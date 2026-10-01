@@ -39,3 +39,11 @@ Cleanview requires licensed API access; no credential is configured. TrackDataCe
 ## Security boundary
 
 Keep the Site owner-private unless explicit server-side authorization is added to every write route. Platform service access supports unattended writes without impersonating a visitor. Never place service credentials or vendor API keys in source, browser code, documentation or automation prompts. Do not change the audience as part of routine maintenance.
+
+## Consumer literacy and electricity comparisons
+
+The Start here guide now distinguishes enterprise, colocation, cloud, hyperscale, edge and campus terminology; training and inference; and proposal records versus operating facilities. Supplemental primary sources are linked beside the explanations.
+
+The electricity-scale calculator compares an illustrative total-facility capacity scenario or an entered full-year MWh total with EIA 2024 residential electricity consumption per customer (50 states, DC and U.S.). It displays assumptions, calendar hours, formulas and the fixed denominator year. This is an electricity-equivalence comparison, not an estimate of homes affected, costs, emissions or water. Downloadable CSV/JSON files retain source provenance. These supplemental consumer resources do not change the 86-record review corpus or the review PDF.
+
+Sources added to consumer resources: U.S. EIA, Table 5a, 2024 Average Monthly Bill—Residential (released 2025-10-07); AWS, What is a Data Center? (undated); Apple Machine Learning Research, Introducing Apple’s On-Device and Server Foundation Models (2024-06-10, updated 2024-07-29). All accessed 2026-10-01.

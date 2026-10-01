@@ -1,0 +1,53 @@
+state,name,data_year,monthly_kWh_per_residential_customer,annual_kWh_derived,source_url,accessed
+AL,Alabama,2024,1143,13716,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+AK,Alaska,2024,578,6936,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+AZ,Arizona,2024,1075,12900,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+AR,Arkansas,2024,1048,12576,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+CA,California,2024,503,6036,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+CO,Colorado,2024,674,8088,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+CT,Connecticut,2024,695,8340,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+DE,Delaware,2024,911,10932,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+DC,District of Columbia,2024,639,7668,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+FL,Florida,2024,1104,13248,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+GA,Georgia,2024,1074,12888,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+HI,Hawaii,2024,495,5940,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+ID,Idaho,2024,944,11328,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+IL,Illinois,2024,693,8316,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+IN,Indiana,2024,901,10812,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+IA,Iowa,2024,832,9984,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+KS,Kansas,2024,876,10512,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+KY,Kentucky,2024,1047,12564,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+LA,Louisiana,2024,1202,14424,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+ME,Maine,2024,550,6600,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+MD,Maryland,2024,929,11148,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+MA,Massachusetts,2024,570,6840,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+MI,Michigan,2024,618,7416,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+MN,Minnesota,2024,712,8544,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+MS,Mississippi,2024,1156,13872,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+MO,Missouri,2024,1001,12012,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+MT,Montana,2024,852,10224,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+NE,Nebraska,2024,956,11472,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+NV,Nevada,2024,930,11160,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+NH,New Hampshire,2024,619,7428,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+NJ,New Jersey,2024,662,7944,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+NM,New Mexico,2024,654,7848,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+NY,New York,2024,571,6852,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+NC,North Carolina,2024,1015,12180,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+ND,North Dakota,2024,1029,12348,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+OH,Ohio,2024,846,10152,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+OK,Oklahoma,2024,1079,12948,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+OR,Oregon,2024,882,10584,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+PA,Pennsylvania,2024,817,9804,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+RI,Rhode Island,2024,567,6804,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+SC,South Carolina,2024,1050,12600,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+SD,South Dakota,2024,994,11928,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+TN,Tennessee,2024,1154,13848,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+TX,Texas,2024,1096,13152,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+US,United States,2024,863,10356,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+UT,Utah,2024,774,9288,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+VT,Vermont,2024,574,6888,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+VA,Virginia,2024,1032,12384,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+WA,Washington,2024,955,11460,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+WV,West Virginia,2024,1027,12324,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+WI,Wisconsin,2024,645,7740,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
+WY,Wyoming,2024,863,10356,https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf,2026-10-01
