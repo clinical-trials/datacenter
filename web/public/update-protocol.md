@@ -1,0 +1,35 @@
+# Prospective filing collection
+
+Site: Data Center Footprint Observatory. Research synthesis remains version 1.2, evidence cutoff 1 October 2026. Prospective ledger begins 1 October 2026 and has a separately curated historical baseline.
+
+## Scope and source access
+
+Start with Indiana and California official filings and nationally relevant scholarly discoveries. `public/filing-sources.json` is the checked source directory. The supported bounded collector watches CEC docket 26-SPPE-01. CEQAnet and IDEM regional notices are researched through public sources. Search applicant aliases and permit IDs. TrackDataCenters is a discovery link with blocked automated access. Cleanview has a documented paid API, but no key or redistribution entitlement has been supplied; it is not connected. Never bypass access controls, copy a commercial database, or infer an undocumented API.
+
+## Unattended access
+
+The Site remains owner-private. A fresh authorized agent can call Sites `get_site` for project `appgprj_6abe91ac211481919ca87515cbcb7961` and obtain `siwc_bypass_bearer_token`. Send this only to the returned Site origin as `OAI-Sites-Authorization: Bearer <token>`. This is dispatch service access to a shared private data endpoint, not an impersonated signed-in user or consent to connected apps. Keep the token in memory/stdin; never commit, log or place it in an automation prompt. If the token is unavailable, stop the write step and report the missing access. Do not relax the audience. If ownership/private access changes, stop and revisit writer authorization before using these endpoints.
+
+## Each run
+
+1. Read `/api/ledger` and `/api/checks`. Export with `/api/export` and follow `nextCursor` as `?after=...` if a complete inventory is needed. Research snapshot bibliography is separate from the prospective ledger; do not silently rewrite it.
+2. POST `{}` to `/api/collect` with `Content-Type: application/json`. It fetches only the configured CEC docket, saves new docket metadata as unreviewed, and logs the attempt. It does not read or interpret each PDF. A zero-new result is valid only if recognizable rows were parsed. Source-layout failures are logged. A partial result means a bounded backlog remains; retry after the documented one-minute throttle when useful. Never claim comprehensive CEC coverage: only this one docket is watched.
+3. Review public CEQAnet notices, IDEM notices and relevant local meeting/utility records for new Indiana/California documents since the last successful check, with a lookback for late publication. Record the actual date type (filed/docketed vs published). Check nationally relevant new studies on datacenter environmental metrics and policy; tag research/preprint and publication status in the summary. Use original agency documents and publisher records. A blocked source is recorded as blocked, not as unchanged.
+4. POST to `/api/ledger` with `{"action":"import","records":[...]}` in batches of at most 50. Use the records in `public/filing-baseline.json` as field examples. Required: project, state, title, HTTPS URL, filedDate OR publishedDate, documentType, summary, limitations. Include locality, operator, docket, source kind/id, page/section, next evidence, and accessedDate. Optional metrics need name, finite nonnegative value, unit and precise boundary. Leave unknown quantities absent. Do not manufacture zeroes. New records are always unreviewed regardless of the submitted review status. The entire batch is atomic. Dedupe uses state/project/docket/date/normalized URL; unchanged documents are skipped without overwriting. If a publisher changes a document at the same identity, flag it for curator correction/versioning; do not quietly claim the content is unchanged. The curator can use the correction editor or action `correct` with id, current version, reviewer, reason and a complete corrected record. Corrections retain the old payload and reset source review to unreviewed.
+5. For every source actually checked, POST `/api/checks` with sourceId, result (`checked`, `partial`, `access-blocked`, `failed`), nonnegative recordsFound and a short truthful notes string. `recordsFound` means new records captured in that attempt. Server timestamps the check. Do not mark a directory searched when only a linked example was opened.
+6. Read saved records back using `/api/ledger` or export pagination; verify IDs, values and labels. Counts are coverage, not environmental impact. Preserve conflicting claims. Never auto-publish a project verdict from extracted text or count comments as representative opinion.
+7. Notify the user only for meaningful new filings/research, corrected interpretation, an impending documented hearing/comment deadline, or collection failure requiring action. Stay quiet when successfully checked sources are unchanged. Incomplete or blocked coverage must remain visible in the log.
+
+## Source review and history
+
+A curator checks the actual document and records a source review via the UI or POST `/api/ledger` with action `review`, id, current version, reviewStatus (`source-checked`, `unreviewed`, `excluded`), reviewer and a specific reason. Version checks prevent stale review writes. Old structured record payloads are retained in `filing_revisions`; GET `/api/ledger?history=<id>` retrieves them. Exclusion preserves the audit record. This is source review, not independent duplicate screening and not an assessment of project safety.
+
+No original PDF bytes are currently archived. Source URLs can disappear or change. The ledger preserves metadata and review versions; a reproducible full-text archive requires separately authorized document copies. Raw reported unit strings are not automatically normalized or aggregated. Permit maxima, forecasts, actual operation, complaints and government findings remain distinct.
+
+## Interface and authentication boundary
+
+The write API relies on the verified owner-private Sites dispatch boundary. Browser JSON writes reject cross-site Origin / Sec-Fetch-Site requests. Service writes may omit Origin and require dispatch service access at production. There are no API keys in client code. Do not change the Site to public without adding explicit server-side write authorization. An unauthenticated local development preview must remain loopback-only.
+
+## Review framework
+
+`public/decision-framework.json` defines an explicitly editorial conditional-support position, eight separate decision dimensions, evidence gates and measurable conditions. It does not compute a composite score, grant legal approval or give automated project verdicts. All current project recommendations remain not yet assessed. Any future project-level editorial recommendation needs a named reviewer, current primary evidence, phase and boundary, legal versus proposed criteria, uncertainty, enforceable conditions, and the evidence that could change it.

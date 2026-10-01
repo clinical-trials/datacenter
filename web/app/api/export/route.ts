@@ -1,0 +1,3 @@
+import { database, publicRow } from '../../../lib/ledger';
+export const dynamic='force-dynamic';
+export async function GET(request:Request){try{const after=new URL(request.url).searchParams.get('after')||'';const rows=await database().prepare('SELECT * FROM filings WHERE id>? ORDER BY id LIMIT 1001').bind(after).all();const page=rows.results.slice(0,1000);return Response.json({exportedAt:new Date().toISOString(),records:page.map(publicRow),nextCursor:rows.results.length>1000?page.at(-1)?.id:null},{headers:{'Cache-Control':'no-store'}});}catch(e){console.error(e);return Response.json({error:'Export unavailable; please retry.'},{status:503});}}

@@ -63,3 +63,11 @@ node --check site/app.js
 ```
 
 Validation checks dataset references, bibliography counts, local downloads, metric coverage and the embedded data copy. The interface was also checked at desktop and mobile widths. Updates should preserve the evidence distinctions above, verify policy status against primary sources and document the new search date.
+
+## Prospective collection (v2.0)
+
+The live dashboard now has a persistent filing ledger, source review and correction history, an automatic collector for CEC docket 26-SPPE-01, a ten-record curated historical baseline, and a cited for/against decision guide. New discoveries remain unreviewed. No project verdict is automatically generated.
+
+The full application is in `web/`; see [runtime instructions](web/README.md) and [collection protocol](web/UPDATE_PROTOCOL.md). The `site/` directory remains a static reader with the dated baseline. Persistent writes and the collector require the full application and database, not a static file server.
+
+The research review remains v1.2 with its original 1 October 2026 cutoff. Prospective filings have their own dates and review status. Cleanview and TrackDataCenters are discovery sources; no commercial API connection or comprehensive national monitoring is claimed.

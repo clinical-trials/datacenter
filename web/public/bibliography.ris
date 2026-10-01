@@ -1,0 +1,881 @@
+TY  - JOUR
+ID  - L01
+TI  - Recalibrating global data center energy-use estimates
+AU  - Eric Masanet
+AU  - Arman Shehabi
+AU  - Nuoa Lei
+AU  - Sarah Smith
+AU  - Jonathan Koomey
+PY  - 2020
+UR  - https://doi.org/10.1126/science.aba3758
+DO  - 10.1126/science.aba3758
+N1  - Published journal policy forum with quantitative model; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L02
+TI  - Data centre water consumption
+AU  - David Mytton
+PY  - 2021
+UR  - https://doi.org/10.1038/s41545-021-00101-w
+DO  - 10.1038/s41545-021-00101-w
+N1  - Published journal Perspective; narrative synthesis; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L03
+TI  - The environmental footprint of data centers in the United States
+AU  - Md Abu Bakar Siddik
+AU  - Arman Shehabi
+AU  - Landon Marston
+PY  - 2021
+UR  - https://doi.org/10.1088/1748-9326/abfba1
+DO  - 10.1088/1748-9326/abfba1
+N1  - Published peer-reviewed research letter; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - L04
+TI  - Estimating the Carbon Footprint of BLOOM, a 176B Parameter Language Model
+AU  - Alexandra Sasha Luccioni
+AU  - Sylvain Viguier
+AU  - Anne-Laure Ligozat
+PY  - 2023
+UR  - https://jmlr.org/papers/v24/23-0069.html
+N1  - Published peer-reviewed research article; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L05
+TI  - Making AI Less 'Thirsty'
+AU  - Pengfei Li
+AU  - Jianyi Yang
+AU  - Mohammad A. Islam
+AU  - Shaolei Ren
+PY  - 2025
+UR  - https://doi.org/10.1145/3724499
+DO  - 10.1145/3724499
+N1  - Published research article; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L06
+TI  - Power Hungry Processing: Watts Driving the Cost of AI Deployment?
+AU  - Alexandra Sasha Luccioni
+AU  - Yacine Jernite
+AU  - Emma Strubell
+PY  - 2024
+UR  - https://doi.org/10.1145/3630106.3658542
+DO  - 10.1145/3630106.3658542
+N1  - Published peer-reviewed conference paper; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L07
+TI  - A systematic review of Green AI
+AU  - Roberto Verdecchia
+AU  - June Sallou
+AU  - Luís Cruz
+PY  - 2023
+UR  - https://doi.org/10.1002/widm.1507
+DO  - 10.1002/widm.1507
+N1  - Published peer-reviewed systematic review; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L08
+TI  - Green AI
+AU  - Roy Schwartz
+AU  - Jesse Dodge
+AU  - Noah A. Smith
+AU  - Oren Etzioni
+PY  - 2020
+UR  - https://doi.org/10.1145/3381831
+DO  - 10.1145/3381831
+N1  - Published position/research article; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L09
+TI  - Aligning artificial intelligence with climate change mitigation
+AU  - Lynn H. Kaack
+AU  - Priya L. Donti
+AU  - Emma Strubell
+AU  - George Kamiya
+AU  - Felix Creutzig
+AU  - David Rolnick
+PY  - 2022
+UR  - https://doi.org/10.1038/s41558-022-01377-7
+DO  - 10.1038/s41558-022-01377-7
+N1  - Published peer-reviewed Perspective; conceptual framework; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L10
+TI  - E-waste challenges of generative artificial intelligence
+AU  - Peng Wang
+AU  - Ling-Yu Zhang
+AU  - Asaf Tzachor
+AU  - Wei-Qiang Chen
+PY  - 2024
+UR  - https://doi.org/10.1038/s43588-024-00712-6
+DO  - 10.1038/s43588-024-00712-6
+N1  - Published peer-reviewed brief communication; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L11
+TI  - Sources of data center energy estimates: A comprehensive review
+AU  - David Mytton
+AU  - Masaō Ashtine
+PY  - 2022
+UR  - https://doi.org/10.1016/j.joule.2022.07.011
+DO  - 10.1016/j.joule.2022.07.011
+N1  - Published peer-reviewed comprehensive review; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L12
+TI  - The Cloud Next Door: Investigating the Environmental and Socioeconomic Strain of Datacenters on Local Communities
+AU  - Wacuka Ngata
+AU  - Noman Bashir
+AU  - Michelle Westerlaken
+AU  - Laurent Liote
+AU  - Yasra Chandio
+AU  - Elsa Olivetti
+PY  - 2025
+UR  - https://doi.org/10.1145/3715335.3736324
+DO  - 10.1145/3715335.3736324
+N1  - Published conference late-breaking work; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L13
+TI  - Global data center expansion and human health: A call for empirical research
+AU  - Yu Tao
+AU  - Peng Gao
+PY  - 2025
+UR  - https://doi.org/10.1016/j.eehl.2025.100157
+DO  - 10.1016/j.eehl.2025.100157
+N1  - Published journal letter/commentary; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L14
+TI  - Health-Informed Computing: Estimating and Addressing the Public Health Impact of Data Centers
+AU  - Yuelin Han
+AU  - Zhifeng Wu
+AU  - Pengfei Li
+AU  - Adam Wierman
+AU  - Shaolei Ren
+PY  - 2026
+UR  - https://arxiv.org/abs/2412.06288v4
+DO  - 10.48550/arXiv.2412.06288
+N1  - Accepted manuscript on arXiv; CACM acceptance reported; final publication not verified; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L15
+TI  - Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA
+AU  - Tianqi Xiao
+AU  - Francesco Fuso Nerini
+AU  - H. Damon Matthews
+AU  - Massimo Tavoni
+AU  - Fengqi You
+PY  - 2025
+UR  - https://doi.org/10.1038/s41893-025-01681-y
+DO  - 10.1038/s41893-025-01681-y
+N1  - Published peer-reviewed analysis; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L16
+TI  - Energy and Policy Considerations for Deep Learning in NLP
+AU  - Emma Strubell
+AU  - Ananya Ganesh
+AU  - Andrew McCallum
+PY  - 2019
+UR  - https://aclanthology.org/P19-1355/
+DO  - 10.18653/v1/P19-1355
+N1  - Published peer-reviewed conference paper; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - L17
+TI  - Towards the Systematic Reporting of the Energy and Carbon Footprints of Machine Learning
+AU  - Peter Henderson
+AU  - Jieru Hu
+AU  - Joshua Romoff
+AU  - Emma Brunskill
+AU  - Dan Jurafsky
+AU  - Joelle Pineau
+PY  - 2020
+UR  - https://jmlr.org/papers/v21/20-312.html
+N1  - Published peer-reviewed research article; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L18
+TI  - Measuring the Carbon Intensity of AI in Cloud Instances
+AU  - Jesse Dodge
+AU  - Taylor Prewitt
+AU  - Rémi Tachet des Combes
+AU  - Erika Odmark
+AU  - Roy Schwartz
+AU  - Emma Strubell
+AU  - Alexandra Sasha Luccioni
+AU  - Noah A. Smith
+AU  - Nicole DeCario
+AU  - Will Buchanan
+PY  - 2022
+UR  - https://doi.org/10.1145/3531146.3533234
+DO  - 10.1145/3531146.3533234
+N1  - Published peer-reviewed conference paper; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L19
+TI  - Chasing Carbon: The Elusive Environmental Footprint of Computing
+AU  - Udit Gupta
+AU  - Young Geun Kim
+AU  - Sylvia Lee
+AU  - Jordan Tse
+AU  - Hsien-Hsin S. Lee
+AU  - Gu-Yeon Wei
+AU  - David Brooks
+AU  - Carole-Jean Wu
+PY  - 2021
+UR  - https://doi.org/10.1109/HPCA51647.2021.00076
+DO  - 10.1109/HPCA51647.2021.00076
+N1  - Published peer-reviewed conference paper; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L20
+TI  - Data flows and water woes: The Utah Data Center
+AU  - Mél Hogan
+PY  - 2015
+UR  - https://doi.org/10.1177/2053951715592429
+DO  - 10.1177/2053951715592429
+N1  - Published peer-reviewed qualitative article; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L21
+TI  - Reinforcement Learning for Data Center Cooling Performance Optimization: A Systematic Review and Gap Analysis for Deployment in Tropical Wet Climates
+AU  - Yung-Wey Chong
+AU  - Michael Maloney
+AU  - Viswanathan Ganesh
+AU  - Wangda Zuo
+PY  - 2026
+UR  - https://doi.org/10.1016/j.enbuild.2026.118163
+DO  - 10.1016/j.enbuild.2026.118163
+N1  - Published journal systematic review; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L22
+TI  - The Unequal Burden of Environmental and Health Costs of Energy-Intensive Artificial Intelligence
+AU  - Imran Hossain Mithu
+AU  - Mona Arora
+AU  - Onicio B. Leal Neto
+AU  - Paloma I. Beamer
+PY  - 2026
+UR  - https://doi.org/10.2105/AJPH.2026.308683
+DO  - 10.2105/AJPH.2026.308683
+N1  - Published journal evidence synthesis; abstract assessed; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - L23
+TI  - Health implications of the rapid rise of data centers in Virginia: an exploratory assessment
+AU  - Neha Gour
+AU  - Luis Ortiz
+AU  - Edward Maibach
+PY  - 2026
+UR  - https://doi.org/10.3389/fclim.2026.1648912
+DO  - 10.3389/fclim.2026.1648912
+N1  - Published peer-reviewed mini review; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - EPRI2024
+TI  - Powering Intelligence: Analyzing Artificial Intelligence and Data Center Energy Consumption
+AU  - Electric Power Research Institute
+PY  - 2024
+UR  - https://restservice.epri.com/publicdownload/000000003002028905/0/Product
+N1  - technical report; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - EPRI2026
+TI  - Powering Intelligence 2026: State-Level Data Center Power Data
+AU  - Electric Power Research Institute
+PY  - 2026
+UR  - https://powering-intelligence.epri.com/dashboard/
+N1  - technical report and data dashboard; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - EPRI2026METHOD
+TI  - Powering Intelligence 2026: Nominal Capacity: History and Future Projections
+AU  - Electric Power Research Institute
+PY  - 2026
+UR  - https://powering-intelligence.epri.com/nominal-capacity.html
+N1  - technical methodology; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - JLARC2024
+TI  - Data Centers in Virginia
+AU  - Joint Legislative Audit and Review Commission
+PY  - 2024
+UR  - https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf
+N1  - government audit; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - GOOGLE2025
+TI  - 2025 Environmental Report
+AU  - Google
+PY  - 2025
+UR  - https://www.gstatic.com/gumdrop/sustainability/google-2025-environmental-report.pdf
+N1  - corporate sustainability disclosure with limited assurance; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - PHOENIX2025
+TI  - City of Phoenix Updates Zoning to Safeguard Health and Safety as Data Center Growth Accelerates
+AU  - City of Phoenix
+PY  - 2025
+UR  - https://www.phoenix.gov/newsroom/pdd-news/city-of-phoenix-updates-zoning-to-safeguard-health-and-safety-as.html
+N1  - municipal action announcement; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - PHOENIX2024
+TI  - City Council Agenda, February 21, 2024, Item 9: Large Water User Ordinance
+AU  - City of Phoenix
+PY  - 2024
+UR  - https://www.phoenix.gov/cityclerksite/City%20Council%20Meeting%20Files/240221002.pdf
+N1  - municipal ordinance agenda; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - TROUP2026
+TI  - Public Notice: Moratorium on Data Centers
+AU  - Troup County Board of Commissioners
+PY  - 2026
+UR  - https://www.troupcountyga.gov/Content/Documents/planning/2026/Moratorium%20-%20Data%20Centers%20Public%20Notice.pdf
+N1  - municipal public notice; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - ERCOT2026
+TI  - ERCOT Large Load Update: House State Affairs Hearing, April 9, 2026
+AU  - Electric Reliability Council of Texas
+PY  - 2026
+UR  - https://www.ercot.com/files/docs/2026/04/09/ERCOTLargeLoadUpdate-April9HouseStateAffairsHearing.pdf
+N1  - grid operator testimony; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - OREGON2025
+TI  - 2025 Legislative Report: HB 3546 POWER Act
+AU  - Oregon Public Utility Commission
+PY  - 2025
+UR  - https://www.oregon.gov/puc/Documents/2025-Legislative-Report.pdf
+N1  - government legislative report; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - OREGON2026
+TI  - Oregon PUC Approves New Rate Structure to Protect Customers Amid Rapid Data Center Growth
+AU  - Oregon Public Utility Commission
+PY  - 2026
+UR  - https://www.oregon.gov/puc/news-events/Documents/PR-202609.pdf
+N1  - regulator decision announcement; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - OREGON2026SEPT
+TI  - Oregon’s POWER Act Delivers Lower Rates for Oregon Families and Businesses, Higher Costs for Data Centers
+AU  - Office of Governor Tina Kotek
+PY  - 2026
+UR  - https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/oregons-power-act-delivers-lower-rates-for-oregon-families-and-businesses-higher-costs-for-data-centers
+N1  - government outcome announcement; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - AEPOHIO2025
+TI  - Data Center Tariff
+AU  - Ohio Power / AEP Ohio
+PY  - 2025
+UR  - https://www.aepohio.com/company/about/rates/data-center-tariff/
+N1  - regulated utility tariff information; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - WA2025
+TI  - Data Center Workgroup: Preliminary Report
+AU  - Washington Department of Revenue / Data Center Workgroup
+PY  - 2025
+UR  - https://www.dor.wa.gov/sites/default/files/2025-12/2025DataCntrWrkgrpPrelimReport.pdf
+N1  - government workgroup report; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - WAJLARC2026
+TI  - 2026 Tax Preference Review: Data Centers in Urban Counties
+AU  - Washington Joint Legislative Audit and Review Committee
+PY  - 2026
+UR  - https://leg.wa.gov/jlarc/taxReports/2026/data/1/report.html
+N1  - government audit; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - LBNL2024
+TI  - 2024 United States Data Center Energy Usage Report
+AU  - Shehabi et al.
+PY  - 2024
+UR  - https://datacenters.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report
+N1  - national laboratory report; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - LBNL2025UPDATE
+TI  - United States Data Center Energy Usage Report: 2025 Update
+AU  - Smith, S. J., Hubbard, A., Newkirk, A., Ganeshalingam, M., Holecek, B., Sartor, D., Mills, M., and Shehabi, A.
+PY  - 2026
+UR  - https://www.osti.gov/biblio/3374245
+DO  - 10.71468/P1RP4F
+N1  - national laboratory report; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - OPB2026
+TI  - The Dalles’ mayor called OPB’s data center story inaccurate. Here are the facts
+AU  - April Ehrlich
+PY  - 2026
+UR  - https://www.opb.org/article/2026/01/23/the-dalles-mayor-data-center-google/
+N1  - investigative journalism; municipal-record reproduction; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN01
+TI  - Significant Water Withdrawal Facility Data
+AU  - Indiana Department of Natural Resources, Division of Water
+PY  - 2026
+UR  - https://secure.in.gov/dnr/water/water-availability-use-rights/significant-water-withdrawal-facility-data/
+N1  - Government administrative data documentation; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN02
+TI  - Fort Wayne Google Data Center Frequently Asked Questions
+AU  - City of Fort Wayne
+AU  - information supplied by Google, Indiana Michigan Power and City Utilities
+PY  - 2026
+UR  - https://engage.cityoffortwayne.org/data-center
+N1  - Municipal FAQ incorporating corporate and utility claims; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN03
+TI  - Adams Center Water Tower
+AU  - Fort Wayne City Utilities
+PY  - 2026
+UR  - https://utilities.cityoffortwayne.org/projects/adams-center-tower
+N1  - Government infrastructure project description; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN04
+TI  - Amazon's Investment Is Building Lasting Opportunity for St. Joseph County
+AU  - Amazon statement published by South Bend Regional Chamber of Commerce
+PY  - 2026
+UR  - https://www.sbrchamber.com/news/2026/07/09/default/amazon-s-investment-is-building-lasting-opportunity-for-st.-joseph-county/
+N1  - Corporate projection / firsthand statement; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN05
+TI  - Dry wells and water supply fears surround Amazon's massive Indiana data center
+AU  - Redmond Bernhold
+AU  - Alyssa Sirichoktanasup
+AU  - Andy Caron, University of Notre Dame Gallivan Program
+PY  - 2026
+UR  - https://www.aol.com/articles/dry-wells-water-supply-fears-090843000.html
+N1  - Corrected original reporting; Indianapolis Star syndication; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN06
+TI  - Economic Outlook: Data Centers and the Regional Economy (Season 21, Episode 1)
+AU  - PBS Michiana
+AU  - host Jeff Rea
+AU  - testimony of Bill Schalliol and other panelists
+PY  - 2026
+UR  - https://www.pbs.org/video/economicoutlook-data-centers-and-the-regional-economy/
+N1  - Public broadcast with firsthand county-official statement; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN07
+TI  - Microsoft breaks ground on La Porte datacenter project
+AU  - Microsoft Local
+PY  - 2026
+UR  - https://local.microsoft.com/blog/microsoft-breaks-ground-on-la-porte-datacenter-project/
+N1  - Corporate project announcement; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN08
+TI  - Microsoft, Dermody update tax agreement to include historic funding for La Porte schools
+AU  - City of La Porte
+PY  - 2026
+UR  - https://www.cityoflaporte.com/news/microsoft-dermody-eupdate-tax-agreement-to-include-historic-funding-for-la-porte-schools
+N1  - Municipal agreement announcement; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN09
+TI  - Ordinance No. 2026-08: An ordinance establishing a development moratorium on data centers
+AU  - Boone County Board of Commissioners
+PY  - 2026
+UR  - https://boonecounty.in.gov/wp-content/uploads/2026/07/Ordinance-2026-08.Moratorium-on-data-centers.pdf
+N1  - Signed government ordinance; all three pages visually verified; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN10
+TI  - Data Centers
+AU  - Town of Merrillville
+PY  - 2026
+UR  - https://www.merrillville.in.gov/business-building-economic-development/data-centers/
+N1  - Municipal policy announcement; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN11
+TI  - Ordinance imposing a temporary moratorium on the development of data centers
+AU  - Miami County Board of Commissioners
+PY  - 2026
+UR  - https://www.miamicountyin.gov/DocumentCenter/View/2446/5426_RECORDED_SIGNED_BOCOrdinance_DataCenterMoratorium
+N1  - Signed, recorded government ordinance; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN12
+TI  - Data centers: A hot-mic conversation leads to a discussion of what government transparency means
+AU  - Daniel Huber, Indiana Public Radio
+PY  - 2026
+UR  - https://indianapublicradio.org/news/2026/09/data-centers-a-hot-mic-conversation-leads-to-a-discussion-of-what-government-transparency-means/
+N1  - Original public-radio reporting; links county minutes; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN13
+TI  - St. Joseph County Council takes first step toward possible ban on future hyperscale data centers
+AU  - WNDU
+PY  - 2026
+UR  - https://www.wndu.com/video/2026/09/23/st-joseph-county-council-takes-first-step-toward-possible-ban-future-hyperscale-data-centers/?outputType=amp
+N1  - Local broadcast reporting; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN14
+TI  - Will our water meet our needs?
+AU  - Jared Quigg, Morgan County Correspondent
+PY  - 2026
+UR  - https://morgancountycorrespondent.com/2026/06/04/will-our-water-meet-our-needs/
+N1  - Original local reporting of public presentation; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - IN15
+TI  - Authorization for Construction of Sanitary Sewer System, IEC-3 South, Permit Approval No. 26205
+AU  - Indiana Department of Environmental Management, Office of Water Quality
+PY  - 2026
+UR  - https://ecm.idem.in.gov/cs/idcplg?IdcService=GET_FILE&Rendition=web&allowInterrupt=1&dDocName=83951820&dID=83943702&noSaveAs=1
+N1  - Primary approved construction permit and application; permit p. 2 visually verified; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - ROOT_IEA2026
+TI  - Key Questions on Energy and AI
+AU  - International Energy Agency
+PY  - 2026
+UR  - https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary
+N1  - Intergovernmental report; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - ROOT_PRISMA
+TI  - PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation
+AU  - Tricco, A. C., Lillie, E., Zarin, W., et al.
+PY  - 2018
+UR  - https://www.prisma-statement.org/scoping
+DO  - 10.7326/M18-0850
+N1  - Methods guideline; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - ROOT_EGRID
+TI  - eGRID: Determining Emissions from Electricity Use
+AU  - U.S. Environmental Protection Agency
+PY  - 2025
+UR  - https://www.epa.gov/system/files/documents/2025-01/using-egrid-to-determine-emissions.pdf
+N1  - Government technical guidance; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - ROOT_GHG
+TI  - Scope 2 Guidance
+AU  - World Resources Institute and World Business Council for Sustainable Development
+PY  - 2015
+UR  - https://ghgprotocol.org/scope-2-guidance
+N1  - Accounting standard; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - ROOT_GHGCONSULT
+TI  - Frequently Asked Questions: Scope 2 and Electricity Sector Consequential Accounting Public Consultations
+AU  - GHG Protocol
+PY  - 2025
+UR  - https://ghgprotocol.org/blog/frequently-asked-questions-scope-2-and-electricity-sector-consequential-accounting-public
+N1  - Standards consultation; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - ROOT_AQUEDUCT
+TI  - Aqueduct 4.0 Current and Future Global Maps Data
+AU  - World Resources Institute
+PY  - 2023
+UR  - https://www.wri.org/data/aqueduct-global-maps-40-data
+N1  - Hydrological screening dataset; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - ROOT_HEERING2026
+TI  - How sovereign control, decarbonization and energy costs shape public support for data centers
+AU  - Heering, J., and Voeten, E.
+PY  - 2026
+UR  - https://www.nature.com/articles/s41467-026-76500-9
+DO  - 10.1038/s41467-026-76500-9
+N1  - Peer-reviewed research; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - POLICY_WATER2026
+TI  - Small Bottle, Big Pipe: Quantifying and Addressing the Impact of Data Centers on Public Water Systems
+AU  - Yuelin Han
+AU  - Pengfei Li
+AU  - Adam Wierman
+AU  - Shaolei Ren
+PY  - 2026
+UR  - https://arxiv.org/abs/2603.02705v2
+DO  - 10.48550/arXiv.2603.02705
+N1  - Preprint; peer review and final publication not verified; accessed 2026-10-01
+ER  - 
+
+TY  - JOUR
+ID  - POLICY_MARGINAL2025
+TI  - Locational Marginal Emissions for Carbon-Aware Data Center Operations in Large-Scale Power Grids
+AU  - Luc Cote
+AU  - Andy Sun
+PY  - 2025
+UR  - https://arxiv.org/abs/2512.18819v1
+DO  - 10.48550/arXiv.2512.18819
+N1  - Preprint; peer review and final publication not verified; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - METRIC_EU
+TI  - Annexes to the Delegated Act on the first phase of the establishment of a common Union rating scheme for data centres
+AU  - European Commission
+AU  - Council of the European Union
+PY  - 2024
+UR  - https://data.consilium.europa.eu/doc/document/ST-7842-2024-ADD-1/en/pdf
+N1  - Primary government methodology; Commission delegated-act annexes; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - METRIC_LCA
+TI  - ITU-T L.1410 (11/2024): Methodology for environmental life cycle assessments of information and communication technology goods, networks and services
+AU  - International Telecommunication Union, Telecommunication Standardization Sector
+PY  - 2024
+UR  - https://www.itu.int/ITU-T/recommendations/rec.aspx?id=16010
+N1  - Primary international technical recommendation; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - METRIC_ENGINES
+TI  - AP-42, Volume I, Chapter 3: Stationary Internal Combustion Sources
+AU  - U.S. Environmental Protection Agency
+PY  - 2025
+UR  - https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-3-stationary-0
+N1  - Primary government emissions-factor methodology; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - METRIC_NOISE
+TI  - ISO 1996-1:2016: Acoustics — Description, measurement and assessment of environmental noise — Part 1: Basic quantities and assessment procedures
+AU  - International Organization for Standardization
+PY  - 2016
+UR  - https://www.iso.org/standard/59765.html
+N1  - Primary international standard; public abstract reviewed; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - METRIC_EFFLUENT
+TI  - NPDES Permit Writers’ Manual: Chapter 8, Monitoring and Reporting Conditions
+AU  - U.S. Environmental Protection Agency
+PY  - 2010
+UR  - https://www.epa.gov/sites/default/files/2015-09/documents/pwm_chapt_08.pdf
+N1  - Primary government technical monitoring guidance; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - METRIC_BIODIVERSITY
+TI  - Guidance Note 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources
+AU  - International Finance Corporation
+PY  - 2019
+UR  - https://www.ifc.org/content/dam/ifc/doc/2010/20190627-ifc-ps-guidance-note-6-en.pdf
+N1  - Primary international project-assessment guidance; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_CEC
+TI  - Data Centers
+AU  - California Energy Commission
+PY  - 2026
+UR  - https://www.energy.ca.gov/programs-and-topics/topics/data-centers
+N1  - Government program guidance; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_AB1577
+TI  - AB 1577: Data centers: reporting
+AU  - California Legislature
+PY  - 2026
+UR  - https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1577
+N1  - Enacted statute; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_AB2383
+TI  - AB 2383: Electricity: data centers
+AU  - California Legislature
+PY  - 2026
+UR  - https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2383
+N1  - Enacted statute; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_AB2469
+TI  - AB 2469: Data centers: water use disclosures
+AU  - California Legislature
+PY  - 2026
+UR  - https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2469
+N1  - Enacted statute; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_AB2619
+TI  - AB 2619: Water resources: data centers
+AU  - California Legislature
+PY  - 2026
+UR  - https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2619
+N1  - Enacted statute; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_SB886
+TI  - SB 886: California Technology Innovation and Ratepayer Protection Act
+AU  - California Legislature
+PY  - 2026
+UR  - https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB886
+N1  - Enacted statute; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_SB887
+TI  - SB 887: CEQA, environmental leadership development projects and data centers
+AU  - California Legislature
+PY  - 2026
+UR  - https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB887
+N1  - Enacted statute; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_SB1168
+TI  - SB 1168: Data centers: rate structures
+AU  - California Legislature
+PY  - 2026
+UR  - https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1168
+N1  - Enacted statute; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_SB57
+TI  - SB 57: Electrical corporations: data centers: report
+AU  - California Legislature
+PY  - 2025
+UR  - https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB57
+N1  - Enacted statute; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_AB93
+TI  - Governor Newsom issues legislative update 10.11.25
+AU  - Office of the Governor of California
+PY  - 2025
+UR  - https://www.gov.ca.gov/2025/10/11/governor-newsom-issues-legislative-update-10-11-25/
+N1  - Official legislative status notice; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_CES50
+TI  - CalEnviroScreen 5.0
+AU  - Office of Environmental Health Hazard Assessment
+PY  - 2026
+UR  - https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-50
+N1  - Government screening dataset and documentation; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_DWR
+TI  - Annual Water Supply and Demand Assessment
+AU  - California Department of Water Resources
+PY  - 2026
+UR  - https://water.ca.gov/Programs/Water-Use-And-Efficiency/Water-Supply-and-Demand-Assessment
+N1  - Government implementation guidance; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_CARB253
+TI  - California Corporate Greenhouse Gas Reporting: Notice of Availability of 2026 Reporting Resources
+AU  - California Air Resources Board
+PY  - 2026
+UR  - https://content.govdelivery.com/accounts/CARB/bulletins/427b576
+N1  - Government regulatory implementation notice; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_GENAI2024
+TI  - Technology Letter 24-03: Generative Artificial Intelligence Inventory, Procurement, and Risk Assessment
+AU  - California Department of Technology
+PY  - 2024
+UR  - https://www.cdt.ca.gov/policy/technology-letters/technology-letter-24-03/
+N1  - Official state procurement policy clarification; accessed 2026-10-01
+ER  - 
+
+TY  - RPRT
+ID  - CA_CALENDAR2026
+TI  - 2026 Legislative Calendar
+AU  - California State Assembly
+PY  - 2026
+UR  - https://www.assembly.ca.gov/system/files/2026-03/2026-calendar-version-2.pdf
+N1  - Official legislative calendar; accessed 2026-10-01
+ER  - 

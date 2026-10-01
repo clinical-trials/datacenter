@@ -1,0 +1,241 @@
+{
+  "asOf": "2026-10-01",
+  "sources": [
+    {
+      "id": "PS_CEC_DOCKET",
+      "name": "California Energy Commission e-filing docket logs",
+      "url": "https://efiling.energy.ca.gov/Lists/DocketLog.aspx?docketnumber=26-SPPE-01",
+      "agency": "California Energy Commission",
+      "jurisdiction": "CA",
+      "access": "Public HTML docket and individual PDF documents read successfully. No documented public API identified.",
+      "ingestion": "Fetch configured public docket logs; identify records by docket + TN; preserve docketed date separately from document/submission date.",
+      "fields": [
+        "TN",
+        "docket",
+        "docketed date",
+        "document title",
+        "submitter role",
+        "from",
+        "topic",
+        "document URL"
+      ],
+      "cadence": "Event-driven filing history; poll only configured public pages, with cache and low request rate.",
+      "limits": "CEC SPPE dockets cover associated thermal generation; they are not a census of data centers. Comments are statements by their authors, not agency findings.",
+      "verified": "2026-10-01"
+    },
+    {
+      "id": "PS_CEC_LIST",
+      "name": "CEC power plant listing and project pages",
+      "url": "https://www.energy.ca.gov/proceedings/power-plant-listing?field_project_status_value=All&field_project_type_value=SPPE&field_technology_value=Backup+Generating+System",
+      "agency": "California Energy Commission",
+      "jurisdiction": "CA",
+      "access": "Public HTML.",
+      "ingestion": "Use filtered list to discover relevant project pages and docket numbers; keep original labels.",
+      "fields": [
+        "owner",
+        "docket",
+        "generating capacity MW",
+        "location",
+        "project status",
+        "technology"
+      ],
+      "limits": "CEC states it does not permit data centers themselves. SPPE exemption is not final construction/operation approval; local land-use and air-district permits remain relevant.",
+      "supportUrl": "https://www.energy.ca.gov/powerplant/backup-generating-system/rb-inyokern-data-center",
+      "verified": "2026-10-01"
+    },
+    {
+      "id": "PS_CEQANET",
+      "name": "CEQAnet environmental notices and reviews",
+      "url": "https://ceqanet.lci.ca.gov/",
+      "documentationUrl": "https://ceqanet.lci.ca.gov/Home/About",
+      "agency": "California Office of Land Use and Climate Innovation",
+      "jurisdiction": "CA",
+      "access": "Public project pages and attachments read successfully; homepage did not yield text to the web tool. No machine API verified.",
+      "ingestion": "Manual/assisted keyword search, SCH identifiers, lead agency, county, received date and review-end filters; preserve each document version.",
+      "fields": [
+        "SCH number",
+        "document type",
+        "received date",
+        "posted date",
+        "lead/responsible agency",
+        "project description",
+        "approval date when supplied",
+        "attachments"
+      ],
+      "limits": "Not all CEQA/NEPA documents are submitted to SCH. LCI posts materials as received and does not review legal adequacy. A Notice of Exemption is not evidence of zero operational footprint.",
+      "supportUrls": [
+        "https://lci.ca.gov/sch/",
+        "https://lci.ca.gov/sch/faq/",
+        "https://lci.ca.gov/sch/evolution/"
+      ],
+      "verified": "2026-10-01"
+    },
+    {
+      "id": "PS_IDEM_NOTICES",
+      "name": "IDEM regional public notices",
+      "url": "https://www.in.gov/idem/public-notices/",
+      "exampleUrl": "https://www.in.gov/idem/public-notices/public-notices-northeast-indiana/",
+      "agency": "Indiana Department of Environmental Management",
+      "jurisdiction": "IN",
+      "access": "Public HTML tables and linked PDFs read successfully. Regional email/text subscription offered; subscribing is a separate user action.",
+      "ingestion": "Track notice URL + permit ID + publication window. Search applicant aliases, not only data center words. Archive discovered notice metadata because expired notices may disappear from current regional lists.",
+      "fields": [
+        "facility/applicant",
+        "notice type",
+        "publication start/end",
+        "comment indicator",
+        "permit IDs",
+        "project manager"
+      ],
+      "limits": "Current notices are not a complete historical permit inventory. A closed comment period does not establish approval. No documented public machine API verified.",
+      "verified": "2026-10-01"
+    },
+    {
+      "id": "PS_IDEM_VFC",
+      "name": "IDEM Virtual File Cabinet",
+      "url": "https://www.in.gov/idem/legal/public-records/virtual-file-cabinet/",
+      "searchUrl": "https://vfc.idem.in.gov/DocumentSearch.aspx",
+      "agency": "Indiana Department of Environmental Management",
+      "jurisdiction": "IN",
+      "access": "Official guidance verified; indexed individual ECM record encountered HTTP 403 on direct open. Do not bypass.",
+      "ingestion": "Manual official search or authorized records request when automated access fails; link record IDs without labeling unreviewed content verified.",
+      "fields": [
+        "program",
+        "permit number",
+        "source name",
+        "county",
+        "document identifier",
+        "document date"
+      ],
+      "limits": "Agency says records are added daily. No public API contract or bulk-republication license established.",
+      "verified": "2026-10-01"
+    },
+    {
+      "id": "PS_IDEM_AIR",
+      "name": "IDEM air permit status search",
+      "url": "https://www.in.gov/idem/airpermit/information-about/pending-and-issued-permits/",
+      "searchUrl": "https://www.in.gov/ai/appfiles/idem-caats/",
+      "agency": "Indiana Department of Environmental Management",
+      "jurisdiction": "IN",
+      "access": "Official guide and indexed search instructions verified; direct search open returned 403. No bypass attempted.",
+      "ingestion": "Manual status verification by permit ID; capture draft/final document separately.",
+      "fields": [
+        "source and county",
+        "permit type",
+        "milestone",
+        "date range",
+        "permit number",
+        "SIC",
+        "address",
+        "program status"
+      ],
+      "limits": "Permitted does not mean built or operating. IDEM warns its permitted-source list may include unbuilt, inactive, removed, or relocated facilities.",
+      "supportUrl": "https://www.in.gov/idem/airpermit/",
+      "verified": "2026-10-01"
+    },
+    {
+      "id": "PS_IDEM_WATER",
+      "name": "IDEM water-quality Regulatory ePortal",
+      "url": "https://waterquality.idem.in.gov/",
+      "agency": "Indiana Department of Environmental Management",
+      "jurisdiction": "IN",
+      "access": "Portal inaccessible through web tool. The official Aug 4, 2026 notice explicitly directs the public to Site Map Explorer and the Documents tab. No API verified.",
+      "ingestion": "Manual portal search for Project Zodiac Phase 3; export/download public documents where authorized.",
+      "fields": [
+        "site",
+        "application documents",
+        "waterway permit ID"
+      ],
+      "limits": "The portal reference is verified; direct data retrieval was not. Do not present as connected.",
+      "supportUrl": "https://www.in.gov/idem/files/notice_20260828_iwip_srip01408.pdf",
+      "verified": "2026-10-01"
+    },
+    {
+      "id": "PS_CLEANVIEW",
+      "name": "Cleanview public tracker and licensed API",
+      "url": "https://www.cleanview.co/data-centers/us",
+      "documentationUrl": "https://docs.cleanview.co/api-reference/endpoint/data-centers",
+      "agency": "Cleanview (commercial provider)",
+      "jurisdiction": "US",
+      "access": "Public tracker and API documentation verified. API requires vendor-provisioned key and paid access. No key supplied and no API request made.",
+      "ingestion": "Optional server-side licensed connector, disabled until credentials and intended redistribution rights are confirmed.",
+      "endpoint": "https://api.cleanview.co/api/v1/data-centers",
+      "method": "GET",
+      "authHeader": "x-api-key",
+      "pagination": "No pagination; docs say all records returned in one response.",
+      "fields": [
+        "id",
+        "project_name",
+        "developer",
+        "status",
+        "operating_year",
+        "capacity_mw",
+        "it_capacity_mw",
+        "land_acres",
+        "building_square_footage",
+        "county",
+        "state",
+        "coordinates",
+        "source_1",
+        "source_2",
+        "source_3",
+        "metadata.generated_at"
+      ],
+      "limits": "Public map only displays facilities with reported capacity. Status taxonomy includes Planned, Under Construction, Operating, Canceled; Canceled description includes postponed. generated_at is response time, not a per-record filing date. Do not sum campus and building phases indiscriminately. API documentation examples are not independently verified project records.",
+      "supportUrls": [
+        "https://docs.cleanview.co/authentication",
+        "https://www.cleanview.co/coverage-rates",
+        "https://www.cleanview.co/pricing",
+        "https://www.cleanview.co/samples"
+      ],
+      "verified": "2026-10-01"
+    },
+    {
+      "id": "PS_TRACKDC",
+      "name": "TrackDataCenters user-provided discovery resource",
+      "url": "https://www.trackdatacenters.com",
+      "agency": "Independent tracker; ownership/methodology not directly verified",
+      "jurisdiction": "US",
+      "access": "Parent research received 403. Public indexed search did not locate official API or reuse terms; robots.txt not retrievable by web tool. No bypass or bulk download attempted.",
+      "ingestion": "Link for discovery; accept user-supplied primary filing URLs. Enable import only after documented export/API permission.",
+      "fields": [],
+      "limits": "Do not claim an active connection, comprehensive coverage, verified license, or validated project count. Third-party descriptions were found but not used for regulatory or project assertions.",
+      "verified": "2026-10-01"
+    }
+  ],
+  "qualityRules": [
+    "Separate discovery candidates from reviewed published evidence; never silently promote extracted text to fact.",
+    "A filing can establish that a claim was made without establishing the truth of that claim.",
+    "Keep campus, phase and building identities distinct; prevent double counting of expansions and backup generation.",
+    "MW is capacity, MWh is energy. Backup generator MW, facility MW and IT MW are separate fields.",
+    "Keep planning estimates, permit limits and metered operational observations in distinct series.",
+    "Waterway and wetland permits quantify ecological disturbance; they do not measure cooling-water consumption.",
+    "Track comment-window end and legal expiry separately; closed comments do not imply granted permit.",
+    "Never infer public support from comment counts; duplicate campaigns and self-selection prevent representative inference.",
+    "Use quality-gated evidence for for/against arguments; factual uncertainty can justify requests for conditions or delay without asserting harm is proven.",
+    "Official-source polling is a proposed collection design, not a verified active service. Honor access barriers, terms and robots before activating any collector."
+  ],
+  "accessFindings": [
+    {
+      "title": "Customer-specific demand may remain confidential",
+      "url": "https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=105928&tn=268766",
+      "date": "2026-02-23",
+      "finding": "CEC determined that PG&E January/February data submissions containing customer and consumption information could remain confidential indefinitely. Public absence of load data is not evidence of zero demand."
+    },
+    {
+      "title": "Cleanview public counts should not be treated as an audited national total",
+      "url": "https://www.cleanview.co/data-centers/us",
+      "finding": "The retrieved page reports 3,612 total, 1,319 operating and 2,248 planned; the two category counts sum to 3,567. Capacity totals also do not equal the two displayed category capacities. Scope differences are unresolved. Do not import a reconciled total by assumption."
+    },
+    {
+      "title": "Commercial integration boundary",
+      "url": "https://docs.cleanview.co/authentication",
+      "finding": "API key must remain server-side; no key should be embedded in dashboard JavaScript or committed. Read access does not by itself establish republication rights."
+    },
+    {
+      "title": "Explicit reuse terms not established",
+      "url": "https://www.cleanview.co/pricing",
+      "finding": "Vendor advertises paid platform/API and one-time download access; research did not locate an explicit license authorizing public dashboard republication. No purchase, subscription, or vendor contact was made."
+    }
+  ]
+}

@@ -1,0 +1,1170 @@
+{
+  "environmentalMetrics": [
+    {
+      "id": "M01",
+      "domain": "Energy/carbon",
+      "name": "Absolute electricity use",
+      "unit": "MWh/site/year; kWh/workload",
+      "boundary": "Operational electricity for the named campus and reporting period; distinguish IT, cooling, power losses and other support loads.",
+      "method": "Sum calibrated import and on-site generation meters, reconcile exports and storage, and avoid counting generator electricity twice.",
+      "frequency": "Retain hourly readings where available, reconcile monthly bills, publish annual totals, and report missing intervals and estimated shares.",
+      "whyItMatters": "Absolute demand determines infrastructure scale; an efficient facility can increase electricity use when workloads and installed capacity grow.",
+      "tradeoff": "Reducing cooling energy may increase water consumption; distinguish genuine demand reduction from shifting activity to another facility or supplier.",
+      "decisionUse": "Compare expansion plans with observed demand trajectories and separately assess which operational changes reduce total electricity use over time.",
+      "minimumEvidence": "Campus boundary, meter locations, reporting dates, grid imports, generator output, storage treatment, estimation share and utility reconciliation records.",
+      "availability": "EPRI supplies modeled state electricity, not site meters; literature benchmarks provide selected workload measurements, with no complete campus inventory.",
+      "sourceIds": [
+        "EPRI2026",
+        "LBNL2024",
+        "L01",
+        "METRIC_EU"
+      ]
+    },
+    {
+      "id": "M02",
+      "domain": "Energy/carbon",
+      "name": "Peak load, timing and flexibility",
+      "unit": "MW; hourly MWh; verified curtailed MWh",
+      "boundary": "Facility demand at the grid connection and relevant utility or balancing area, distinguishing contracted, installed and actual coincident peaks.",
+      "method": "Use interval meters to identify seasonal peaks; compare dispatch events with documented baselines and report rebound demand after curtailment.",
+      "frequency": "Archive hourly or finer data, review monthly peaks, and assess summer, winter and grid-stress events separately from annual consumption.",
+      "whyItMatters": "Grid capacity and reliability depend on when loads occur, while annual electricity totals can hide concentrated local infrastructure pressure.",
+      "tradeoff": "Shifting computation may reduce peak demand but move water use, latency or emissions to a different hour or location.",
+      "decisionUse": "Evaluate interconnection sizing, demand response and workload scheduling with utility-specific constraints and tested performance rather than promised flexible capacity.",
+      "minimumEvidence": "Interval load series, timezone, interconnection boundary, seasonal system peaks, baseline method, dispatched reductions, generator operation and subsequent recovery load.",
+      "availability": "EPRI includes modeled peak GW and scenarios; this dataset lacks metered hourly loads, coincident utility peaks and demonstrated flexibility.",
+      "sourceIds": [
+        "EPRI2026",
+        "EPRI2026METHOD",
+        "IN02",
+        "POLICY_MARGINAL2025"
+      ]
+    },
+    {
+      "id": "M03",
+      "domain": "Energy/carbon",
+      "name": "Facility overhead efficiency: PUE",
+      "unit": "Dimensionless total facility energy / IT energy",
+      "boundary": "Facility and IT energy measured over identical periods and declared measurement points; include all relevant energy inputs consistently.",
+      "method": "Divide facility energy by IT energy, disclose metering category and weather/utilization context, and retain the absolute numerator and denominator.",
+      "frequency": "Report annual energy-weighted PUE alongside monthly values; investigate seasonal changes and alterations in occupancy, IT loading or cooling operation.",
+      "whyItMatters": "PUE isolates support overhead, enabling cooling and electrical-loss diagnosis while leaving workload usefulness and total demand to separate metrics.",
+      "tradeoff": "Improved PUE can accompany greater evaporation or more wasteful IT activity; it does not establish lower total environmental burden.",
+      "decisionUse": "Use PUE to compare operational improvements within compatible boundaries, paired with absolute electricity, water and useful-service output measures.",
+      "minimumEvidence": "Facility and IT energy meters, synchronized periods, metering category, allocation for shared buildings, occupancy, weather and documented calculation method.",
+      "availability": "The dataset explains PUE but lacks matched facility and IT meter series for Indiana or California project-level comparisons.",
+      "sourceIds": [
+        "METRIC_EU",
+        "LBNL2024",
+        "L01"
+      ]
+    },
+    {
+      "id": "M04",
+      "domain": "Energy/carbon",
+      "name": "Purchased-electricity GHG inventory",
+      "unit": "tCO2e/year; gCO2e/kWh, separately by method",
+      "boundary": "Purchased electricity within the reported campus or organization; keep location-based and market-based inventories separate and disclose geographic matching.",
+      "method": "Multiply electricity by documented grid-average factors for location accounting; apply qualifying contractual instruments separately, preserving residual-mix and factor provenance.",
+      "frequency": "Publish annual inventories with factor vintage and contractual coverage; add hourly matching diagnostics when time-resolved energy and supply exist.",
+      "whyItMatters": "Two accounting views describe physical grid context and contractual procurement; annual renewable claims alone cannot demonstrate carbon-free electricity every hour.",
+      "tradeoff": "Contractual reductions may differ from local hourly emissions changes; renewable procurement also has land, materials and water consequences elsewhere.",
+      "decisionUse": "Assess inventory disclosure and procurement quality without subtracting claimed avoided emissions or treating certificates as proof of local zero emissions.",
+      "minimumEvidence": "Electricity totals, factor geography and year, gases and GWP version, instrument ownership and retirement, coverage gaps and accounting rules.",
+      "availability": "Existing GHG guidance supports methods; no matched campus load, factors and instruments are available here to calculate audited site inventories.",
+      "sourceIds": [
+        "ROOT_GHG",
+        "ROOT_GHGCONSULT",
+        "ROOT_EGRID"
+      ]
+    },
+    {
+      "id": "M05",
+      "domain": "Energy/carbon",
+      "name": "Consequential electricity emissions",
+      "unit": "Change in tCO2e versus explicit counterfactual",
+      "boundary": "Power-system response to an identified load, siting, scheduling or procurement decision, over a stated geography and time horizon.",
+      "method": "Model incremental generation and capacity changes against an explicit baseline; label marginal factors, dispatch assumptions and sensitivity ranges.",
+      "frequency": "Assess each material decision; update scenarios when grid forecasts, load shape or transmission assumptions change, retaining previous versions for comparison.",
+      "whyItMatters": "A decision can change emissions differently from its allocated inventory, especially when new capacity or different generating units respond.",
+      "tradeoff": "Short-run dispatch savings may conflict with long-run infrastructure effects, local air pollution or water demand; scenario choices influence conclusions.",
+      "decisionUse": "Compare alternatives with common service requirements and uncertainty ranges; report consequential results separately from location-based and market-based inventories.",
+      "minimumEvidence": "Counterfactual, decision horizon, hourly loads, marginal-emissions model, capacity response, transmission constraints, model vintage and transparent sensitivity analysis.",
+      "availability": "Marginal-emissions preprint offers methods; existing state scenarios do not identify causal grid responses or establish site-specific avoided emissions.",
+      "sourceIds": [
+        "POLICY_MARGINAL2025",
+        "ROOT_GHGCONSULT",
+        "L09"
+      ]
+    },
+    {
+      "id": "M06",
+      "domain": "Energy/carbon",
+      "name": "Embodied and full life-cycle GHG",
+      "unit": "tCO2e/project; kgCO2e/defined service",
+      "boundary": "Raw materials, fabrication, buildings, equipment, transport, operation and end-of-life; identify networks and user devices included or excluded explicitly.",
+      "method": "Combine process inventories with operational data; allocate shared hardware transparently across service life and utilization, testing alternative lifetimes and allocations.",
+      "frequency": "Update at procurement, retrofit and retirement, then reconcile annually with asset records and significant changes in utilization or supplier data.",
+      "whyItMatters": "Operational decarbonization leaves equipment and construction burdens; omitting manufacturing can substantially understate the footprint of a specific AI deployment.",
+      "tradeoff": "New hardware can reduce operational energy yet increase manufacturing impacts; lifetime extension benefits depend on performance, reliability and grid emissions.",
+      "decisionUse": "Compare replacement, refurbishment and deployment options using equivalent service requirements, consistent system boundaries and separate life-cycle stage results.",
+      "minimumEvidence": "Bill of materials, supplier inventories, asset lifetimes, utilization, functional unit, allocation rules, electricity assumptions, end-of-life treatment and uncertainty ranges.",
+      "availability": "BLOOM and computing studies illustrate allocated life-cycle estimates; project bills of materials and comparable supplier inventories are absent here.",
+      "sourceIds": [
+        "L04",
+        "L19",
+        "METRIC_LCA",
+        "L10"
+      ]
+    },
+    {
+      "id": "M07",
+      "domain": "Energy/carbon",
+      "name": "Direct fuel and refrigerant emissions",
+      "unit": "Fuel quantity; kg refrigerant lost; tCO2e/year",
+      "boundary": "On-site combustion and refrigerant releases from campus equipment, including maintenance and retirement; separate direct emissions from purchased electricity.",
+      "method": "Calculate combustion from fuel records and factors; estimate refrigerant losses through charge, additions, recovery and inventory reconciliation by substance.",
+      "frequency": "Record every refueling, refrigerant service and leak event; reconcile annual stocks and report testing, outage and routine operating hours.",
+      "whyItMatters": "Backup generation and cooling-fluid leaks remain direct emissions sources even when annual purchased electricity is matched with renewable instruments.",
+      "tradeoff": "Air-cooled or mechanical cooling may reduce water demand while changing electricity use and refrigerant exposure; backup choices change reliability and pollution.",
+      "decisionUse": "Prioritize leak prevention and low-emission backup options; assess actual use separately from installed engine capacity and maximum permitted operation.",
+      "minimumEvidence": "Fuel invoices, engine runtime, refrigerant species and charge, service additions, recovered mass, emission factors, GWP version and boundary reconciliation.",
+      "availability": "Existing sources describe designs and reporting concepts; no complete campus fuel ledger, runtime history or refrigerant mass balance is included.",
+      "sourceIds": [
+        "METRIC_EU",
+        "METRIC_ENGINES",
+        "GOOGLE2025"
+      ]
+    },
+    {
+      "id": "M08",
+      "domain": "Water",
+      "name": "Direct withdrawal by source",
+      "unit": "m³/year; m³/day; source-specific volumes",
+      "boundary": "Water entering the named campus from surface water, groundwater, municipal or reclaimed supplies; report construction dewatering separately from operations.",
+      "method": "Meter each intake, identify ultimate source and treatment, and distinguish withdrawals from storage capacity, sewer flows and water consumed.",
+      "frequency": "Publish monthly totals, daily peaks and seasonal source mix; retain shorter intervals during drought, construction pumping or supply restrictions.",
+      "whyItMatters": "Withdrawal indicates pressure on supply and infrastructure, but does not reveal how much returns or whether the source is locally scarce.",
+      "tradeoff": "Reclaimed water can reduce potable demand while altering treatment energy and downstream return flows; source substitution requires a watershed-specific assessment.",
+      "decisionUse": "Assess water-supply agreements and drought performance using actual demand by source, independently from treatment plant capacity and permit design maxima.",
+      "minimumEvidence": "Intake meters, source identities, daily and monthly series, construction versus operation separation, estimation flags and utility delivery reconciliations.",
+      "availability": "Google discloses selected 2024 campus volumes, sometimes estimated; the sample contains no Indiana or California campus water measurements.",
+      "sourceIds": [
+        "L02",
+        "GOOGLE2025",
+        "IN01",
+        "IN04",
+        "IN15"
+      ]
+    },
+    {
+      "id": "M09",
+      "domain": "Water",
+      "name": "Direct consumption and stated WUE",
+      "unit": "m³/year; L/kWh IT, numerator explicitly labeled",
+      "boundary": "Water not returned within the stated basin and time boundary; distinguish site water-input WUE from consumption-based intensity measures.",
+      "method": "Reconcile withdrawals, discharge destinations and storage changes; divide the explicitly named water numerator by matched IT electricity for intensity.",
+      "frequency": "Reconcile monthly water balances and publish annual WUE with summer peaks; separately report uncertain returns, storage changes and measurement gaps.",
+      "whyItMatters": "Consumptive losses reduce water available to other users; WUE supports operational diagnosis only when its numerator and denominator are consistent.",
+      "tradeoff": "Low site WUE can shift demand to electricity generation; low consumption does not imply harmless discharge temperature or chemistry.",
+      "decisionUse": "Compare cooling alternatives using both absolute volumes and defined intensities; do not calculate WUE from state electricity and unrelated campuses.",
+      "minimumEvidence": "Withdrawal, discharge and storage records, basin and timing of returns, IT energy, balance closure, water quality and explicitly stated WUE definition.",
+      "availability": "Google provides withdrawal-minus-discharge estimates for named sites; missing matched IT electricity prevents comparable campus WUE calculations in this dataset.",
+      "sourceIds": [
+        "L02",
+        "GOOGLE2025",
+        "METRIC_EU"
+      ]
+    },
+    {
+      "id": "M10",
+      "domain": "Water",
+      "name": "Indirect electricity and supply-chain water",
+      "unit": "m³ withdrawal and m³ consumption, separately",
+      "boundary": "Electricity-generation and hardware-manufacturing water attributed to the service; retain upstream watersheds and distinguish these burdens from direct site water.",
+      "method": "Multiply location-specific energy or material activity by compatible withdrawal and consumption factors; disclose cooling, hydropower and allocation assumptions.",
+      "frequency": "Recalculate annually and when electricity sourcing, hardware procurement or operating location changes; use seasonal factors where validated data permit.",
+      "whyItMatters": "Cooling alone misses water used by power plants and semiconductor production, potentially shifting burdens to distant communities and ecosystems.",
+      "tradeoff": "Water-intensive clean electricity or fabrication can offset site savings; upstream allocation choices can dominate cross-location comparisons and apparent rankings.",
+      "decisionUse": "Evaluate cooling and procurement together, reporting direct and indirect components and testing alternative electricity-water factors before selecting locations.",
+      "minimumEvidence": "Energy geography, generation mix, water-factor definitions and vintage, supplier process data, basin assignments, allocation method and uncertainty ranges.",
+      "availability": "Studies offer modeled indirect-water examples; supplier inventories and matched campus electricity are missing, preventing reliable project-specific totals here.",
+      "sourceIds": [
+        "L03",
+        "L05",
+        "L15",
+        "METRIC_LCA"
+      ]
+    },
+    {
+      "id": "M11",
+      "domain": "Water",
+      "name": "Seasonal scarcity and supply resilience",
+      "unit": "Monthly m³; basin stress category; drought scenarios",
+      "boundary": "Facility and upstream watersheds, local users and ecological flows during relevant months; distinguish water availability from treatment and pipe capacity.",
+      "method": "Overlay source-specific seasonal demand with basin screening indicators, validated local hydrology and drought scenarios; avoid interpreting screening scores as spare supply.",
+      "frequency": "Review seasonal conditions monthly, update drought assessments as conditions change, and reassess before expansions or changes in water source.",
+      "whyItMatters": "Equal annual volumes can create different harms depending on dry-season demand, groundwater recovery, existing users and ecological flow requirements.",
+      "tradeoff": "Lower-carbon locations may face greater water scarcity; annual replenishment claims may occur in different basins or seasons from consumption.",
+      "decisionUse": "Screen sites, then request local drought-yield analysis, operating triggers and contingency plans before concluding that infrastructure can support expansion.",
+      "minimumEvidence": "Source watershed, monthly withdrawals and consumption, competing demand, groundwater or streamflow data, drought assumptions, ecological requirements and local hydrologic review.",
+      "availability": "Aqueduct supplies screening context; Indiana system capacities do not establish sustainable yield, and this dataset lacks calibrated campus water models.",
+      "sourceIds": [
+        "ROOT_AQUEDUCT",
+        "L03",
+        "IN02",
+        "IN06"
+      ]
+    },
+    {
+      "id": "M12",
+      "domain": "Pollution/health",
+      "name": "Combustion pollution and population exposure",
+      "unit": "kg NOx/PM2.5; µg/m³; separately modeled health outcomes",
+      "boundary": "On-site engines plus attributed power-plant pollution and exposed receptors; separate emitted mass, modeled concentration, observed exposure and health outcomes.",
+      "method": "Combine runtime and tested or factor-based emissions with dispersion and population data; validate concentrations and retain uncertainty in health models.",
+      "frequency": "Log engine events continuously, summarize emissions annually, and sample relevant background, testing and outage periods with meteorology and receptor locations.",
+      "whyItMatters": "Pollution burdens depend on where emissions travel and who is exposed; equal emissions totals can produce unequal potential health impacts.",
+      "tradeoff": "Carbon-oriented scheduling or backup substitution can move local pollutant exposure; modeled health damages are not observed diagnoses or proof of causation.",
+      "decisionUse": "Compare backup and siting options through exposure analysis; prioritize monitoring near sensitive receptors and avoid attributing individual illness without evidence.",
+      "minimumEvidence": "Engine specifications, fuel and hours, stack tests or factor quality, meteorology, background concentrations, receptor populations and documented exposure-response assumptions.",
+      "availability": "Health studies provide modeled burdens and research gaps; this dataset contains no causal epidemiology or campus-specific verified exposure series.",
+      "sourceIds": [
+        "METRIC_ENGINES",
+        "L13",
+        "L14",
+        "L22",
+        "L23"
+      ]
+    },
+    {
+      "id": "M13",
+      "domain": "Pollution/health",
+      "name": "Residential noise and tonal character",
+      "unit": "LAeq/Lmax dBA; LCeq dBC; spectrum and tonality",
+      "boundary": "Outdoor and relevant indoor residential receptors exposed to cooling, generators and construction; specify background conditions, time periods and equipment operation.",
+      "method": "Measure calibrated A- and C-weighted levels, frequency spectra and tonal characteristics; compare baseline and operating periods under documented meteorology.",
+      "frequency": "Collect day and night baselines, commissioning measurements and seasonal operating surveys; investigate complaints and intermittent generator events with time-stamped records.",
+      "whyItMatters": "Persistent tones and low-frequency sound can matter beyond a single average decibel value; facility-internal measurements do not describe residential exposure.",
+      "tradeoff": "Quieter cooling or barriers can affect energy use, airflow and cost; acoustically equal levels can have different perceived characteristics.",
+      "decisionUse": "Assess design mitigation and actual neighbor experience against verified local criteria; do not import occupational limits as residential standards.",
+      "minimumEvidence": "Receptor map, calibrated instruments, LAeq and maximum periods, LCeq, frequency bands, background subtraction, meteorology, runtime and applicable local criteria.",
+      "availability": "Community studies identify concerns; no standardized Indiana or California receptor measurements are included, so compliance or health effects cannot be scored.",
+      "sourceIds": [
+        "METRIC_NOISE",
+        "JLARC2024",
+        "L13",
+        "L23"
+      ]
+    },
+    {
+      "id": "M14",
+      "domain": "Pollution/health",
+      "name": "Effluent heat and chemistry",
+      "unit": "m³/day; °C/temperature rise; pH; mg/L and kg/day",
+      "boundary": "Campus wastewater, cooling blowdown and receiving treatment or water bodies; distinguish sewer design capacity from measured outfall quality and quantity.",
+      "method": "Pair flow with temperature and chemical sampling to calculate loads; evaluate receiving-water conditions, treatment performance and source-specific chemicals used.",
+      "frequency": "Follow applicable permit schedules; proposed assessment adds representative seasonal and upset-event samples, with continuous flow and temperature where feasible.",
+      "whyItMatters": "Returning water does not eliminate impacts if temperature, salts, biocides or other constituents affect treatment systems or aquatic ecosystems.",
+      "tradeoff": "Water reuse can reduce withdrawal while concentrating constituents and increasing treatment demand; disposal pathways determine where remaining burdens occur.",
+      "decisionUse": "Evaluate cooling and wastewater designs using measured loads and receiving conditions; obtain the specific permit before assessing compliance or limits.",
+      "minimumEvidence": "Actual flow, sampling location and method, temperature, chemistry, chemical inventory, receiving conditions, treatment destination, laboratory quality controls and applicable permit.",
+      "availability": "Indiana sewer approval supplies design flows only; no campus discharge temperature, chemistry or receiving-water monitoring is available in this dataset.",
+      "sourceIds": [
+        "METRIC_EFFLUENT",
+        "IN15",
+        "L02"
+      ]
+    },
+    {
+      "id": "M15",
+      "domain": "Materials/ecology",
+      "name": "Land change and biodiversity",
+      "unit": "Hectares disturbed; habitat condition and connectivity indicators",
+      "boundary": "Campus, substations, transmission, generation and relevant supply-chain land; distinguish previously developed land, sensitive habitats and indirect infrastructure changes.",
+      "method": "Compare mapped pre-project land cover with surveyed habitat and post-project conditions; report fragmentation and species-specific findings without collapsing ecological differences.",
+      "frequency": "Establish a preconstruction baseline, monitor construction and restoration, then survey appropriate ecological seasons after operation and major site changes.",
+      "whyItMatters": "A small campus footprint can depend on extensive infrastructure or affect connected habitats; hectares alone omit ecological condition and sensitivity.",
+      "tradeoff": "Renewable generation and grid upgrades can reduce operational carbon while expanding land demand; restoration pledges require location-specific outcome verification.",
+      "decisionUse": "Compare siting alternatives and avoidance measures using habitat evidence; keep biodiversity conclusions distinct from greenhouse-gas or fiscal performance.",
+      "minimumEvidence": "Project and associated infrastructure maps, baseline land cover, seasonal habitat surveys, connectivity assessment, mitigation commitments and independently checked restoration outcomes.",
+      "availability": "The present dataset lacks parcel-level ecological baselines or infrastructure footprints; this domain remains an unfilled project-assessment requirement, not zero impact.",
+      "sourceIds": [
+        "METRIC_BIODIVERSITY",
+        "METRIC_LCA",
+        "L09",
+        "L22"
+      ]
+    },
+    {
+      "id": "M16",
+      "domain": "Materials/ecology",
+      "name": "Hardware turnover, e-waste and critical materials",
+      "unit": "Tonnes/year by route; lifetime years; material-specific kg",
+      "boundary": "Servers, accelerators, storage, network equipment and batteries from procurement through reuse, recycling and final disposal, including material supply chains.",
+      "method": "Reconcile asset and mass inventories; track service life, reuse destination and recovery by material, distinguishing collection claims from verified recycling outcomes.",
+      "frequency": "Record procurement and retirement events, audit downstream transfers annually, and update material inventories when equipment configurations or suppliers change.",
+      "whyItMatters": "Rapid hardware replacement increases manufacturing demand and waste; critical-material recovery and safe handling depend on traceable downstream processes.",
+      "tradeoff": "Extending hardware life can reduce manufacturing demand while increasing operational energy; recycling rates alone can conceal losses of specific critical materials.",
+      "decisionUse": "Choose repair, refurbishment and procurement options using life-cycle comparisons; require downstream documentation and material-specific reporting for retired assets.",
+      "minimumEvidence": "Asset register, equipment mass and composition, actual lifetimes, refurbishment records, waste manifests, downstream destinations and evidence of material recovery.",
+      "availability": "Generative-AI research supplies global waste scenarios; no local asset mass balance or verified supplier and recycler chain is included.",
+      "sourceIds": [
+        "L10",
+        "L19",
+        "METRIC_LCA",
+        "L22"
+      ]
+    },
+    {
+      "id": "M17",
+      "domain": "Distribution/governance",
+      "name": "Cumulative burden and distributional equity",
+      "unit": "Separate exposure indicators by population and geography",
+      "boundary": "Nearby residents, workers and upstream communities, including sensitive populations; compare distribution of burdens and benefits within a defined assessment geography.",
+      "method": "Overlay measured or modeled exposures with demographic vulnerability and existing burdens; involve residents and preserve each indicator rather than inventing a composite.",
+      "frequency": "Assess before siting, update annually with disclosed data vintages, and review when exposures, population conditions or expansion plans materially change.",
+      "whyItMatters": "A project-wide average can hide disproportionate burdens on particular neighborhoods or workers, while benefits may accrue to different populations.",
+      "tradeoff": "Low statewide carbon can coexist with local pollution or water hardship; screening percentiles do not prove project-attributable illness or individual exposure.",
+      "decisionUse": "Identify priority monitoring and mitigation areas through source-specific analysis and community participation; avoid transferring California percentile ranks to Indiana.",
+      "minimumEvidence": "Spatial exposure estimates, background burden, population and worker characteristics, data vintages, community input, geographic uncertainty and separately reported benefits.",
+      "availability": "CalEnviroScreen 5.0 supports California screening, but no campus-to-tract overlay or community exposure inventory has been completed in this dataset.",
+      "sourceIds": [
+        "CA_CES50",
+        "L12",
+        "L22",
+        "L23"
+      ]
+    },
+    {
+      "id": "M18",
+      "domain": "Distribution/governance",
+      "name": "Public costs, jobs and fiscal distribution",
+      "unit": "Inflation-stated dollars; job-years; permanent FTE; rate effects",
+      "boundary": "Public budgets, utility customers, workers and host community over the project life; distinguish private investment from net local public benefit.",
+      "method": "Compare verified taxes and payroll with incentives, infrastructure, services and stranded-cost scenarios; separate construction job-years from ongoing full-time employment.",
+      "frequency": "Assess before agreements, verify annual realized jobs and revenue, and stress-test delay, closure or lower-than-promised demand throughout contract periods.",
+      "whyItMatters": "Large announced investment does not establish net community benefit; infrastructure costs and financial risks can shift among customers and taxpayers.",
+      "tradeoff": "Jobs and revenue may coexist with environmental burdens; monetizing selected harms cannot replace separate health, water or biodiversity assessment.",
+      "decisionUse": "Evaluate benefit agreements and utility cost allocation using common fiscal assumptions, distribution tables and documented responsibilities if projects underperform.",
+      "minimumEvidence": "Executed agreements, incentive schedules, verified payroll and employment, actual tax receipts, upgrade costs, financing terms and utility cost-allocation evidence.",
+      "availability": "Indiana announcements provide job and tax commitments; tariff examples show allocation mechanisms, but no independent project net-benefit calculation is available.",
+      "sourceIds": [
+        "IN07",
+        "IN08",
+        "AEPOHIO2025",
+        "OREGON2026",
+        "WAJLARC2026"
+      ]
+    },
+    {
+      "id": "M19",
+      "domain": "Distribution/governance",
+      "name": "Disclosure, verification and accountability",
+      "unit": "Coverage percentages; reporting lag; unresolved cases and resolution time",
+      "boundary": "Every reported metric, campus boundary and affected community; assess data completeness and accountability separately from environmental performance itself.",
+      "method": "Track missing data, measurement versus estimation, assurance scope, public access and complaint outcomes; preserve versioned sources and correction histories.",
+      "frequency": "Update a public ledger quarterly where feasible, reconcile annually, and disclose material boundary changes, incidents and corrections promptly.",
+      "whyItMatters": "Comparisons fail when reporting omits campuses or changes definitions; clear evidence status prevents promises and design permits becoming apparent measurements.",
+      "tradeoff": "More reporting improves scrutiny but has costs and confidentiality constraints; redaction should preserve decision-relevant aggregates and transparent explanations for gaps.",
+      "decisionUse": "Set procurement and community reporting expectations, identify evidence gaps, and assign responsible owners without treating disclosure quality as low environmental impact.",
+      "minimumEvidence": "Metric definitions, coverage denominator, data owner, reporting dates, raw-to-reported reconciliation, estimation flags, independent review scope and complaint-response records.",
+      "availability": "This review preserves source status and uncertainty; project-level reporting coverage, regular complaint logs and independent assurance remain incomplete.",
+      "sourceIds": [
+        "L17",
+        "L12",
+        "GOOGLE2025",
+        "WAJLARC2026"
+      ]
+    },
+    {
+      "id": "M20",
+      "domain": "Distribution/governance",
+      "name": "Useful AI service and rebound",
+      "unit": "kWh/accepted task; service quality; total annual footprint",
+      "boundary": "Equivalent end-user service across training, tuning, inference, idle capacity and associated equipment; include deployment volume and any claimed downstream benefit.",
+      "method": "Measure energy for fixed quality and latency requirements, then multiply by actual volume; test counterfactual savings and induced additional demand.",
+      "frequency": "Benchmark before selection, remeasure after model or hardware changes, and review monthly service volume and annual operational and embodied totals.",
+      "whyItMatters": "Lower energy per request can coincide with higher total demand; comparing unequal tasks or unconstrained output lengths can mislead procurement.",
+      "tradeoff": "Smaller models, caching and batching may change quality, privacy or latency; efficiency gains may stimulate demand that erodes aggregate savings.",
+      "decisionUse": "Procure the least-burden option meeting service requirements, monitor absolute budgets, and report avoided impacts separately with a defensible baseline.",
+      "minimumEvidence": "Representative task set, acceptance criteria, model and hardware versions, tokens, batch size, latency, energy boundary, utilization and annual workload volume.",
+      "availability": "Published benchmarks and BLOOM illustrate bounded cases; this dataset cannot rank current vendors or calculate a universal footprint per prompt.",
+      "sourceIds": [
+        "L06",
+        "L04",
+        "L08",
+        "L09",
+        "L17"
+      ]
+    }
+  ],
+  "metricApplication": {
+    "title": "Apply the framework without inventing missing impacts",
+    "intro": "The framework covers 20 decision-relevant metrics. Existing evidence can populate selected state scenarios and research examples, but cannot fully quantify actual impacts of an Indiana or California campus or a current AI service.",
+    "frameworkStatus": "Assessment-ready metric specifications, with partially populated evidence. Missing observations remain unknown; neither data availability nor disclosure quality is an environmental severity score.",
+    "evidenceLabels": [
+      {
+        "label": "Observed measurement",
+        "definition": "An actual reading or measured benchmark for a stated boundary and period; it still requires calibration, representativeness and uncertainty review."
+      },
+      {
+        "label": "Company-reported",
+        "definition": "Operator disclosure may combine meters and estimation. Identify the measured share, accounting definition and exact independent-assurance scope."
+      },
+      {
+        "label": "Modeled historical",
+        "definition": "A reconstructed estimate for a past period, such as EPRI state electricity; it is not a statewide utility-meter total."
+      },
+      {
+        "label": "Scenario or projection",
+        "definition": "A conditional future pathway or operator expectation. Scenario ranges are not probabilities or statistical confidence intervals."
+      },
+      {
+        "label": "Design or authorization",
+        "definition": "A permitted, engineered or contractual quantity. Capacity, peak flows and approved maxima do not establish actual operating use."
+      },
+      {
+        "label": "Screening or proxy",
+        "definition": "A contextual indicator used to prioritize investigation. It does not measure a campus-specific exposure, impact or causal outcome."
+      },
+      {
+        "label": "Unknown in this dataset",
+        "definition": "Required information was not established. Leave it blank and request evidence; do not interpret absence as zero or compliance."
+      }
+    ],
+    "maturity": [
+      {
+        "level": "Established operational measurement",
+        "description": "Electricity, flow, fuel and basic noise indicators have established instruments. The main obstacles here are public access, matching boundaries and time resolution."
+      },
+      {
+        "level": "Established methods, allocation required",
+        "description": "GHG inventories, PUE/WUE and life-cycle accounting are tractable, but comparability depends on definitions, denominator matching, supplier data and uncertainty analysis."
+      },
+      {
+        "level": "Local assessment required",
+        "description": "Exposure, effluent impacts, hydrology and biodiversity require source-specific field data and models. State averages or general literature cannot substitute for these inputs."
+      },
+      {
+        "level": "Counterfactual and distributional analysis",
+        "description": "Marginal emissions, net public benefits and AI rebound depend on alternatives and affected populations. Report assumptions and separate indicators rather than a universal score."
+      }
+    ],
+    "interpretationRules": [
+      "These metric definitions, reporting cadences and minimum-evidence lists are analyst recommendations informed by cited methods. Applicable legal duties depend on the actual jurisdiction and permit.",
+      "Report absolute burdens together with intensity metrics. PUE and WUE do not measure total impact, scarcity, service usefulness or community benefit.",
+      "Preserve site, service, state, grid and watershed boundaries. Do not divide campus water by state electricity or treat statewide modeled demand as AI-only demand.",
+      "Keep withdrawals, consumptive losses, discharges, construction dewatering and storage distinct. State the basin and timing of returns; indirect water remains separately identified.",
+      "Display location-based, market-based and consequential GHG results separately. Do not subtract unverified avoided emissions from a physical inventory.",
+      "Define lifecycle stages and asset allocation before comparing AI options. Disclose training, inference, idle capacity, hardware lifespan and omitted networks or devices.",
+      "Separate pollution emissions, exposure and modeled health damages. None establishes that a particular facility caused a specific person’s illness.",
+      "Evaluate options against disclosed local priorities and verified criteria. Do not collapse carbon, water, biodiversity, jobs and health into an invented universal impact score."
+    ],
+    "coverage": [
+      {
+        "domain": "Energy/carbon",
+        "available": "EPRI state electricity and peak-demand models; historical research, AI benchmark measurements and selected lifecycle estimates.",
+        "missing": "Matched campus interval load, PUE meters, contract instruments, fuel/refrigerant logs and supplier lifecycle inventory."
+      },
+      {
+        "domain": "Water",
+        "available": "A 23-location Google 2024 reported water sample, national models and Indiana design/projection/context records.",
+        "missing": "No California or Indiana campus in that measured/reported sample; no matched campus IT electricity, seasonal water balance or local drought-yield model."
+      },
+      {
+        "domain": "Pollution/health",
+        "available": "Primary measurement methods, community research and modeled health-burden literature; an Indiana sewer design permit.",
+        "missing": "Actual campus emissions, residential exposure/noise series, effluent temperature/chemistry and causal local health studies."
+      },
+      {
+        "domain": "Materials/ecology",
+        "available": "ICT lifecycle methodology, embodied-carbon case studies and global AI e-waste scenarios.",
+        "missing": "Campus bills of materials, asset retirement mass balances, verified downstream destinations and parcel-level habitat surveys."
+      },
+      {
+        "domain": "Distribution/governance",
+        "available": "Community research, policy examples, announced job/tax commitments and California screening methodology.",
+        "missing": "Project-specific distributional overlays, realized net fiscal benefit, complaint outcomes, verified performance commitments and procurement benchmarks."
+      }
+    ],
+    "cases": [
+      {
+        "id": "indiana",
+        "title": "Indiana: distinguish operating impacts from design and promises",
+        "summary": "State energy models and specific project documents support a structured evidence assessment. They do not supply a measured campus water balance or a complete local environmental-impact inventory.",
+        "evidence": [
+          {
+            "metricIds": [
+              "M01",
+              "M02"
+            ],
+            "label": "State electricity and peak demand",
+            "value": "2024: 0.820 TWh central estimate (0.725–0.915); 0.097 GW modeled peak.",
+            "status": "Modeled historical",
+            "boundary": "State modeled small- and large-scale data centers plus cryptocurrency mining; not utility-metered or AI-only.",
+            "sourceIds": [
+              "EPRI2026"
+            ]
+          },
+          {
+            "metricIds": [
+              "M01",
+              "M02"
+            ],
+            "label": "Conditional expansion range",
+            "value": "2030 low / medium / high: 11.266 / 27.595 / 38.977 TWh/year.",
+            "status": "Scenario or projection",
+            "boundary": "EPRI statewide development pathways; not commitments, confidence intervals or forecasts of a named campus.",
+            "sourceIds": [
+              "EPRI2026",
+              "EPRI2026METHOD"
+            ]
+          },
+          {
+            "metricIds": [
+              "M08",
+              "M09",
+              "M11"
+            ],
+            "label": "New Carlisle projected water",
+            "value": "18 million US gallons/year projected at full buildout; withdrawal versus consumption is not explicitly defined.",
+            "status": "Scenario or projection",
+            "boundary": "Operator statement for AWS New Carlisle; no actual monthly meter series, return-flow balance or peak operating limit supplied.",
+            "sourceIds": [
+              "IN04"
+            ]
+          },
+          {
+            "metricIds": [
+              "M14"
+            ],
+            "label": "IEC-3 South wastewater design",
+            "value": "Future average 55,000 gallons/day; future peak 1,612,000 gallons/day; design peaking factor 29.3.",
+            "status": "Design or authorization",
+            "boundary": "Approved sanitary/industrial sewer project, not the whole-campus withdrawal or consumption. Do not extrapolate these flows to campus water use.",
+            "sourceIds": [
+              "IN15"
+            ]
+          },
+          {
+            "metricIds": [
+              "M08",
+              "M11"
+            ],
+            "label": "Construction and public-system context",
+            "value": "Reported temporary dewatering authorization: 31 MGD. Two public plants’ described cap: 24 MGD. Neither is AWS measured consumption.",
+            "status": "Design or authorization; dewatering primary document not reviewed",
+            "boundary": "Construction pumping and two public plants serving multiple users are different systems; no quantitative campus share or sustainable surplus established.",
+            "sourceIds": [
+              "IN05",
+              "IN06"
+            ]
+          },
+          {
+            "metricIds": [
+              "M11",
+              "M19"
+            ],
+            "label": "Fort Wayne system context",
+            "value": "Municipal FAQ reports average use of 37 MGD and treatment capacity of 72 MGD.",
+            "status": "Published utility-system context",
+            "boundary": "Whole municipal system. The difference is not demonstrated drought-available supply, and neither number measures Google campus withdrawal.",
+            "sourceIds": [
+              "IN02"
+            ]
+          },
+          {
+            "metricIds": [
+              "M18"
+            ],
+            "label": "La Porte benefits to verify",
+            "value": "Microsoft announces more than 600 permanent first-phase jobs; city announces 15% of tax revenue to schools for 20 years.",
+            "status": "Corporate projection and municipal agreement announcement",
+            "boundary": "Jobs and fiscal commitments, not realized employment or independent net-benefit evaluation; keep environmental burdens separately visible.",
+            "sourceIds": [
+              "IN07",
+              "IN08"
+            ]
+          }
+        ],
+        "missingData": [
+          "For each campus, obtain hourly electricity plus separate IT energy, actual generator hours/fuel, refrigerant inventory and the expansion phase boundary.",
+          "Request monthly intake, discharge, consumption and daily peaks by water source; obtain original dewatering records and hydrologic evidence before attributing reported well impacts.",
+          "Obtain residential day/night noise, modeled and monitored air exposure, actual wastewater chemistry/temperature and parcel ecology; present unmeasured impacts as unknown.",
+          "Verify executed utility/tax agreements, permanent payroll, public upgrade costs and complaint outcomes; distinguish promised benefits from realized distribution."
+        ],
+        "recommendation": "Prioritize an auditable campus operating-data request and local hydrologic/exposure assessment. Keep the 18-million-gallon projection, 1.612-MGD sewer peak and construction pumping in separate evidence rows; none can establish actual campus consumption.",
+        "sourceIds": [
+          "EPRI2026",
+          "EPRI2026METHOD",
+          "IN02",
+          "IN04",
+          "IN05",
+          "IN06",
+          "IN07",
+          "IN08",
+          "IN15"
+        ]
+      },
+      {
+        "id": "california",
+        "title": "California: state growth is quantified; campus impacts remain local",
+        "summary": "California has a modeled electricity trajectory in the dataset. That statewide series cannot establish Santa Clara or other campus water use, air/noise exposure, lifecycle emissions or equitable siting.",
+        "evidence": [
+          {
+            "metricIds": [
+              "M01"
+            ],
+            "label": "State electricity model",
+            "value": "2024: 9.058 TWh central estimate; 8.758–9.357 TWh source-variation range.",
+            "status": "Modeled historical",
+            "boundary": "State modeled small- and large-scale data centers plus cryptocurrency mining; not metered statewide consumption or AI-only demand.",
+            "sourceIds": [
+              "EPRI2026"
+            ]
+          },
+          {
+            "metricIds": [
+              "M02"
+            ],
+            "label": "Modeled peak versus nominal capacity",
+            "value": "2024 modeled peak 1.069 GW; nominal capacity 1.496 GW.",
+            "status": "Modeled historical",
+            "boundary": "Separate EPRI state-level concepts; neither establishes a campus load curve, utility-coincident peak or amount of dispatchable demand response.",
+            "sourceIds": [
+              "EPRI2026",
+              "EPRI2026METHOD"
+            ]
+          },
+          {
+            "metricIds": [
+              "M01",
+              "M02"
+            ],
+            "label": "Conditional 2030 demand",
+            "value": "Low / medium / high: 10.793 / 15.027 / 19.824 TWh/year.",
+            "status": "Scenario or projection",
+            "boundary": "Common EPRI 2026 edition; scenarios reflect development assumptions, not probability intervals. Do not splice with older-edition estimates as a measured trend.",
+            "sourceIds": [
+              "EPRI2026",
+              "EPRI2026METHOD"
+            ]
+          },
+          {
+            "metricIds": [
+              "M08",
+              "M09",
+              "M10",
+              "M11"
+            ],
+            "label": "Campus water evidence gap",
+            "value": "No California location is present in the dataset’s 23-location Google 2024 water sample. No California campus water or WUE value is calculated.",
+            "status": "Unknown in this dataset",
+            "boundary": "The sample is selected company locations, not statewide coverage. Google global figures and other-state campuses cannot fill California observations.",
+            "sourceIds": [
+              "GOOGLE2025",
+              "L02",
+              "L03"
+            ]
+          },
+          {
+            "metricIds": [
+              "M17"
+            ],
+            "label": "Cumulative-burden screening route",
+            "value": "CalEnviroScreen 5.0 is an available California screening method; no campus-to-census-tract overlay or site score has been extracted here.",
+            "status": "Screening or proxy; application not yet populated",
+            "boundary": "Use current indicator definitions and local source/exposure evidence. Statewide percentiles do not establish project causation, individual risk or a permit outcome.",
+            "sourceIds": [
+              "CA_CES50",
+              "L22"
+            ]
+          },
+          {
+            "metricIds": [
+              "M04",
+              "M05",
+              "M12",
+              "M13",
+              "M14",
+              "M15",
+              "M16"
+            ],
+            "label": "Carbon, exposure and lifecycle gaps",
+            "value": "No matched California campus inventory or validated local-impact estimate can be calculated from the present evidence.",
+            "status": "Unknown in this dataset",
+            "boundary": "State electricity totals alone do not establish contractual or marginal GHG, fuel emissions, nearby exposure, noise, discharge effects or material footprints.",
+            "sourceIds": [
+              "ROOT_GHG",
+              "ROOT_EGRID",
+              "L13",
+              "METRIC_LCA"
+            ]
+          }
+        ],
+        "missingData": [
+          "Identify each project and utility connection; request interval loads, IT electricity, electricity accounting instruments and physical supply context before assigning GHG or PUE.",
+          "Request campus water-source meters and return-flow destinations, including monthly dry-season demand and drought assessment; do not infer zero water use from a cooling label.",
+          "Join the actual project and relevant receptors to current CalEnviroScreen indicators, then assess incremental emissions/noise with existing burden and community input.",
+          "Obtain project permits and monitoring, site ecology, equipment lifecycle records, public infrastructure costs and realized employment; keep legal screening separate from impact magnitude."
+        ],
+        "recommendation": "Use EPRI to frame statewide electricity planning, then apply the 20-metric record at the campus, utility, watershed and receptor scales. Start with Santa Clara or another defined project only after its operating boundary and local evidence are established.",
+        "sourceIds": [
+          "EPRI2026",
+          "EPRI2026METHOD",
+          "GOOGLE2025",
+          "L02",
+          "L03",
+          "CA_CES50",
+          "ROOT_GHG",
+          "ROOT_EGRID",
+          "METRIC_LCA",
+          "L13",
+          "L22"
+        ]
+      },
+      {
+        "id": "ai-procurement",
+        "title": "AI procurement: compare equivalent useful service, then total deployment",
+        "summary": "The evidence shows how task, output length, hardware and lifecycle boundary change results. It supports a procurement protocol, not a universal prompt footprint or current vendor ranking.",
+        "evidence": [
+          {
+            "metricIds": [
+              "M01",
+              "M20"
+            ],
+            "label": "Bounded inference-energy benchmark",
+            "value": "Published text-generation mean: 0.047 kWh per 1,000 inferences with 10 new tokens per input.",
+            "status": "Observed benchmark measurement",
+            "boundary": "The study’s models, hardware and test protocol; whole-service lifecycle is not measured. Do not apply this rate to present-day unrestricted chatbot requests.",
+            "sourceIds": [
+              "L06"
+            ]
+          },
+          {
+            "metricIds": [
+              "M01",
+              "M20"
+            ],
+            "label": "Task dependence",
+            "value": "The same study reports means of 0.002 kWh/1,000 text-classification inferences and 2.907 kWh/1,000 image-generation inferences.",
+            "status": "Observed benchmark measurement",
+            "boundary": "Different tasks are not quality-equivalent alternatives. These values demonstrate why procurement must compare a defined service, not arbitrary requests.",
+            "sourceIds": [
+              "L06"
+            ]
+          },
+          {
+            "metricIds": [
+              "M06"
+            ],
+            "label": "Boundary-sensitive training estimate",
+            "value": "BLOOM final training: 24.7 tonnes CO2e for dynamic electricity versus 50.5 tonnes with equipment manufacture and operational-process allocation.",
+            "status": "Life-cycle case estimates using measured training electricity",
+            "boundary": "One model and low-carbon electricity setting. These are nested boundary views of the same case, not values to add or universal AI factors.",
+            "sourceIds": [
+              "L04"
+            ]
+          },
+          {
+            "metricIds": [
+              "M08",
+              "M10"
+            ],
+            "label": "Direct and upstream water illustration",
+            "value": "Published GPT-3 example estimates 5.4 million liters of total operational water, including about 0.7 million liters on site.",
+            "status": "Modeled case estimate",
+            "boundary": "Includes modeled electricity-related water; the site component is already in the total. Not metered current-service water or a universal per-prompt factor.",
+            "sourceIds": [
+              "L05"
+            ]
+          },
+          {
+            "metricIds": [
+              "M16"
+            ],
+            "label": "Materials horizon",
+            "value": "Generative-AI e-waste research projects 1.2–5 million tonnes cumulatively during 2020–2030 across scenarios.",
+            "status": "Scenario or projection",
+            "boundary": "Global cumulative material-flow scenarios, not observed annual waste and not an individual vendor’s lifecycle footprint.",
+            "sourceIds": [
+              "L10"
+            ]
+          },
+          {
+            "metricIds": [
+              "M20"
+            ],
+            "label": "Rebound and claimed benefits",
+            "value": "No deployment-specific demand response or defensible avoided-impact baseline is provided for a purchaser in this dataset.",
+            "status": "Unknown in this dataset",
+            "boundary": "A lower per-task footprint does not establish a lower total footprint if workload volume grows; claims of downstream savings need a counterfactual.",
+            "sourceIds": [
+              "L09",
+              "L08",
+              "METRIC_LCA"
+            ]
+          }
+        ],
+        "missingData": [
+          "Specify the intended task, acceptable quality and latency; benchmark candidate services on the same representative inputs, output limits and request volumes.",
+          "Request model/hardware versions, batch size, utilization, IT and facility energy boundary, serving location, time resolution and direct/indirect water accounting.",
+          "Obtain training/tuning allocation, equipment embodied inventory, expected lifetime and replacement policy; disclose any omitted network, device or idle-capacity burden.",
+          "Estimate annual request volume from the actual use case, test growth and rebound scenarios, and independently substantiate any claimed savings outside the computing service."
+        ],
+        "recommendation": "Evaluate candidates only after they meet common service requirements. Compare absolute annual electricity, GHG, water and equipment burdens alongside per-accepted-task metrics; require versioned disclosure and rebenchmark after material changes.",
+        "sourceIds": [
+          "L04",
+          "L05",
+          "L06",
+          "L08",
+          "L09",
+          "L10",
+          "L17",
+          "METRIC_LCA"
+        ]
+      }
+    ]
+  },
+  "californiaPolicy": [
+    {
+      "id": "ca_cec_existing",
+      "title": "CEC forecasting, benchmarking and generation review",
+      "status": "Existing programs",
+      "statusDate": "2026-10-01",
+      "authority": "California Energy Commission",
+      "scope": "California electricity planning, covered buildings and onsite thermal generation.",
+      "whatItDoes": "IEPR forecasts incorporate utility data-center applications. Covered buildings over 50,000 square feet report annual energy use. Thermal generation of 50 MW or more falls within CEC licensing jurisdiction.",
+      "environmentalApplication": "Connect load forecasts with procurement, local permitting and backup-generator impacts.",
+      "metricsNeeded": [
+        "MW peak",
+        "annual kWh",
+        "generator fuel"
+      ],
+      "limitation": "CEC does not permit data centers themselves. A small-power-plant exemption still requires environmental review and subsequent permits.",
+      "sourceIds": [
+        "CA_CEC"
+      ],
+      "researchQuestion": "How do projected connections compare with realized demand and local pollution?"
+    },
+    {
+      "id": "ca_ab1577",
+      "title": "AB 1577: facility energy reporting",
+      "status": "Enacted; effective 2027-01-01",
+      "statusDate": "2026-09-21",
+      "authority": "CEC; chapter 434",
+      "scope": "Data centers ≥10 MW; specified public, research and utility facilities excluded.",
+      "whatItDoes": "Requires energy, peak-load, PUE and fuel reporting; CEC sets filing timing. Public releases are anonymized aggregates; IEPR load-trend assessments start in 2029.",
+      "environmentalApplication": "Local discretionary applications must estimate electricity, onsite generation and boundary noise.",
+      "metricsNeeded": [
+        "monthly kWh",
+        "peak MW",
+        "PUE",
+        "fuel",
+        "dBA"
+      ],
+      "limitation": "Facility reporting does not isolate AI workloads; customer energy data remain protected.",
+      "sourceIds": [
+        "CA_AB1577"
+      ],
+      "researchQuestion": "Can aggregate disclosures reveal infrastructure pressure while retaining useful local accountability?"
+    },
+    {
+      "id": "ca_ab2469",
+      "title": "AB 2469: water conditions for development",
+      "status": "Enacted; effective 2027-01-01",
+      "statusDate": "2026-09-21",
+      "authority": "Local governments; chapter 436",
+      "scope": "Construction or expansion increasing maximum peak water use; discretionary and ministerial approvals.",
+      "whatItDoes": "Requires water-supply assessment, projected use, efficiency and workforce disclosures, and applicant funding of necessary water infrastructure. Water-scarcity plans begin January 1, 2028.",
+      "environmentalApplication": "Evaluate dry-year reliability alongside project demand and infrastructure costs.",
+      "metricsNeeded": [
+        "peak water",
+        "supply reliability",
+        "drought curtailment",
+        "infrastructure cost"
+      ],
+      "limitation": "No MW cutoff appears here; satisfying conditions does not require approval.",
+      "sourceIds": [
+        "CA_AB2469"
+      ],
+      "researchQuestion": "Are peak cooling demands compatible with enforceable drought reductions and existing customers' needs?"
+    },
+    {
+      "id": "ca_ab2619",
+      "title": "AB 2619: water-use disclosure",
+      "status": "Enacted; effective 2027-01-01",
+      "statusDate": "2026-09-21",
+      "authority": "Cities, counties and water suppliers; chapter 437",
+      "scope": "Data centers across defined size classes, including facilities below 2 MW.",
+      "whatItDoes": "Initial licensing requires good-faith water estimates and source disclosure; renewals report prior-year water use, direct use by source and cooling type.",
+      "environmentalApplication": "Supplier shortage planning must include unconstrained demand from data centers and other large users.",
+      "metricsNeeded": [
+        "maximum day",
+        "maximum month",
+        "average year",
+        "cooling type"
+      ],
+      "limitation": "Withdrawals or deliveries are not automatically consumptive losses or upstream electricity water use.",
+      "sourceIds": [
+        "CA_AB2619"
+      ],
+      "researchQuestion": "How accurately do license estimates predict metered seasonal demand?"
+    },
+    {
+      "id": "ca_sb886",
+      "title": "SB 886: interconnection and cost protection",
+      "status": "Enacted; effective 2027-01-01",
+      "statusDate": "2026-09-21",
+      "authority": "CPUC; chapter 438",
+      "scope": "Participating data-center customers; transmission-specific provisions cover new agreements from January 1, 2027.",
+      "whatItDoes": "Requires tariffs or updated rules by January 1, 2028 to prevent stranded costs and cost shifts. Transmission provisions allocate upgrade costs, constrain refunds and require termination protection.",
+      "environmentalApplication": "Compare committed demand, infrastructure exposure and demand-response participation.",
+      "metricsNeeded": [
+        "load ramp",
+        "upgrade cost",
+        "termination liability"
+      ],
+      "limitation": "Implementation requires CPUC decisions; transmission cost allocation is constrained by federal law.",
+      "sourceIds": [
+        "CA_SB886",
+        "CA_AB2383"
+      ],
+      "researchQuestion": "Do deposits and exit obligations cover realistic cancellation and underutilization scenarios?"
+    },
+    {
+      "id": "ca_ab2383",
+      "title": "AB 2383: service tariffs and procurement",
+      "status": "Enacted; effective 2027-01-01",
+      "statusDate": "2026-09-21",
+      "authority": "CPUC, CCAs and energy service providers; chapter 435",
+      "scope": "Participating customers; generation-tariff thresholds must be set no higher than 25 MW.",
+      "whatItDoes": "Requires cost-protective service tariffs, clean-energy-consistent procurement and generation payment mechanisms lasting at least ten years. CCA/provider generation tariffs are due January 1, 2028.",
+      "environmentalApplication": "Link added load with incremental procurement, collateral and societal-cost contributions.",
+      "metricsNeeded": [
+        "incremental generation cost",
+        "collateral",
+        "minimum payments"
+      ],
+      "limitation": "Generation-specific exemptions and thresholds are not universal exemptions from every provision.",
+      "sourceIds": [
+        "CA_AB2383"
+      ],
+      "researchQuestion": "Which contract terms best prevent stranded procurement without weakening clean-energy requirements?"
+    },
+    {
+      "id": "ca_sb1168",
+      "title": "SB 1168: rate-structure assessment",
+      "status": "Enacted; effective 2027-01-01",
+      "statusDate": "2026-09-21",
+      "authority": "CPUC; chapter 440",
+      "scope": "Data-center transmission and distribution connections in CPUC proceedings.",
+      "whatItDoes": "Requires assessing opportunities for rates that assign reasonable network costs and proportionate load-growth procurement costs to data centers while relieving residential rate pressures.",
+      "environmentalApplication": "Connect resource planning to distributional effects on households, including CARE and FERA participants.",
+      "metricsNeeded": [
+        "allocated network costs",
+        "procurement costs",
+        "household bill effects"
+      ],
+      "limitation": "The act directs assessment; it neither publishes a completed tariff nor establishes a numerical cost allocation.",
+      "sourceIds": [
+        "CA_SB1168"
+      ],
+      "researchQuestion": "How do allocation choices affect low-income customers under different load-growth outcomes?"
+    },
+    {
+      "id": "ca_sb887",
+      "title": "SB 887: CEQA review and conditional streamlining",
+      "status": "Enacted; effective 2027-01-01",
+      "statusDate": "2026-09-21",
+      "authority": "Lead agencies, Governor and LCI; chapter 439",
+      "scope": "Data-center entitlements; categorical-exemption restrictions contain specified facility exceptions.",
+      "whatItDoes": "Extends CEQA coverage and bars categorical exemptions for covered projects. Leadership-project streamlining requires demanding energy, water, cost-protection and community-benefit conditions.",
+      "environmentalApplication": "Streamlining conditions include hourly zero-carbon supply within five years, predominantly new resources, and efficient cooling.",
+      "metricsNeeded": [
+        "hourly carbon-free share",
+        "water source",
+        "noise",
+        "community benefits"
+      ],
+      "limitation": "These streamlining conditions are not universal operating standards for every data center.",
+      "sourceIds": [
+        "CA_SB887"
+      ],
+      "researchQuestion": "Do enforceable project conditions reduce cumulative burdens beyond statutory minimum review?"
+    },
+    {
+      "id": "ca_sb57",
+      "title": "SB 57: earlier cost-shift assessment",
+      "status": "Enacted; effective 2026-01-01",
+      "statusDate": "2025-10-11",
+      "authority": "CPUC; chapter 647",
+      "scope": "Electrical-corporation costs caused by new data-center loads.",
+      "whatItDoes": "Authorizes assessment of procurement, network investment and stranded-asset cost shifts. Any completed assessment must be submitted to legislative committees and posted by January 1, 2027.",
+      "environmentalApplication": "Provides an analytical bridge between electricity growth, infrastructure risk and ratepayer protection.",
+      "metricsNeeded": [
+        "procurement exposure",
+        "stranded assets",
+        "customer cost allocation"
+      ],
+      "limitation": "SB 57 authorizes assessment; it does not itself order a new tariff. Section sunsets January 1, 2031.",
+      "sourceIds": [
+        "CA_SB57"
+      ],
+      "researchQuestion": "Which documented cost risks warrant specific safeguards in later tariff proceedings?"
+    },
+    {
+      "id": "ca_ab93",
+      "title": "AB 93: vetoed water proposal",
+      "status": "Vetoed; no effective date",
+      "statusDate": "2025-10-11",
+      "authority": "Governor's veto; 2025 legislative record",
+      "scope": "Historical data-center water-policy proposal.",
+      "whatItDoes": "The Governor returned AB 93 without approval. It must not be displayed as an operative water-reporting mandate.",
+      "environmentalApplication": "Compare the unsuccessful 2025 proposal with the separately enacted 2026 water-disclosure laws, AB 2469 and AB 2619.",
+      "metricsNeeded": [
+        "bill version",
+        "status date",
+        "replacement provisions"
+      ],
+      "limitation": "A vetoed proposal supplies legislative context, not compliance authority; later bills require independent scope and effective-date checks.",
+      "sourceIds": [
+        "CA_AB93",
+        "CA_AB2469",
+        "CA_AB2619"
+      ],
+      "researchQuestion": "What changed between the vetoed proposal and the enacted water protections?"
+    },
+    {
+      "id": "ca_ces",
+      "title": "CalEnviroScreen 5.0: cumulative-burden screening",
+      "status": "Final tool; not a facility permit",
+      "statusDate": "2026-07-01",
+      "authority": "OEHHA and CalEPA",
+      "scope": "California census-tract pollution burden and population vulnerability.",
+      "whatItDoes": "Updates screening data and methods, adding diabetes prevalence and small air-toxic sites. It informs CalEPA's final September 18, 2026 disadvantaged-community designation.",
+      "environmentalApplication": "Screen proposed sites, then investigate nearby receptors, emissions, noise and community priorities.",
+      "metricsNeeded": [
+        "tract percentile",
+        "pollution indicators",
+        "vulnerable populations"
+      ],
+      "limitation": "A screening percentile neither measures a project's incremental health risk nor determines permit approval.",
+      "sourceIds": [
+        "CA_CES50"
+      ],
+      "researchQuestion": "Would the project add burdens where exposure and vulnerability already overlap?"
+    },
+    {
+      "id": "ca_water_planning",
+      "title": "DWR: supplier shortage and drought planning",
+      "status": "Existing annual reporting",
+      "statusDate": "2026-10-01",
+      "authority": "DWR; Water Code §10632.1",
+      "scope": "Urban suppliers exceeding 3,000 connections or 3,000 acre-feet annually.",
+      "whatItDoes": "Requires annual supply-demand assessment and shortage reporting, generally by July 1; specified imported-water allocation timing can extend submission.",
+      "environmentalApplication": "Use supplier assessments, shortage-contingency plans and drought-risk assessments to contextualize new cooling demand.",
+      "metricsNeeded": [
+        "supplier shortfall",
+        "drought supply",
+        "response triggers",
+        "seasonal demand"
+      ],
+      "limitation": "Regional or statewide sufficiency does not establish site-specific supply. Assessments require ongoing updates as actual conditions change.",
+      "sourceIds": [
+        "CA_DWR"
+      ],
+      "researchQuestion": "What restrictions apply when facility demand peaks during a supplier shortage?"
+    },
+    {
+      "id": "ca_sb253",
+      "title": "SB 253: corporate emissions disclosure",
+      "status": "Enacted statute; subsequent regulatory approval unverified",
+      "statusDate": "2026-09-01",
+      "authority": "CARB; Health and Safety Code §38532",
+      "scope": "U.S. entities doing business in California with annual revenue above $1 billion.",
+      "whatItDoes": "Requires Scope 1–2 reporting in 2026 and Scope 3 from 2027. CARB's September notice identifies November 10, 2026, conditional on OAL approval.",
+      "environmentalApplication": "Use corporate emissions to supplement facility and supply-chain evidence.",
+      "metricsNeeded": [
+        "Scope 1",
+        "Scope 2",
+        "Scope 3",
+        "reporting boundary"
+      ],
+      "limitation": "Corporate totals are not facility or AI-model measurements. This review did not establish whether OAL approved the regulation after CARB’s September 1 notice.",
+      "sourceIds": [
+        "CA_CARB253"
+      ],
+      "researchQuestion": "Can corporate inventories be reconciled with location-specific electricity and equipment emissions?"
+    }
+  ],
+  "priorWork": {
+    "summary": "CivicShield WIA and NAWEI already translate environmental review into workforce governance: assess before deployment, compare alternatives, consult affected people, assign mitigation, and monitor outcomes. The supplied artifacts do not measure physical environmental impacts. Extend their workflow with explicit baselines, attributable changes, lifecycle boundaries, cumulative effects, uncertainty, and enforceable monitoring. Keep workforce outcomes and AI's physical footprint visible as separate dimensions.",
+    "existingConcepts": [
+      {
+        "name": "Purpose, baseline, alternatives",
+        "existingApproach": "The WIA plan compares non-AI, lower-impact AI, phased, and human-review alternatives.",
+        "environmentalExtension": "Use equal service volume and quality across alternatives. Compare baseline versus deployment changes in task-hours, employment, earnings, service outcomes, energy, emissions, and water.",
+        "caveat": "The baseline and counterfactual must be documented; current staffing is not automatically the future without AI."
+      },
+      {
+        "name": "Exposure and consequence",
+        "existingApproach": "Task inventories distinguish automation, augmentation, adoption intensity, and human judgment.",
+        "environmentalExtension": "Separate hazard, exposure, severity, likelihood, duration, and reversibility. Record affected task-hours and workers independently from displacement, wage loss, safety, and service failures.",
+        "caveat": "Exposure is not displacement; a composite score is not a probability."
+      },
+      {
+        "name": "Tiered review",
+        "existingApproach": "Four score bands suggest clearance, assessment, impact statement, or executive review.",
+        "environmentalExtension": "Add documented significance criteria and escalation triggers for concentrated, irreversible, cumulative, or uncertain harms. Permit human escalation regardless of aggregate score.",
+        "caveat": "Bands are proposed governance choices, not validated thresholds or legal clearance."
+      },
+      {
+        "name": "Distribution and cumulative burden",
+        "existingApproach": "Equity sensitivity, wage bands, counties, bargaining units, and regional resilience inform review.",
+        "environmentalExtension": "Evaluate repeated deployments across employers and regions, overlapping transition burdens, affected communities, and unequal access to training or clean infrastructure.",
+        "caveat": "Protect privacy and report subgroup uncertainty; regional correlation does not prove individual harm."
+      },
+      {
+        "name": "Mitigation and residual effects",
+        "existingApproach": "Avoid displacement, redesign roles, phase rollout, and fund training or worker supports with owners and dates.",
+        "environmentalExtension": "Compare pre-control and residual impacts; track implementation, worker retention, real earnings, placement quality, and environmental reductions against explicit targets.",
+        "caveat": "Training participation is not verified employment recovery; modeled improvement is not achieved mitigation."
+      },
+      {
+        "name": "Lifecycle physical footprint",
+        "existingApproach": "No physical environmental inventory appears in the reviewed files.",
+        "environmentalExtension": "Add training and inference energy, electricity emissions, direct and indirect water consumption, hardware manufacturing, replacement, and waste; identify site, time, allocation, and supplier evidence.",
+        "caveat": "Avoid double counting; report absolute totals and useful-service intensity separately."
+      },
+      {
+        "name": "California policy and public accountability",
+        "existingApproach": "The pitch proposes procurement gates, public summaries, comment, transition funding, and an oversight office.",
+        "environmentalExtension": "Develop pilot procurement disclosures, alternatives memoranda, accountable mitigation commitments, public monitoring, and reassessment when scope changes.",
+        "caveat": "These are policy options. The pitch's N-6-26 reference and any legal requirements require current primary-source verification."
+      }
+    ],
+    "recommendedWorkflow": [
+      "Register the deployment, decision authority, service target, boundaries, baseline, and affected groups.",
+      "Inventory tasks and workforce outcomes alongside a separate physical environmental inventory.",
+      "Compare realistic alternatives with consistent assumptions, units, evidence quality, and uncertainty ranges.",
+      "Review distribution, cumulative effects, significance, and stakeholder evidence; document escalation rationale.",
+      "Assign funded controls, owners, deadlines, residual impacts, monitoring thresholds, and corrective actions.",
+      "Publish an accessible summary; reconcile observed results with forecasts and reopen review after material changes."
+    ],
+    "avoidClaims": [
+      "NAWEI weights are validated: the plan uses six factors, while the methodology and calculator use five with different weights.",
+      "Risk score multiplied by worker count estimates exposed workers: the prototype does this without an exposure model.",
+      "The prototype forecasts measured outcomes: its percentage-labeled controls add score points annually, and its heat map is a yearly strip.",
+      "Evidence and confidence are implemented: the plan calls for them, but the calculator lacks those inputs.",
+      "A score proves statutory compliance, mandates 30-day public comment, or substitutes for applicable environmental review."
+    ],
+    "sourceFiles": [
+      "nawei-methodology-v1.md",
+      "ai-workforce-impact-assessment-tool-plan.md",
+      "civicshield-ai-pitch-narrative-v1.md",
+      "nawei-assessment-tool.html"
+    ]
+  }
+}

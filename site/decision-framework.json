@@ -1,0 +1,223 @@
+{
+  "title": "Should a community support this data center?",
+  "asOf": "2026-10-01",
+  "frameworkVersion": "1.0",
+  "frameworkStatus": "Editorial decision framework proposed by this dashboard; not a validated impact score, legal determination, or finding about an individual facility.",
+  "editorialTake": {
+    "headline": "Support useful computing when the project earns public trust and meets enforceable limits.",
+    "position": "Our position is conditional support. Data centers can deliver useful digital services, construction work and local revenue. We oppose approval of a particular proposal when credible evidence shows unacceptable water, pollution, grid or public-cost impacts that the proposal does not remedy. Where essential evidence is missing, withhold a recommendation and require disclosure before an irreversible commitment. A project can become supportable through a better site, a smaller first phase, cleaner power, lower-water cooling or stronger public protections.",
+    "qualification": "This is an explicit policy judgment informed by the evidence. It is not a scientific consensus that every project should proceed, nor a claim that every proposal causes harm. A decision about one campus does not decide whether all data centers should be banned.",
+    "sourceIds": ["JLARC2024", "L03", "L09", "L15", "AEPOHIO2025"]
+  },
+  "strongestCases": [
+    {
+      "side": "For",
+      "title": "Useful infrastructure and local economic value",
+      "argument": "Digital services need physical infrastructure. A well-sited facility can add dependable services and tax revenue, and its construction can support local employment. These benefits become persuasive when the intended service, public receipts, ongoing jobs and infrastructure obligations are documented for the actual proposal.",
+      "evidence": "Virginia's legislative audit found economic benefits concentrated in construction, with substantial local revenues in some jurisdictions and comparatively few continuing workers per building. These findings do not establish the net benefit of a new campus elsewhere.",
+      "sourceIds": ["JLARC2024"],
+      "test": "Publish a conservative, independently reviewed fiscal comparison with the no-project and alternative-land-use cases. Report construction job-years separately from permanent full-time-equivalent jobs. Compare computing alternatives at equivalent service quality."
+    },
+    {
+      "side": "Against",
+      "title": "A bad site or unprotected expansion can transfer costs to others",
+      "argument": "A proposal is harder to justify when it competes for drought-limited water, creates unresolved neighborhood exposure, expands fossil dependence, or leaves households paying for speculative utility infrastructure. Carbon contracts or job promises do not cancel these separate harms.",
+      "evidence": "U.S. footprint research identifies geographic differences in water and electricity impacts. Virginia's audit identified prospective system-cost and stranded-investment risks; that same audit found data centers were paying their currently allocated cost of service, so a present-day subsidy should not be assumed everywhere.",
+      "sourceIds": ["L03", "JLARC2024"],
+      "test": "Examine the affected watershed, utility service area, nearby receptors and full development phases. Identify who bears the downside if demand, clean supply or promised benefits do not materialize."
+    },
+    {
+      "side": "Conditional",
+      "title": "Approve a bounded phase with measurable obligations",
+      "argument": "A project can be worth supporting when service and public benefits are credible, constraints are assessed before approval, obligations are enforceable, and later expansion depends on measured performance. The conditions must identify quantities, dates, responsible parties, verification and remedies.",
+      "evidence": "AEP Ohio's territory-specific tariff illustrates load studies, contractual commitments and cancellation protection. California's chaptered 2026 legislation creates additional reporting and cost-protection mechanisms with future effective dates; it is not evidence that any project has already passed an assessment.",
+      "sourceIds": ["AEPOHIO2025", "CA_AB1577", "CA_AB2469", "CA_SB886", "CA_AB2383"],
+      "test": "Require a signed condition register before the relevant approval, with an independently reviewable plan for each applicable decision gate below."
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "D01",
+      "title": "Useful service and avoided demand",
+      "question": "What useful result do we receive for the computing consumed?",
+      "metricIds": ["M01", "M20"],
+      "for": "The proposal supplies an identified service or public benefit, and a smaller model, reused system or existing capacity cannot meet the same tested requirements with lower total burden.",
+      "against": "The benefit case depends on untested claims that AI will offset its footprint, or on efficiency per request while total deployment grows without bounds.",
+      "evidenceGate": "Describe the service and realistic alternatives. Where AI performance or avoided emissions justify procurement, provide a quality-equivalent baseline, measured useful outcomes and a complete measurement boundary. Do not require confidential customer content to assess aggregate impacts.",
+      "conditions": [
+        "Before procurement or a public-benefit incentive, name the outcome metric, minimum acceptable quality, baseline alternative and evaluation period; compare kWh and life-cycle emissions per successful outcome.",
+        "Set an absolute annual electricity and emissions budget for the evaluated service, alongside intensity metrics; report workload volume, failed outputs and human rework so rebound remains visible.",
+        "Keep claimed avoided emissions in a separate consequential assessment with a counterfactual and uncertainty range; do not subtract them from the facility's inventory."
+      ],
+      "whatWouldChangeTheTake": "A replicated service-quality evaluation and measured savings relative to a credible alternative strengthen support; expanding total demand or a failed quality test weakens it.",
+      "sourceIds": ["L06", "L09", "L17"]
+    },
+    {
+      "id": "D02",
+      "title": "Jobs, public revenue and who pays",
+      "question": "Do public benefits survive after public costs and downside risks are counted?",
+      "metricIds": ["M18"],
+      "for": "Net public receipts and local employment are credible, benefits are additional, and the developer covers attributable infrastructure and cancellation costs.",
+      "against": "A large investment headline hides low continuing employment, costly tax exemptions, unprotected utility investment or costs transferred to existing customers.",
+      "evidenceGate": "Disclose annual tax receipts after abatements, grants, attributable infrastructure and service costs, forecast assumptions, construction job-years, permanent FTEs, wages and local hiring. Separate municipal, state, ratepayer and developer accounts to avoid counting a transfer as a net gain.",
+      "conditions": [
+        "File a year-by-year fiscal assessment with discount rate, project lifetime, alternative land use, low-occupancy and cancellation cases. Show the remaining public exposure in dollars under each case.",
+        "Specify responsibility for water and power upgrades; secure regulator-approved minimum payments, collateral or termination protection proportionate to demonstrable cost exposure.",
+        "Tie discretionary incentives to audited milestones and explicit repayment provisions. Publish actual permanent FTEs, wages and tax receipts annually, distinct from contractor estimates."
+      ],
+      "whatWouldChangeTheTake": "Auditable net local benefits with bounded public liabilities strengthen support. A fiscal model showing uncompensated public losses or refusal to secure speculative infrastructure costs weakens it.",
+      "sourceIds": ["JLARC2024", "AEPOHIO2025", "CA_AB2469", "CA_SB886", "CA_AB2383"]
+    },
+    {
+      "id": "D03",
+      "title": "Power, carbon and grid reliability",
+      "question": "Can the added load operate within a credible grid and climate plan?",
+      "metricIds": ["M01", "M02", "M03", "M04", "M05", "M07"],
+      "for": "The project has deliverable supply and infrastructure, credible incremental clean resources, low absolute emissions and tested flexibility that protects reliability.",
+      "against": "A near-term load ramp precedes required capacity, relies on unresolved fossil expansion, or uses annual renewable certificates as proof of no hourly emissions.",
+      "evidenceGate": "Record the phased connection MW, hourly load profile, annual MWh, grid study, resource commissioning dates, direct fuel, location- and market-based emissions, and any consequential emissions model. Capacity announcements and service requests are not delivered power or metered consumption.",
+      "conditions": [
+        "Condition each energization phase on the responsible utility's capacity and reliability findings. Identify a firm maximum MW and date for every phase; document dependencies and outage behavior.",
+        "Specify an annual absolute tCO2e budget, reporting boundary and separately stated hourly clean-energy matching target. Identify delivery region, commissioning date, ownership and retirement of attributes, and gaps in coverage.",
+        "Verify claimed curtailment in MW and duration against a disclosed baseline, including recovery load and generator use. Publish monthly energy and peak demand; reopen expansion approval when agreed limits are exceeded."
+      ],
+      "whatWouldChangeTheTake": "Earlier clean-resource delivery, independently verified flexibility or a smaller load phase can support approval. Delayed supply, extra fossil dispatch or repeated load-limit failures can justify deferral or opposition to expansion.",
+      "sourceIds": ["LBNL2024", "ROOT_GHG", "ROOT_EGRID", "POLICY_MARGINAL2025", "CA_AB1577", "CA_AB2383"]
+    },
+    {
+      "id": "D04",
+      "title": "Water source, season and drought resilience",
+      "question": "Will this campus consume water that its basin and neighbors can afford to lose, especially on peak days?",
+      "metricIds": ["M08", "M09", "M10", "M11"],
+      "for": "Seasonal supply and ecological needs remain protected under cumulative drought conditions, and cooling design minimizes consumptive losses without moving excessive impacts elsewhere.",
+      "against": "The source is constrained, peak cooling coincides with shortage, groundwater impacts remain unresolved, or a regional replenishment claim substitutes for local water availability.",
+      "evidenceGate": "Separate withdrawal or utility delivery, discharge and consumption; identify each source, basin, permit, cooling mode and phase. Obtain annual, maximum-month and maximum-day projections, dry-year supply analysis and existing users' needs. Annual WUE alone cannot pass this gate.",
+      "conditions": [
+        "Specify source-specific annual withdrawal and consumption limits, maximum-day delivery, drought triggers and enforceable curtailment priorities, using the local water authority's supported quantities rather than a universal gallon limit.",
+        "Meter all relevant imports, returns and material losses; publish monthly source-specific volumes and peak-day totals. Explain uncertainty when water balance is estimated.",
+        "Evaluate committed neighboring projects, ecological flow or groundwater constraints, wastewater capacity and reclaimed-water alternatives; pair each cooling option with its electricity effects."
+      ],
+      "whatWouldChangeTheTake": "A substantiated lower-consumption design, reliable dry-year supply and enforceable restrictions strengthen support. An adverse basin balance or documented unmitigated interference with existing supplies supports opposition to that design or location.",
+      "sourceIds": ["L02", "L03", "POLICY_WATER2026", "ROOT_AQUEDUCT", "CA_AB2469", "CA_AB2619"]
+    },
+    {
+      "id": "D05",
+      "title": "Air pollution, noise and nearby residents",
+      "question": "What changes at the places where people live, learn and work?",
+      "metricIds": ["M12", "M13", "M17"],
+      "for": "Baseline monitoring and cumulative modeling support a compatible location, cleaner equipment, controlled testing and effective complaint remedies.",
+      "against": "Credible receptor-level evidence identifies unresolved pollution or persistent noise, or the permit ignores the full generator fleet and neighboring facilities.",
+      "evidenceGate": "List engine quantities, ratings, fuel, emission controls and annual operating scenarios; assess pollutant exposure at sensitive receptors. Obtain day/night noise baselines and operating predictions, including tonal and low-frequency characteristics. Regional averages cannot establish a particular home's exposure.",
+      "conditions": [
+        "Specify allowed engine uses and hours, NOx and PM emissions limits, monitoring method and enforcement authority in the applicable permit; test cumulative exposure under realistic coincident operation.",
+        "Set receptor-specific daytime, nighttime and low-frequency or tonal noise criteria using applicable local rules and a competent acoustical assessment, with measurement locations, averaging periods and weather conditions recorded.",
+        "Conduct commissioning verification and recurring checks; publish complaints and resolution times without personal identifiers, with an enforceable mitigation and re-testing process."
+      ],
+      "whatWouldChangeTheTake": "Verified quieter design, relocation, cleaner power and enforceable exposure reductions strengthen support. Persistent exceedances or an unresolvable residential conflict strengthen opposition. A modeled health-damage estimate alone is not a diagnosis or proof that a particular campus caused illness.",
+      "sourceIds": ["JLARC2024", "L14", "METRIC_ENGINES", "METRIC_NOISE"]
+    },
+    {
+      "id": "D06",
+      "title": "Land, habitat and discharge",
+      "question": "What physical changes remain after construction and in the receiving environment?",
+      "metricIds": ["M14", "M15"],
+      "for": "A compatible already-developed site avoids sensitive habitat, and stormwater and wastewater discharges have workable monitored controls.",
+      "against": "The development or its dedicated infrastructure causes unacceptable habitat loss, flood exposure, thermal discharge or chemical loading that has no feasible enforceable remedy.",
+      "evidenceGate": "Map the entire campus and attributable access, power and water infrastructure. Identify land-cover change, sensitive habitats, flood exposure, construction disturbance, wastewater volume, temperature and constituents. Review the actual receiving water and permit boundary.",
+      "conditions": [
+        "Publish hectares disturbed by phase and identify no-disturbance areas and restoration obligations, verified against a pre-construction baseline and locally applicable requirements.",
+        "State discharge limits with units, averaging periods, sample points and frequency; require reporting of exceedances and an actionable corrective plan.",
+        "Compare alternative sites and designs before relying on restoration or offsets, and specify funded closure and site-restoration responsibilities."
+      ],
+      "whatWouldChangeTheTake": "A lower-impact site, reduced footprint or demonstrated treatment performance can change the recommendation. Irreversible prohibited impacts or infeasible discharge controls support opposition as proposed.",
+      "sourceIds": ["METRIC_EFFLUENT", "METRIC_BIODIVERSITY"]
+    },
+    {
+      "id": "D07",
+      "title": "Equipment life, materials and waste",
+      "question": "Does apparent operating efficiency justify the equipment being manufactured and discarded?",
+      "metricIds": ["M06", "M16"],
+      "for": "Procurement demonstrates lower life-cycle impacts, useful hardware life is extended, and reuse and safe end-of-life handling are traceable.",
+      "against": "Rapid replacement shifts burdens upstream or overseas, while a narrow operational footprint omits manufacturing, construction or disposal.",
+      "evidenceGate": "Provide a life-cycle boundary, inventory or supplier estimates with uncertainty, equipment quantities and expected lifetime. Compare keeping existing equipment with replacement at equivalent useful service. Track actual destinations rather than equating shipment to recycling with verified recovery.",
+      "conditions": [
+        "Report embodied tCO2e separately from operational emissions, with allocation and lifetime assumptions; present replacement alternatives under the same service demand and grid scenarios.",
+        "Report equipment mass acquired, reused, retired and processed annually, with auditable disposition records and verified data-erasure procedures.",
+        "Include repairability, take-back and end-of-life obligations in procurement, and test whether earlier replacement actually reduces total life-cycle burdens."
+      ],
+      "whatWouldChangeTheTake": "A credible life-cycle comparison and verified reuse can support a procurement choice. Missing supply-chain data require uncertainty disclosure and further evidence; they do not prove a specific downstream injury.",
+      "sourceIds": ["L04", "L10", "L19", "METRIC_LCA"]
+    },
+    {
+      "id": "D08",
+      "title": "Community accountability and cumulative burden",
+      "question": "Can affected people see the evidence, challenge it and enforce the promises?",
+      "metricIds": ["M17", "M19"],
+      "for": "Decisions expose the cumulative burden, identify who benefits, respond to affected communities and give commitments a named authority, budget and remedy.",
+      "against": "Approvals precede material disclosures, benefits and burdens fall on different populations without remedies, or voluntary promises cannot be checked or enforced.",
+      "evidenceGate": "Identify affected communities and the relevant consultation processes; publish the nonconfidential assessment, alternatives, comments, responses, permit conditions and monitoring responsibilities. Keep resident experience, measured exposure and causal health evidence distinct.",
+      "conditions": [
+        "Maintain a public condition register with responsible party, numeric limit where relevant, effective date, evidence due date, verifier, remedy and appeal or complaint route.",
+        "Review cumulative burdens in the host area and electricity/water supply areas; report benefits and exposures separately by place and affected population rather than averaging away local harms.",
+        "Provide a change log and correction route. Reassess after a material expansion, cooling change, supply change or validated breach; do not let community-benefit payments waive environmental requirements."
+      ],
+      "whatWouldChangeTheTake": "Meaningful disclosure, independent review and enforceable changes can improve support. A public poll or number of comments alone cannot establish safety, public consent or the absence of an environmental inequity.",
+      "sourceIds": ["L12", "CA_CES50", "CA_AB1577", "CA_AB2469", "IN09"]
+    }
+  ],
+  "recommendationRules": {
+    "label": "Evidence gates, not a popularity score",
+    "principle": "Benefits and harms remain visible separately. Do not add unlike quantities, assign arbitrary weights, or allow a tax receipt to cancel an unresolved health or water constraint. Apply jurisdiction-specific requirements and clearly labeled dashboard policy criteria separately.",
+    "gateStates": [
+      {"id": "met", "label": "Evidence supports the condition", "definition": "A named reviewer links current stage-appropriate evidence to a stated criterion and explains why it is met. Pre-construction modeled compliance must remain labeled projected, not measured."},
+      {"id": "not_met", "label": "Documented unresolved condition", "definition": "Evidence establishes that the named criterion is not satisfied for this proposal or phase; the finding records whether a feasible enforceable remedy exists."},
+      {"id": "unknown", "label": "Insufficient evidence", "definition": "Evidence is absent, contradictory, outdated, not applicable to this boundary, or too weak to resolve the criterion. This is not proof of harm."},
+      {"id": "not_applicable", "label": "Not applicable with explanation", "definition": "A reviewer documents why the criterion does not apply to the decision being made. Absence of data is not a justification."}
+    ],
+    "outcomes": [
+      {"id": "unreviewed", "label": "Not yet assessed", "rule": "No completed human review, only tracker or news discovery, or unresolved facility/filing identity. Never auto-publish a for/against verdict from extracted text."},
+      {"id": "oppose_as_proposed", "label": "Against this proposal as written", "rule": "A human reviewer confirms at least one critical condition is not met, documents the supporting primary evidence, and finds no adequate enforceable remedy in the current proposal. Identify the violated legal requirement or the explicitly declared editorial criterion; do not imply the two are identical."},
+      {"id": "revise_and_resubmit", "label": "Require changes before support", "rule": "A critical condition is not met but a specific feasible remedy is documented. Name the necessary design, location, load, contract or permit change and the evidence needed to verify it. Do not describe an unsigned promise as a completed remedy."},
+      {"id": "evidence_needed", "label": "Withhold judgment: evidence needed", "rule": "No confirmed unremedied critical failure determines the outcome, but one or more applicable critical conditions are unknown or stale. List the missing documents and responsible source, rather than labeling the project harmful or harmless."},
+      {"id": "conditional_support", "label": "For the assessed phase, with conditions", "rule": "All applicable critical conditions are met using stage-appropriate evidence, noncritical gaps and residual impacts are explicit, and monitoring, enforcement and review dates are documented. Support applies only to the named phase and assumptions, and is revisited when they change."}
+    ],
+    "criticalityRule": "Before evaluating a record, a reviewer designates critical conditions with reasons. Safety, applicable binding requirements, material resource adequacy, enforceable accountability and material public cost exposure require explicit treatment; a claimed benefit used to justify an incentive must also be tested. All eight dimensions must be marked applicable or justified as not applicable, without presuming every submetric is a universal legal prerequisite.",
+    "minimumRecordFields": ["projectId", "facilityBoundary", "phase", "decisionType", "reviewDate", "reviewer", "assessmentStatus", "editorialOutcome", "legalStatusSeparate", "criterionId", "criterionType: legal or editorial", "thresholdAndUnitsOrQualitativeCriterion", "criticalityAndReason", "gateState", "evidenceIds", "primarySourceUrl", "documentDate", "pageOrSection", "evidenceStatus: measured/projected/modeled/alleged", "limitation", "conditionOwner", "dueDate", "remedy", "whatWouldChangeRecommendation"],
+    "implementationNote": "A filter may count documents or show gate completion, but completion is not environmental performance. If the application cannot preserve review provenance and the fields needed for a gate, display the general framework and 'Not yet assessed' instead of calculating a verdict."
+  },
+  "conditionTemplate": {
+    "text": "By [date], [responsible party] must demonstrate [quantity and boundary] satisfies [named applicable limit or clearly labeled proposed condition], using [measurement or model and uncertainty], reviewed by [authority/verifier]. Failure triggers [specific corrective action, expansion hold or contractual remedy authorized by the decision].",
+    "note": "No single MW, gallons/day, dBA, jobs/MW or PUE threshold is scientifically sufficient across all sites. A useful condition specifies the local constraint, measurement period and enforcement mechanism. Any numerical target proposed by this dashboard must be labeled a policy choice, not an existing universal legal limit."
+  },
+  "prospectiveDecisionUse": [
+    "Treat TrackDataCenters and Cleanview as discovery aids unless their record links to a verified primary filing; reproduce only authorized information and preserve their provenance.",
+    "Resolve project aliases, developer entities, campus phases and duplicate filings before aggregating. A permit application, approved permit, construction start and operating meter reading are different events.",
+    "Store both document publication date and retrieval date. A newly ingested older filing should not appear as a new project event.",
+    "Preserve original units and source passages with normalized quantities. Distinguish requested MW, utility-approved MW, built MW and operating peak MW; likewise separate water capacity, withdrawal, consumption and discharge.",
+    "Use AI to suggest fields and highlight contradictions with source citations. Require a reviewer for project status, numerical corrections, legal interpretation and editorial recommendations.",
+    "Keep allegations and local resistance visible with their source and status. Opposition is evidence of a governance issue or reported experience, not by itself proof of an environmental exceedance.",
+    "Archive superseded claims rather than silently replacing them. Show what changed, which condition it affects and whether the prior recommendation needs review."
+  ],
+  "applicationExamples": [
+    {"exampleType": "Illustrative, not an actual project", "case": "A tracker lists a new 200 MW campus but no verified filing is linked.", "outcome": "Not yet assessed", "why": "Discovery is not a primary filing or evidence of an actual load. Verify identity, phase and source before evaluating impacts."},
+    {"exampleType": "Illustrative, not an actual project", "case": "A filed proposal gives annual water use, but its drought and maximum-day requirements are unavailable.", "outcome": "Withhold judgment: evidence needed", "why": "The annual quantity cannot resolve the local water-resilience gate. Missing peak data do not establish that harm has occurred."},
+    {"exampleType": "Illustrative, not an actual project", "case": "An official assessment finds the proposed withdrawal incompatible with a binding source constraint, and the submitted design offers no workable remedy.", "outcome": "Against this proposal as written", "why": "The opposition follows an identified project-specific failed condition. A lower-water design or different source could change the result."},
+    {"exampleType": "Illustrative, not an actual project", "case": "A revised first phase has adequate documented supply, assessed cumulative impacts, secured costs and enforceable monitoring; later phases remain conditional.", "outcome": "For the assessed phase, with conditions", "why": "Support is limited to the reviewed phase. Future capacity and projected performance are not treated as observed outcomes."}
+  ],
+  "scientificLimits": [
+    "The framework is a transparent normative synthesis, not a validated prediction of health outcomes or public acceptance.",
+    "National or state scenario results cannot supply missing facility-level measurements. Evidence of association, a complaint and a modeled causal pathway require different labels.",
+    "Direct generator emissions, electricity-system pollution, manufacturing burdens and service benefits have different populations, places and time horizons; retain those boundaries.",
+    "The public-opinion source ROOT_HEERING2026 studies German respondents. Its numerical preference effects should not be presented as U.S. public opinion.",
+    "A low-carbon claim is not a zero-impact claim. Even a credible no-increase carbon scenario leaves water, materials, land, health and distributional questions.",
+    "Prospective collection can support before/after and comparison-site research, but researcher access must preserve source versions, missingness, definitions and permit-stage changes to avoid false causal conclusions."
+  ],
+  "newSources": [],
+  "verificationLog": [
+    {"date": "2026-10-01", "sourceId": "JLARC2024", "url": "https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf", "scope": "Primary report, summary pp. i-viii: construction benefits, local taxes, current cost allocation versus future system-cost risks, local noise and water context. All proposed gates are this dashboard's synthesis, not adopted JLARC requirements."},
+    {"date": "2026-10-01", "sourceId": "AEPOHIO2025", "url": "https://www.aepohio.com/company/about/rates/data-center-tariff/", "scope": "Current utility tariff explainer: effective July 23, 2025; mandatory service process; load studies and contracts; cancellation, ramp, minimum-payment and collateral provisions. Limited to AEP Ohio territory."},
+    {"date": "2026-10-01", "sourceId": "L09", "url": "https://www.nature.com/articles/s41558-022-01377-7", "scope": "Publisher abstract and metadata: computing, application and system-level effects; no claim that a particular AI use yields net climate benefits."},
+    {"date": "2026-10-01", "sourceId": "L04", "url": "https://jmlr.org/papers/v24/23-0069.html", "scope": "Publisher article landing page; life-cycle accounting boundary used as existing framework support."},
+    {"date": "2026-10-01", "sourceId": "ROOT_HEERING2026", "url": "https://www.nature.com/articles/s41467-026-76500-9", "scope": "Verified the experiment surveyed Germany, n=2,523. Excluded preference percentages from U.S. decision claims."}
+  ]
+}
