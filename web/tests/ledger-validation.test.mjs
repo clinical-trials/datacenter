@@ -65,6 +65,24 @@ test('unknown metrics can be omitted; invalid numbers or missing units/boundarie
   assert.throws(() => validateRecord(fixture({ metrics: Array.from({ length: 13 }, () => fixture().metrics[0]) })), /At most 12/);
 });
 
+test('undated brochures retain an observation date without inventing publication or filing', () => {
+  const r = validateRecord(fixture({filedDate:null,publishedDate:null,observedDate:'2026-01-20',sourceSha256:'a'.repeat(64)}));
+  assert.equal(r.filedDate,null); assert.equal(r.publishedDate,null);
+  assert.equal(r.observedDate,'2026-01-20'); assert.equal(r.dateKind,'observed');
+  assert.equal(r.documentDate,'2026-01-20'); assert.equal(r.sourceSha256,'a'.repeat(64));
+  assert.throws(()=>validateRecord(fixture({filedDate:null,observedDate:tomorrow})));
+  assert.throws(()=>validateRecord(fixture({sourceSha256:'not-a-sha256'})));
+});
+
+test('re-observing an undated copy does not duplicate it; different source fingerprints stay distinct', async () => {
+  const base={filedDate:null,publishedDate:null,observedDate:'2026-01-20',sourceSha256:'a'.repeat(64)};
+  const a=validateRecord(fixture(base));
+  const b=validateRecord(fixture({...base,observedDate:'2026-02-20'}));
+  const c=validateRecord(fixture({...base,sourceSha256:'b'.repeat(64)}));
+  assert.equal(await recordKey(a),await recordKey(b));
+  assert.notEqual(await recordKey(a),await recordKey(c));
+});
+
 test('an imported record cannot self-assign source-checked status or a reviewer identity', () => {
   const result = validateRecord(fixture({ reviewStatus: 'source-checked', reviewer: 'Verified official', reviewNote: 'Already confirmed', version: 999 }));
   assert.equal(result.reviewStatus, 'unreviewed');

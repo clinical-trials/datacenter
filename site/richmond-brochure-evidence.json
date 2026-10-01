@@ -1,0 +1,83 @@
+{
+  "records": [
+    {
+      "id": "baseline-richmond-operator-brochure-20261001",
+      "project": "Iron Mountain Richmond campus",
+      "state": "VA",
+      "locality": "White Oak Technology Park, Henrico County",
+      "operator": "Iron Mountain Data Centers",
+      "docket": "RCH-1\u2013RCH-3 brochure; four buildings listed",
+      "title": "Richmond, Virginia Data Center Campus (RCH-1\u2013RCH-3) \u2014 operator brochure",
+      "url": "https://edge.sitecorecloud.io/ironmountain-c8dd68e9/media/project/iron-mountain/iron-mountain/files/resources/solution-guides/d/data-centers-richmond-campus.pdf?sc_lang=en",
+      "supportingUrls": [
+        "https://www.ironmountain.com/data-centers/locations/na/richmond",
+        "https://www.ironmountain.com/data-centers/locations/na/richmond/rch-1",
+        "https://resources.ironmountain.com/solution-guides/d/data-centers-richmond-campus"
+      ],
+      "filedDate": null,
+      "publishedDate": null,
+      "observedDate": "2026-10-01",
+      "documentDate": "2026-10-01",
+      "dateKind": "observed",
+      "sourceSha256": "3a2fd8b2015d76030a4ab7a2010049748db978764f8332e22fbd3c8a91d19d30",
+      "documentType": "other",
+      "projectPhase": "proposed",
+      "sourceId": "RICHMOND_OPERATOR_BROCHURE",
+      "sourceKind": "operator",
+      "reportedPosition": "support",
+      "accessedDate": "2026-10-01",
+      "pageOrSection": "Two-page brochure; p. 1 campus narrative; p. 2 Quick Reference Guide, Campus, Data Centers and Sustainability",
+      "summary": "Operator brochure describes a 66-acre campus with four planned buildings, more than 1,137,000 square feet and over 200 MW of advertised capacity, with phased delivery from Q1 2028 to Q2 2029. The two 48 MW and two 60 MW building specifications sum to 216 MW; this is arithmetic on advertised capacities, not measured demand. It claims renewable procurement through a PPA, energy efficiency and BREEAM credentials. These are developer specifications and commitments, not environmental monitoring results. No operating water, electricity, emissions or PUE measurement is supplied.",
+      "limitations": "Publication/filing date is unknown; copyright 2025 and PDF metadata do not establish either. The title names RCH-1\u2013RCH-3 while specifications list four buildings. BREEAM wording differs between building to accreditation standards and being certified; certificate, rating and assessment stage are absent. Renewable procurement does not establish hourly carbon-free operation or zero lifecycle emissions. The current campus FAQ gives RCH-1 Q1 2029, whereas the RCH-1 page gives Q1 2028; a legacy page still describes three buildings and 2030. Neither a definitive environmental endorsement nor opposition follows from this brochure alone. Unknown impacts are not zero.",
+      "nextEvidence": "Obtain the dated approved site plan, building and environmental permits, campus/IT/utility capacity reconciliation and current phasing schedule; monthly withdrawal and consumptive water forecasts with drought limits; annual/hourly facility energy and PUE; PPA scope and hourly matching; generator emissions and runtime; receptor noise; embodied carbon, habitat impacts, permanent jobs, incentives and infrastructure cost allocation. Verify the BREEAM certificate and post-opening monitoring commitments.",
+      "status": "Brochure reviewed as a proposed-campus description; current construction/permit status is not independently established here. Evidence needed for a project-level recommendation.",
+      "metrics": [
+        {
+          "name": "Advertised campus area",
+          "value": 66,
+          "unit": "acres",
+          "boundary": "Operator-reported campus area; not a measurement of disturbed land, habitat loss or impervious cover."
+        },
+        {
+          "name": "Planned buildings",
+          "value": 4,
+          "unit": "buildings",
+          "boundary": "Brochure specifications; planned campus count, not operating or independently permitted buildings."
+        },
+        {
+          "name": "Advertised floor area exceeds",
+          "value": 1137000,
+          "unit": "ft\u00b2",
+          "boundary": "Brochure p. 2 reports a lower-bound floor-area figure with a plus sign; not net IT floor space or measured resource use."
+        },
+        {
+          "name": "Advertised campus power exceeds",
+          "value": 200,
+          "unit": "MW",
+          "boundary": "Brochure lower-bound power capacity; IT versus gross facility boundary is not resolved in this two-page document. Not annual MWh or average load."
+        },
+        {
+          "name": "Sum of advertised building capacities",
+          "value": 216,
+          "unit": "MW",
+          "boundary": "Derived 2 \u00d7 48 + 2 \u00d7 60 MW from p. 2; not measured demand and not a resolved facility-electricity input for the household calculator."
+        },
+        {
+          "name": "Advertised apparent-power capacity",
+          "value": 300,
+          "unit": "MVA",
+          "boundary": "Brochure campus electrical specification; apparent power cannot be equated to real MW without an appropriate power factor and boundary."
+        },
+        {
+          "name": "Claimed renewable PPA coverage",
+          "value": 100,
+          "unit": "%",
+          "boundary": "Operator procurement claim, not a verified share of renewable electricity delivered at each operating hour; contract scope and accounting period absent."
+        }
+      ],
+      "reviewStatus": "source-checked",
+      "reviewer": "Document source review",
+      "reviewNote": "Both pages visually inspected on 1 October 2026. Direct public PDF and user-supplied copy have matching normalized extracted text, but different file bytes. The recorded sourceSha256 identifies the supplied copy; public copy SHA-256 is 8e19e037c4c0cd6ff82d34bcdd132e758d56bc1f7c523bf723aa6662510c6117. Source checking verifies the reported claims and limits; it does not verify promises, certificate status or environmental safety."
+    }
+  ]
+}

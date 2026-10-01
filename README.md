@@ -66,7 +66,7 @@ Validation checks dataset references, bibliography counts, local downloads, metr
 
 ## Prospective collection (v2.0)
 
-The live dashboard now has a persistent filing ledger, source review and correction history, an automatic collector for CEC docket 26-SPPE-01, a ten-record curated historical baseline, and a cited for/against decision guide. New discoveries remain unreviewed. No project verdict is automatically generated.
+The live dashboard now has a persistent filing ledger, source review and correction history, an automatic collector for CEC docket 26-SPPE-01, a curated baseline of ten historical records plus one Richmond operator brochure, and a cited for/against decision guide. New discoveries remain unreviewed. No project verdict is automatically generated.
 
 The full application is in `web/`; see [runtime instructions](web/README.md) and [collection protocol](web/UPDATE_PROTOCOL.md). The `site/` directory remains a static reader with the dated baseline. Persistent writes and the collector require the full application and database, not a static file server.
 
@@ -79,3 +79,9 @@ The Start here guide now distinguishes enterprise, colocation, cloud, hyperscale
 The electricity-scale calculator compares an illustrative total-facility capacity scenario or an entered full-year MWh total with EIA 2024 residential electricity consumption per customer (50 states, DC and U.S.). It displays assumptions, calendar hours, formulas and the fixed denominator year. This is an electricity-equivalence comparison, not an estimate of homes affected, costs, emissions or water. Downloadable CSV/JSON files retain source provenance. These supplemental consumer resources do not change the 86-record review corpus or the review PDF.
 
 Sources added to consumer resources: U.S. EIA, Table 5a, 2024 Average Monthly Bill—Residential (released 2025-10-07); AWS, What is a Data Center? (undated); Apple Machine Learning Research, Introducing Apple’s On-Device and Server Foundation Models (2024-06-10, updated 2024-07-29). All accessed 2026-10-01.
+
+## Richmond operator evidence
+
+The prospective ledger now includes the supplied Iron Mountain Richmond campus brochure as operator evidence, with seven explicitly bounded quantities and no inferred operating water or emissions data. Its publication/filing date is unknown, so observation on 2026-10-01 is labeled separately. Source-copy SHA-256 identifies the supplied PDF; the matching-text public copy has a different file fingerprint. Conflicting operator schedules, missing certificate details and required environmental measurements remain visible. The original PDF is not redistributed in this repository.
+
+[Structured Richmond evidence](site/richmond-brochure-evidence.json) supplements the 86-source review rather than changing the scholarly corpus. Undated records support explicit observedDate and optional sourceSha256; repeated observation alone does not duplicate a document.

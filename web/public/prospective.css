@@ -7,3 +7,5 @@
 
 .mobile-view-label{display:none}@media(max-width:720px){.rail .nav{display:none}.mobile-view-label{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:600;padding:4px 8px}.mobile-view-label select{font:inherit;font-size:16px;width:100%;padding:10px;background:white;border:1px solid #9fb2bf;border-radius:3px;color:#112538}.rail{padding:12px 10px}.rail-label{display:none}}
 @media(max-width:720px){#view-ledger .pagehead,#view-decide .pagehead{flex-direction:column;gap:10px}#view-ledger .pagehead>.btn,#view-decide .pagehead>.btn{display:inline-flex}}
+
+.source-fingerprint code{overflow-wrap:anywhere;word-break:break-word;font-size:12px}
