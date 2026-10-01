@@ -1,0 +1,154 @@
+'use strict';
+const DATA=JSON.parse(document.getElementById('research-data').textContent);
+const $=id=>document.getElementById(id), esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const nf=(v,d=2)=>Number(v).toLocaleString('en-US',{maximumFractionDigits:d,minimumFractionDigits:d});
+const src=Object.fromEntries(DATA.sources.map(s=>[s.id,s]));
+const ref=(...ids)=>ids.map(id=>src[id]?`<a class="ref" href="${esc(src[id].url)}" target="_blank" rel="noopener" aria-label="Source ${src[id].number}: ${esc(src[id].title)}">[${src[id].number}]</a>`:'').join(' ');
+const names=Object.fromEntries(DATA.states.map(s=>[s.abbreviation,s.name]));
+let selected='IN';
+function view(name){
+ if(!['learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='learn';
+ document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!=='view-'+name);
+ document.querySelectorAll('.nav button').forEach(b=>b.dataset.view===name?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ history.replaceState(null,'','#'+name);window.scrollTo({top:0,behavior:'instant'});
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b)view(b.dataset.view);});
+function series(state,year,scenario='medium'){return DATA.series.find(r=>r.state===state&&r.year===Number(year)&&r.scenario===scenario);}
+function caseText(c){return `<h3>${esc(c.name)} <span class="badge">${esc(c.focus)}</span></h3><p>${esc(c.findings)}</p><p>${esc(c.policy)}</p><p class="small"><b>Boundary:</b> ${esc(c.limitations)}</p><p class="small">Evidence date: ${esc(c.statusDate)} ${ref(...c.sourceIds)}</p>`;}
+function renderStates(){
+ const year=Number($('year').value),count=Number($('coverage').value);
+ const rows=DATA.states.filter(s=>s.abbreviation!=='US').map(s=>({...s,value:series(s.abbreviation,year).annual_TWh})).sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
+ let shown=rows.slice(0,count);if(!shown.some(r=>r.abbreviation===selected))shown.push(rows.find(r=>r.abbreviation===selected));
+ const max=rows[0].value;
+ $('chart-max').textContent=nf(max,1)+' TWh';$('yearbadge').textContent=year===2024?'Historical estimate':'Conditional projection';
+ $('state-chart').innerHTML=shown.map(r=>`<button class="barrow ${r.abbreviation===selected?'selected':''}" data-state="${r.abbreviation}" aria-pressed="${r.abbreviation===selected}" aria-label="${esc(r.name)}, ${nf(r.value,3)} TWh, ${year}. Inspect evidence"><span>${esc(r.name)}</span><span class="bartrack" aria-hidden="true"><span class="barfill" style="width:${r.value/max*100}%"></span></span><span class="barvalue">${nf(r.value,2)}</span></button>`).join('');
+ const r=series(selected,year),lo=series(selected,year,'low'),hi=series(selected,year,'high'),hist=series(selected,2024),future=series(selected,2030);
+ const c=DATA.cases.find(c=>c.abbreviation===selected),water=DATA.water.filter(w=>w.abbreviation===selected);
+ const old=DATA.historical2023.find(s=>s.abbreviation===selected);
+ $('state-detail').innerHTML=`<div class="eyebrow section">${esc(names[selected])} · ${year}</div><div class="detail-value">${nf(r.annual_TWh,3)} <small>TWh/year</small></div><p class="small">${year===2024?'Historical midrange estimate':'Medium scenario projection'} ${ref('EPRI2026')}</p><dl class="kv"><dt>${year===2024?'Source-variation range':'Low–high scenarios'}</dt><dd>${nf(lo.annual_TWh,3)}–${nf(hi.annual_TWh,3)} TWh</dd><dt>Modeled peak load</dt><dd>${nf(r.peak_GW,3)} GW</dd><dt>Nominal capacity</dt><dd>${nf(r.nominal_GW,3)} GW</dd></dl><hr class="detail-rule"><h3>From estimate to outlook</h3><p class="small">2024: ${nf(hist.annual_TWh,3)} TWh<br>2030 medium scenario: ${nf(future.annual_TWh,3)} TWh<br>2030 low–high: ${nf(series(selected,2030,'low').annual_TWh,3)}–${nf(series(selected,2030,'high').annual_TWh,3)} TWh</p>${selected==='IN'?`<div class="callout"><strong>Indiana’s buildout is newer than the baseline.</strong> Low historical electricity does not establish low future water or grid pressure.</div><button class="btn primary" data-view="indiana">Open Indiana case file</button>`:''}<hr class="detail-rule"><h3>Local evidence</h3>${selected==='IN'?`<p class="small">A dedicated Indiana case file documents water-system capacity, developer projections, the original sewer permit, and local moratoria. No statewide industry water-consumption total was verified. ${ref('IN01','IN09','IN10','IN15')}</p>`:c?`<p>${esc(c.findings)}</p><p class="small">${esc(c.limitations)} ${ref(...c.sourceIds)}</p>`:`<p class="small">No dedicated policy case study was completed for ${esc(names[selected])} in this snapshot. This does not mean no moratorium, opposition or local impact exists.</p>`}<p class="small">${water.length?`${water.length} Google campus water record${water.length===1?'':'s'} included. Not statewide totals.`:'No campus water record included in the harmonized sample.'}</p>${water.length?'<button class="btn" id="inspect-water">View campus water</button>':''}<details class="disclosure"><summary>Earlier 2023 electricity comparison</summary><p>${old&&old.sharePct!==null?`EPRI 2024 reported ${nf(old.sharePct,2)}% of state electricity in its 2023 data-center model.`:'Not reported in the older 2023 table.'} This uses a different vintage and boundary; do not calculate growth against the 2026 series. ${ref('EPRI2024')}</p></details>`;
+ $('state-source').innerHTML=`EPRI, Powering Intelligence 2026, data updated 24 February 2026. ${ref('EPRI2026','EPRI2026METHOD')} Top view adds the selected state when outside the top 15. All 50 states are included; DC is not in the source dataset.`;
+ const b=$('inspect-water');if(b)b.onclick=()=>{$('water-state').value=selected;renderWater();view('water');};
+}
+$('state-select').innerHTML=DATA.states.filter(s=>s.abbreviation!=='US').sort((a,b)=>a.name.localeCompare(b.name)).map(s=>`<option value="${s.abbreviation}">${esc(s.name)}</option>`).join('');$('state-select').value=selected;
+$('state-select').onchange=e=>{selected=e.target.value;renderStates();};
+$('year').onchange=renderStates;$('coverage').onchange=renderStates;
+$('state-chart').onclick=e=>{const b=e.target.closest('[data-state]');if(b){selected=b.dataset.state;$('state-select').value=selected;renderStates();}};
+$('national-stats').innerHTML=`<article class="stat"><div class="stat-label">U.S. electricity · 2024 modeled</div><div class="stat-value">184.2 <small>TWh</small></div><div class="stat-note">EPRI · Includes crypto ${ref('EPRI2026')}</div></article><article class="stat"><div class="stat-label">Global electricity · 2025 estimated</div><div class="stat-value">485 <small>TWh</small></div><div class="stat-note">IEA · All data centers ${ref('ROOT_IEA2026')}</div></article><article class="stat"><div class="stat-label">Included evidence records</div><div class="stat-value">${DATA.sources.length}</div><div class="stat-note">23 core literature records + context & policy</div></article>`;
+$('state-cases').innerHTML=DATA.cases.map(c=>`<article class="case">${caseText(c)}</article>`).join('');
+const waterStates=[...new Set(DATA.water.map(r=>r.abbreviation))].sort((a,b)=>names[a].localeCompare(names[b]));
+$('water-state').innerHTML+='<option value="IN">Indiana · no comparable campus record</option>'+waterStates.map(s=>`<option value="${s}">${esc(names[s])}</option>`).join('');
+function renderWater(){const sel=$('water-state').value,rows=DATA.water.filter(w=>sel==='all'||w.abbreviation===sel).sort((a,b)=>b.consumptionMG-a.consumptionMG);
+ $('water-table').innerHTML=rows.length?rows.map(w=>`<tr><td><strong>${esc(w.location)}</strong><br><span class="small">${esc(w.name)}</span></td><td class="num">${nf(w.withdrawalMG,w.withdrawalMG<1?2:1)}</td><td class="num">${nf(w.dischargeMG,w.dischargeMG<1?2:1)}</td><td class="num"><strong>${nf(w.consumptionMG,w.consumptionMG<1?2:1)}</strong></td><td class="small">${w.reclaimedWithdrawalMG!==undefined?`${nf(w.reclaimedWithdrawalMG,1)}M reclaimed / ${nf(w.potableWithdrawalMG,1)}M potable withdrawn. `:''}${w.location==='Phoenix'?'Rounded inputs do not exactly balance. ':''}Company-reported; volume is not an efficiency score. ${ref(...w.sourceIds)}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">No comparable campus balance included for Indiana. See the Indiana case file for projections, infrastructure and policy evidence.</td></tr>';
+}
+$('water-state').onchange=renderWater;
+$('water-source').innerHTML=`Google, 2025 Environmental Report, pp. 110–114: withdrawal, discharge and consumption are included in the limited-assurance schedule. Engineering estimates are permitted where meter data are unavailable. This is a harmonized 2024 sample; the newer 2026 report was not extracted. Rounded values may not exactly balance. ${ref('GOOGLE2025')}`;
+$('cooling-ref').innerHTML=ref('L02','L03','L05','L21');$('water-method-ref').innerHTML=ref('L02','ROOT_AQUEDUCT');
+const indMetric=[
+ ['18 million gal/year','AWS New Carlisle · projected full buildout','Operator projection; “water use” does not specify withdrawal versus consumption. Not observed operating data.','IN04'],
+ ['24 million gal/day','New Carlisle · shared water-system limit','Two public plants and multiple users. Not an Amazon campus meter reading.','IN06'],
+ ['1.612 million gal/day','IEC-3 South · future peak sewer design','IDEM sewer design flow for one project boundary. Outgoing wastewater capacity is not consumptive water use.','IN15'],
+ ['31 million gal/day','New Carlisle · temporary construction dewatering','Reported authorization from a corrected investigation. Temporary pumping is not annual cooling consumption.','IN05'],
+ ['37 / 72 million gal/day','Fort Wayne · system average / treatment capacity','Municipal context, not Google water use or evidence of drought-safe ecological headroom.','IN02'],
+ ['2 million gallons','Fort Wayne · planned public storage tank','Storage volume, not a daily flow. Developer-funded infrastructure described by City Utilities.','IN03'],
+ ['No measured total verified','Monrovia / Morgan County','Local reporting documents water concerns; a prospective number does not establish operating consumption.','IN14']
+];
+$('indiana-metrics').innerHTML=indMetric.map(([v,t,d,id])=>`<article class="metric-card"><span class="small">${esc(t)}</span><br><strong>${esc(v)}</strong><p>${esc(d)} ${ref(id)}</p></article>`).join('');
+const policies=[['June 2026–May 2027','Merrillville','Municipal pause: 1 June 2026–31 May 2027. Scheduled active at the cutoff; applies to new approvals within the town.',['IN10']],['June 2026–June 2027','Boone County','Signed Ordinance 2026-08: 16 June 2026–15 June 2027, unincorporated county jurisdiction. Not a statewide ban.',['IN09']],['May–July 2026','Miami County','May pause ended on adoption of data-center zoning. July 20 replacement reported; classify the pause as historical, with the signed replacement text still to confirm.',['IN11','IN12']],['September 2026','St. Joseph County','Preliminary 6–3 resolution began a process toward a possible future restriction. An enacted ban was not established.',['IN13']]];
+$('indiana-policy').innerHTML=policies.map(([date,t,d,ids])=>`<article><div class="date">${esc(date)}</div><h3>${esc(t)}</h3><p class="small">${esc(d)} ${ref(...ids)}</p></article>`).join('');
+const specs=[
+ ['base','Baseline IT electricity (GWh/year)',10,0.001,100000,0.1],['growth','Useful-work multiplier (×)',2,0.01,100,0.1],
+ ['saving','IT energy saving per unit of work (%)',40,0,99,1],['pue0','Baseline PUE (facility / IT)',1.3,1,5,0.01],
+ ['pue1','Scenario PUE (facility / IT)',1.15,1,5,0.01],['ci0','Baseline electricity factor (kg CO₂e/kWh)',0.4,0,2,0.01],
+ ['ci1','Scenario electricity factor (kg CO₂e/kWh)',0.1,0,2,0.01],['wue0','Baseline WUE (L consumed / kWh IT)',0.5,0,20,0.01],
+ ['wue1','Scenario WUE (L consumed / kWh IT)',0.2,0,20,0.01],['embodied','Added embodied emissions (t CO₂e/year)',500,0,1000000,10]
+];
+$('scenario-inputs').innerHTML=specs.map(([id,label,v,min,max,step])=>`<label class="field" for="s-${id}">${esc(label)}<input type="number" id="s-${id}" value="${v}" min="${min}" max="${max}" step="${step}"></label>`).join('');
+function calculateScenario(x){
+ const it0=x.base*1e6,it1=it0*x.growth*(1-x.saving/100),e0=it0*x.pue0,e1=it1*x.pue1,c0=e0*x.ci0/1000,c1=e1*x.ci1/1000,w0=it0*x.wue0/1e6,w1=it1*x.wue1/1e6;
+ const perGrowth=it0*(1-x.saving/100)*x.pue1*x.ci1/1000;
+ return {it0,it1,e0,e1,c0,c1,w0,w1,total:c1+x.embodied,cap:x.embodied>c0?null:(perGrowth===0?Infinity:Math.max(0,(c0-x.embodied)/perGrowth))};
+}
+function renderScenario(){const x={};for(const [id,label,v,min,max] of specs){const el=$('s-'+id);if(el.value===''||!Number.isFinite(Number(el.value))||+el.value<min||+el.value>max){$('scenario-results').innerHTML='<p role="alert">Enter valid values within the displayed control limits. Values cannot be negative and PUE must be at least 1.</p>';return;}x[id]=+el.value;}
+ const r=calculateScenario(x),delta=r.total-r.c0,max=Math.max(r.c0,r.total,1),change=r.c0>0?nf(delta/r.c0*100,1)+'%':'not defined from a zero baseline';
+ $('scenario-results').innerHTML=`<div class="stats"><article class="stat"><div class="stat-label">Scenario electricity</div><div class="stat-value">${nf(r.e1/1e6,2)} <small>GWh</small></div><div class="stat-note">Baseline ${nf(r.e0/1e6,2)} GWh</div></article><article class="stat"><div class="stat-label">Direct consumptive water</div><div class="stat-value">${nf(r.w1,2)} <small>ML</small></div><div class="stat-note">Baseline ${nf(r.w0,2)} million liters</div></article></div><h3>Included emissions · t CO₂e/year</h3><div class="comparison"><span>Baseline</span><span class="bartrack"><span class="barfill" style="width:${r.c0/max*100}%"></span></span><strong>${nf(r.c0,0)}</strong></div><div class="comparison new"><span>Scenario</span><span class="bartrack"><span class="barfill" style="width:${r.total/max*100}%"></span></span><strong>${nf(r.total,0)}</strong></div><p class="small">Scenario = ${nf(r.c1,0)} t electricity + ${nf(x.embodied,0)} t additional embodied emissions.</p><div class="callout ${delta>0?'amber':''}"><strong>${delta<=0?'Within the selected emissions baseline':'Exceeds the selected emissions baseline'}</strong><br>Change: ${delta>0?'+':''}${nf(delta,0)} t CO₂e/year (${change}). Direct water ${r.w1<=r.w0?'also stays within':'exceeds'} its baseline.</div><p><strong>Carbon-budget workload limit:</strong> ${r.cap===Infinity?'unbounded in this simplified zero-electricity-factor model':r.cap===null?'no feasible workload under the added embodied allowance':nf(r.cap,2)+'× baseline useful work'}.</p><p class="small">A zero input electricity factor does not establish zero lifecycle emissions. Budget headroom depends on assumptions; efficiency and cleaner supply must be demonstrated.</p>`;
+}
+$('scenario-inputs').addEventListener('input',renderScenario);$('scenario-reset').onclick=()=>{specs.forEach(([id,label,v])=>$('s-'+id).value=v);renderScenario();};
+const actions=[['Measure the whole service','Record IT and facility electricity, output quality, task count, output length, water and equipment life. Retain totals as well as intensity.', ['L17','L19']],['Reduce avoidable work first','Use deduplication, caching, batching, compact specialist models and conventional analytical methods where they meet the same quality bar. Validate energy with representative tasks.', ['L06','L07','L08']],['Schedule within local constraints','Shift flexible training and batch jobs when lower-emission power is available, while honoring water, latency and network constraints. Annual averages cannot identify the best hour.', ['L18','ROOT_EGRID','L05']],['Match growth with real clean supply','Track hourly deliverable clean energy, additionality and residual gross emissions. Annual renewable certificates do not prove zero physical emissions throughout the year.', ['ROOT_GHG','ROOT_GHGCONSULT']],['Protect water and health','Pair cooling control with seasonal water caps, groundwater monitoring, receptor noise and generator-emission limits. Report displaced burdens instead of optimizing one ratio alone.', ['L02','L21','L23']],['Keep a binding absolute budget','Reassess rebound, manufacturing and hardware retirement. Claim avoided emissions only against a specified counterfactual, separately from gross operating emissions.', ['L09','L10','L15']]];
+$('interventions').innerHTML=actions.map(([t,d,ids])=>`<details class="disclosure"><summary>${esc(t)}</summary><p>${esc(d)} ${ref(...ids)}</p></details>`).join('');
+$('methods-summary').innerHTML=DATA.methodsHTML;
+$('source-type').innerHTML+=[...new Set(DATA.sources.map(s=>s.category))].map(t=>`<option>${esc(t)}</option>`).join('');
+function renderSources(){const q=$('source-search').value.toLowerCase().trim(),type=$('source-type').value;const matches=DATA.sources.filter(s=>(type==='all'||s.category===type)&&(!q||[s.title,s.authors,s.theme,s.finding,s.geography,s.type].join(' ').toLowerCase().includes(q)));
+ $('source-count').textContent=`${matches.length} of ${DATA.sources.length} records · Search covers titles, authors, themes, findings and geography`;
+ $('source-list').innerHTML=matches.length?matches.map(s=>`<article class="source-item" id="source-${esc(s.id)}"><div class="pillrow"><span class="badge">${esc(s.type)}</span><span class="badge">${s.year}</span>${s.theme?`<span class="small">${esc(s.theme)}</span>`:''}</div><h3><a href="${esc(s.url)}" target="_blank" rel="noopener">[${s.number}] ${esc(s.title)}</a></h3><div class="source-meta">${esc(s.authors)}${s.venue?' · '+esc(s.venue):''}</div>${s.methods?`<p><b>Method:</b> ${esc(s.methods)}</p>`:''}<p>${esc(s.finding)}</p>${s.limitations?`<p class="small"><b>Limitations:</b> ${esc(s.limitations)}</p>`:''}${s.access?`<p class="small"><b>Access:</b> ${esc(s.access)}</p>`:''}<p class="source-meta">${s.doi?'DOI: '+esc(s.doi)+' · ':''}${s.geography?esc(s.geography)+' · ':''}Accessed 1 October 2026</p></article>`).join(''):'<div class="empty">No matching records. Try a broader term or select all evidence categories.</div>';
+}
+$('source-search').oninput=renderSources;$('source-type').onchange=renderSources;
+renderStates();renderWater();renderScenario();renderSources();view(location.hash.slice(1)||'learn');
+if(document.modelContext?.registerTool){
+ const lifecycle=new AbortController();
+ const properties=Object.fromEntries(specs.map(([id,label,value,minimum,maximum])=>[id,{type:'number',description:label,minimum,maximum}]));
+ try{Promise.resolve(document.modelContext.registerTool({name:'configure_environmental_scenario',title:'Configure environmental scenario',description:'Apply hypothetical annual workload, electricity, water and embodied-carbon assumptions to the visible calculator. Does not change research data or send information externally.',inputSchema:{type:'object',properties,additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute(input){
+  if(!input||typeof input!=='object'||Array.isArray(input))throw new Error('Expected an object of calculator assumptions.');
+  for(const [key,value] of Object.entries(input)){const spec=specs.find(s=>s[0]===key);if(!spec||typeof value!=='number'||!Number.isFinite(value)||value<spec[3]||value>spec[4])throw new Error('Invalid or out-of-range assumption: '+key);}
+  Object.entries(input).forEach(([key,value])=>$('s-'+key).value=value);renderScenario();view('scenario');
+  const x=Object.fromEntries(specs.map(([id])=>[id,Number($('s-'+id).value)]));const r=calculateScenario(x);
+  return {electricityGWh:r.e1/1e6,baselineElectricityCO2eTonnes:r.c0,scenarioIncludedCO2eTonnes:r.total,directWaterMillionLiters:r.w1,withinIncludedEmissionsBudget:r.total<=r.c0,assumptions:x};
+ }},{signal:lifecycle.signal})).catch(()=>{});}catch{}
+ window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true});
+}
+
+const guide=DATA.consumerGuide;
+$('consumer-intro').innerHTML=`<p>${esc(guide.intro.text)} ${ref(...guide.intro.sourceIds)}</p>`;
+$('how-it-works').innerHTML=guide.howItWorks.map((item,i)=>`<article class="process-step"><div class="step-number" aria-hidden="true">0${i+1}</div><h3>${esc(item.title.replace(/^\d\. /,''))}</h3><p>${esc(item.text)} ${ref(...item.sourceIds)}</p></article>`).join('');
+$('household-questions').innerHTML=guide.householdQuestions.map(item=>`<details class="disclosure"><summary>${esc(item.question)}</summary><p>${esc(item.text)} ${ref(...item.sourceIds)}</p></details>`).join('');
+$('claim-decoder').innerHTML=guide.claimDecoder.map(item=>`<details class="disclosure"><summary>${esc(item.claim)}</summary><p>${esc(item.meaning)}</p><p><b>Evidence to request:</b> ${esc(item.evidenceNeeded)} ${ref(...item.sourceIds)}</p></details>`).join('');
+$('local-questions').innerHTML=guide.localQuestions.map(item=>`<li><b>${esc(item.question)}</b><p>${esc(item.askFor)} ${ref(...item.sourceIds)}</p></li>`).join('');
+$('consumer-glossary').innerHTML=guide.glossary.map(item=>`<div><dt>${esc(item.term)}</dt><dd>${esc(item.definition)} ${ref(...item.sourceIds)}</dd></div>`).join('');
+const topics=['Water','Carbon','Health','Equity','Governance','Community','Disclosure','Grid','Siting','Infrastructure'];
+$('research-topic').innerHTML+=topics.map(t=>`<option>${esc(t)}</option>`).join('');
+function researchMatches(r,q,topic,group){
+ const text=[r.title,src[r.sourceId].authors,r.policyDomain,r.studyType,r.novelty,r.usPolicyRelevance,r.nextResearchQuestion,...r.tags].join(' ').toLowerCase();
+ return (!q||text.includes(q))&&(topic==='all'||r.tags.includes(topic))&&(group==='all'||r.selectionGroup===group);
+}
+function renderResearch(){
+ const q=$('research-search').value.trim().toLowerCase(),topic=$('research-topic').value,group=$('research-group').value;
+ const readings=DATA.policyReadings.filter(r=>researchMatches(r,q,topic,group));
+ $('research-count').textContent=`${readings.length} of ${DATA.policyReadings.length} selected readings · No numerical importance ranking`;
+ $('research-readings').innerHTML=readings.length?readings.map(r=>{
+  const s=src[r.sourceId],emerging=/Preprint|Accepted manuscript/.test(r.studyType);
+  return `<article class="reading-card"><div class="reading-top"><span class="eyebrow">${esc(r.policyDomain)}</span><span class="reading-year">${r.year}</span></div><div class="pillrow"><span class="badge ${emerging?'warn':'primary'}">${esc(r.studyType)}</span></div><h2><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></h2><p class="source-meta">${esc(s.authors)} · ${esc(s.venue)}<br>Record date: ${esc(r.date)}</p><p class="reading-plain">${esc(r.plainLanguage)}</p><dl class="reading-notes"><dt>What it contributes</dt><dd>${esc(r.novelty)}</dd><dt>U.S. policy relevance</dt><dd>${esc(r.usPolicyRelevance)}</dd><dt>What remains uncertain</dt><dd>${esc(r.limitation)}</dd></dl><div class="research-question"><span class="eyebrow">Next research question</span><p>${esc(r.nextResearchQuestion)}</p></div><details class="disclosure"><summary>Why it is on this list</summary><p>${esc(r.priorityReason)}</p><p class="small">${esc(r.selectionGroup)} · ${r.tags.map(esc).join(' · ')}</p></details><a class="paper-link" href="${esc(r.url)}" target="_blank" rel="noopener">Open source [${s.number}] <span aria-hidden="true">↗</span></a></article>`;
+ }).join(''):'<div class="panel empty"><h2>No readings match these filters</h2><p>Try a broader term or reset the filters to see all ten readings.</p></div>';
+}
+$('research-search').addEventListener('input',renderResearch);
+['research-topic','research-group'].forEach(id=>$(id).addEventListener('change',renderResearch));
+$('research-reset').addEventListener('click',()=>{$('research-search').value='';$('research-topic').value='all';$('research-group').value='all';renderResearch();});
+$('agenda-refs').innerHTML='Studies motivating these questions: '+ref('POLICY_WATER2026','POLICY_MARGINAL2025','L14','L12','ROOT_HEERING2026','L11');
+renderResearch();
+
+const application=DATA.metricApplication;
+$('assessment-context').innerHTML=application.cases.map(c=>`<option value="${esc(c.id)}">${esc({'indiana':'Indiana facilities','california':'California facilities','ai-procurement':'AI procurement'}[c.id]||c.title)}</option>`).join('');
+function renderApplication(){
+ const c=application.cases.find(c=>c.id===$('assessment-context').value)||application.cases[0];
+ $('assessment-application').innerHTML=`<h3>${esc(c.title)}</h3><p>${esc(c.summary)}</p><div class="assessment-scope"><b>Assessment status:</b> ${esc(application.frameworkStatus)}</div><div class="application-grid"><div><h3>Evidence available</h3>${c.evidence.map(e=>`<article class="application-evidence"><span class="badge">${esc(e.status)}</span><h4>${esc(e.label)}</h4><p><b>${esc(e.value)}</b></p><p>${esc(e.boundary)} ${ref(...e.sourceIds)}</p><p class="small">Related metrics: ${e.metricIds.map(id=>esc(DATA.environmentalMetrics.find(m=>m.id===id)?.name||id)).join(' · ')}</p></article>`).join('')}</div><div><h3>What a complete assessment still needs</h3><ul class="application-gaps">${c.missingData.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div></div><p class="application-note"><b>Decision use:</b> ${esc(c.recommendation)} ${ref(...c.sourceIds)}</p>`;
+}
+$('assessment-context').addEventListener('change',renderApplication);
+$('metric-domain').innerHTML+=[...new Set(DATA.environmentalMetrics.map(m=>m.domain))].map(d=>`<option>${esc(d)}</option>`).join('');
+function renderMetrics(){
+ const q=$('metric-search').value.trim().toLowerCase(),domain=$('metric-domain').value;
+ const matches=DATA.environmentalMetrics.filter(m=>(domain==='all'||m.domain===domain)&&(!q||Object.values(m).flat().join(' ').toLowerCase().includes(q)));
+ $('metric-count').textContent=`${matches.length} of ${DATA.environmentalMetrics.length} defined metrics · Definitions do not imply complete site measurements`;
+ $('metric-dictionary').innerHTML=matches.length?matches.map(m=>`<details class="metric-entry"><summary><span><span class="metric-domain">${esc(m.domain)} · ${esc(m.id)}</span><span class="metric-name">${esc(m.name)}</span><span class="metric-unit">${esc(m.unit)}</span></span></summary><div class="metric-detail"><p>${esc(m.whyItMatters)}</p><dl class="metric-fields">${[['Boundary',m.boundary],['Measurement method',m.method],['Suggested monitoring',m.frequency],['Minimum evidence',m.minimumEvidence],['Decision use',m.decisionUse],['Tradeoff / limitation',m.tradeoff]].map(([label,value])=>`<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><div class="metric-coverage"><b>Current evidence coverage:</b> ${esc(m.availability)}</div><p class="small">Method and evidence references: ${ref(...m.sourceIds)}</p></div></details>`).join(''):'<p class="empty">No metrics match. Try a broader term or select all domains.</p>';
+}
+$('metric-search').addEventListener('input',renderMetrics);$('metric-domain').addEventListener('change',renderMetrics);
+$('bridge-summary').textContent=DATA.priorWork.summary;
+$('assessment-bridge').innerHTML=DATA.priorWork.existingConcepts.map(c=>`<details class="disclosure bridge-item"><summary>${esc(c.name)}</summary><p><b>Existing concept:</b> ${esc(c.existingApproach)}</p><p><b>Assessment extension:</b> ${esc(c.environmentalExtension)}</p><p class="small"><b>Limit:</b> ${esc(c.caveat)}</p></details>`).join('');
+$('bridge-workflow').innerHTML=DATA.priorWork.recommendedWorkflow.map(t=>`<li>${esc(t)}</li>`).join('');
+const ca=series('CA',2024),calo=series('CA',2024,'low'),cahi=series('CA',2024,'high');
+$('california-evidence').innerHTML=`<div class="stats"><article class="stat"><div class="stat-label">California electricity · 2024 model</div><div class="stat-value">${nf(ca.annual_TWh,3)} <small>TWh</small></div><div class="stat-note">Source variation: ${nf(calo.annual_TWh,3)}–${nf(cahi.annual_TWh,3)} TWh</div></article><article class="stat"><div class="stat-label">California peak demand · 2024 model</div><div class="stat-value">${nf(ca.peak_GW,3)} <small>GW</small></div><div class="stat-note">Modeled peak, not a metered hourly series</div></article><article class="stat"><div class="stat-label">California campus water in this sample</div><div class="stat-value">Not covered</div><div class="stat-note">A measurement gap, not zero water use</div></article></div><p class="small">Historical model estimates, including cryptocurrency mining. ${ref('EPRI2026','EPRI2026METHOD')}</p>`;
+$('california-policies').innerHTML=DATA.californiaPolicy.map(r=>`<article class="policy-card"><div class="policy-status">${esc(r.status)}</div><h3>${esc(r.title)}</h3><p class="small">${esc(r.authority)} · Source status date: ${esc(r.statusDate)}</p><p><b>Applies to:</b> ${esc(r.scope)}</p><div class="policy-pair"><div><h4>What it does</h4><p>${esc(r.whatItDoes)}</p></div><div><h4>How metrics apply</h4><p>${esc(r.environmentalApplication)}</p></div></div><p class="small"><b>Evidence needed:</b> ${r.metricsNeeded.map(esc).join(' · ')}</p><p class="policy-limit"><b>Limit / implementation:</b> ${esc(r.limitation)}</p><details class="disclosure"><summary>Research question</summary><p>${esc(r.researchQuestion)}</p></details><p class="small">Primary sources: ${ref(...r.sourceIds)}</p></article>`).join('');
+$('procurement-authority').innerHTML='Existing authority: CDT Technology Letter 24-03 clarifies that procurements governed by California’s State GenAI procurement policies require a completed SIMM 5305-F assessment at every risk level. The environmental and workforce annex below is a proposed addition. '+ref('CA_GENAI2024');
+$('assessment-context').value='california';
+$('assessment-maturity').innerHTML=application.maturity.map(m=>`<article><h3>${esc(m.level)}</h3><p>${esc(m.description)}</p></article>`).join('');
+$('assessment-evidence-labels').innerHTML='<h3 class="section">Evidence labels</h3>'+application.evidenceLabels.map(e=>`<p class="small"><b>${esc(e.label)}:</b> ${esc(e.definition)}</p>`).join('');
+renderApplication();renderMetrics();
+
+$('california-date-ref').innerHTML=ref('CA_CALENDAR2026');

@@ -1,0 +1,1064 @@
+{
+  "search_date": "2026-10-01",
+  "review_classification": "Rapid structured scoping search, not exhaustive systematic retrieval",
+  "scholarly": {
+    "scope": "Rapid structured scoping search supporting scholarly synthesis; not an exhaustive systematic review or complete PRISMA flow",
+    "search_date": "2026-10-01",
+    "evidence_cutoff": "2026-10-01",
+    "sources_searched": "General web search used to locate publisher records, author manuscripts and institutional repositories; PubMed records verified. No exhaustive native Scopus, Web of Science, Embase or licensed-index export performed.",
+    "queries": [
+      {
+        "q": "Masanet 2020 Recalibrating global data center energy use estimates Science",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "Mytton 2021 Data centre water consumption npj Clean Water",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "Siddik Shehabi Marston environmental footprint data centers United States 2021",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "Luccioni Viguier Ligozat 2023 estimating carbon footprint BLOOM",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Making AI Less Thirsty\" published Communications ACM Li Yang Islam Ren",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Power Hungry Processing\" \"2024\" Luccioni Jernite Strubell",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"The Unpaid Toll\" data centers public health 2025",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Green AI\" Schwartz Dodge Smith Etzioni 2020",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "site.dl.acm.org \"Power Hungry Processing\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"A Systematic Review of Green AI\" Verdecchia Sallou Cruz",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Generative AI could generate millions\" e-waste Nature Computational Science 2024",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Aligning artificial intelligence with climate change mitigation\" Kaack 2022",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"E-waste challenges of generative artificial intelligence\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"data centers\" \"health\" \"2026\" air pollution study",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"data center\" noise environmental justice peer reviewed",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Sources of data center energy estimates\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Environmental impact\" \"artificial intelligence servers\" \"United States\" Nature 2025",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Global data center expansion and human health\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"data centres\" \"systematic review\" \"water\" \"2025\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Reducing the Carbon Intensity of AI through System-Level Innovations\" 2025",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Energy and Policy Considerations for Deep Learning in NLP\" ACL 2019",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Towards the Systematic Reporting of the Energy and Carbon Footprints\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"The Carbon Footprint of Machine Learning Training\" Patterson 2022",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"The climate impact of ICT\" Freitag 2021 review",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"E-waste challenges of generative artificial intelligence\" \"10.1038\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Sources of data center energy estimates\" \"258\" \"authors\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Measuring the Carbon Intensity of AI in Cloud Instances\" DOI",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"The Cloud Next Door\" authors 2025 Arxiv",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Data flows and water woes\" Hogan",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Sources of data center energy estimates\" \"Mytton\" \"Ashtine\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"A preliminary assessment of water use in data centers\" Ristic",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Health-Informed Computing\" \"10.1145\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Chasing Carbon\" \"2021\" Gupta computing",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Chasing Carbon: The Elusive Environmental Footprint of Computing\" DOI",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"A preliminary assessment of water use in data centers\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Sources of data center energy estimates\" site.cell.com",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Author Correction: Data centre water consumption\" \"correct\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Recalibrating global data center\" \"205\" \"6%\" site.lbl.gov",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Reinforcement Learning for Data Center Cooling Performance Optimization\" \"2026\" date",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Health-Informed Computing: Estimating\" site.dl.acm.org",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"s41545-021-00140-3\"",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Measuring the Carbon Intensity\" \"3533234\" site.microsoft.com",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Green AI\" \"3381831\" site.dl.acm.org",
+        "date": "2026-10-01"
+      },
+      {
+        "q": "\"Global data center expansion and human health\" \"noise\"",
+        "date": "2026-10-01"
+      }
+    ],
+    "direct_parent_supplied_records": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42715536/",
+        "decision": "included L22"
+      },
+      {
+        "url": "https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2026.1648912/full",
+        "decision": "included L23"
+      }
+    ],
+    "eligibility": "English-accessible primary scholarly reports, reviews, conceptual analyses and clearly labeled accepted/preprint material addressing datacenter/AI environmental metrics, health pathways, justice or mitigation. Prioritized seminal work and recent relevant reviews. Official inventories and state policy documents handled separately.",
+    "included": [
+      {
+        "id": "L01",
+        "doi": "10.1126/science.aba3758",
+        "title": "Recalibrating global data center energy-use estimates",
+        "reason": "energy, efficiency",
+        "appraisal": "Journal metadata plus LBNL primary research summary verified: https://bies.lbl.gov/news/data-centers-successful-energy"
+      },
+      {
+        "id": "L02",
+        "doi": "10.1038/s41545-021-00101-w",
+        "title": "Data centre water consumption",
+        "reason": "water, metrics, transparency",
+        "appraisal": "Publisher or author manuscript/abstract verified"
+      },
+      {
+        "id": "L03",
+        "doi": "10.1088/1748-9326/abfba1",
+        "title": "The environmental footprint of data centers in the United States",
+        "reason": "water, carbon, siting",
+        "appraisal": "Full author-hosted journal PDF verified: https://vtechworks.lib.vt.edu/server/api/core/bitstreams/484c56d7-9557-4c71-ad47-84ab67a21bad/content"
+      },
+      {
+        "id": "L04",
+        "doi": null,
+        "title": "Estimating the Carbon Footprint of BLOOM, a 176B Parameter Language Model",
+        "reason": "carbon, lifecycle, AI training",
+        "appraisal": "Publisher or author manuscript/abstract verified"
+      },
+      {
+        "id": "L05",
+        "doi": "10.1145/3724499",
+        "title": "Making AI Less 'Thirsty'",
+        "reason": "water, AI training, AI inference, tradeoffs",
+        "appraisal": "Publisher full article verified; June 17, 2025 publication replaces duplicate arXiv:2304.03271 in count."
+      },
+      {
+        "id": "L06",
+        "doi": "10.1145/3630106.3658542",
+        "title": "Power Hungry Processing: Watts Driving the Cost of AI Deployment?",
+        "reason": "AI inference, energy, model selection",
+        "appraisal": "Full accepted paper Table 2 verified at https://arxiv.org/html/2311.16863v3"
+      },
+      {
+        "id": "L07",
+        "doi": "10.1002/widm.1507",
+        "title": "A systematic review of Green AI",
+        "reason": "review, AI efficiency, research gaps",
+        "appraisal": "Published version metadata and author manuscript verified: https://repository.tudelft.nl/file/File_39af94da-1784-4864-a1e2-45e519b5cef8"
+      },
+      {
+        "id": "L08",
+        "doi": "10.1145/3381831",
+        "title": "Green AI",
+        "reason": "efficiency, responsibility, reporting",
+        "appraisal": "Author arXiv manuscript and university publication record verified: https://cris.huji.ac.il/en/publications/green-ai/"
+      },
+      {
+        "id": "L09",
+        "doi": "10.1038/s41558-022-01377-7",
+        "title": "Aligning artificial intelligence with climate change mitigation",
+        "reason": "carbon, AI applications, rebound, governance",
+        "appraisal": "ETH author repository verified: https://www.research-collection.ethz.ch/items/31d02bf1-40f4-4bb4-8f14-4f5a06eba774"
+      },
+      {
+        "id": "L10",
+        "doi": "10.1038/s43588-024-00712-6",
+        "title": "E-waste challenges of generative artificial intelligence",
+        "reason": "e-waste, hardware, circularity",
+        "appraisal": "Publisher or author manuscript/abstract verified"
+      },
+      {
+        "id": "L11",
+        "doi": "10.1016/j.joule.2022.07.011",
+        "title": "Sources of data center energy estimates: A comprehensive review",
+        "reason": "review, data quality, energy",
+        "appraisal": "Oxford author repository verified: https://ora.ox.ac.uk/objects/uuid:37af62a4-40ff-4a5c-ab12-778e197af64f"
+      },
+      {
+        "id": "L12",
+        "doi": "10.1145/3715335.3736324",
+        "title": "The Cloud Next Door: Investigating the Environmental and Socioeconomic Strain of Datacenters on Local Communities",
+        "reason": "community, environmental justice, noise, governance",
+        "appraisal": "ACM record and authors' https://arxiv.org/abs/2506.03367 verified."
+      },
+      {
+        "id": "L13",
+        "doi": "10.1016/j.eehl.2025.100157",
+        "title": "Global data center expansion and human health: A call for empirical research",
+        "reason": "health, air pollution, noise, research gaps",
+        "appraisal": "Publisher full letter verified."
+      },
+      {
+        "id": "L14",
+        "doi": "10.48550/arXiv.2412.06288",
+        "title": "Health-Informed Computing: Estimating and Addressing the Public Health Impact of Data Centers",
+        "reason": "health, air pollution, equity, scheduling",
+        "appraisal": "Publisher or author manuscript/abstract verified"
+      },
+      {
+        "id": "L15",
+        "doi": "10.1038/s41893-025-01681-y",
+        "title": "Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA",
+        "reason": "water, carbon, siting, scenarios, AI servers",
+        "appraisal": "Publisher or author manuscript/abstract verified"
+      },
+      {
+        "id": "L16",
+        "doi": "10.18653/v1/P19-1355",
+        "title": "Energy and Policy Considerations for Deep Learning in NLP",
+        "reason": "AI training, carbon, equity",
+        "appraisal": "Publisher or author manuscript/abstract verified"
+      },
+      {
+        "id": "L17",
+        "doi": null,
+        "title": "Towards the Systematic Reporting of the Energy and Carbon Footprints of Machine Learning",
+        "reason": "measurement, reporting, AI efficiency",
+        "appraisal": "Publisher or author manuscript/abstract verified"
+      },
+      {
+        "id": "L18",
+        "doi": "10.1145/3531146.3533234",
+        "title": "Measuring the Carbon Intensity of AI in Cloud Instances",
+        "reason": "carbon, scheduling, siting, measurement",
+        "appraisal": "Author paper verified at https://arxiv.org/abs/2206.05229"
+      },
+      {
+        "id": "L19",
+        "doi": "10.1109/HPCA51647.2021.00076",
+        "title": "Chasing Carbon: The Elusive Environmental Footprint of Computing",
+        "reason": "embodied carbon, hardware, lifecycle",
+        "appraisal": "Conference full text verified at https://www.cs.cmu.edu/~18742/papers/Gupta2021.pdf; later IEEE Micro version treated as duplicate."
+      },
+      {
+        "id": "L20",
+        "doi": "10.1177/2053951715592429",
+        "title": "Data flows and water woes: The Utah Data Center",
+        "reason": "community, water, environmental justice, governance",
+        "appraisal": "Publisher or author manuscript/abstract verified"
+      },
+      {
+        "id": "L21",
+        "doi": "10.1016/j.enbuild.2026.118163",
+        "title": "Reinforcement Learning for Data Center Cooling Performance Optimization: A Systematic Review and Gap Analysis for Deployment in Tropical Wet Climates",
+        "reason": "review, cooling, AI control, water, carbon",
+        "appraisal": "Publisher abstract/highlights verified; full text not retrieved."
+      },
+      {
+        "id": "L22",
+        "doi": "10.2105/AJPH.2026.308683",
+        "title": "The Unequal Burden of Environmental and Health Costs of Energy-Intensive Artificial Intelligence",
+        "reason": "health, environmental justice, occupational health, lifecycle",
+        "appraisal": "PubMed abstract verified: https://pubmed.ncbi.nlm.nih.gov/42715536/"
+      },
+      {
+        "id": "L23",
+        "doi": "10.3389/fclim.2026.1648912",
+        "title": "Health implications of the rapid rise of data centers in Virginia: an exploratory assessment",
+        "reason": "health, air pollution, noise, land use, equity",
+        "appraisal": "Publisher full text verified"
+      }
+    ],
+    "excluded_or_consolidated": [
+      {
+        "title": "Making AI Less Thirsty arXiv:2304.03271 (2023)",
+        "reason": "Duplicate precursor; consolidated into 2025 published CACM version L05"
+      },
+      {
+        "title": "Estimating Carbon Footprint of BLOOM arXiv:2211.02001 (2022)",
+        "reason": "Duplicate precursor; consolidated into JMLR 2023 L04"
+      },
+      {
+        "title": "A Systematic Review of Green AI arXiv:2301.11047",
+        "reason": "Duplicate precursor; consolidated into published WIREs review L07"
+      },
+      {
+        "title": "Chasing Carbon IEEE Micro 2022",
+        "doi": "10.1109/MM.2022.3163226",
+        "reason": "Related later publication; consolidated with HPCA2021 L19 to avoid double counting the same core work"
+      },
+      {
+        "title": "The Unpaid Toll arXiv:2412.06288 v1/v2/v3",
+        "reason": "Superseded versions; use v4 L14. Claims and horizon changed."
+      },
+      {
+        "title": "Generative AI could generate millions of tons of e-waste by decade's end (TechXplore)",
+        "reason": "Secondary news; original Wang et al. retained instead"
+      },
+      {
+        "title": "Environmental impact of artificial intelligence (Wikipedia)",
+        "reason": "Discovery-only tertiary source; not evidence"
+      },
+      {
+        "title": "The Environmental Impact of AI Servers and Sustainable Solutions arXiv:2601.06063",
+        "reason": "Not retained in bounded core; primary Xiao2025 state modeling verified instead"
+      },
+      {
+        "title": "Toward climate neutral data centers: Greenhouse gas inventory, scenarios, and strategies",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11773490/",
+        "reason": "Relevant candidate not fully appraised; primary page access challenge. Not evidence of ineligibility."
+      },
+      {
+        "title": "Infrasound and Low-Frequency Noise in Data Center Environments: A Narrative Review Toward Health-Protective Acoustic Design Standards",
+        "url": "https://www.mdpi.com/2571-8797/8/4/126",
+        "reason": "Relevant candidate not fully appraised; publisher access challenge. Noise pathways covered by L13/L23."
+      },
+      {
+        "title": "Resource Management Challenges in AI-Driven Data Centers: A Systematic Review of Energy, Water, and Material Constraints",
+        "url": "https://www.mdpi.com/2079-9276/15/9/115",
+        "reason": "Relevant recent candidate not fully appraised; broad secondary synthesis outside bounded extraction core"
+      },
+      {
+        "title": "A Systematic Review of Green and Sustainable AI: Taxonomy, Metrics, Challenges, and Open Research Directions",
+        "doi": "10.3390/su18084115",
+        "reason": "Relevant recent review not fully appraised; retention prioritized established L07 and datacenter-specific L21"
+      },
+      {
+        "title": "Reinforcement learning for data center energy efficiency optimization: A systematic literature review and research roadmap",
+        "doi": "10.1016/j.apenergy.2025.125734",
+        "reason": "Relevant review not fully appraised; retained more recent targeted cooling review L21"
+      },
+      {
+        "title": "The growing energy footprint of artificial intelligence",
+        "doi": "10.1016/j.joule.2023.09.004",
+        "reason": "Relevant perspective not extracted in bounded core; newer official demand and L15 modeling handled elsewhere"
+      }
+    ],
+    "count_note": "23 retained scholarly records; this is the number extracted for this component, not all search hits or all relevant published literature. Candidate exclusions listed here are a transparent selected log, not complete screening. No fabricated title/abstract-screened or full-text excluded totals.",
+    "limitations": [
+      "One-agent screening/extraction for this component; no independent duplicate review",
+      "Search engine ranking, English accessibility and selective retention introduce bias",
+      "Full text not available for every record; access status listed per record",
+      "No meta-analysis: boundaries, dates, geographies, denominators and methods differ",
+      "No clinical risk-of-bias grading or causal certainty ratings fabricated",
+      "Annual modeled costs and quantities are distinguished from observed meters and diagnoses"
+    ]
+  },
+  "states": {
+    "date": "2026-10-01",
+    "database": "Public web search; primary agency, regulator, operator and corporate sources prioritized",
+    "queries": [
+      "EPRI Powering Intelligence 2024 state data center electricity 2023 25.9 2023 state table pdf",
+      "Virginia JLARC 2024 data centers water use million gallons report",
+      "Lawrence Berkeley National Laboratory 2024 United States data center energy usage report",
+      "site.powering-intelligence.epri.com 2026 state Virginia 2024 2025 table",
+      "site:energy.gov \"Data Center Energy\" \"2025 Update\"",
+      "site:chandleraz.gov data center ordinance water 2025",
+      "site:gwinnettcounty.com data centers moratorium 2025 2026",
+      "site:powering-intelligence.epri.com \"state\" \"2026\" \"2024\"",
+      "site:gwinnettcounty.com \"data centers\" \"moratorium\"",
+      "site:phoenix.gov data centers water 2025",
+      "site:thedalles.org google 2024 water million gallons",
+      "site:powering-intelligence.epri.com \"Dashboard\"",
+      "site:gwinnettcounty.com \"data center\" \"moratorium\" 2026",
+      "site:thedalles.org \"Google\" \"water\" gallons",
+      "site:ercot.com \"large load\" \"2025\" \"data centers\"",
+      "Gwinnett County data centers moratorium adopted 2025 2026 official",
+      "\"The Dalles\" \"Google\" \"2024\" \"water\" 434",
+      "\"EPRI\" \"2026\" \"data dashboard\"",
+      "site:google.com \"2025 environmental report\" \"The Dalles\"",
+      "site:oregon.gov HB 3546 2025 POWER act data centers PUC",
+      "site:com.ohio.gov data centers tariff 2025 PUCO 85 percent",
+      "site:puco.ohio.gov \"data centers\" \"85%\" \"2025\"",
+      "site:troupcountyga.gov \"Moratorium\" \"Data Centers\" \"2026\"",
+      "site:sustainability.google \"2025\" \"water consumption\" \"Council Bluffs\"",
+      "\"PUCO\" \"data centers\" \"85%\" July 2025",
+      "\"Gwinnett\" \"moratorium\" \"data centers\" official",
+      "site:phoenix.gov \"large water\" \"250,000\"",
+      "site:aep.com \"July 9, 2025\" \"85%\" data centers",
+      "site:wa.gov data center workgroup 2025 water electricity 2026 report",
+      "site:leg.colorado.gov data centers 2025 water electricity",
+      "site:troupcountyga.gov \"data centers\" \"September\" \"2026\"",
+      "site:aep.com \"proposal on serving data centers\" \"July 9\"",
+      "site:aepohio.com \"85%\" \"2025\""
+    ],
+    "limitations": "Targeted non-exhaustive search; query-specific hit counts unavailable. Some results were used for citation chasing only. No claim of full state-law coverage."
+  },
+  "indiana": {
+    "search_engine": "web search; official-site and citation-following searches",
+    "query_count": 41,
+    "queries": [
+      "Indiana New Carlisle Amazon data center water consumption Indiana Finance Authority 2025",
+      "Morgan County Indiana data center moratorium 2026 official",
+      "La Porte Microsoft data center water use city gallons",
+      "site.morgancounty.in.gov \"moratorium\" \"data\"",
+      "Indiana data center moratorium adopted 2026 county ordinance",
+      "\"New Carlisle\" \"1.6 million\" \"water\"",
+      "site.in.gov \"Amazon\" \"water\" \"gallons\"",
+      "\"New Carlisle\" \"water\" \"million gallons\" Amazon 2026",
+      "\"Amazon\" \"New Carlisle\" \"water\" site.sjcindiana.gov",
+      "\"Microsoft\" \"La Porte\" water site.cityoflaporte.com",
+      "\"Google\" \"Fort Wayne\" \"water\" gallons",
+      "\"83951820\"",
+      "\"New Carlisle\" \"water\" \"24 million\" -site:reddit.com",
+      "\"New Carlisle\" \"water\" \"dry wells\" 2026",
+      "\"Morgan County\" \"Google\" water gallons 2026",
+      "site.sjcindiana.gov \"24 million\" water",
+      "site.in.gov \"New Carlisle\" \"drought\" \"2025\"",
+      "\"Amazon\" \"1.6 million\" \"2026\" water Indiana",
+      "\"La Porte\" Microsoft \"cooling\" \"2026\"",
+      "\"83951820\" \"gallons\"",
+      "\"Amazon\" \"SBN\" \"1,600,000\" sewer",
+      "\"New Carlisle\" \"sewer\" \"2026\" \"1.6\"",
+      "site.sjcindiana.gov \"moratorium\" \"71-26\"",
+      "site.in.gov dnr \"Significant Water Withdrawal\" data 2025",
+      "\"St. Joseph County\" \"moratorium\" \"September\" \"2026\" data centers",
+      "\"Miami County\" \"data center\" \"July 20\" \"2026\" ordinance",
+      "site.cityoffortwayne.org \"182 million\" Google water",
+      "\"St. Joseph\" \"data center\" \"September 22, 2026\" moratorium",
+      "\"Miami County\" \"July 20, 2026\" minutes data center",
+      "\"24\" \"water\" \"interlocal\" \"New Carlisle\" 2024",
+      "site.aboutamazon.com \"New Carlisle\" \"18 million\"",
+      "site.wndu.com \"St. Joseph County Council takes first step\" \"2026\"",
+      "site.abc57.com \"advances plan to ban new data centers\"",
+      "\"Amazon’s Investment Is Building Lasting Opportunity\" Oyer",
+      "\"Boone County\" \"moratorium\" \"September\" \"2026\" data",
+      "site.boonecounty.in.gov \"moratorium\" \"June 16, 2026\"",
+      "site.boonecounty.in.gov \"2026\" \"data centers\" \"ordinance\"",
+      "\"Boone County\" \"June 15, 2027\" data centers",
+      "site.boonecounty.in.gov \"data\" \"2026-15\"",
+      "site.boonecounty.in.gov \"moratorium\" \"ordinance\" \"2026\" filetype:pdf",
+      "site.boonecounty.in.gov \"June 15\" \"2026\" commissioners minutes"
+    ],
+    "search_result_count": null,
+    "search_result_count_note": "Search result records were not exhaustively enumerated or deduplicated; no PRISMA discovery count claimed.",
+    "included_source_count": 15,
+    "primary_government_or_corporate_or_firsthand_count": 11,
+    "original_reporting_count": 4,
+    "exclusions": "Social posts, tertiary facility registries and speculative extrapolations excluded as evidentiary bases. Some used to identify original sources.",
+    "retrieval_failures": [
+      "IDEM 83924700 diesel malfunction filing: 403",
+      "Peerless Midwest hydrologic report on DocumentCloud: 403",
+      "Morgan County 2025-1 PUD document: 403",
+      "Microsoft La Porte community-board PDF: tool retrieval failure"
+    ],
+    "limits": "Single-agent extraction, no independent double screening, no subscription database search, no formal risk-of-bias scoring, no statewide completeness claim.",
+    "audit_addendum": "October 1 follow-up located signed Boone Ordinance 2026-08 through official APC downloads. Downloaded and visually verified all three scanned pages; source replaced, included count unchanged. Public-file download also recovered IDEM 83951820 (permit 26205) after web fetch had failed; PDF text extracted and permit page 2 visually checked. Added IN15."
+  },
+  "methods": {
+    "search_date": "2026-10-01",
+    "engine": "Built-in web search and direct source opening",
+    "queries": [
+      "site.lbl.gov 2024 United States Data Center Energy Usage Report 66 billion liters 176 terawatt",
+      "site.iea.org Energy and AI 2025 data centres emissions 945 TWh 2030",
+      "site.iea.org 2026 Energy AI data centres 485 950 TWh",
+      "site.prisma-statement.org scoping reviews checklist PRISMA ScR",
+      "site.ghgprotocol.org scope 2 guidance location based market based hourly matching additionality",
+      "site.epa.gov egrid data center emissions electricity emission factors limitations marginal",
+      "site.wri.org aqueduct 4.0 baseline water stress withdrawals available supply data centers",
+      "site.iea.org key questions energy ai 2026 published April 2026",
+      "site.energy.gov 2025 Update Data Center 2024 electricity",
+      "site.nature.com data centers environmental health noise systematic review 2025 2026"
+    ],
+    "notes": "Purposive web discovery and reference following; engine result totals and every transient snippet were not retained. No full PRISMA identification or exclusion count is asserted. Source records and investigator query logs are preserved separately. Duplicates resolved by DOI, title and URL during integration."
+  },
+  "policy_discovery": {
+    "searchDate": "2026-10-01",
+    "cutoff": "2026-10-01",
+    "scope": "Targeted update for a decision-relevant reading shortlist; not systematic or exhaustive. Selection reflects editorial judgment about U.S. policy research, not measured influence, citations, or a ranking.",
+    "queries": [
+      "data centers peak water infrastructure 2026 research Siddik Marston Nature water",
+      "data centers marginal emissions 2025 2026 electricity research Nature Energy",
+      "\"Health-Informed Computing\" \"2026\"",
+      "\"Environmental impact and net-zero pathways\" \"2025\"",
+      "\"Health-Informed Computing: Estimating and Addressing\" ",
+      "\"Environmental impact and net-zero pathways for sustainable artificial intelligence servers\" ",
+      "\"The Unequal Burden of Environmental and Health Costs\" ",
+      "\"The Cloud Next Door\" 2025 ACM",
+      "\"Making AI Less\" \"Thirsty\" site:cacm.acm.org",
+      "\"Sources of data center energy estimates\" 2022 published",
+      "\"The environmental footprint of data centers in the United States\" \"2021\" published",
+      "\"How sovereign control, decarbonization\" site:nature.com",
+      "\"Making AI Less ‘Thirsty’\" site:cacm.acm.org ",
+      "\"10.1145/3715335.3736324\" site:dl.acm.org ",
+      "\"10.2105/AJPH.2026.308683\" site:ajph.aphapublications.org ",
+      "\"Small Bottle, Big Pipe\" journal OR accepted OR published",
+      "\"Making AI Less\" \"3724499\"",
+      "\"Locational Marginal Emissions for Carbon-Aware Data Center Operations\" journal accepted published",
+      "\"Sources of data center energy estimates\" \"17 August 2022\""
+    ],
+    "selectionNotes": "Eight readings from 2025–2026 and two foundations. Eight existing records retained; two new preprints fill peak-water-capacity and marginal-emissions gaps. Publication status checked against publisher or author archive records. Abstract-only and date uncertainty disclosed.",
+    "verifiedRecords": [
+      {
+        "sourceId": "POLICY_WATER2026",
+        "url": "https://arxiv.org/abs/2603.02705v2",
+        "status": "v2 dated 2026-03-18; preprint; full HTML also inspected"
+      },
+      {
+        "sourceId": "POLICY_MARGINAL2025",
+        "url": "https://arxiv.org/abs/2512.18819v1",
+        "status": "v1 dated 2025-12-21; preprint; full HTML inspected"
+      },
+      {
+        "sourceId": "L14",
+        "url": "https://arxiv.org/abs/2412.06288v4",
+        "status": "v4 dated 2026-06-08; comments report CACM acceptance; final publication not verified"
+      },
+      {
+        "sourceId": "L15",
+        "url": "https://www.nature.com/articles/s41893-025-01681-y.pdf",
+        "status": "Publisher PDF states published online 2025-11-10; Analysis"
+      },
+      {
+        "sourceId": "L22",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42715536/",
+        "status": "Authors' abstract and October 2026 issue metadata accessible; publisher full text blocked; exact online date unverified"
+      },
+      {
+        "sourceId": "L12",
+        "url": "https://arxiv.org/abs/2506.03367",
+        "status": "Author archive links ACM DOI and identifies ACM COMPASS 2025 Late Breaking Work; publisher directly blocked"
+      },
+      {
+        "sourceId": "ROOT_HEERING2026",
+        "url": "https://www.nature.com/articles/s41467-026-76500-9",
+        "status": "Publisher full article; published 2026-08-10"
+      },
+      {
+        "sourceId": "L05",
+        "url": "https://crystal.uta.edu/~mislam/pdfs/2025_CACM.pdf",
+        "status": "Author-hosted published PDF; publisher category search record states June 17 2025"
+      },
+      {
+        "sourceId": "L03",
+        "url": "https://vtechworks.lib.vt.edu/server/api/core/bitstreams/484c56d7-9557-4c71-ad47-84ab67a21bad/content",
+        "status": "Author repository published PDF states 2021-05-21"
+      },
+      {
+        "sourceId": "L11",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2542435122003580",
+        "status": "Publisher search record; issue dated 2022-09-21; author repository manuscript also verified"
+      }
+    ]
+  },
+  "metric_methods": {
+    "searched": "2026-10-01",
+    "scope": "Targeted primary-methodology verification for the 20-metric assessment framework; not a systematic literature search.",
+    "queries": [
+      {
+        "q": "site.eur-lex.europa.eu 2024/1364 data centres water consumption PUE WUE"
+      },
+      {
+        "q": "site.itu.int L.1410 environmental life cycle assessments information communication technology goods networks services"
+      },
+      {
+        "q": "site.epa.gov AP-42 stationary gas turbines diesel engines data center emissions emission factors"
+      },
+      {
+        "q": "site.iso.org ISO 1996-1 environmental noise assessment tonal sound"
+      },
+      {
+        "q": "site.oehha.ca.gov CalEnviroScreen 4.0 report pollution burden population characteristics screening not risk assessment"
+      },
+      {
+        "q": "site.epa.gov NPDES permit writers manual monitoring flow temperature pH effluent"
+      },
+      {
+        "q": "site.epa.gov refrigerant emissions greenhouse gas inventory mass balance refrigeration air conditioning"
+      },
+      {
+        "q": "site.eur-lex.europa.eu \"2024/1364\" \"E_DC\" \"W_IN\""
+      },
+      {
+        "q": "site.itu.int \"L.1410\" \"2024\" \"allocation\" \"life cycle\""
+      },
+      {
+        "q": "site.oehha.ca.gov \"CalEnviroScreen 5.0\" \"risk assessment\""
+      },
+      {
+        "q": "site.ifc.org Performance Standard 6 biodiversity baseline habitat ecosystem services 2012"
+      }
+    ],
+    "sourceFollowing": [
+      {
+        "url": "https://data.consilium.europa.eu/doc/document/ST-7842-2024-ADD-1/en/pdf",
+        "result": "Full primary annexes retrieved; used for energy, water and refrigerant reporting definitions."
+      },
+      {
+        "url": "https://www.itu.int/ITU-T/recommendations/rec.aspx?id=16010",
+        "result": "2024 in-force recommendation, detailed contents and indexed allocation section verified; direct PDF fetch failed."
+      },
+      {
+        "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-3-stationary-0",
+        "result": "Current chapter and linked April 2025 large-diesel PDF retrieved."
+      },
+      {
+        "url": "https://www.iso.org/standard/59765.html",
+        "result": "Public abstract verified; full licensed standard not reviewed."
+      },
+      {
+        "url": "https://www.epa.gov/sites/default/files/2015-09/documents/pwm_chapt_08.pdf",
+        "result": "Full effluent monitoring chapter retrieved."
+      },
+      {
+        "url": "https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-50",
+        "result": "Final July 1, 2026 release verified after 4.0 page identified successor; source owned by California agent as CA_CES50. No tract scores extracted."
+      },
+      {
+        "url": "https://www.ifc.org/content/dam/ifc/doc/2010/20190627-ifc-ps-guidance-note-6-en.pdf",
+        "result": "Official 2019-updated guidance retrieved and baseline/impact sections read; sixth methodology source fills ecology gap."
+      }
+    ],
+    "excludedOrNotAdded": [
+      {
+        "query": "site.epa.gov refrigerant emissions greenhouse gas inventory mass balance refrigeration air conditioning",
+        "reason": "Did not add a separate source; retained refrigerant-specific measurement requirement and existing corporate/Commission reporting context."
+      }
+    ],
+    "limitations": "No completeness claim; selected official methods fill operational, lifecycle, pollution and distributional gaps. Proposed frequency and minimum evidence are analyst recommendations."
+  },
+  "california_policy": {
+    "reviewDate": "2026-10-01",
+    "jurisdiction": "California",
+    "method": "Targeted official-source search, direct chaptered-text review, status/date comparison and agency guidance verification. Secondary results used only to locate primary sources.",
+    "queries": [
+      {
+        "id": "ca_query_1",
+        "date": "2026-10-01",
+        "query": "site.energy.ca.gov data centers 2026 California integrated energy policy report electricity",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_2",
+        "date": "2026-10-01",
+        "query": "site.leginfo.legislature.ca.gov 2026 data center water electricity SB AB",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_3",
+        "date": "2026-10-01",
+        "query": "site.cpuc.ca.gov data centers 2026 large load tariffs",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_4",
+        "date": "2026-10-01",
+        "query": "site.gov.ca.gov 2026 data centers water bills",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_5",
+        "date": "2026-10-01",
+        "query": "site:gov.ca.gov 2026 September data centers seven bills",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_6",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov \"202520260SB0057\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_7",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov \"202520260AB2469\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_8",
+        "date": "2026-10-01",
+        "query": "site:arb.ca.gov climate corporate data accountability SB 253 2026 August",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_9",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov \"SB-886\" \"2025-2026\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_10",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov \"SB-887\" \"2025-2026\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_11",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov \"SB-1168\" \"2025-2026\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_12",
+        "date": "2026-10-01",
+        "query": "site:arb.ca.gov \"SB 253\" \"August\" \"2026\" \"SB 261\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_13",
+        "date": "2026-10-01",
+        "query": "site:oehha.ca.gov CalEnviroScreen 5.0 2026 final screening limitations",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_14",
+        "date": "2026-10-01",
+        "query": "site:water.ca.gov urban water management plans drought risk assessment water supply assessment",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_15",
+        "date": "2026-10-01",
+        "query": "site:arb.ca.gov \"SB 261\" \"injunction\" \"2026\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_16",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov California Constitution Article IV section 8 January 1 statute",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_17",
+        "date": "2026-10-01",
+        "query": "\"SB 253\" \"September\" \"2026\" CARB",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_18",
+        "date": "2026-10-01",
+        "query": "\"SB 261\" \"2026\" injunction CARB official",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_19",
+        "date": "2026-10-01",
+        "query": "site:ww2.arb.ca.gov \"not enforce\" \"261\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_20",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov \"statute enacted at a regular session shall go into effect\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_21",
+        "date": "2026-10-01",
+        "query": "site:ww2.arb.ca.gov \"2026_SB253_Reporting_Guidance\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_22",
+        "date": "2026-10-01",
+        "query": "site:content.govdelivery.com/accounts/CARB \"November 10, 2026\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_23",
+        "date": "2026-10-01",
+        "query": "site:ww2.arb.ca.gov \"Guidance for SB 253\" \"2026\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_24",
+        "date": "2026-10-01",
+        "query": "site:ww2.arb.ca.gov \"SB 261\" \"September\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_25",
+        "date": "2026-10-01",
+        "query": "site:content.govdelivery.com/accounts/CARB \"Initial Regulation\" \"September\" \"2026\" \"approved\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_26",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov \"AB-93\" \"Data centers\" \"2025-2026\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_27",
+        "date": "2026-10-01",
+        "query": "site:gov.ca.gov \"AB 93\" \"2025\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_28",
+        "date": "2026-10-01",
+        "query": "site:gov.ca.gov \"AB 222\" \"2025\"",
+        "platform": "web search"
+      },
+      {
+        "id": "ca_query_29",
+        "date": "2026-10-01",
+        "query": "site:leginfo.legislature.ca.gov \"AB 93\" \"2025\" \"data centers\"",
+        "platform": "web search"
+      }
+    ],
+    "verification": [
+      {
+        "topic": "September 2026 data-center package",
+        "result": "All seven bills signed and chaptered September 21, 2026: AB1577 chapter434; AB2383 chapter435; AB2469 chapter436; AB2619 chapter437; SB886 chapter438; SB887 chapter439; SB1168 chapter440. Enactment is distinguished from January 1, 2027 effectiveness and later implementation dates.",
+        "urls": [
+          "https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/",
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1577",
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2383",
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2469",
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2619",
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB886",
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB887",
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1168"
+        ]
+      },
+      {
+        "topic": "General effective-date rule",
+        "result": "California Constitution Article IV §8(c)(1) supplies ordinary-statute effective-date rule; reviewed the seven chaptered acts and found no urgency clause. These September 21 ordinary statutes become effective January 1, 2027, with later specified duties separately stated.",
+        "urls": [
+          "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&article=IV"
+        ]
+      },
+      {
+        "topic": "AB1577 applicability and deadlines",
+        "result": "Chaptered §25302.10 excludes electrical capacity below10 MW and specified public/research/utility facilities; reporting process and timing set by CEC; at least annual operator reports with monthly disaggregation unless otherwise specified; IEPR assessment begins2029. §65909.3 estimates energy/onsite generation/noise for local discretionary applications; customer energy data protected.",
+        "sourceIds": [
+          "CA_AB1577"
+        ]
+      },
+      {
+        "topic": "AB2469 and AB2619 distinct water triggers",
+        "result": "AB2469 has no MW threshold; applies to construction or peak-water-increasing expansion and discretionary/ministerial approvals. Scarcity-plan requirement specifically begins January1 2028. AB2619 includes all three defined facility classes including below2MW; initial-license estimates and renewals with prior-year water use differ from AB2469 development approvals.",
+        "sourceIds": [
+          "CA_AB2469",
+          "CA_AB2619"
+        ]
+      },
+      {
+        "topic": "SB886 and AB2383 scope correction",
+        "result": "No universal75MW cutoff in chaptered SB886. Definitions supplied by AB2383; generation tariff threshold chosen by implementing entity must be no greater than25MW. SB886 transmission-specific §945.3 applies to new agreements on/after January1 2027; tariff/rule deadline January1 2028. Generation exceptions cannot be generalized across every provision.",
+        "sourceIds": [
+          "CA_SB886",
+          "CA_AB2383"
+        ]
+      },
+      {
+        "topic": "SB887 streamlining versus universal standards",
+        "result": "Chaptered act bars categorical exemptions for covered data-center development, with specified facility exceptions; leadership-project certification is a distinct conditional pathway. Hourly100% zero-carbon within five years (75% newly developed), four-hour storage, water-efficient/recycled or waterless cooling and community-benefit conditions apply to that pathway, not all operating facilities.",
+        "sourceIds": [
+          "CA_SB887"
+        ]
+      },
+      {
+        "topic": "2025 cost-shift statute",
+        "result": "SB57 signed October11 2025, chapter647; effective January1 2026. CPUC may assess cost shifts and must submit any completed assessment by January1 2027; not an enactment of a new tariff.",
+        "sourceIds": [
+          "CA_SB57"
+        ]
+      },
+      {
+        "topic": "Vetoed water predecessor",
+        "result": "AB93 verified in Governor's October11 2025 veto list. Linked veto-message PDF located but image text not extracted; the policy record makes no claim about detailed veto rationale.",
+        "sourceIds": [
+          "CA_AB93"
+        ],
+        "urls": [
+          "https://www.gov.ca.gov/wp-content/uploads/2025/10/AB-93-Veto.pdf"
+        ]
+      },
+      {
+        "topic": "AB222 proposal exclusion",
+        "result": "Official status page has no chapter; last displayed action August29 2025 held under submission, with July7 2025 amended text. Excluded from current requirements. Earlier deleted model-energy language in struck-out text is not operative law.",
+        "urls": [
+          "https://leginfo.legislature.ca.gov/faces/billStatusClient.xhtml?bill_id=202520260AB222",
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB222"
+        ]
+      },
+      {
+        "topic": "Current CEC practice and jurisdiction",
+        "result": "Official Data Centers page verifies forecasting from utility applications, existing building-energy benchmarking and separate onsite thermal-generation jurisdiction. It explicitly states CEC does not permit data centers themselves; SPPE is not a blanket CEQA exemption.",
+        "sourceIds": [
+          "CA_CEC"
+        ]
+      },
+      {
+        "topic": "CES current version and meaning",
+        "result": "OEHHA final CES5.0 page dated July1 2026 references final September18 2026 disadvantaged-community designation. FAQ/model pages confirm census-tract ranking and multiple pollution/vulnerability indicators; no project score generated.",
+        "sourceIds": [
+          "CA_CES50"
+        ],
+        "urls": [
+          "https://oehha.ca.gov/calenviroscreen/calenviroscreen-faqs",
+          "https://oehha.ca.gov/calenviroscreen/model-scoring"
+        ]
+      },
+      {
+        "topic": "Water planning",
+        "result": "DWR annual assessment page confirms supplier threshold, annual July1 timing, imported-water allocation exception, drought assumptions and ongoing reassessment. Separate current urban-efficiency page confirms five-year UWMP2025-cycle due July1 2026; only annual-assessment source included to limit bibliography.",
+        "sourceIds": [
+          "CA_DWR"
+        ],
+        "urls": [
+          "https://water.ca.gov/programs/water-use-and-efficiency/urban-water-use-efficiency"
+        ]
+      },
+      {
+        "topic": "SB253 newest retrievable agency notice",
+        "result": "September1 2026 official CARB bulletin identifies November10 2026 deadline and describes Initial Regulation as conditional on OAL approval. February press release's August10 date is stale. No later official approval verified in this search; policy preserves conditional implementation language.",
+        "sourceIds": [
+          "CA_CARB253"
+        ],
+        "urls": [
+          "https://content.govdelivery.com/accounts/CARB/bulletins/41d8418",
+          "https://content.govdelivery.com/accounts/CARB/bulletins/421d3a1"
+        ]
+      },
+      {
+        "topic": "CARB retrieval limitation",
+        "result": "Direct program, September1 guidance PDF and rulemaking webpage returned JavaScript/bot verification via web. Official CARB GovDelivery bulletin was accessible and used as primary evidence. Secondary legal/accounting pages were discovery leads only.",
+        "urls": [
+          "https://ww2.arb.ca.gov/sites/default/files/2026-09/2026_SB253_Reporting_Guidance.pdf",
+          "https://ww2.arb.ca.gov/rulemaking/2025/california-corporate-greenhouse-gas-reporting-and-climate-related-financial-risk"
+        ]
+      },
+      {
+        "topic": "SB261 kept separate",
+        "result": "Official December1 2025 CARB bulletin says enforcement enjoined pending appeal, reports optional, and SB253 unaffected. No latest appellate disposition verified; SB261 not presented as an operative current requirement in policy cards.",
+        "urls": [
+          "https://content.govdelivery.com/accounts/CARB/bulletins/3fdc84b"
+        ]
+      },
+      {
+        "topic": "Scope of selection",
+        "result": "Thirteen primary sources retained with parent approval to exceed initial ten-source cap modestly. Sources prioritize all seven enacted 2026 bills, existing facility context, 2025 precedent, water, screening and one carefully bounded corporate disclosure record. This is a targeted policy scan, not an exhaustive legal search."
+      }
+    ],
+    "sourceCount": 13,
+    "limitations": [
+      "No blanket environmental obligation inferred from AI transparency or AI-training-data laws.",
+      "No statutory reporting proposal, industry submission, forecast, or voluntary procurement recommendation relabeled as current law.",
+      "No facility-specific compliance opinion or measured environmental score generated.",
+      "Post-review legal or rulemaking changes require a dated refresh."
+    ]
+  },
+  "procurement_bridge": {
+    "searchDate": "2026-10-01",
+    "queries": [
+      "site.dgs.ca.gov generative artificial intelligence procurement risk assessment SAM 4986 California 2026",
+      "site.gov.ca.gov September 21 2026 data center AB 1577 AB 2469 SB 887",
+      "site.ww2.arb.ca.gov SB 253 November 10 2026 OAL approval September 2026 reporting",
+      "site.content.govdelivery.com CARB SB 253 \"September\" \"2026\" \"OAL\""
+    ],
+    "verification": [
+      {
+        "url": "https://www.cdt.ca.gov/policy/technology-letters/technology-letter-24-03/",
+        "result": "Full policy page verified; GenAI procurements require completed SIMM5305-F at every risk level."
+      },
+      {
+        "url": "https://www.dgs.ca.gov/Resources/SAM/TOC/4900/4986-9/02-20-2025",
+        "result": "Official indexed text found; direct retrieval returned403. Not treated as a fully inspected current policy chapter."
+      },
+      {
+        "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2469",
+        "result": "Chapter436, enacted September21 2026; full chaptered text inspected."
+      },
+      {
+        "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB886",
+        "result": "Chapter438, enacted September21 2026; full chaptered text inspected."
+      },
+      {
+        "url": "https://www.assembly.ca.gov/system/files/2026-03/2026-calendar-version-2.pdf",
+        "result": "Official legislative calendar read for ordinary statute effective-date context."
+      }
+    ]
+  }
+}
