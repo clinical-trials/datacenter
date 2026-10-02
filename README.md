@@ -98,3 +98,9 @@ Validation covered all 51 electricity geographies and both years, water rounding
 ## Filing-language decoder
 
 Project watch highlights a curated set of claim phrases in stored record titles, summaries and status text. Amber marks and expandable prompts ask for supporting measurements, accounting boundaries and certification details. The decoder does not scan full PDFs, infer the author’s intent, classify claims as false, or measure phrase prevalence. A switch removes highlights. Analyst limitations are excluded from matching, and input text is escaped before display. No filing records or review decisions are changed.
+
+## Calder-inspired visual edition
+
+The interface uses primary colors, strong typography and three generated mobile-style illustrations. Live HTML numbers sit inside the computer, electricity/carbon and dinosaur artwork; the pictures select their underlying impact panels. The water ring encodes consumption as a share of reported withdrawal, with rounded-balance notices. Decorative artwork has no quantitative scale. A cited EIA explainer separates dinosaur imagery from fossil-fuel origins and present-day wetland evidence. All scientific boundaries, source links, filing actions and claim highlights remain available.
+
+Illustrations were generated with the built-in image tool; exact prompts are recorded in [asset provenance](design/calder-assets.json). No runtime image generation or animation is used.
