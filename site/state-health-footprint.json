@@ -1,0 +1,60 @@
+{
+  "source": "Nicholas Z. Muller, NBER Working Paper 35100, April 2026, Table 1 (printed page 16; PDF page 17)",
+  "url": "https://www.nber.org/system/files/working_papers/w35100/w35100.pdf#page=17",
+  "checked": "2026-10-02",
+  "year": 2025,
+  "nationalAirMillion": 4590,
+  "boundary": "Modeled mortality-risk valuation associated with electricity for operational data centers, attributed to data-center state, not affected-resident state. Climate damages excluded. Table 1 selects states by combined air and climate damages; this is not a national top-ten health ranking. Other state air-damage values not extracted.",
+  "records": [
+    {
+      "state": "VA",
+      "airMillion": 869,
+      "combinedMillion": 4290
+    },
+    {
+      "state": "TX",
+      "airMillion": 468,
+      "combinedMillion": 3230
+    },
+    {
+      "state": "OH",
+      "airMillion": 419,
+      "combinedMillion": 1740
+    },
+    {
+      "state": "IA",
+      "airMillion": 391,
+      "combinedMillion": 1440
+    },
+    {
+      "state": "IL",
+      "airMillion": 363,
+      "combinedMillion": 1410
+    },
+    {
+      "state": "GA",
+      "airMillion": 182,
+      "combinedMillion": 1420
+    },
+    {
+      "state": "TN",
+      "airMillion": 172,
+      "combinedMillion": 717
+    },
+    {
+      "state": "OR",
+      "airMillion": 150,
+      "combinedMillion": 1210
+    },
+    {
+      "state": "NE",
+      "airMillion": 145,
+      "combinedMillion": 712
+    },
+    {
+      "state": "AZ",
+      "airMillion": 101,
+      "combinedMillion": 1090
+    }
+  ]
+}
