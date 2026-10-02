@@ -7,7 +7,7 @@ const ref=(...ids)=>ids.map(id=>src[id]?`<a class="ref" href="${esc(src[id].url)
 const names=Object.fromEntries(DATA.states.map(s=>[s.abbreviation,s.name]));
 let selected='IN';
 function view(name){
- if(!['ledger','decide','learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='learn';
+ if(!['impact','ledger','decide','learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='learn';
  document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!=='view-'+name);
  document.querySelectorAll('.nav button').forEach(b=>b.dataset.view===name?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
  if(document.getElementById('mobile-view'))document.getElementById('mobile-view').value=name;history.replaceState(null,'','#'+name);window.scrollTo({top:0,behavior:'instant'});
@@ -38,7 +38,7 @@ $('state-cases').innerHTML=DATA.cases.map(c=>`<article class="case">${caseText(c
 const waterStates=[...new Set(DATA.water.map(r=>r.abbreviation))].sort((a,b)=>names[a].localeCompare(names[b]));
 $('water-state').innerHTML+='<option value="IN">Indiana · no comparable campus record</option>'+waterStates.map(s=>`<option value="${s}">${esc(names[s])}</option>`).join('');
 function renderWater(){const sel=$('water-state').value,rows=DATA.water.filter(w=>sel==='all'||w.abbreviation===sel).sort((a,b)=>b.consumptionMG-a.consumptionMG);
- $('water-table').innerHTML=rows.length?rows.map(w=>`<tr><td><strong>${esc(w.location)}</strong><br><span class="small">${esc(w.name)}</span></td><td class="num">${nf(w.withdrawalMG,w.withdrawalMG<1?2:1)}</td><td class="num">${nf(w.dischargeMG,w.dischargeMG<1?2:1)}</td><td class="num"><strong>${nf(w.consumptionMG,w.consumptionMG<1?2:1)}</strong></td><td class="small">${w.reclaimedWithdrawalMG!==undefined?`${nf(w.reclaimedWithdrawalMG,1)}M reclaimed / ${nf(w.potableWithdrawalMG,1)}M potable withdrawn. `:''}${w.location==='Phoenix'?'Rounded inputs do not exactly balance. ':''}Company-reported; volume is not an efficiency score. ${ref(...w.sourceIds)}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">No comparable campus balance included for Indiana. See the Indiana case file for projections, infrastructure and policy evidence.</td></tr>';
+ $('water-table').innerHTML=rows.length?rows.map(w=>`<tr><td><strong>${esc(w.location)}</strong><br><span class="small">${esc(w.name)}</span></td><td class="num">${nf(w.withdrawalMG,w.withdrawalMG<1?2:1)}</td><td class="num">${nf(w.dischargeMG,w.dischargeMG<1?2:1)}</td><td class="num"><strong>${nf(w.consumptionMG,w.consumptionMG<1?2:1)}</strong></td><td class="small">${w.reclaimedWithdrawalMG!==undefined?`${nf(w.reclaimedWithdrawalMG,1)}M reclaimed / ${nf(w.potableWithdrawalMG,1)}M potable withdrawn. `:''}${w.location==='Phoenix'?'Rounded inputs do not exactly balance. ':''}Company-reported; volume is not an efficiency score. ${ref(...w.sourceIds)}</td></tr>`).join(''):`<tr><td colspan="5" class="empty">No comparable campus balance included for ${esc(names[sel]||'this selection')}. Missing observations do not establish zero water use.</td></tr>`;
 }
 $('water-state').onchange=renderWater;
 $('water-source').innerHTML=`Google, 2025 Environmental Report, pp. 110–114: withdrawal, discharge and consumption are included in the limited-assurance schedule. Engineering estimates are permitted where meter data are unavailable. This is a harmonized 2024 sample; the newer 2026 report was not extracted. Rounded values may not exactly balance. ${ref('GOOGLE2025')}`;
@@ -82,7 +82,7 @@ function renderSources(){const q=$('source-search').value.toLowerCase().trim(),t
  $('source-list').innerHTML=matches.length?matches.map(s=>`<article class="source-item" id="source-${esc(s.id)}"><div class="pillrow"><span class="badge">${esc(s.type)}</span><span class="badge">${s.year}</span>${s.theme?`<span class="small">${esc(s.theme)}</span>`:''}</div><h3><a href="${esc(s.url)}" target="_blank" rel="noopener">[${s.number}] ${esc(s.title)}</a></h3><div class="source-meta">${esc(s.authors)}${s.venue?' · '+esc(s.venue):''}</div>${s.methods?`<p><b>Method:</b> ${esc(s.methods)}</p>`:''}<p>${esc(s.finding)}</p>${s.limitations?`<p class="small"><b>Limitations:</b> ${esc(s.limitations)}</p>`:''}${s.access?`<p class="small"><b>Access:</b> ${esc(s.access)}</p>`:''}<p class="source-meta">${s.doi?'DOI: '+esc(s.doi)+' · ':''}${s.geography?esc(s.geography)+' · ':''}Accessed 1 October 2026</p></article>`).join(''):'<div class="empty">No matching records. Try a broader term or select all evidence categories.</div>';
 }
 $('source-search').oninput=renderSources;$('source-type').onchange=renderSources;
-renderStates();renderWater();renderScenario();renderSources();view(location.hash.slice(1)||'ledger');
+renderStates();renderWater();renderScenario();renderSources();view(location.hash.slice(1)||'impact');
 if(document.modelContext?.registerTool){
  const lifecycle=new AbortController();
  const properties=Object.fromEntries(specs.map(([id,label,value,minimum,maximum])=>[id,{type:'number',description:label,minimum,maximum}]));

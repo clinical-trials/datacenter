@@ -16,6 +16,7 @@ Open [http://localhost:8000](http://localhost:8000).
 
 ## Included
 
+- A visual opening dashboard with 50-state electricity tiles and scenario ranges, campus water-balance charts, interactive AI footprint comparisons, and selected local land and generator specifications. Sources and methods expand on demand.
 - Plain-language consumer guide, environmental claim decoder and questions for public meetings.
 - Twenty environmental assessment metrics, with units, boundaries, methods, monitoring, evidence requirements, tradeoffs and coverage gaps.
 - Applications to Indiana facilities, California facilities and AI procurement.
@@ -85,3 +86,11 @@ Sources added to consumer resources: U.S. EIA, Table 5a, 2024 Average Monthly Bi
 The prospective ledger now includes the supplied Iron Mountain Richmond campus brochure as operator evidence, with seven explicitly bounded quantities and no inferred operating water or emissions data. Its publication/filing date is unknown, so observation on 2026-10-01 is labeled separately. Source-copy SHA-256 identifies the supplied PDF; the matching-text public copy has a different file fingerprint. Conflicting operator schedules, missing certificate details and required environmental measurements remain visible. The original PDF is not redistributed in this repository.
 
 [Structured Richmond evidence](site/richmond-brochure-evidence.json) supplements the 86-source review rather than changing the scholarly corpus. Undated records support explicit observedDate and optional sourceSha256; repeated observation alone does not duplicate a document.
+
+## Visual impact explorer — 2 October 2026
+
+The dashboard opens at `#impact`. Four views separate modeled electricity demand, company-reported water balances, hypothetical carbon scenarios and local project specifications. Selecting a state, campus or scenario updates the corresponding chart. The 50-state electricity model, 23-location Google water sample and smaller project ledger have separate coverage labels; their values are not combined into a national environmental score. Rounded water balances are explicitly identified. The full scenario calculator inherits assumptions selected in the visual explorer.
+
+Project-watch cards now show a compact summary, with quantities, source limitations and review history in expandable details. This interface update does not expand the review corpus or establish measured health outcomes. Source citations remain beside each chart's methods.
+
+Validation covered all 51 electricity geographies and both years, water rounding cases, carbon arithmetic and transfer of controls, collapsed/expanded filing cards, and mobile layouts. JavaScript syntax and research-data integrity checks passed. The underlying research cutoff remains 1 October 2026.
