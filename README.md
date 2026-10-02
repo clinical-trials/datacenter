@@ -94,3 +94,7 @@ The dashboard opens at `#impact`. Four views separate modeled electricity demand
 Project-watch cards now show a compact summary, with quantities, source limitations and review history in expandable details. This interface update does not expand the review corpus or establish measured health outcomes. Source citations remain beside each chart's methods.
 
 Validation covered all 51 electricity geographies and both years, water rounding cases, carbon arithmetic and transfer of controls, collapsed/expanded filing cards, and mobile layouts. JavaScript syntax and research-data integrity checks passed. The underlying research cutoff remains 1 October 2026.
+
+## Filing-language decoder
+
+Project watch highlights a curated set of claim phrases in stored record titles, summaries and status text. Amber marks and expandable prompts ask for supporting measurements, accounting boundaries and certification details. The decoder does not scan full PDFs, infer the author’s intent, classify claims as false, or measure phrase prevalence. A switch removes highlights. Analyst limitations are excluded from matching, and input text is escaped before display. No filing records or review decisions are changed.
