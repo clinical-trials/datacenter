@@ -1,0 +1,258 @@
+{
+  "updated": "2026-10-02",
+  "status": "Policy proposals; not legal requirements or guaranteed reductions",
+  "solutions": [
+    {
+      "group": "Compute",
+      "title": "Use the smallest adequate model",
+      "metric": "kWh per successfully completed task; accuracy and failure rate",
+      "owner": "AI provider / operations",
+      "action": "Route routine requests to smaller models; reserve larger models for tasks that need them.",
+      "caution": "Benchmark at the same quality and latency; a smaller model is not always sufficient.",
+      "source": "MIT2",
+      "number": 1
+    },
+    {
+      "group": "Compute",
+      "title": "Reuse results and models",
+      "metric": "Cache hit rate; avoided runs; total monthly kWh",
+      "owner": "AI provider / operations",
+      "action": "Cache repeat outputs where privacy permits; reuse trained models before starting new training.",
+      "caution": "Check stale answers, privacy and retraining needs.",
+      "source": "IEA25",
+      "number": 2
+    },
+    {
+      "group": "Compute",
+      "title": "Cap wasteful computation",
+      "metric": "GPU watts; kWh/job; completion time",
+      "owner": "Operator / operations",
+      "action": "Test power caps, batching and idle-server shutdown against a service target.",
+      "caution": "Longer runtime can offset lower power; measure energy, not watts alone.",
+      "source": "MIT2",
+      "number": 3
+    },
+    {
+      "group": "Compute",
+      "title": "Set an absolute energy budget",
+      "metric": "Monthly MWh and tCO\u2082e, alongside useful output",
+      "owner": "Corporate buyer / procurement",
+      "action": "Require annual resource budgets and a documented review before expansion.",
+      "caution": "Efficiency alone can be overwhelmed by increased use; this is a proposed governance control.",
+      "source": "IEA25",
+      "number": 4
+    },
+    {
+      "group": "Power",
+      "title": "Commission clean supply before load",
+      "metric": "New deliverable clean MWh; commissioning dates",
+      "owner": "Developer / energization",
+      "action": "Stage new load against verified delivery of additional low-emission supply and grid capacity.",
+      "caution": "A contract or distant certificate does not establish local or hourly delivery.",
+      "source": "IEA26",
+      "number": 5
+    },
+    {
+      "group": "Power",
+      "title": "Match power by time and place",
+      "metric": "Hourly clean-energy coverage; location-based tCO\u2082e",
+      "owner": "Operator / operations",
+      "action": "Disclose hourly supply gaps and both location-based and applicable market-based inventories.",
+      "caution": "Hourly matching is a proposed stronger procurement condition; certificates do not erase local pollution.",
+      "source": "GHG",
+      "number": 6
+    },
+    {
+      "group": "Power",
+      "title": "Shift flexible work with health safeguards",
+      "metric": "Marginal CO\u2082 and pollutant changes; latency",
+      "owner": "Operator / operations",
+      "action": "Schedule deferrable jobs using carbon and public-health signals together.",
+      "caution": "Han\u2019s modeled gains are not field-proven universal savings; do not export harm to another community.",
+      "source": "HAN",
+      "number": 7
+    },
+    {
+      "group": "Power",
+      "title": "Make flexibility enforceable",
+      "metric": "Verified curtailable MW; response time; rebound load",
+      "owner": "Developer and utility / connection",
+      "action": "Contract and test load reductions during grid stress, with limits on diesel substitution.",
+      "caution": "Protect essential services and account for catch-up demand after the event.",
+      "source": "IEA26",
+      "number": 8
+    },
+    {
+      "group": "Water & health",
+      "title": "Choose the least harmful viable site",
+      "metric": "Basin stress; exposed population; grid constraints",
+      "owner": "Developer / siting",
+      "action": "Compare alternative sites and cumulative impacts before buying into a single location.",
+      "caution": "National income and average grid carbon are inadequate siting scores.",
+      "source": "UN",
+      "number": 9
+    },
+    {
+      "group": "Water & health",
+      "title": "Budget water for drought",
+      "metric": "Withdrawal and consumption m\u00b3/day; drought allocation",
+      "owner": "Operator / permit and operations",
+      "action": "Meter sources separately and set drought triggers, curtailment and protected community supply.",
+      "caution": "Dry cooling can increase electricity; reclaimed water also has treatment and ecological costs.",
+      "source": "MIT1",
+      "number": 10
+    },
+    {
+      "group": "Water & health",
+      "title": "Reduce routine diesel use",
+      "metric": "Generator hours; fuel; NOx and PM emissions",
+      "owner": "Operator / commissioning and operations",
+      "action": "Assess batteries and cleaner backup; meter generator tests and enforce operating conditions.",
+      "caution": "Battery duration, fire protection and reliability require engineering; backup is not automatically replaceable.",
+      "source": "HAN",
+      "number": 11
+    },
+    {
+      "group": "Water & health",
+      "title": "Measure exposure near people",
+      "metric": "PM\u2082.\u2085, NO\u2082; nighttime noise; modeled concentration change",
+      "owner": "Operator funds independent oversight / operations",
+      "action": "Use baseline and follow-up monitoring at sensitive receptors, supported by dispersion analysis.",
+      "caution": "Sensors alone cannot attribute disease to a site; near-field impacts need more than regional screening.",
+      "source": "EPA",
+      "number": 12
+    },
+    {
+      "group": "Lifecycle",
+      "title": "Extend useful hardware life",
+      "metric": "Service years; embodied tCO\u2082e; energy per task",
+      "owner": "Equipment buyer / procurement",
+      "action": "Compare repair and reuse with replacement using lifecycle emissions.",
+      "caution": "Older equipment may consume more power; assess the break-even point.",
+      "source": "UN",
+      "number": 13
+    },
+    {
+      "group": "Lifecycle",
+      "title": "Buy lower-carbon construction",
+      "metric": "Verified material quantities and product tCO\u2082e",
+      "owner": "Developer / construction",
+      "action": "Specify lower-emission concrete and steel with comparable performance and product declarations.",
+      "caution": "Use consistent lifecycle boundaries; do not double-count supplier emissions.",
+      "source": "MIT2",
+      "number": 14
+    },
+    {
+      "group": "Lifecycle",
+      "title": "Recover useful heat where feasible",
+      "metric": "Delivered useful MWh; net avoided emissions",
+      "owner": "Operator and heat buyer / design",
+      "action": "Build heat reuse only with a real nearby heat customer and a verified displaced heat source.",
+      "caution": "Pumping, seasonal demand and backup heat can reduce the benefit.",
+      "source": "EU",
+      "number": 15
+    },
+    {
+      "group": "Lifecycle",
+      "title": "Track equipment to its end of life",
+      "metric": "Mass reused; verified downstream recovery; hazardous waste",
+      "owner": "Producer and operator / retirement",
+      "action": "Require take-back contracts and independently trace downstream treatment.",
+      "caution": "A recycling receipt alone does not establish safe recovery or prevent exported harm.",
+      "source": "UN",
+      "number": 16
+    },
+    {
+      "group": "Accountability",
+      "title": "Charge for dedicated infrastructure",
+      "metric": "Project-attributable grid/water costs; household bill change",
+      "owner": "Developer / utility agreement",
+      "action": "Recover attributable connection and expansion costs through regulator-reviewed tariffs and exit security.",
+      "caution": "Allocate shared benefits fairly; avoid charging the same cost twice.",
+      "source": "IEA26",
+      "number": 17
+    },
+    {
+      "group": "Accountability",
+      "title": "Price residual damage transparently",
+      "metric": "tCO\u2082e; pollutant-specific modeled damage ranges",
+      "owner": "Operator / proposed national policy",
+      "action": "Combine emissions limits with a transparent residual-damage charge and community mitigation funding.",
+      "caution": "Requires legal authority; taxes already paid must be reconciled. Fees never substitute for health limits.",
+      "source": "EPA",
+      "number": 18
+    },
+    {
+      "group": "Accountability",
+      "title": "Fund independent public scrutiny",
+      "metric": "Audit completion; data availability; grievances resolved",
+      "owner": "Developer pays regulator-administered fund / all phases",
+      "action": "Publish phase, owners, forecasts, measured use, exceedances and enforceable conditions in a common registry.",
+      "caution": "Independent review needs protection from sponsor influence and safeguards for genuinely sensitive data.",
+      "source": "EU",
+      "number": 19
+    },
+    {
+      "group": "Accountability",
+      "title": "Prove local and climate benefits",
+      "metric": "Permanent jobs; net local revenue; verified net avoided tCO\u2082e",
+      "owner": "Developer and AI buyer / renewal",
+      "action": "Audit promised benefits and test AI-enabled savings against a credible non-AI baseline.",
+      "caution": "Report additional computing and rebound; speculative future savings cannot cancel today\u2019s footprint.",
+      "source": "IEA25",
+      "number": 20
+    }
+  ],
+  "sources": [
+    {
+      "id": "IEA25",
+      "title": "IEA (2025). Energy and AI: World Energy Outlook Special Report. Chapters 2, 3, 5.6 and 5.8.",
+      "url": "https://www.iea.org/reports/energy-and-ai"
+    },
+    {
+      "id": "IEA26",
+      "title": "IEA (2026). Key Questions on Energy and AI. Executive summary; updated outlook.",
+      "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary"
+    },
+    {
+      "id": "HAN",
+      "title": "Han, Y., Wu, Z., Li, P., Wierman, A., & Ren, S. (2026). Health-Informed Computing: Estimating and Addressing the Public Health Impact of Data Centers. arXiv:2412.06288v4.",
+      "url": "https://arxiv.org/abs/2412.06288v4"
+    },
+    {
+      "id": "EPA",
+      "title": "US EPA. COBRA Questions and Answers. Screening model, uncertainty and geographic coverage. Accessed 2 October 2026.",
+      "url": "https://www.epa.gov/cobra/cobra-questions-and-answers"
+    },
+    {
+      "id": "UN",
+      "title": "UNCTAD (2024). Digital Economy Report: Shaping an environmentally sustainable and inclusive digital future.",
+      "url": "https://unctad.org/publication/digital-economy-report-2024"
+    },
+    {
+      "id": "EU",
+      "title": "European Commission (2024). Delegated Regulation (EU) 2024/1364. Data-centre reporting methodology.",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R1364-20240517"
+    },
+    {
+      "id": "SG",
+      "title": "IMDA (2024). Charting green growth for data centres in Singapore.",
+      "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/charting-green-growth-for-data-centres-in-sg"
+    },
+    {
+      "id": "GHG",
+      "title": "GHG Protocol (2015). Scope 2 Guidance.",
+      "url": "https://ghgprotocol.org/scope-2-guidance"
+    },
+    {
+      "id": "MIT1",
+      "title": "Zewe, A. (2025, January 17). Explained: Generative AI\u2019s environmental impact. MIT News. Explanatory journalism.",
+      "url": "https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117"
+    },
+    {
+      "id": "MIT2",
+      "title": "Zewe, A. (2025, September 30). Responding to the climate impact of generative AI. MIT News. Explanatory journalism.",
+      "url": "https://news.mit.edu/2025/responding-to-generative-ai-climate-impact-0930"
+    }
+  ]
+}
