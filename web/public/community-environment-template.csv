@@ -1,0 +1,1 @@
+record_id,project_id,project_phase,phase_source_url,site_id,area_role,geography_public_label,period_start_iso8601,period_end_iso8601,time_zone,metric,value,unit,measurement_basis,method,instrument_id,calibration_date,qa_flag,completeness_percent,missing_reason,source_url,recorded_at_iso8601,notes

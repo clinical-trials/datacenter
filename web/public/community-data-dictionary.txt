@@ -1,0 +1,49 @@
+COMMUNITY STUDY — DRAFT FIELD GUIDE / 2026-10-05
+Collection is not active. Templates are environmental/project records, not participant intake.
+No names, exact residential addresses, symptoms, medical records or participant identifiers.
+
+COMMON FIELDS
+record_id/event_id: locally unique non-personal record identifier.
+project_id: stable project identifier; retain across phases.
+project_phase: proposed, permitting, construction, commissioning, operating, expansion, closed, or unknown. Record actual phase for the observation period; split periods crossing phases.
+phase_source_url/source_url: retrievable provenance; avoid links exposing private records.
+All *_iso8601: ISO8601 dates/timestamps with timezone offset when time is known; do not invent precision. time_zone: IANA zone, e.g. America/Indiana/Indianapolis.
+recorded_at_iso8601: record creation time, distinct from measurement/event time.
+notes: methods/context only, no personal or identifying data.
+Unknown values: blank, not zero. Environmental records must explain missing values in missing_reason.
+
+ENVIRONMENTAL OBSERVATIONS
+site_id: non-residential monitoring station code.
+area_role: nearby or comparison; not a claim of proven exposure.
+geography_public_label: approved coarse area/station label; no household location.
+metric: stable prespecified metric code, e.g. pm25_mean, noise_laeq, water_consumption, water_withdrawal. Do not combine different averaging periods.
+value: numeric value only, blank for missing.
+unit: explicit unit such as ug/m3, dBA, m3. Do not mix concentration, total and flow-rate units.
+period_start/end: measurement window; required to interpret averages and totals.
+measurement_basis: measured, modeled, reported, or derived; reported means a third-party disclosure not independently measured by the study.
+method: sampling/aggregation method and version; water boundary/source or noise weighting as applicable.
+instrument_id: equipment code, not a person identifier; blank if not applicable.
+calibration_date: latest relevant calibration/check; method notes should identify collocation/correction history.
+qa_flag: pending, accepted, suspect, invalid, missing; accepted means checked against the study plan, not regulatory certification.
+completeness_percent: valid observations / expected observations * 100 for the period, 0–100; blank if not applicable. Specify denominator and minimum completeness in the protocol.
+missing_reason: not measured, unavailable, instrument outage, invalidated, or explicit explanation.
+
+PROJECT EVENTS
+event_type: phase_change, generator_test, outage, construction_activity, expansion, incident, mitigation, or other described event.
+operating_capacity_mw: actual operating capacity if documented; not announced/buildout capacity; blank if unknown.
+verification_status: primary_source, corroborated, or unverified. Do not publish an allegation as verified fact.
+
+BEFORE LAUNCH — ALL CURRENTLY UNCONFIRMED
+1. Select pilot, geography and phase; appoint accountable sponsor and community advisory group.
+2. Approve primary outcomes, comparison areas, seasonal baseline, follow-up cadence and analysis/power plan.
+3. Secure lawful data access and institutional/public-health determination of research oversight and consent requirements.
+4. Establish separate secure participant system if needed; approve retention, access, disclosure/suppression and data-use agreements.
+5. Finalize quality-assurance plan, instruments, maintenance responsibilities and independent funding/publication terms.
+6. Agree agency response/notification procedures, publish protocol, and train collectors before monitoring begins.
+7. Review completeness, protocol deviations and missingness on a prespecified schedule; report uncertainty and null results.
+
+REFERENCES
+EPA study design: https://www.epa.gov/air-sensor-toolbox/air-sensor-use-and-study-design
+EPA quality assurance: https://www.epa.gov/air-sensor-toolbox/quality-assurance-air-sensors
+CDC HIA resources: https://www.cdc.gov/environmental-health-tracking/php/communications-resources/hia-resources.html
+HHS regulations: https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/index.html

@@ -7,7 +7,7 @@ const ref=(...ids)=>ids.map(id=>src[id]?`<a class="ref" href="${esc(src[id].url)
 const names=Object.fromEntries(DATA.states.map(s=>[s.abbreviation,s.name]));
 let selected='IN';
 function view(name){
- if(!['solutions','periodic','impact','ledger','decide','learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='learn';
+ if(!['community','solutions','periodic','impact','ledger','decide','learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='learn';
  document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!=='view-'+name);
  document.querySelectorAll('.nav button').forEach(b=>b.dataset.view===name?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
  if(document.getElementById('mobile-view'))document.getElementById('mobile-view').value=name;history.replaceState(null,'','#'+name);window.scrollTo({top:0,behavior:'instant'});
