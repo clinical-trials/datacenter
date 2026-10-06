@@ -1,0 +1,14 @@
+/* Play lives in the exploration controls, not the severity of the evidence. */
+.footprint-path-label{display:flex;align-items:center;gap:.6rem;font-size:.875rem;letter-spacing:.02em;font-weight:700;margin:1.5rem 0 .65rem}.footprint-path-label>span{font-size:1.6rem;color:#174ac6}
+.ledger-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.ledger-shortcuts button{display:flex;align-items:center;gap:.75rem;text-align:left;padding:1rem;background:#fffffc;box-shadow:3px 3px 0 #181816;min-width:0;color:#181816}
+.path-shape{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;font-size:.85rem;font-weight:750;background:#174ac6;color:#fff}
+.path-circle{border-radius:50%;background:#d52620}.path-square{background:#f6cf26;color:#181816}.path-arch{border-radius:24px 24px 0 0}
+.ledger-shortcuts button>span:last-child{flex:1;font-weight:700}.ledger-shortcuts b{font-size:1.2rem;float:right;margin-left:.4rem}
+.ledger-shortcuts button:hover,.ledger-shortcuts button:focus-visible{background:#fff7cd;box-shadow:5px 5px 0 #181816}.ledger-shortcuts button:active{box-shadow:0 0 0 #181816;transform:translate(3px,3px)}
+.footprint-puzzle{border-block:1px solid #181816;margin:1.5rem 0;padding:.25rem 0;background:#fffffc}
+.footprint-puzzle summary{list-style:none;display:flex;align-items:center;gap:1rem;padding:1rem 0;cursor:pointer}.footprint-puzzle summary::-webkit-details-marker{display:none}
+.puzzle-mark{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border:2px solid #181816;border-radius:50%;font-size:1.75rem;background:#f6cf26;font-weight:700}
+.footprint-puzzle summary small,.footprint-puzzle summary strong,.puzzle-invite{display:block}.footprint-puzzle summary small{font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem}.footprint-puzzle summary strong{font-size:1.2rem;line-height:1.3}.puzzle-invite{font-size:.875rem;margin-top:.4rem;color:#174ac6;text-decoration:underline;text-underline-offset:3px}.footprint-puzzle[open] .puzzle-invite{display:none}.footprint-puzzle[open] .puzzle-mark{background:#174ac6;color:#fff}.puzzle-answer{padding:.5rem 0 1rem;max-width:75ch}.puzzle-answer>strong{display:block;font-size:1.15rem;margin-bottom:.75rem}.footprint-puzzle summary:focus-visible{outline:3px solid #174ac6;outline-offset:3px}
+.quantity-controls button{box-shadow:3px 3px 0 #181816}.quantity-controls button:active{box-shadow:none}.periodic-grid .element:hover{outline:3px solid #f6cf26;outline-offset:1px;z-index:1}.periodic-grid .element:active{outline-color:white}
+@media(max-width:800px){.ledger-shortcuts{grid-template-columns:1fr}.ledger-shortcuts button,.ledger-shortcuts button:last-child{grid-column:auto;padding:.65rem .85rem}.path-shape{width:36px;height:36px;flex-basis:36px}.footprint-puzzle summary{gap:.75rem}.footprint-puzzle summary strong{font-size:1.05rem}}
