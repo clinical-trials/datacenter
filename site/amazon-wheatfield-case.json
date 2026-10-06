@@ -1,0 +1,29 @@
+{
+  "case": "Amazon Data Services / Wheatfield, Jasper County, Indiana",
+  "permit": "T 073-50413-00077",
+  "reviewedDate": "2026-10-05",
+  "phase": "proposed; draft air permit under review",
+  "draftUrl": "https://permits.air.idem.in.gov/50413d.pdf",
+  "sha256": "4d45fe6c331fc54dc5892824cab47e872324de51ab96516a89157b020bec892d",
+  "applicationReceived": "2026-05-20",
+  "publicNoticeBegins": "2026-09-24",
+  "listedCommentEnd": "2026-10-24",
+  "deadlineCaveat": "Saturday; notice provides next-business-day rule when IDEM offices are closed. Confirm with IDEM.",
+  "issuedDate": null,
+  "epaSubmissionDate": null,
+  "criticalGenerators": 384,
+  "otherGenerators": 7,
+  "criticalGeneratorOutputKWeEach": 2750,
+  "calculatedCriticalBackupOutputMW": 1056,
+  "potentialEmissionsAfterIssuanceExcludingFugitivesTonsPerYear": {
+    "NOx": 245.65,
+    "directPM2_5": 152.28,
+    "CO": 221.24
+  },
+  "limitations": "Draft potential emissions, not observed emissions or exposure. Unknown milestones from user extract do not establish no later action. No actual construction status verified.",
+  "pageReferences": [
+    "Draft A.2\u2013A.3, pp. 5\u20136 of 42",
+    "Technical support document, application receipt",
+    "TSD Appendix A, p. 1 of 8"
+  ]
+}
