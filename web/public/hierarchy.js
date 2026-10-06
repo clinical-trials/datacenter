@@ -1,0 +1,13 @@
+(() => {
+'use strict';
+const contexts={impact:['Understand','Evidence explorer','Reported data, models and scenarios are labeled separately.'],learn:['Understand','Public guide','Start with the physical systems behind the cloud.'],periodic:['Understand','Evidence map','Severity depends on the selected metric; missing evidence is not safety.'],ledger:['Investigate','Project records','Check the project phase, source date and next public milestone.'],states:['Investigate','Modeled estimates','Compare the same metric, year and scenario across states.'],water:['Investigate','Reported disclosures','Compare consumption and withdrawal separately.'],indiana:['Investigate','Case evidence','Local findings and policies do not establish a statewide effect.'],research:['Investigate','Research appraisal','Study design and uncertainty matter as much as the headline.'],review:['Investigate','Rapid review','A documented research snapshot, not an exhaustive living review.'],sources:['Investigate','Source register','Trace claims to their original documents.'],solutions:['Act','Policy proposals','Conditions to evaluate—not enacted requirements or guaranteed savings.'],scenario:['Act','Hypothetical scenario','Maintain comparable service. Compare totals and useful-work intensity.'],decide:['Act','Decision framework','Weigh project-specific evidence before taking a position.'],assessment:['Act','Assessment framework','Identify scope, affected people, alternatives and unresolved evidence.'],california:['Act','Policy analysis','Distinguish verified requirements from proposed safeguards.']};
+for(const [name,[group,label,note]] of Object.entries(contexts)){
+ const section=document.getElementById('view-'+name);if(!section)continue;
+ const bar=document.createElement('div');bar.className='reading-context';
+ const category=document.createElement('span');category.className='reading-group';category.textContent=group;
+ const status=document.createElement('strong');status.textContent=label;
+ const help=document.createElement('span');help.className='reading-note';help.textContent=note;
+ bar.append(category,status,help);section.prepend(bar);
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-section]');if(!b)return;const target=document.getElementById(b.dataset.section);if(!target)return;target.scrollIntoView({behavior:'instant',block:'start'});target.setAttribute('tabindex','-1');target.focus({preventScroll:true});});
+})();
