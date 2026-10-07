@@ -2,7 +2,7 @@ export const TYPES=['application','permit','environmental-review','agency-reques
 export const PHASES=['proposed','under-review','approved','construction','operating','unknown'];
 export const REVIEWS=['unreviewed','source-checked','excluded'];
 export const KINDS=['official','operator','community','commercial','research'];
-const STATES=new Set('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC US'.split(' '));
+const STATES=new Set('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC PR US'.split(' '));
 function str(v,name,max=1000,required=false){if(v==null&&!required)return '';if(typeof v!=='string'||v.trim().length>max||required&&!v.trim())throw Error('Invalid '+name);return v.trim();}
 export function safeUrl(v){const s=str(v,'source URL',2000,true);let u;try{u=new URL(s);}catch{throw Error('A complete https source URL is required.');}if(u.protocol!=='https:'||u.username||u.password)throw Error('Use a public https source URL without credentials.');return u.href;}
 export function date(v,name){const s=str(v,name,10,true);if(!/^\d{4}-\d{2}-\d{2}$/.test(s)||Number.isNaN(Date.parse(s))||new Date(s).toISOString().slice(0,10)!==s||s>new Date().toISOString().slice(0,10))throw Error('Invalid or future '+name);return s;}

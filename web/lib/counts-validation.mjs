@@ -1,4 +1,4 @@
-const states=new Set('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC'.split(' '));
+const states=new Set('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC PR'.split(' '));
 export function validateSnapshot(x){
  if(!x||typeof x!=='object')throw Error('Snapshot required');
  if(typeof x.observed_at!=='string'||!Number.isFinite(Date.parse(x.observed_at))||Date.parse(x.observed_at)>Date.now()+60000||Date.now()-Date.parse(x.observed_at)>86400000)throw Error('Use an observation from the last 24 hours');

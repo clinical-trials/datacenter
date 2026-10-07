@@ -2,21 +2,22 @@
 (() => {
  const get = id => document.getElementById(id);
  const n = (value, places=1) => Number(value).toLocaleString('en-US',{maximumFractionDigits:places});
- const amount = value => n(value,value<1?3:1);
+ const amount = value => Number.isFinite(value)?n(value,value<1?3:1):'Not yet covered';
  const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const source = id => {const s=DATA.sources.find(s=>s.id===id);return s?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)} [${s.number}]</a>`:'';};
- const stateRows=DATA.states.filter(s=>s.abbreviation!=='US').sort((a,b)=>a.name.localeCompare(b.name));
+ const stateRows=[...DATA.states.filter(s=>!['US','PR','DC'].includes(s.abbreviation)),{abbreviation:'PR',name:'Puerto Rico'},{abbreviation:'DC',name:'Washington, D.C.'}].sort((a,b)=>a.name.localeCompare(b.name));
  const stateName=code=>code==='US'?'United States':stateRows.find(s=>s.abbreviation===code)?.name||code;
  const electricity=(state,year,scenario='medium')=>DATA.series.find(r=>r.state===state&&r.year===year&&r.scenario===scenario)?.annual_TWh;
  let chosenState='US',chosenYear=2024;
  for(const [value,label] of [['US','United States'],...stateRows.map(s=>[s.abbreviation,s.name])]) {const o=document.createElement('option');o.value=value;o.textContent=label;get('impact-state').append(o);}
  function chooseTab(name){document.querySelectorAll('[data-impact-tab]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.impactTab===name)));for(const key of ['electricity','water','carbon','local'])get('impact-'+key).hidden=key!==name;}
  document.querySelectorAll('[data-impact-tab]').forEach(b=>b.addEventListener('click',()=>chooseTab(b.dataset.impactTab)));
- const tileColors=value=>value<=1?['#eaf0f3','#233e50']:value<=5?['#b8d4df','#183748']:value<=15?['#5d9aad','#102e40']:['#175269','#fff'];
+ const tileColors=value=>!Number.isFinite(value)?['#eee9df','#544e43']:value<=1?['#eaf0f3','#233e50']:value<=5?['#b8d4df','#183748']:value<=15?['#5d9aad','#102e40']:['#175269','#fff'];
  function renderElectricity(){
   const year=chosenYear;
   get('impact-state-tiles').innerHTML=stateRows.map(s=>{const value=electricity(s.abbreviation,year),[bg,ink]=tileColors(value);return `<button class="state-tile" data-impact-state="${s.abbreviation}" aria-pressed="${s.abbreviation===chosenState}" style="--tile:${bg};--tile-ink:${ink}" aria-label="${esc(s.name)}: ${amount(value)} TWh, ${year} ${year===2024?'estimate':'medium scenario'}"><b>${s.abbreviation}</b><small>${amount(value)}</small></button>`;}).join('');
   const v=electricity(chosenState,year),base=electricity(chosenState,2024),future=electricity(chosenState,2030),low=electricity(chosenState,2030,'low'),high=electricity(chosenState,2030,'high');
+  if(!Number.isFinite(v)){get('impact-energy-kpi').textContent='Not yet covered';get('impact-energy-scope').textContent=stateName(chosenState)+' · no comparable estimate in this dataset';get('impact-energy-chart').innerHTML='<h3>'+esc(stateName(chosenState))+'</h3><p>Included in geographic coverage. No comparable data-center electricity estimate is available in the current source. Missing data is not zero consumption or evidence of no facilities.</p>';get('impact-energy-source').innerHTML='The current EPRI series covers the 50 states; it does not provide a separate Puerto Rico or D.C. estimate. '+source('EPRI2026');return;}
   const lo0=electricity(chosenState,2024,'low'),hi0=electricity(chosenState,2024,'high');
   get('impact-energy-kpi').innerHTML=`${amount(v)} <small>TWh</small>`;get('impact-energy-scope').textContent=`${chosenState==='US'?'U.S.':stateName(chosenState)} · ${year} ${year===2024?'model estimate':'medium scenario'}`;
   const max=Math.max(high,hi0,.001)*1.06,scale=v=>v/max*305;
