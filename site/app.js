@@ -12,6 +12,7 @@ function view(name){
  document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!=='view-'+name);
  document.querySelectorAll('.nav button').forEach(b=>b.dataset.view===name?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
  if(document.getElementById('mobile-view'))document.getElementById('mobile-view').value=name;history.replaceState(null,'','#'+name);window.scrollTo({top:0,behavior:'instant'});
+ window.dispatchEvent(new CustomEvent('footprint:viewchange',{detail:{name}}));
 }
 document.addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b)view(b.dataset.view);});
 function series(state,year,scenario='medium'){return DATA.series.find(r=>r.state===state&&r.year===Number(year)&&r.scenario===scenario);}
