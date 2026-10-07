@@ -1,0 +1,13 @@
+{
+  "dataset": "IM3 Open Source Data Center Atlas (v2026.02.09), existing-location centroids",
+  "citation": "Mongird, K., Thurber, T., Vernon, C., Burleyson, C., Akdemir, K. Z., & Rice, J. (2026). IM3 Open Source Data Center Atlas (v2026.02.09). MSD-LIVE Data Repository.",
+  "doi": "https://doi.org/10.57931/3017294",
+  "retrieved": "2026-10-07",
+  "source": "https://github.com/IMMM-SFA/datacenter-atlas/blob/f65cf032ebb66f17b2d8aebfc453cbf82c0d3f12/static/im3_datacenter_centroids.geojson",
+  "sha256": "2e7bd7e650fe86fe0d156b4e483ebd331cfa98a0468ce33b932f8c1b6c3245df",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "\u00a9 OpenStreetMap contributors; IM3 / Pacific Northwest National Laboratory",
+  "records": 1382,
+  "limitations": "Existing-location source features, not deduplicated campuses or verified current phases. Excludes projected-future layers. Point/building/campus features can overlap. ZIP reference-point distances are not household distances or exposure estimates."
+}
