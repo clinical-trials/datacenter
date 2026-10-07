@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "snapshots": [
+    {
+      "date": "2026-10-07",
+      "operating": 742,
+      "under_construction": 182,
+      "planned": 63,
+      "source": "User-supplied figures in dashboard conversation",
+      "source_url": null,
+      "geography": "Unconfirmed",
+      "counting_unit": "Data centers; facility versus campus definition unconfirmed",
+      "verification": "User-reported; not independently verified"
+    }
+  ]
+}
