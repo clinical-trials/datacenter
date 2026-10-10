@@ -2,6 +2,14 @@
 
 **Data Center Footprint Observatory** — a sourced dashboard and rapid scoping review of data centers, AI services, environmental health and public responsibility in the United States.
 
+## Open the dashboard
+
+**[Launch the live Data Center Footprint Observatory →](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#impact)**
+
+[Health & air quality](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#health) · [Project watch](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#ledger) · [Public comment](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#citizen)
+
+This GitHub repository contains the source code and research files. The interactive website is hosted separately at the link above, not on GitHub Pages. The live site currently has owner-only access; opening this repository does not grant access to the dashboard.
+
 Research snapshot: **1 October 2026 · version 1.2**.
 
 ## Explore locally
