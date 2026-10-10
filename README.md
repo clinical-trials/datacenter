@@ -4,11 +4,13 @@
 
 ## Open the dashboard
 
-**[Launch the live Data Center Footprint Observatory →](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#impact)**
+**[Launch the public Data Center Footprint Observatory →](https://clinical-trials.github.io/datacenter/)**
 
-[Health & air quality](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#health) · [Project watch](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#ledger) · [Public comment](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#citizen)
+[Health & air quality](https://clinical-trials.github.io/datacenter/#health) · [Project watch](https://clinical-trials.github.io/datacenter/#ledger) · [Public comment](https://clinical-trials.github.io/datacenter/#citizen)
 
-This GitHub repository contains the source code and research files. The interactive website is hosted separately at the link above, not on GitHub Pages. The live site currently has owner-only access; opening this repository does not grant access to the dashboard.
+GitHub Pages serves the public dashboard from `site/`; the root `index.html` forwards visitors there while preserving the selected tab. This edition includes interactive charts, research downloads and public-comment tools, with dated baseline data. GitHub Pages cannot run the collection API or database, so live updates and saved filing edits are unavailable in this edition.
+
+The **[full hosted application](https://datacenter-footprint-observatory.yoyoyoyoyoyoyoyoyoyoyo.chatgpt.site/#impact)** supports the persistent ledger and automated collection. It currently has owner-only access; opening this repository does not grant access to that application.
 
 Research snapshot: **1 October 2026 · version 1.2**.
 

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Center Footprint Observatory</title>
+  <meta name="description" content="Explore data-center climate, health, water and public costs, with cited research and public-comment tools.">
+  <script>
+    const dashboard = new URL('./site/', window.location.href);
+    dashboard.search = window.location.search;
+    dashboard.hash = window.location.hash || '#impact';
+    window.location.replace(dashboard.href);
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=./site/"></noscript>
+</head>
+<body>
+  <h1>Data Center Footprint Observatory</h1>
+  <p><a href="./site/#impact">Open the dashboard</a></p>
+  <p>The public dashboard includes charts, research and public-comment tools. Live collection and saved filing edits require the separately hosted application.</p>
+</body>
+</html>
