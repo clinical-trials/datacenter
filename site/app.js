@@ -14,7 +14,7 @@ function view(name){
  if(document.getElementById('mobile-view'))document.getElementById('mobile-view').value=name;history.replaceState(null,'','#'+name);window.scrollTo({top:0,behavior:'instant'});
  window.dispatchEvent(new CustomEvent('footprint:viewchange',{detail:{name}}));
 }
-document.addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b)view(b.dataset.view);});
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-view],a[data-view]');if(b)view(b.dataset.view);});
 function series(state,year,scenario='medium'){return DATA.series.find(r=>r.state===state&&r.year===Number(year)&&r.scenario===scenario);}
 function caseText(c){return `<h3>${esc(c.name)} <span class="badge">${esc(c.focus)}</span></h3><p>${esc(c.findings)}</p><p>${esc(c.policy)}</p><p class="small"><b>Boundary:</b> ${esc(c.limitations)}</p><p class="small">Evidence date: ${esc(c.statusDate)} ${ref(...c.sourceIds)}</p>`;}
 function renderStates(){
