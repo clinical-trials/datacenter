@@ -1,0 +1,43 @@
+.nearby-map-mount{min-width:0;margin:1rem 0 1.5rem}
+.nearby-map-card{border:2px solid #25231f;border-radius:1.25rem;background:#fffaf0;overflow:hidden;box-shadow:4px 4px 0 #d2c6ac;scroll-margin-top:1rem}
+.nearby-map-toolbar{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:space-between;align-items:center;padding:1rem;background:#e2eaf4;border-bottom:2px solid #25231f}
+#zip-result .nearby-map-toolbar h3{margin:0;font-size:1.15rem;line-height:1.3}
+.nearby-map-actions{display:flex;flex-wrap:wrap;gap:.5rem}
+.nearby-map-actions .btn{min-height:44px;padding:.5rem .7rem;font-size:.875rem;background:#fffaf0}
+.nearby-map-canvas{height:22rem;height:clamp(18rem,52svh,34rem);width:100%;background:#e8e9e3;isolation:isolate;font-family:inherit}
+.nearby-map-canvas.leaflet-touch .leaflet-control-zoom a,.nearby-map-canvas .leaflet-control-zoom a{width:44px;height:44px;line-height:44px;color:#25231f}
+.nearby-map-canvas .leaflet-control-attribution{font-size:.7rem;line-height:1.5;background:#fffc}
+.nearby-map-canvas .leaflet-control-attribution a{color:#214daf}
+.nearby-map-canvas .leaflet-control-scale-line{border-color:#25231f;background:#fffc;color:#25231f}
+.nearby-map-key,.nearby-map-tile-status{padding:.75rem 1rem;margin:0!important;line-height:1.5;font-size:.875rem!important}
+.nearby-map-key{background:#f6edcf;border-bottom:1px solid #c9c0ae}
+.nearby-map-tile-status{background:#f6ded7}
+.nearby-map-profile{padding:1rem;min-width:0;border-top:3px solid #214daf}
+.nearby-map-profile h3{font-size:1.3rem!important;overflow-wrap:anywhere;margin:.5rem 0!important}
+.nearby-map-profile p{line-height:1.5;margin:.6rem 0}
+.nearby-map-profile .eyebrow{font-size:.7rem}
+.nearby-map-profile .nearby-map-distance{color:#214daf;font-size:1rem!important;font-weight:750}
+.nearby-map-phase{background:#eee8d9;border-radius:.6rem;padding:.7rem;font-weight:650}
+.nearby-map-profile summary{min-height:44px;align-content:center;cursor:pointer;font-weight:700}
+.nearby-map-profile details p{font-size:.875rem!important}
+.nearby-map-profile-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-top:1rem}
+.nearby-map-profile-actions a{min-height:44px;align-content:center;color:#214daf;font-weight:700}
+.nearby-map-profile:focus-visible{outline:3px solid #214daf;outline-offset:-5px}
+.nearby-map-profile select{width:100%;min-height:44px;font-size:1rem;margin-top:.5rem}
+.footprint-map-pin{background:transparent;border:0;color:#fff}
+.footprint-map-pin>span{display:grid;place-items:center;width:40px;height:40px;background:#214daf;border:2px solid #fff;border-radius:50% 50% 50% 8%;transform:rotate(-45deg);box-shadow:0 0 0 1px #25231f,1px 2px 4px #0004}
+.footprint-map-pin svg,.footprint-map-pin b{width:19px;height:24px;transform:rotate(45deg);display:block;text-align:center;line-height:24px;font-size:1rem}
+.footprint-map-pin.is-selected>span{background:#ba2c23;box-shadow:0 0 0 3px #efc53c}
+.footprint-map-pin:focus-visible{outline:3px solid #25231f;outline-offset:4px}
+.nearby-pin-popup{max-width:230px;font-family:'Avenir Next',Avenir,sans-serif;line-height:1.45}
+.nearby-pin-popup strong{display:block;font-size:1rem;overflow-wrap:anywhere}
+.nearby-pin-popup button{display:block;border:0;background:transparent;color:#214daf;font:inherit;font-weight:700;min-height:44px;text-align:left;cursor:pointer;padding:.5rem 0 0}
+.nearby-map-dialog{width:min(96vw,78rem);max-width:96vw;height:94vh;height:94svh;max-height:96svh;margin:auto;padding:0;border:2px solid #25231f;border-radius:1.2rem;background:#fffaf0;color:#25231f;overflow:auto}
+.nearby-map-dialog::backdrop{background:#25231fb3}
+.nearby-map-dialog .nearby-map-card{border:0;border-radius:0;box-shadow:none}
+.nearby-map-dialog .nearby-map-toolbar{position:sticky;top:0;z-index:1100}
+.nearby-map-dialog .nearby-map-canvas{height:53vh;height:53svh}
+.nearby-map-dialog .nearby-map-profile h3{font-family:inherit}
+.nearby-card .nearby-map-select{display:block;margin:.75rem 0;min-height:44px}
+@media(min-width:801px){.nearby-map-canvas{height:30rem}.nearby-map-toolbar{padding:1rem 1.25rem}.nearby-map-profile{padding:1.25rem}.nearby-map-dialog .nearby-map-canvas{height:57svh}}
+@media(max-width:360px){.nearby-map-actions{width:100%;display:grid;grid-template-columns:1fr 1fr}.nearby-map-actions .btn{padding:.5rem .3rem}.nearby-map-toolbar{padding:.75rem}.nearby-map-profile{padding:.8rem}}
