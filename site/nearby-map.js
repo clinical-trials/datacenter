@@ -79,23 +79,24 @@
     });
     function showProfile(row, siblings) {
       const p = row.feature.properties, [lon, lat] = row.feature.geometry.coordinates;
-      profile.replaceChildren(el('div', 'Mapped location · source record', 'eyebrow'), el('h3', p.name || p.operator || 'Unnamed mapped data-center record'));
+      profile.replaceChildren(el('div', 'Mapped location · source record', 'eyebrow'), el('h3', window.FacilityAddresses.name(row.feature)));
       if (siblings.length > 1) {
         const label = el('label', 'Overlapping records at this point');
         const select = el('select');
         select.setAttribute('aria-label', 'Choose an overlapping location record');
         for (const sibling of siblings) {
-          const option = el('option', sibling.feature.properties.name || sibling.feature.properties.operator || 'Unnamed record');
+          const option = el('option', window.FacilityAddresses.name(sibling.feature));
           option.value = sibling.index; option.selected = sibling.index === row.index; select.append(option);
         }
         select.onchange = () => choose(Number(select.value), false);
         label.append(select); profile.append(label);
       }
-      profile.append(el('p', (p.operator || 'Operator not provided') + ' · ' + (p.county || 'County not provided') + (p.state_abb ? ', ' + p.state_abb : '')));
+      profile.append(el('p', (p.address?.operator || p.operator || 'Operator not provided') + ' · ' + (p.county || 'County not provided') + (p.state_abb ? ', ' + p.state_abb : '')));
       profile.append(el('p', '≈ ' + Math.round(row.distance) + ' miles from the ZIP reference point', 'nearby-map-distance'));
+      window.FacilityAddresses.append(profile, row.feature);
       profile.append(el('p', 'Phase: existing in the source. Current operation not independently verified.', 'nearby-map-phase'));
       const details = el('details'); details.append(el('summary', 'Location & evidence limits'));
-      details.append(el('p', 'Street address is not supplied by this dataset. This is a ' + (p.type || 'source') + ' representative point: ' + lat.toFixed(5) + ', ' + lon.toFixed(5) + '. Buildings and campuses may overlap.'));
+      details.append(el('p', 'The original IM3 layer supplies a ' + (p.type || 'source') + ' representative point: ' + lat.toFixed(5) + ', ' + lon.toFixed(5) + '. Buildings and campuses may overlap.'));
       details.append(el('p', 'No facility-specific air-quality reading or emissions inventory is attached to this location record. Distance alone does not establish exposure.'));
       details.append(link('IM3 dataset and provenance ↗', 'https://doi.org/10.57931/3017294'));
       const actions = el('div', undefined, 'nearby-map-profile-actions');
@@ -129,7 +130,7 @@
       }
       for (const siblings of byPoint.values()) {
         const row = siblings[0], p = row.feature.properties, [lon, lat] = row.feature.geometry.coordinates;
-        const name = p.name || p.operator || 'Unnamed mapped data-center record';
+        const name = window.FacilityAddresses.name(row.feature);
         const title = siblings.length > 1 ? siblings.length + ' overlapping location records' : name;
         const symbol = siblings.length > 1 ? '<b>' + siblings.length + '</b>' : '<svg viewBox="0 0 24 28" aria-hidden="true"><path d="M5 26V3h14v23M1 26h22" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M9 8h2m3 0h2M9 13h2m3 0h2M9 18h2m3 0h2" stroke="currentColor" stroke-width="2.5"/></svg>';
         const icon = L.divIcon({ className: 'footprint-map-pin', html: '<span>' + symbol + '</span>', iconSize: [44, 48], iconAnchor: [22, 44], popupAnchor: [0, -38] });

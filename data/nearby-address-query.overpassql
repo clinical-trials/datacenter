@@ -1,0 +1,1 @@
+[out:json][timeout:60];area["ISO3166-1"="US"]["admin_level"="2"]->.us;nwr["telecom"="data_center"]["addr:street"](area.us);out center tags;

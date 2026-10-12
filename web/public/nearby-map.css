@@ -41,3 +41,21 @@
 .nearby-card .nearby-map-select{display:block;margin:.75rem 0;min-height:44px}
 @media(min-width:801px){.nearby-map-canvas{height:30rem}.nearby-map-toolbar{padding:1rem 1.25rem}.nearby-map-profile{padding:1.25rem}.nearby-map-dialog .nearby-map-canvas{height:57svh}}
 @media(max-width:360px){.nearby-map-actions{width:100%;display:grid;grid-template-columns:1fr 1fr}.nearby-map-actions .btn{padding:.5rem .3rem}.nearby-map-toolbar{padding:.75rem}.nearby-map-profile{padding:.8rem}}
+
+/* Address cards keep provenance alongside the destination, including on phones. */
+.nearby-address{margin:.85rem 0;padding:.85rem;border:1px solid #b8c9dc;border-radius:1rem;background:#e8eff7;color:#25231f;min-width:0}
+.nearby-address-badge{font-size:.75rem;font-weight:750;line-height:1.5;color:#24456e}
+#zip-result .nearby-street-address,.nearby-map-profile .nearby-street-address{font-size:1.05rem;font-weight:750;line-height:1.5;margin:.5rem 0;overflow-wrap:anywhere;user-select:text}
+.nearby-address-source{font-size:.8rem!important;line-height:1.5;margin:.5rem 0!important}
+.nearby-address-actions{display:flex;flex-wrap:wrap;gap:.65rem;align-items:center}
+.nearby-address-actions a,.nearby-address-actions button{display:inline-flex;align-items:center;min-height:44px;color:#214daf;font-weight:700;font-size:.875rem}
+.nearby-address-actions .btn{padding:.4rem .65rem;background:#f6f8fb}
+.nearby-visit-note{font-size:.875rem!important;border-top:1px solid #b8c9dc;padding-top:.7rem}
+.nearby-address-missing{color:#625e54;font-size:.875rem!important}
+.nearby-address-toggle{display:flex!important;gap:.65rem;align-items:center;min-height:44px;margin-top:.6rem;font-size:.9rem}
+.nearby-address-toggle input{width:22px;height:22px;flex:0 0 22px;accent-color:#214daf}
+.nearby-visit-intro{font-weight:700;color:#24456e;line-height:1.5}
+.nearby-directory-links{margin-top:1rem;font-size:.875rem;line-height:1.6}
+.nearby-directory-links a{display:inline-block;min-height:44px;align-content:center;margin-right:.75rem}
+
+.nearby-address-date{white-space:nowrap}
