@@ -93,7 +93,7 @@
         label.append(select); profile.append(label);
       }
       profile.append(el('p', (p.address?.operator || p.operator || 'Operator not provided') + ' · ' + (p.county || 'County not provided') + (p.state_abb ? ', ' + p.state_abb : '')));
-      profile.append(el('p', '≈ ' + Math.round(row.distance) + ' miles from the ZIP reference point', 'nearby-map-distance'));
+      profile.append(el('p', '≈ ' + (row.distance < 10 ? row.distance.toFixed(1) : Math.round(row.distance)) + ' miles from the ZIP reference point', 'nearby-map-distance'));
       window.FacilityAddresses.append(profile, row.feature);
       profile.append(el('p', 'Phase: existing in the source. Current operation not independently verified.', 'nearby-map-phase'));
       const details = el('details'); details.append(el('summary', 'Location & evidence limits'));
@@ -146,7 +146,7 @@
       fit();
     }
     const observer = new ResizeObserver(resize); observer.observe(canvas);
-    const onView = () => { if (document.body.dataset.view !== 'ledger') closeExpanded(); else resize(); };
+    const onView = () => { if (document.body.dataset.view !== 'nearby') closeExpanded(); else resize(); };
     window.addEventListener('footprint:viewchange', onView);
     return {
       setRows,

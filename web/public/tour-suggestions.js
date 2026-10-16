@@ -57,6 +57,7 @@
       const use=el('button','Use '+budget+' min '+preset.label+' →','btn ct-primary');use.type='button';use.onclick=async()=>{use.disabled=true;try{await onUse(suggestion);}finally{use.disabled=false;}};
       card.append(use,el('p','Loads these stops into your tour below. Times are estimates, without live traffic.','cp-small'));return card;
     }
+    window.addEventListener('footprint:tourzip',event=>{const zip=String(event.detail?.zip||'');if(!/^\d{5}$/.test(zip))return;$('ct-auto-zip').value=zip;$('ct-auto-zip').dispatchEvent(new Event('input'));$('ct-auto-form').requestSubmit();});
     $('ct-auto-form').onsubmit=async event=>{
       event.preventDefault();const zip=$('ct-auto-zip').value;if(!/^\d{5}$/.test(zip)){status('Enter a five-digit ZIP code.');return;}
       if(!$('ct-auto-dwell').validity.valid)return;
