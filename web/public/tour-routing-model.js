@@ -30,7 +30,7 @@
     const rounded=Math.ceil(seconds),m=Math.floor(rounded/60),s=rounded%60;
     return (m?m+' min'+(s?' ':''):'')+(s?s+' sec':m?'':'0 min');
   }
-  function routeKey(stops,roundTrip){return JSON.stringify([stops.map(s=>s.address.trim().toLowerCase()),!!roundTrip]);}
+  function routeKey(stops,roundTrip){return JSON.stringify([stops.map(s=>[s.address.trim().toLowerCase(),s.location?.coordinates||null]),!!roundTrip]);}
   const api={readRoute,assessTime,readGeocodes,formatTime,routeKey,coordinate};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.TourRoutingModel=api;
 })(typeof window==='undefined'?globalThis:window);

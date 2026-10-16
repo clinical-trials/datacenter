@@ -30,6 +30,10 @@ if (fs.existsSync(modelPath)) {
     const x=normalizeStop({name:'Example',address:'100 Main St, NM 00123',source:'javascript:alert(1)',note:{bad:true}});
     assert.equal(x.source,''); assert.equal(x.note,''); assert.ok(x.address.includes('00123'));
     assert.equal(normalizeStop({name:'Example',address:'a|b'}),null);
+    const mapped=normalizeStop({name:'Mapped',address:'10 Public St',location:{coordinates:[-106,35],source:'https://example.org/source',label:'Mapped point'}});
+    assert.deepEqual(mapped.location.coordinates,[-106,35]);
+    assert.equal(normalizeStop({...mapped,location:{coordinates:[999,35],source:'https://example.org'}}).location,undefined);
+    assert.equal(normalizeStop({...mapped,location:{coordinates:[-106,35],source:'javascript:alert(1)'}}).location,undefined);
   });
   test('pasted addresses preserve order, optional names and leading-zero ZIPs', () => {
     const parsed=parseAddresses('  10 Main St, Boston, MA 02108\n\nLibrary — 20 Main St, Boston, MA 02108  ');

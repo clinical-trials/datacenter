@@ -45,23 +45,32 @@
   async function route(points,mode,signal){
     const coords=points.map(p=>p.coordinates.map(n=>n.toFixed(6)).join(',')).join(';'),key=mode+'|'+coords;
     if(routeCache.has(key))return routeCache.get(key);
-    const result=await queued(async()=>{
-      const timeout=new AbortController(),timer=setTimeout(()=>timeout.abort(),25000);
-      const abort=()=>timeout.abort();signal.addEventListener('abort',abort,{once:true});
-      try{
-        const url='https://routing.openstreetmap.de/routed-'+profiles[mode]+'/route/v1/driving/'+coords+'?overview=full&geometries=geojson&steps=false&radiuses='+points.map(()=>100).join(';');
-        const response=await fetch(url,{signal:timeout.signal,credentials:'omit'});
-        if(!response.ok)throw Error('Routing is temporarily unavailable. Retry, or use directions below.');
-        return model.readRoute(await response.json(),points.length);
-      }catch(error){if(error.name==='AbortError'&&!signal.aborted)throw Error('Routing timed out. Please retry.');throw error;}
+    const url='https://routing.openstreetmap.de/routed-'+profiles[mode]+'/route/v1/driving/'+coords+'?overview=full&geometries=geojson&steps=false&continue_straight=false&radiuses='+points.map(()=>100).join(';');
+    const result=model.readRoute(await requestJSON(url,signal),points.length);
+    routeCache.set(key,result);if(routeCache.size>30)routeCache.delete(routeCache.keys().next().value);return result;
+  }
+  async function requestJSON(url,signal){
+    return queued(async()=>{
+      const timeout=new AbortController(),timer=setTimeout(()=>timeout.abort(),25000),abort=()=>timeout.abort();signal.addEventListener('abort',abort,{once:true});
+      try{const response=await fetch(url,{signal:timeout.signal,credentials:'omit'});if(!response.ok)throw Error('Routing is temporarily unavailable. Retry, or use directions below.');return await response.json();}
+      catch(error){if(error.name==='AbortError'&&!signal.aborted)throw Error('Routing timed out. Please retry.');throw error;}
       finally{clearTimeout(timer);signal.removeEventListener('abort',abort);}
     },signal);
-    routeCache.set(key,result);if(routeCache.size>30)routeCache.delete(routeCache.keys().next().value);return result;
+  }
+  async function matrix(points,mode,signal){
+    const coords=points.map(p=>p.coordinates.map(n=>n.toFixed(6)).join(',')).join(';'),key='matrix|'+mode+'|'+coords;
+    if(routeCache.has(key))return routeCache.get(key);
+    const data=await requestJSON('https://routing.openstreetmap.de/routed-'+profiles[mode]+'/table/v1/driving/'+coords+'?annotations=duration',signal);
+    const table=window.TourSuggestionModel.readMatrix(data,points.length);routeCache.set(key,table);if(routeCache.size>40)routeCache.delete(routeCache.keys().next().value);return table;
+  }
+  async function locateStop(stop,signal){
+    if(model.coordinate(stop.location?.coordinates))return {...stop.location,matchedAddress:stop.address+' · '+stop.location.label};
+    return geocode(stop.address,signal);
   }
   function create({mount,presetButtons}){
     mount.className='ct-map-panel';
     mount.innerHTML=`<div class="ct-map-top"><div><p class="cp-tag">03 / Put your time on the map</p><h2>How far can you go?</h2></div><button type="button" class="btn ct-primary" id="ct-map-calculate">Map & time my route ↗</button></div>
-      <p class="ct-map-privacy">This sends the selected public addresses to the US Census Bureau for matching and route coordinates to FOSSGIS. Your notes stay here.</p>
+      <p class="ct-map-privacy">This shares route coordinates with FOSSGIS. Address-only stops are matched by the US Census Bureau. Your notes stay here.</p>
       <p id="ct-map-status" role="status">Add at least two stops to calculate a route.</p>
       <div id="ct-timed-result" class="ct-timed-result" hidden></div>
       <div id="ct-map-empty" class="ct-map-empty"><div aria-hidden="true"><b>1</b><i>·······</i><b>2</b><i>·······</i><b>3</b></div><p>Your streets. Your stops. Your time.</p><span>A street-by-street route will appear here.</span></div>
@@ -69,7 +78,7 @@
       <div id="ct-map-controls" class="ct-map-controls" hidden><button type="button" class="btn" id="ct-map-fit">Show whole route</button><span>Blue = walk · red = drive · numbers = stop order</span></div>
       <p id="ct-map-tiles" class="cp-small" hidden>Some map tiles did not load. The route and stop list are still available.</p>
       <ol id="ct-timed-legs" class="ct-timed-legs" aria-label="Route leg times and cumulative arrivals"></ol>
-      <details class="ct-map-method"><summary>How times and locations are calculated</summary><p>Times come from <a href="https://routing.openstreetmap.de/about.html" target="_blank" rel="noopener noreferrer">FOSSGIS / OSRM</a> routes on OpenStreetMap roads and paths, using separate walking, driving and cycling profiles. They are estimates, not measured trips or live traffic. Your pace, crossings, roadworks and parking can add time. Time to reach stop 1 is not included.</p><p>Address pins use <a href="https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html" target="_blank" rel="noopener noreferrer">US Census address-range interpolation</a>, not verified entrances. Check the matched addresses below. A mapped route does not verify public access, sidewalks or accessibility. Use permitted public places.</p><p>Changing stops clears old estimates. Routes are calculated on request; a service failure leaves the time unknown. Notes are never sent to routing services.</p><div id="ct-matched-addresses"></div><a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener noreferrer">Help fix the map ↗</a></details>`;
+      <details class="ct-map-method"><summary>How times and locations are calculated</summary><p>Times come from <a href="https://routing.openstreetmap.de/about.html" target="_blank" rel="noopener noreferrer">FOSSGIS / OSRM</a> routes on OpenStreetMap roads and paths, using separate walking, driving and cycling profiles. They are estimates, not measured trips or live traffic. Your pace, crossings, roadworks and parking can add time. Time to reach stop 1 is not included.</p><p>Address-only stops use <a href="https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html" target="_blank" rel="noopener noreferrer">US Census address-range interpolation</a>. ZIP suggestions use their cited map coordinates, or cached Census matches for the Albuquerque examples. Neither identifies a verified entrance. Check the matched addresses below. A mapped route does not verify public access, sidewalks or accessibility. Use permitted public places.</p><p>Changing stops clears old estimates. Routes are calculated on request; a service failure leaves the time unknown. Notes are never sent to routing services.</p><div id="ct-matched-addresses"></div><a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener noreferrer">Help fix the map ↗</a></details>`;
     const $=id=>mount.querySelector('#'+id),button=$('ct-map-calculate');
     let config={stops:[],mode:'walking',budget:10,dwell:0,roundTrip:false},key='',generation=0,controller,results={},errors={},points=[],busy=false,map,L,group,markers=[],bounds,lastDraw='';
     const setStatus=text=>$('ct-map-status').textContent=text;
@@ -133,7 +142,7 @@
         points=[];
         for(const [i,stop] of snapshot.stops.entries()){
           setStatus('Finding stop '+(i+1)+' of '+snapshot.stops.length+'…');
-          try{points.push(await geocode(stop.address,signal));}catch(error){if(error.name==='AbortError')throw error;throw Error('Stop '+(i+1)+' — '+stop.address+': '+error.message);}
+          try{points.push(await locateStop(stop,signal));}catch(error){if(error.name==='AbortError')throw error;throw Error('Stop '+(i+1)+' — '+stop.address+': '+error.message);}
         }
         signal.throwIfAborted();$('ct-matched-addresses').replaceChildren(el('h3','Matched public addresses'));
         points.forEach((p,i)=>$('ct-matched-addresses').append(el('p',(i+1)+'. '+p.matchedAddress)));
@@ -149,7 +158,15 @@
       finally{if(job===generation){busy=false;button.disabled=config.stops.length<2;paint();}}
     };
     $('ct-map-fit').onclick=()=>{if(bounds)map.fitBounds(bounds,{padding:[35,35],maxZoom:17,animate:false});};
-    return {update};
+    function showPrepared(data){
+      generation++;controller?.abort();busy=false;button.disabled=config.stops.length<2;
+      points=data.points;results={[config.mode]:data.route};errors={};
+      $('ct-matched-addresses').replaceChildren(el('h3','Route location sources'));
+      points.forEach((p,i)=>$('ct-matched-addresses').append(el('p',(i+1)+'. '+(p.matchedAddress||config.stops[i].address)+' · '+(p.label||'Census address match'))));
+      setStatus('Suggested route verified against your total budget, including time at every stop. No live traffic.');paint();
+    }
+    return {update,showPrepared};
   }
+  window.TourRoutingService={route,matrix,locateStop};
   window.TourRouteMap={create};
 })();
