@@ -69,6 +69,7 @@
     dialog.setAttribute('aria-label', 'Expanded nearby data-center map'); document.body.append(dialog);
     function resize() { if (!destroyed) requestAnimationFrame(() => { if (!destroyed) { map.invalidateSize({ pan: true, animate: false }); selectedMarker?.getPopup()?.update(); } }); }
     function closeExpanded() { if (dialog.open) dialog.close(); }
+    window.addEventListener('footprint:opentour', closeExpanded);
     expand.onclick = () => {
       if (dialog.open) { closeExpanded(); return; }
       dialog.append(card); expand.textContent = '✕ Close map'; dialog.showModal(); resize(); expand.focus();
@@ -150,7 +151,7 @@
     return {
       setRows,
       select(index) { choose(index); card.scrollIntoView({ block: 'start' }); },
-      destroy() { destroyed = true; observer.disconnect(); window.removeEventListener('footprint:viewchange', onView); dialog.close(); dialog.remove(); map.remove(); }
+      destroy() { destroyed = true; observer.disconnect(); window.removeEventListener('footprint:viewchange', onView); window.removeEventListener('footprint:opentour', closeExpanded); dialog.close(); dialog.remove(); map.remove(); }
     };
   }
   window.NearbyMap = { create };

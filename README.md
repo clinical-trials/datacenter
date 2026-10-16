@@ -114,3 +114,11 @@ Project watch highlights a curated set of claim phrases in stored record titles,
 The interface uses primary colors, strong typography and three generated mobile-style illustrations. Live HTML numbers sit inside the computer, electricity/carbon and dinosaur artwork; the pictures select their underlying impact panels. The water ring encodes consumption as a share of reported withdrawal, with rounded-balance notices. Decorative artwork has no quantitative scale. A cited EIA explainer separates dinosaur imagery from fossil-fuel origins and present-day wetland evidence. All scientific boundaries, source links, filing actions and claim highlights remain available.
 
 Illustrations were generated with the built-in image tool; exact prompts are recorded in [asset provenance](design/calder-assets.json). No runtime image generation or animation is used.
+
+## Cleaner power and community tours — 16 October 2026
+
+The `#cleaner-power` tab compares regional air-quality benefits with local burdens for wind, solar and data centers using cleaner electricity. Seven cited publications include evidence type, geography and limits. Historical national modeled benefits are not facility-level measurements or credits against a new project's damages. The downloadable [supplemental study register](site/cleaner-power.json) does not expand the 86-source scoping-review corpus or change its PDF.
+
+The `#tours` tab starts with six Albuquerque addresses or four downtown stops and supports personal tours of up to twelve public places. Visitors can add stops from the ZIP finder, select and reorder places, choose driving/walking/cycling, download a field sheet and optionally save notes only in their browser. Google Maps receives the selected addresses when directions are opened; notes are not submitted. Routes split at mobile waypoint limits. The twenty-minute suggestion is a planning budget, not a verified travel time. Operator office addresses are distinguished from facility listings; neither verifies current operation, public access or pollution. Sources and phase qualifications accompany every stop.
+
+Tour route invariants can be checked with `node --test scripts/test-community-tours.cjs`.

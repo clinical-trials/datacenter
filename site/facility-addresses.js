@@ -51,6 +51,17 @@
       catch { feedback.textContent = 'Select and copy the address above.'; }
     };
     actions.append(copy);
+    const tour = make('button', 'Add to my tour +', 'btn'); tour.type = 'button';
+    tour.onclick = async () => {
+      if (!window.CommunityTours) { feedback.textContent = 'The tour builder is still loading. Try again.'; return; }
+      tour.disabled = true;
+      try {
+        feedback.textContent = await window.CommunityTours.add({ name: name(feature), address: fullAddress(record), source: record.source_url, verification: label(record), checked: record.checked_on, phase: 'Existing in mapped source; current operation not independently verified' });
+      } finally { tour.disabled = false; }
+    };
+    const openTour = make('button', 'View my tour →', 'btn'); openTour.type = 'button';
+    openTour.onclick = () => { window.dispatchEvent(new Event('footprint:opentour')); view('tours'); };
+    actions.append(tour, openTour);
     if (!compact && record.visit_url) actions.append(publicLink(record.visit_label, record.visit_url));
     block.append(actions, feedback);
     if (!compact) block.append(make('p', 'View from public streets where permitted. A listed address is not permission to enter; arrange any tour with the operator. Pins may mark a building center, not an entrance.', 'nearby-visit-note'));
