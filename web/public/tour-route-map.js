@@ -93,10 +93,10 @@
       const detail=el('div');detail.append(el('b',fit.fits?'Fits your '+budget+' min budget':'Over your '+budget+' min budget', 'ct-time-verdict'));
       detail.append(el('p',model.formatTime(r.duration)+' travel'+(fit.pause?' + '+model.formatTime(fit.pause)+' at stops':'')+' · '+(r.distance/1609.344).toFixed(2)+' mi'));
       detail.append(el('p',(roundTrip?'Returns to stop 1':'One-way · finishes at stop '+stops.length)+' · no live traffic','cp-small'));
-      if(!fit.fits)detail.append(el('span','About '+Math.ceil(-fit.remaining/60)+' min over. Remove a stop, change order or choose a larger budget.','ct-over-note'));
+      if(!fit.fits)detail.append(el('span',model.formatTime(-fit.remaining)+' over. Remove a stop, change order or choose a larger budget.','ct-over-note'));
       result.append(time,detail);
       stops.forEach((s,i)=>{
-        const li=el('li'),jump=el('button',undefined,'ct-leg-stop');jump.type='button';jump.append(el('b',String(i+1)),el('span',s.name));jump.onclick=()=>{markers[i]?.openPopup();map?.panTo(points[i].coordinates.slice().reverse());};
+        const li=el('li'),jump=el('button',undefined,'ct-leg-stop');jump.type='button';jump.append(el('b',String(i+1)),el('span',s.name));jump.onclick=()=>{if(map){map.setView(points[i].coordinates.slice().reverse(),Math.max(map.getZoom(),17),{animate:false});markers[i]?.openPopup();$('ct-map-canvas').scrollIntoView({block:'center',behavior:'instant'});}};
         const timing=el('div',undefined,'ct-leg-time');timing.append(el('strong',i?model.formatTime(r.legs[i-1].duration)+' '+modes[mode]:'Start here'));
         timing.append(el('span',i?'Arrive at '+model.formatTime(fit.arrivals[i]):'Travel to this stop not included'));
         li.append(jump,timing);$('ct-timed-legs').append(li);
@@ -107,7 +107,7 @@
     async function draw(r){
       const signature=key+'|'+config.mode;if(lastDraw===signature)return;
       const expected=generation,mode=config.mode;
-      $('ct-map-controls').querySelector('span').textContent=(mode==='walking'?'Dotted blue = walking route':mode==='driving'?'Red = driving route':'Blue = cycling route')+' · numbers = stop order';
+      $('ct-map-controls').querySelector('span').textContent=(mode==='walking'?'Dotted blue = walking route':mode==='driving'?'Red = driving route':'Blue = cycling route')+' · tap a stop below for a close-up';
       L=await window.NearbyMap.loadLibrary();if(expected!==generation||mode!==config.mode)return;
       $('ct-map-canvas').hidden=false;$('ct-map-controls').hidden=false;$('ct-map-empty').hidden=true;
       if(!map){map=L.map($('ct-map-canvas'),{scrollWheelZoom:false,zoomControl:false}).setView([39,-98],4);L.control.zoom({position:'topright'}).addTo(map);L.control.scale({position:'bottomleft'}).addTo(map);
