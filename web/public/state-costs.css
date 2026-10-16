@@ -1,0 +1,46 @@
+/* A public-account diagram: color identifies the kind of flow, never its severity. */
+.fiscal-story{--fc-ink:#252521;--fc-blue:#1748ad;--fc-red:#a32e27;color:var(--fc-ink);max-width:1280px;margin-inline:auto}
+.fc-nav,.fc-jump-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:24px}
+.fc-nav a,.fc-jump-links a{display:inline-flex;align-items:center;min-height:44px;padding:9px 15px;border:1px solid #b6bdc3;border-radius:24px;color:#193f8b;background:#eaf0fb;text-decoration:none;font-weight:700;font-size:14px}
+.fc-nav a[aria-current]{background:#1748ad;color:#fff;border-color:#1748ad}
+.fc-jump-links{padding:16px;background:#edf3fb;border-radius:22px}.fc-jump-links>span{font-weight:700;margin-right:10px}
+.fc-hero{display:grid;grid-template-columns:minmax(0,1fr);align-items:center;gap:12px;border-top:2px solid var(--fc-ink);padding-top:22px}
+.fc-hero h1{font-family:'Gill Sans','Trebuchet MS',sans-serif;font-size:clamp(2.8rem,6.3vw,5.8rem);font-weight:800;line-height:.98;letter-spacing:-.05em;margin:16px 0 20px}
+.fc-hero h1 span{color:var(--fc-blue)}.fc-hero p:not(.eyebrow){font-size:clamp(1rem,2vw,1.35rem);line-height:1.45}
+.fc-balance{display:none}.fc-balance svg{width:100%;max-height:220px}.fc-balance span{display:block;text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:2px}
+.fc-status{font-size:12px;color:#555c62;border-bottom:1px solid #c9c9c0;padding-bottom:16px;margin:4px 0 22px}
+.fc-money,.fc-nm-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.fc-revenue,.fc-concession{min-width:0;padding:22px;border-radius:25px;position:relative;overflow:hidden}
+.fc-revenue{background:#e4edfa;border:1px solid #becfea}.fc-concession{background:#f9edbe;border:1px solid #e0cf87}
+.fc-kicker{display:flex;align-items:center;justify-content:space-between;gap:14px;text-transform:uppercase;font-weight:750;font-size:12px;letter-spacing:1px}
+.fc-icon{width:72px;height:72px;flex:none;display:block}.fc-kicker .fc-icon{width:55px;height:55px}
+.fc-flow{display:grid;grid-template-columns:minmax(0,1fr) 23px minmax(0,1fr);align-items:center;gap:8px;font-size:13px;line-height:1.4;margin:15px 0}
+.fc-flow>b{font-size:24px;text-align:center}.fc-flow>strong{font-weight:800}.fc-flow>span{color:#41443f}
+.fc-number{display:block;font-family:'Gill Sans','Trebuchet MS',sans-serif;font-size:clamp(3.7rem,6.8vw,6.1rem);line-height:1.06;letter-spacing:-.055em;margin-top:22px}
+.fc-revenue .fc-number{color:var(--fc-blue)}.fc-unit{font-size:13px;font-weight:650;line-height:1.45;margin-top:8px}
+.fc-budget{display:flex;align-items:center;gap:18px;margin:25px 0}.fc-waffle{display:grid;grid-template-columns:repeat(10,1fr);width:120px;gap:3px;flex:none}.fc-waffle i{aspect-ratio:1;background:#fff;border-radius:2px}.fc-waffle i.filled{background:#1748ad}.fc-budget p{font-size:14px;line-height:1.4;margin:0}.fc-budget b{display:block;font-size:34px;line-height:1.15}.fc-budget span{display:block;font-size:11px;margin-top:8px}
+.fc-destination{padding:13px 0;border-top:2px solid #aebfdb;font-weight:700;font-size:15px}.fc-caption{font-size:12px;line-height:1.6;margin:10px 0 0}.fiscal-story a{overflow-wrap:anywhere}.fiscal-story a:not(.fc-nav a){color:#143e91}
+.fc-stamp{display:inline-block;border:2px solid #8c6d20;border-radius:14px;padding:11px 15px;margin:15px 0;color:#674e0c;font-weight:750;font-size:13px}
+.fiscal-story details{border-top:1px solid #b8b6a7;margin-top:16px}.fiscal-story summary{cursor:pointer;min-height:48px;padding:12px 0;font-size:14px;font-weight:750}.fiscal-story details p{font-size:14px;line-height:1.6}.fiscal-story details p:last-child{margin-bottom:12px}
+.fc-boundary{padding:16px 19px;border-left:4px solid #1748ad;background:#f0f3f6;border-radius:0 13px 13px 0;font-size:13px;line-height:1.6;margin:20px 0}
+.fc-cost-heading{margin-top:38px}.fc-cost-heading h2,.fc-ask h2,.fc-irb h2{font:800 clamp(1.75rem,3vw,2.8rem)/1.1 'Gill Sans','Trebuchet MS',sans-serif;letter-spacing:-.03em;margin:9px 0 14px}.fc-cost-heading>p:last-child{font-size:15px;max-width:650px}
+.fc-burdens{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.fc-burden{position:relative;border-radius:25px;padding:22px;min-width:0;border:1px solid #dcb9b0;background:#f9e7e2}
+.fc-burden>.fc-icon{width:79px;height:79px;margin-bottom:12px}.fc-climate{background:#f8eddc;border-color:#dcc69e}.fc-grid{background:#f8f0cc;border-color:#decf98}
+.fc-health:after{content:'';position:absolute;top:24px;right:22px;width:55px;height:70px;background:radial-gradient(circle,#92372e 1.8px,transparent 2px) 0 0/8px 8px;border-radius:0 0 40px 40px;opacity:.45}
+.fc-tag{display:block;font-size:11px;font-weight:750;letter-spacing:.6px;text-transform:uppercase;line-height:1.5}
+.fc-burden h3{font:800 clamp(2.45rem,4vw,3.5rem)/1.12 'Gill Sans','Trebuchet MS',sans-serif;letter-spacing:-.04em;margin:10px 0;color:#872c28}.fc-burden h3 small{font:600 12px/1.4 'Avenir Next',sans-serif;letter-spacing:0;display:block;color:#4b4740;margin-top:7px}.fc-grid h3{color:#69500d}
+.fc-burden>p{font-size:14px;line-height:1.5;margin-bottom:0}.fc-burden .fc-flow{grid-template-columns:minmax(0,1fr);gap:4px;border-top:1px solid #cfb5ac;padding-top:15px}.fc-burden .fc-flow>b{text-align:left;font-size:24px;line-height:1;transform:rotate(90deg);transform-origin:10px 12px;width:20px;margin:6px 0}
+.fc-method-note{font-size:12px;line-height:1.6;margin-top:14px;color:#58554c}
+.fc-water-note{display:flex;flex-wrap:wrap;align-items:center;gap:16px;border:1px solid #bed0de;border-radius:22px;padding:20px;background:#eaf2f8;margin:24px 0}.fc-water-note>.fc-icon{width:48px;height:60px}.fc-water-note>div{flex:1;min-width:180px}.fc-water-note p{font-size:13px;margin:6px 0 0}.fc-water-note b{font-size:15px}
+.fc-reasons{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.fc-reasons p{margin:0}.fc-explain{padding:0 5px}
+.fc-ask{background:#e9eee5;border-radius:24px;padding:24px;margin-top:30px}.fc-ask>div{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:24px 0}.fc-ask>div p{font-size:14px;line-height:1.55;margin:0}.fc-ask>div b{display:block;margin-bottom:6px}.fc-ask .btn,.fc-water-note .btn{min-height:44px;background:#fffefa}
+.fc-sources{margin-top:28px!important;padding-bottom:15px}.fc-sources li{font-size:13px;line-height:1.6;margin-bottom:15px}.fc-sources li span{display:block;color:#56564d}.fc-sources ol{padding-left:22px}.fc-sources p,.fc-sources>a{font-size:13px}
+.fc-verdict{border-left:5px solid #a4781f;background:#faf1d3;padding:18px;border-radius:0 18px 18px 0;line-height:1.6;font-size:15px}.fc-verdict b{display:block}.fc-nm-art{display:none}.fc-nm-grid h2{font:800 clamp(1.8rem,3.7vw,3rem)/1.1 'Gill Sans','Trebuchet MS',sans-serif;letter-spacing:-.04em;margin:16px 0}.fc-nm-grid article>p:not(.fc-caption){font-size:15px;line-height:1.6}
+.fc-irb{padding:26px 0 0}.fc-irb-flows{display:grid;gap:18px}.fc-irb-flows>div{border-top:2px solid #d1c8ae}.fc-irb-flows p{font-size:14px}
+.fiscal-story .fc-nav a:focus-visible,.fiscal-story summary:focus-visible{outline:3px solid #1748ad;outline-offset:4px}
+@media(min-width:650px){.fc-hero{grid-template-columns:minmax(0,1fr) 30%}.fc-balance,.fc-nm-art{display:block}.fc-nm-art{border-radius:50%;aspect-ratio:1;background:#f4d257;padding:12%;text-align:center}.fc-nm-art .fc-icon{margin:auto;width:65%;height:auto}.fc-nm-art b{font:800 2.5rem/1 'Gill Sans','Trebuchet MS',sans-serif;display:block}.fc-nm-art span{font-size:12px;display:block;margin-top:10px}.fc-money,.fc-nm-grid,.fc-reasons,.fc-irb-flows{grid-template-columns:repeat(2,minmax(0,1fr))}.fc-revenue,.fc-concession{padding:28px}.fc-ask>div{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1050px){.fc-burdens{grid-template-columns:repeat(3,minmax(0,1fr))}.fc-burden{padding:24px}.fc-burden details{margin-top:20px}.fc-hero{padding-top:30px}.fc-status{margin-top:12px}}
+@media print{.fiscal-story .fc-nav,.fc-jump-links,.fiscal-story button{display:none}.fc-burdens{grid-template-columns:repeat(3,minmax(0,1fr))}.fc-burden,.fc-money>article{break-inside:avoid}.fiscal-story .fc-number{font-size:45px}}
+
+body:is([data-view="virginia"],[data-view="new-mexico"]) main>.center-counts,body:is([data-view="virginia"],[data-view="new-mexico"]) main>.phone-fold,body:is([data-view="virginia"],[data-view="new-mexico"]) main>.phone-section-jump{display:none}
