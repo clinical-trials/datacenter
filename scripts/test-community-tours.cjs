@@ -5,7 +5,7 @@ const path = require('node:path');
 const modelPath = path.join(__dirname, '../site/tour-model.js');
 test('tour routing model is available', () => assert.ok(fs.existsSync(modelPath)));
 if (fs.existsSync(modelPath)) {
-  const { normalizeStop, routeSegments } = require(modelPath);
+  const { normalizeStop, routeSegments, parseAddresses } = require(modelPath);
   const stops = Array.from({length:12}, (_,i) => ({name:'Stop '+i,address:`${i+1} Main St, Test, NM 87102`}));
   test('phone routes preserve all stops in order with at most three waypoints', () => {
     for (let n=2;n<=12;n++) {
@@ -30,5 +30,16 @@ if (fs.existsSync(modelPath)) {
     const x=normalizeStop({name:'Example',address:'100 Main St, NM 00123',source:'javascript:alert(1)',note:{bad:true}});
     assert.equal(x.source,''); assert.equal(x.note,''); assert.ok(x.address.includes('00123'));
     assert.equal(normalizeStop({name:'Example',address:'a|b'}),null);
+  });
+  test('pasted addresses preserve order, optional names and leading-zero ZIPs', () => {
+    const parsed=parseAddresses('  10 Main St, Boston, MA 02108\n\nLibrary — 20 Main St, Boston, MA 02108  ');
+    assert.equal(parsed.error,'');
+    assert.deepEqual(parsed.stops.map(s=>s.address),['10 Main St, Boston, MA 02108','20 Main St, Boston, MA 02108']);
+    assert.equal(parsed.stops[1].name,'Library');
+    assert.equal(parsed.stops[0].verification,'User-added · address not verified');
+    for(const text of ['', 'Place — ', '1 Main St|2 Main St', 'x'.repeat(181), Array(13).fill('10 Main St').join('\n')]) {
+      assert.ok(parseAddresses(text).error);
+      assert.equal(parseAddresses(text).stops.length,0);
+    }
   });
 }

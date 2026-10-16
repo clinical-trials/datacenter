@@ -26,6 +26,21 @@
     }
     return segments;
   }
-  const api={normalizeStop,routeSegments};
+  function parseAddresses(text){
+    const lines=typeof text==='string'?text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean):[];
+    if(!lines.length)return {stops:[],error:'Add at least one address, one per line.'};
+    if(lines.length>12)return {stops:[],error:'Use up to 12 addresses per tour.'};
+    const stops=[];
+    for(const [i,line] of lines.entries()){
+      const divider=line.indexOf('—');
+      const name=divider<0?line.split(',')[0].slice(0,100):line.slice(0,divider).trim();
+      const address=(divider<0?line:line.slice(divider+1)).trim();
+      const stop=address.length<=180&&normalizeStop({name,address});
+      if(!stop)return {stops:[],error:'Check address '+(i+1)+': use a complete address under 180 characters, without a pipe (|).'};
+      stops.push(stop);
+    }
+    return {stops,error:''};
+  }
+  const api={normalizeStop,routeSegments,parseAddresses};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.TourModel=api;
 })(typeof window==='undefined'?globalThis:window);
