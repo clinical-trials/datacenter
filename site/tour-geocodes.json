@@ -1,0 +1,72 @@
+{
+  "provider": "US Census Geocoder, Public_AR_Current",
+  "note": "Address-range interpolations, not verified entrances.",
+  "locations": [
+    {
+      "address": "3830 Singer Blvd NE, Albuquerque, NM 87109",
+      "query": "3830 Singer Blvd NE, Albuquerque, NM 87109",
+      "matchedAddress": "3830 SINGER BLVD NE, ALBUQUERQUE, NM, 87109",
+      "coordinates": [
+        -106.602701710281,
+        35.144634944626
+      ],
+      "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3830+Singer+Blvd+NE%2C+Albuquerque%2C+NM+87109&benchmark=Public_AR_Current&format=json",
+      "checked": "2026-10-16"
+    },
+    {
+      "address": "5021 Indian School Rd NE, Suite 600, Albuquerque, NM 87110",
+      "query": "5021 Indian School Rd NE, Albuquerque, NM 87110",
+      "matchedAddress": "5021 INDIAN SCHOOL RD NE, ALBUQUERQUE, NM, 87110",
+      "coordinates": [
+        -106.58932840745,
+        35.10195827532
+      ],
+      "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5021+Indian+School+Rd+NE%2C+Albuquerque%2C+NM+87110&benchmark=Public_AR_Current&format=json",
+      "checked": "2026-10-16"
+    },
+    {
+      "address": "725 6th St NW, Albuquerque, NM 87102",
+      "query": "725 6th St NW, Albuquerque, NM 87102",
+      "matchedAddress": "725 6TH ST NW, ALBUQUERQUE, NM, 87102",
+      "coordinates": [
+        -106.652651291095,
+        35.092617161073
+      ],
+      "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=725+6th+St+NW%2C+Albuquerque%2C+NM+87102&benchmark=Public_AR_Current&format=json",
+      "checked": "2026-10-16"
+    },
+    {
+      "address": "505 Marquette Ave NW, Albuquerque, NM 87102",
+      "query": "505 Marquette Ave NW, Albuquerque, NM 87102",
+      "matchedAddress": "505 MARQUETTE AVE NW, ALBUQUERQUE, NM, 87102",
+      "coordinates": [
+        -106.652229489129,
+        35.088401231788
+      ],
+      "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=505+Marquette+Ave+NW%2C+Albuquerque%2C+NM+87102&benchmark=Public_AR_Current&format=json",
+      "checked": "2026-10-16"
+    },
+    {
+      "address": "400 Tijeras Ave NW, Albuquerque, NM 87102",
+      "query": "400 Tijeras Ave NW, Albuquerque, NM 87102",
+      "matchedAddress": "400 TIJERAS AVE NW, ALBUQUERQUE, NM, 87102",
+      "coordinates": [
+        -106.651288885313,
+        35.086586106324
+      ],
+      "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=400+Tijeras+Ave+NW%2C+Albuquerque%2C+NM+87102&benchmark=Public_AR_Current&format=json",
+      "checked": "2026-10-16"
+    },
+    {
+      "address": "123 Central Ave NW, Albuquerque, NM 87102",
+      "query": "123 Central Ave NW, Albuquerque, NM 87102",
+      "matchedAddress": "123 CENTRAL AVE NW, ALBUQUERQUE, NM, 87102",
+      "coordinates": [
+        -106.653002305551,
+        35.084809104194
+      ],
+      "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=123+Central+Ave+NW%2C+Albuquerque%2C+NM+87102&benchmark=Public_AR_Current&format=json",
+      "checked": "2026-10-16"
+    }
+  ]
+}

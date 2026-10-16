@@ -154,5 +154,5 @@
       destroy() { destroyed = true; observer.disconnect(); window.removeEventListener('footprint:viewchange', onView); window.removeEventListener('footprint:opentour', closeExpanded); dialog.close(); dialog.remove(); map.remove(); }
     };
   }
-  window.NearbyMap = { create };
+  window.NearbyMap = { create, loadLibrary };
 })();
