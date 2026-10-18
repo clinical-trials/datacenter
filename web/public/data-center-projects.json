@@ -1,0 +1,2260 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-18T17:48:40.350Z",
+  "source": "USDataMap directory",
+  "source_url": "https://usdatamap.com/",
+  "verification": "Directory-reported; not independently verified",
+  "counts": {
+    "construction": 239,
+    "planned": 82
+  },
+  "records": [
+    {
+      "id": "aws-4",
+      "company": "Amazon Web Services",
+      "name": "AWS Mississippi Campus",
+      "stateCode": "MS",
+      "status": "construction"
+    },
+    {
+      "id": "aws-5",
+      "company": "Amazon Web Services",
+      "name": "AWS Indiana Campus",
+      "stateCode": "IN",
+      "status": "planned"
+    },
+    {
+      "id": "aws-6",
+      "company": "Amazon Web Services",
+      "name": "AWS New Albany Campus",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "ms-6",
+      "company": "Microsoft",
+      "name": "Azure Georgia Campus",
+      "stateCode": "GA",
+      "status": "planned"
+    },
+    {
+      "id": "ggl-5",
+      "company": "Google",
+      "name": "Google Kansas City",
+      "stateCode": "MO",
+      "status": "construction"
+    },
+    {
+      "id": "ggl-6",
+      "company": "Google",
+      "name": "Google Columbus Expansion",
+      "stateCode": "OH",
+      "status": "planned"
+    },
+    {
+      "id": "meta-5",
+      "company": "Meta",
+      "name": "Meta Temple",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "meta-6",
+      "company": "Meta",
+      "name": "Meta Hyperion (Richland Parish)",
+      "stateCode": "LA",
+      "status": "construction"
+    },
+    {
+      "id": "orc-4",
+      "company": "Oracle",
+      "name": "Oracle Nashville Campus",
+      "stateCode": "TN",
+      "status": "construction"
+    },
+    {
+      "id": "apl-4",
+      "company": "Apple",
+      "name": "Apple Iowa Expansion",
+      "stateCode": "IA",
+      "status": "construction"
+    },
+    {
+      "id": "eq-4",
+      "company": "Equinix",
+      "name": "Equinix Dallas Expansion",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "qts-3",
+      "company": "QTS",
+      "name": "QTS Phoenix Expansion",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "cy-6",
+      "company": "CyrusOne",
+      "name": "CyrusOne Houston West",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "van-5",
+      "company": "Vantage Data Centers",
+      "name": "Vantage Atlanta",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "t5-3",
+      "company": "T5 Data Centers",
+      "name": "T5 Chicago",
+      "stateCode": "IL",
+      "status": "construction"
+    },
+    {
+      "id": "aln-4",
+      "company": "Aligned",
+      "name": "Aligned Salt Lake City",
+      "stateCode": "UT",
+      "status": "construction"
+    },
+    {
+      "id": "cmp-3",
+      "company": "Compass Datacenters",
+      "name": "Compass Columbus",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "ntt-4",
+      "company": "NTT",
+      "name": "NTT Chicago",
+      "stateCode": "IL",
+      "status": "construction"
+    },
+    {
+      "id": "chq-2",
+      "company": "CloudHQ",
+      "name": "CloudHQ Manassas",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "ms-7",
+      "company": "Microsoft",
+      "name": "Azure Cheyenne Campus",
+      "stateCode": "WY",
+      "status": "construction"
+    },
+    {
+      "id": "ms-8",
+      "company": "Microsoft",
+      "name": "Azure Racine County",
+      "stateCode": "WI",
+      "status": "planned"
+    },
+    {
+      "id": "ms-9",
+      "company": "Microsoft",
+      "name": "Azure Phoenix West",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "ms-10",
+      "company": "Microsoft",
+      "name": "Azure Stargate JV",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "ggl-7",
+      "company": "Google",
+      "name": "Google Wichita Campus",
+      "stateCode": "KS",
+      "status": "planned"
+    },
+    {
+      "id": "ggl-8",
+      "company": "Google",
+      "name": "Google Fort Wayne",
+      "stateCode": "IN",
+      "status": "construction"
+    },
+    {
+      "id": "ggl-9",
+      "company": "Google",
+      "name": "Google Mesa AZ",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "ggl-10",
+      "company": "Google",
+      "name": "Google Beaumont TX",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "aws-7",
+      "company": "Amazon Web Services",
+      "name": "AWS Loudoun Expansion",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "aws-8",
+      "company": "Amazon Web Services",
+      "name": "AWS Sarpy County NE",
+      "stateCode": "NE",
+      "status": "construction"
+    },
+    {
+      "id": "aws-9",
+      "company": "Amazon Web Services",
+      "name": "AWS Saginaw County MI",
+      "stateCode": "MI",
+      "status": "planned"
+    },
+    {
+      "id": "aws-10",
+      "company": "Amazon Web Services",
+      "name": "AWS Fayette County GA",
+      "stateCode": "GA",
+      "status": "planned"
+    },
+    {
+      "id": "meta-7",
+      "company": "Meta",
+      "name": "Meta Chesterfield VA",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "meta-8",
+      "company": "Meta",
+      "name": "Meta DeKalb IL",
+      "stateCode": "IL",
+      "status": "planned"
+    },
+    {
+      "id": "meta-9",
+      "company": "Meta",
+      "name": "Meta Montgomery County IN",
+      "stateCode": "IN",
+      "status": "planned"
+    },
+    {
+      "id": "orc-6",
+      "company": "Oracle",
+      "name": "Oracle Lemont Campus",
+      "stateCode": "IL",
+      "status": "planned"
+    },
+    {
+      "id": "xai-3",
+      "company": "xAI",
+      "name": "xAI Memphis Expansion",
+      "stateCode": "TN",
+      "status": "construction"
+    },
+    {
+      "id": "cw-2",
+      "company": "CoreWeave",
+      "name": "CoreWeave Edison NJ",
+      "stateCode": "NJ",
+      "status": "construction"
+    },
+    {
+      "id": "cw-3",
+      "company": "CoreWeave",
+      "name": "CoreWeave Independence MO",
+      "stateCode": "MO",
+      "status": "construction"
+    },
+    {
+      "id": "lan-1",
+      "company": "Lancium",
+      "name": "Lancium Clean Campus Abilene",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "pd-1",
+      "company": "Prologis",
+      "name": "Prologis DC Campus Ashburn",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "pd-2",
+      "company": "Prologis",
+      "name": "Prologis DC Campus Chicago",
+      "stateCode": "IL",
+      "status": "planned"
+    },
+    {
+      "id": "van-6",
+      "company": "Vantage Data Centers",
+      "name": "Vantage Ashburn Phase III",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "van-7",
+      "company": "Vantage Data Centers",
+      "name": "Vantage Montreal TX Campus",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "qts-4",
+      "company": "QTS",
+      "name": "QTS Hillsboro Campus",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "qts-5",
+      "company": "QTS",
+      "name": "QTS Fort Worth Campus",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "eq-5",
+      "company": "Equinix",
+      "name": "Equinix xScale Ashburn",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "eq-6",
+      "company": "Equinix",
+      "name": "Equinix xScale Atlanta",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "dlr-4",
+      "company": "Digital Realty",
+      "name": "Digital Realty Manassas",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "dlr-5",
+      "company": "Digital Realty",
+      "name": "Digital Realty Portland",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "trc-1",
+      "company": "Tract",
+      "name": "Tract Salt Lake City",
+      "stateCode": "UT",
+      "status": "construction"
+    },
+    {
+      "id": "trc-2",
+      "company": "Tract",
+      "name": "Tract Reno Campus",
+      "stateCode": "NV",
+      "status": "planned"
+    },
+    {
+      "id": "ynd-1",
+      "company": "Yondr",
+      "name": "Yondr Northern Virginia",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "ynd-2",
+      "company": "Yondr",
+      "name": "Yondr Phoenix",
+      "stateCode": "AZ",
+      "status": "planned"
+    },
+    {
+      "id": "sab-2",
+      "company": "Sabey",
+      "name": "Sabey Ashburn",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "str-2",
+      "company": "Stream",
+      "name": "Stream Phoenix Campus",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "pdc-1",
+      "company": "Prime Data Centers",
+      "name": "Prime Sacramento",
+      "stateCode": "CA",
+      "status": "construction"
+    },
+    {
+      "id": "db-5",
+      "company": "DataBank",
+      "name": "DataBank Atlanta",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "db-6",
+      "company": "DataBank",
+      "name": "DataBank Phoenix",
+      "stateCode": "AZ",
+      "status": "planned"
+    },
+    {
+      "id": "apl-5",
+      "company": "Apple",
+      "name": "Apple North Carolina Expansion",
+      "stateCode": "NC",
+      "status": "construction"
+    },
+    {
+      "id": "sw-5",
+      "company": "Switch",
+      "name": "Switch CITADEL Campus",
+      "stateCode": "NV",
+      "status": "construction"
+    },
+    {
+      "id": "ec-4",
+      "company": "EdgeConneX",
+      "name": "EdgeConneX Dallas",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "ec-5",
+      "company": "EdgeConneX",
+      "name": "EdgeConneX Phoenix",
+      "stateCode": "AZ",
+      "status": "planned"
+    },
+    {
+      "id": "cmp-4",
+      "company": "Compass Datacenters",
+      "name": "Compass Phoenix Campus",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "cmp-5",
+      "company": "Compass Datacenters",
+      "name": "Compass Virginia Campus II",
+      "stateCode": "VA",
+      "status": "planned"
+    },
+    {
+      "id": "cmp-6",
+      "company": "Compass Datacenters",
+      "name": "Compass Meridian Campus",
+      "stateCode": "MS",
+      "status": "construction"
+    },
+    {
+      "id": "aws-pa-1",
+      "company": "Amazon Web Services",
+      "name": "AWS Salem Township Campus",
+      "stateCode": "PA",
+      "status": "planned"
+    },
+    {
+      "id": "aws-pa-2",
+      "company": "Amazon Web Services",
+      "name": "AWS Falls Township Campus",
+      "stateCode": "PA",
+      "status": "planned"
+    },
+    {
+      "id": "padcp-1",
+      "company": "PA Data Center Partners",
+      "name": "Pennsylvania Digital 1 (PAX-1)",
+      "stateCode": "PA",
+      "status": "construction"
+    },
+    {
+      "id": "lv-1",
+      "company": "Lehigh Valley DC Partners",
+      "name": "Lehigh Valley Campus",
+      "stateCode": "PA",
+      "status": "planned"
+    },
+    {
+      "id": "van-8",
+      "company": "Vantage Data Centers",
+      "name": "Vantage Frontier Texas",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "van-9",
+      "company": "Vantage Data Centers",
+      "name": "Vantage Lighthouse WI",
+      "stateCode": "WI",
+      "status": "construction"
+    },
+    {
+      "id": "clg-2",
+      "company": "Cologix",
+      "name": "Cologix Johnstown Campus",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "aws-nc-1",
+      "company": "Amazon Web Services",
+      "name": "AWS Richmond County NC",
+      "stateCode": "NC",
+      "status": "construction"
+    },
+    {
+      "id": "aws-sunbury",
+      "company": "Amazon Web Services",
+      "name": "AWS Sunbury Campus",
+      "stateCode": "OH",
+      "status": "planned"
+    },
+    {
+      "id": "ggl-11",
+      "company": "Google",
+      "name": "Google Lincoln NE",
+      "stateCode": "NE",
+      "status": "construction"
+    },
+    {
+      "id": "sol-1",
+      "company": "Soluna",
+      "name": "Soluna Project Kati",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "pat-1",
+      "company": "Patmos",
+      "name": "Patmos Kansas City DC",
+      "stateCode": "MO",
+      "status": "construction"
+    },
+    {
+      "id": "meta-sc-1",
+      "company": "Meta",
+      "name": "Meta New Albany SC Campus",
+      "stateCode": "SC",
+      "status": "planned"
+    },
+    {
+      "id": "fb-al-2",
+      "company": "Meta",
+      "name": "Meta Huntsville Expansion",
+      "stateCode": "AL",
+      "status": "construction"
+    },
+    {
+      "id": "cw-ma-1",
+      "company": "CoreWeave",
+      "name": "CoreWeave Boston",
+      "stateCode": "MA",
+      "status": "construction"
+    },
+    {
+      "id": "meta-nm-2",
+      "company": "Meta",
+      "name": "Meta Los Lunas Expansion",
+      "stateCode": "NM",
+      "status": "construction"
+    },
+    {
+      "id": "sg-nm-1",
+      "company": "Oracle",
+      "name": "Stargate New Mexico Site",
+      "stateCode": "NM",
+      "status": "planned"
+    },
+    {
+      "id": "sg-mi-1",
+      "company": "Oracle",
+      "name": "Stargate Michigan Site",
+      "stateCode": "MI",
+      "status": "planned"
+    },
+    {
+      "id": "sg-wi-1",
+      "company": "Oracle",
+      "name": "Stargate Wisconsin Site",
+      "stateCode": "WI",
+      "status": "planned"
+    },
+    {
+      "id": "sg-pa-1",
+      "company": "Oracle",
+      "name": "Stargate Pennsylvania Site",
+      "stateCode": "PA",
+      "status": "planned"
+    },
+    {
+      "id": "meta-ks-1",
+      "company": "Meta",
+      "name": "Meta Lenexa KS",
+      "stateCode": "KS",
+      "status": "planned"
+    },
+    {
+      "id": "apd-mt-1",
+      "company": "Applied Digital",
+      "name": "Applied Digital Montana",
+      "stateCode": "MT",
+      "status": "planned"
+    },
+    {
+      "id": "ar-4",
+      "company": "Meta",
+      "name": "Meta Russellville AR",
+      "stateCode": "AR",
+      "status": "planned"
+    },
+    {
+      "id": "va-crw-1",
+      "company": "CoreWeave",
+      "name": "CoreWeave Northern Virginia",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "ca-van-10",
+      "company": "Vantage Data Centers",
+      "name": "Vantage San Jose Phase II",
+      "stateCode": "CA",
+      "status": "construction"
+    },
+    {
+      "id": "ca-ec-6",
+      "company": "EdgeConneX",
+      "name": "EdgeConneX Sacramento",
+      "stateCode": "CA",
+      "status": "construction"
+    },
+    {
+      "id": "nc-ms-12",
+      "company": "Microsoft",
+      "name": "Azure Charlotte NC",
+      "stateCode": "NC",
+      "status": "construction"
+    },
+    {
+      "id": "or-fb-5",
+      "company": "Meta",
+      "name": "Meta Prineville Expansion",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "az-ms-13",
+      "company": "Microsoft",
+      "name": "Azure El Mirage AZ",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "fl-ms-14",
+      "company": "Microsoft",
+      "name": "Azure Jacksonville FL",
+      "stateCode": "FL",
+      "status": "planned"
+    },
+    {
+      "id": "ia-fb-6",
+      "company": "Meta",
+      "name": "Meta Altoona Expansion",
+      "stateCode": "IA",
+      "status": "construction"
+    },
+    {
+      "id": "ny-ggl-15",
+      "company": "Google",
+      "name": "Google Buffalo NY",
+      "stateCode": "NY",
+      "status": "construction"
+    },
+    {
+      "id": "nj-van-11",
+      "company": "Vantage Data Centers",
+      "name": "Vantage NJ Campus",
+      "stateCode": "NJ",
+      "status": "construction"
+    },
+    {
+      "id": "co-van-12",
+      "company": "Vantage Data Centers",
+      "name": "Vantage Denver Campus",
+      "stateCode": "CO",
+      "status": "construction"
+    },
+    {
+      "id": "in-ms-16",
+      "company": "Microsoft",
+      "name": "Azure South Bend IN",
+      "stateCode": "IN",
+      "status": "planned"
+    },
+    {
+      "id": "mn-ms-17",
+      "company": "Microsoft",
+      "name": "Azure Chaska MN",
+      "stateCode": "MN",
+      "status": "construction"
+    },
+    {
+      "id": "ne-ggl-17",
+      "company": "Google",
+      "name": "Google Omaha NE",
+      "stateCode": "NE",
+      "status": "planned"
+    },
+    {
+      "id": "sc-aws-12",
+      "company": "Amazon Web Services",
+      "name": "AWS South Carolina Cluster",
+      "stateCode": "SC",
+      "status": "planned"
+    },
+    {
+      "id": "pa-ms-18",
+      "company": "Microsoft",
+      "name": "Azure Harrisburg PA",
+      "stateCode": "PA",
+      "status": "construction"
+    },
+    {
+      "id": "pa-ggl-18",
+      "company": "Google",
+      "name": "Google Middletown PA",
+      "stateCode": "PA",
+      "status": "planned"
+    },
+    {
+      "id": "pa-cw-4",
+      "company": "CoreWeave",
+      "name": "CoreWeave Lehigh Valley PA",
+      "stateCode": "PA",
+      "status": "construction"
+    },
+    {
+      "id": "wi-fb-7",
+      "company": "Meta",
+      "name": "Meta Altoona WI",
+      "stateCode": "WI",
+      "status": "planned"
+    },
+    {
+      "id": "wy-ggl-19",
+      "company": "Google",
+      "name": "Google Cheyenne WY",
+      "stateCode": "WY",
+      "status": "planned"
+    },
+    {
+      "id": "ky-aws-13",
+      "company": "Amazon Web Services",
+      "name": "AWS Kentucky Campus",
+      "stateCode": "KY",
+      "status": "construction"
+    },
+    {
+      "id": "nd-ms-19",
+      "company": "Microsoft",
+      "name": "Azure Fargo ND",
+      "stateCode": "ND",
+      "status": "planned"
+    },
+    {
+      "id": "avaio-1",
+      "company": "AVAIO Digital",
+      "name": "AVAIO Digital Leo Campus",
+      "stateCode": "AR",
+      "status": "planned"
+    },
+    {
+      "id": "avaio-2",
+      "company": "AVAIO Digital",
+      "name": "AVAIO Digital Hercules Campus",
+      "stateCode": "VA",
+      "status": "planned"
+    },
+    {
+      "id": "avaio-3",
+      "company": "AVAIO Digital",
+      "name": "AVAIO Digital Taurus Campus",
+      "stateCode": "MS",
+      "status": "construction"
+    },
+    {
+      "id": "avaio-4",
+      "company": "AVAIO Digital",
+      "name": "AVAIO Digital Perseus Campus",
+      "stateCode": "CA",
+      "status": "planned"
+    },
+    {
+      "id": "galaxy-1",
+      "company": "Galaxy Digital",
+      "name": "Galaxy Helios Campus",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "cloudburst-1",
+      "company": "CloudBurst",
+      "name": "CloudBurst Texas Flagship",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "oai-eff-1",
+      "company": "OpenAI",
+      "name": "Stargate Effingham County",
+      "stateCode": "GA",
+      "status": "planned"
+    },
+    {
+      "id": "stack-vamega-1",
+      "company": "Stack Infrastructure",
+      "name": "Southern Virginia Megasite Campus",
+      "stateCode": "VA",
+      "status": "planned"
+    },
+    {
+      "id": "oai-mi-1",
+      "company": "OpenAI",
+      "name": "Stargate Saline Township",
+      "stateCode": "MI",
+      "status": "construction"
+    },
+    {
+      "id": "ms-pecos-1",
+      "company": "Microsoft",
+      "name": "Microsoft Pecos Campus",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "ms-laporte-1",
+      "company": "Microsoft",
+      "name": "Microsoft La Porte Campus",
+      "stateCode": "IN",
+      "status": "construction"
+    },
+    {
+      "id": "cru-childress-1",
+      "company": "Crusoe Energy",
+      "name": "Crusoe Childress Campus",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "aws-mo-1",
+      "company": "Amazon Web Services",
+      "name": "AWS Montgomery County Campus",
+      "stateCode": "MO",
+      "status": "planned"
+    },
+    {
+      "id": "twulf-ky-1",
+      "company": "TeraWulf",
+      "name": "TeraWulf Hawesville Campus",
+      "stateCode": "KY",
+      "status": "construction"
+    },
+    {
+      "id": "fermi-1",
+      "company": "Fermi America",
+      "name": "Fermi America Amarillo Campus",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "t5-ga-1",
+      "company": "T5 Data Centers",
+      "name": "T5 Atlanta Campus",
+      "stateCode": "GA",
+      "status": "planned"
+    },
+    {
+      "id": "oai-pike-1",
+      "company": "OpenAI",
+      "name": "PORTS-Pike Technology Campus",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "aws-gwranch-1",
+      "company": "Amazon Web Services",
+      "name": "AWS GW Ranch Campus",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "aws-cincy-1",
+      "company": "Amazon Web Services",
+      "name": "AWS Trenton Campus",
+      "stateCode": "OH",
+      "status": "planned"
+    },
+    {
+      "id": "aws-wheat-1",
+      "company": "Amazon Web Services",
+      "name": "AWS Wheatfield Campus",
+      "stateCode": "IN",
+      "status": "planned"
+    },
+    {
+      "id": "cy-fr-1",
+      "company": "CyrusOne",
+      "name": "CyrusOne Freestone Campus",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "sw-pa-1",
+      "company": "Switch",
+      "name": "Switch Beaver County Campus",
+      "stateCode": "PA",
+      "status": "planned"
+    },
+    {
+      "id": "talen-1",
+      "company": "Talen Energy",
+      "name": "Talen Slate Belt Campus",
+      "stateCode": "PA",
+      "status": "planned"
+    },
+    {
+      "id": "ggl-skye-1",
+      "company": "Google",
+      "name": "Google Project Skye",
+      "stateCode": "VA",
+      "status": "planned"
+    },
+    {
+      "id": "pdc-phx-1",
+      "company": "Prime Data Centers",
+      "name": "Prime Phoenix Campus",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "fleet-1",
+      "company": "Fleet",
+      "name": "Fleet Reno Campus",
+      "stateCode": "NV",
+      "status": "construction"
+    },
+    {
+      "id": "xai-4",
+      "company": "xAI",
+      "name": "xAI Memphis Building 4",
+      "stateCode": "TN",
+      "status": "construction"
+    },
+    {
+      "id": "aln-pa-1",
+      "company": "Aligned",
+      "name": "Aligned Project Phoenix",
+      "stateCode": "PA",
+      "status": "construction"
+    },
+    {
+      "id": "iren-tx-1",
+      "company": "IREN",
+      "name": "IREN Sweetwater Hub",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "fluid-tx-1",
+      "company": "Fluidstack",
+      "name": "Fluidstack Cameron County Campus",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "fb-tx-elp",
+      "company": "Meta",
+      "name": "Meta El Paso Data Center",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "aws-tx-bol",
+      "company": "Amazon Web Services",
+      "name": "AWS Boling Campus",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "eqx-12",
+      "company": "Equinix",
+      "name": "Equinix DC21",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "eqx-13",
+      "company": "Equinix",
+      "name": "Equinix DC22",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "eqx-21",
+      "company": "Equinix",
+      "name": "Equinix DA12",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "eqx-30",
+      "company": "Equinix",
+      "name": "Equinix SV17",
+      "stateCode": "CA",
+      "status": "construction"
+    },
+    {
+      "id": "eqx-38",
+      "company": "Equinix",
+      "name": "Equinix CH8",
+      "stateCode": "IL",
+      "status": "construction"
+    },
+    {
+      "id": "eqx-46",
+      "company": "Equinix",
+      "name": "Equinix NY12",
+      "stateCode": "NJ",
+      "status": "construction"
+    },
+    {
+      "id": "dlr-7",
+      "company": "Digital Realty",
+      "name": "Digital Realty Ashburn ACC10",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "dlr-9",
+      "company": "Digital Realty",
+      "name": "Digital Realty Manassas MIT2",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "dlr-15",
+      "company": "Digital Realty",
+      "name": "Digital Realty Dallas DFW12",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "dlr-22",
+      "company": "Digital Realty",
+      "name": "Digital Realty Chicago CHI4",
+      "stateCode": "IL",
+      "status": "construction"
+    },
+    {
+      "id": "dlr-31",
+      "company": "Digital Realty",
+      "name": "Digital Realty Phoenix PHX12",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "dlr-34",
+      "company": "Digital Realty",
+      "name": "Digital Realty Hillsboro HIL3",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "qts-5-a",
+      "company": "QTS",
+      "name": "QTS Ashburn DC5",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "qts-7",
+      "company": "QTS",
+      "name": "QTS Manassas DC2",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "qts-13",
+      "company": "QTS",
+      "name": "QTS Phoenix 2",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "qts-17",
+      "company": "QTS",
+      "name": "QTS Eemshaven",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "qts-19",
+      "company": "QTS",
+      "name": "QTS Irving Mega",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "qts-20",
+      "company": "QTS",
+      "name": "QTS New Albany Campus",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "cor-11",
+      "company": "CoreSite",
+      "name": "CoreSite SV9",
+      "stateCode": "CA",
+      "status": "construction"
+    },
+    {
+      "id": "cor-15",
+      "company": "CoreSite",
+      "name": "CoreSite LA4",
+      "stateCode": "CA",
+      "status": "construction"
+    },
+    {
+      "id": "cyr-4",
+      "company": "CyrusOne",
+      "name": "CyrusOne Sterling IV",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "cyr-6",
+      "company": "CyrusOne",
+      "name": "CyrusOne Manassas II",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "cyr-11",
+      "company": "CyrusOne",
+      "name": "CyrusOne Allen II",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "cyr-17",
+      "company": "CyrusOne",
+      "name": "CyrusOne Phoenix II",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "cyr-19",
+      "company": "CyrusOne",
+      "name": "CyrusOne Council Bluffs II",
+      "stateCode": "IA",
+      "status": "construction"
+    },
+    {
+      "id": "dbk-3",
+      "company": "DataBank",
+      "name": "DataBank ATL4",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "dbk-9",
+      "company": "DataBank",
+      "name": "DataBank IAD3",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "stck-4",
+      "company": "Stack Infrastructure",
+      "name": "Stack PDX04",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "stck-7",
+      "company": "Stack Infrastructure",
+      "name": "Stack DFW03",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "stck-12",
+      "company": "Stack Infrastructure",
+      "name": "Stack NoVA03",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "stck-14",
+      "company": "Stack Infrastructure",
+      "name": "Stack PHX02",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "stck-17",
+      "company": "Stack Infrastructure",
+      "name": "Stack ATL02",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "algn-3",
+      "company": "Aligned",
+      "name": "Aligned ORD-03 Chicago",
+      "stateCode": "IL",
+      "status": "construction"
+    },
+    {
+      "id": "algn-6",
+      "company": "Aligned",
+      "name": "Aligned IAD-03 Ashburn",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "algn-7",
+      "company": "Aligned",
+      "name": "Aligned IAD-04 Manassas",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "algn-10",
+      "company": "Aligned",
+      "name": "Aligned PHX-03 Phoenix",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "algn-14",
+      "company": "Aligned",
+      "name": "Aligned SLC-02 Salt Lake City",
+      "stateCode": "UT",
+      "status": "construction"
+    },
+    {
+      "id": "algn-16",
+      "company": "Aligned",
+      "name": "Aligned ATL-02 Atlanta",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "algn-17",
+      "company": "Aligned",
+      "name": "Aligned ORD-04 Chicago",
+      "stateCode": "IL",
+      "status": "construction"
+    },
+    {
+      "id": "vnt-8",
+      "company": "Vantage Data Centers",
+      "name": "Vantage VA13 Ashburn",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "vnt-11",
+      "company": "Vantage Data Centers",
+      "name": "Vantage AZ3 Phoenix",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "vnt-14",
+      "company": "Vantage Data Centers",
+      "name": "Vantage TX3 Dallas",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "vnt-15",
+      "company": "Vantage Data Centers",
+      "name": "Vantage TX12 Frontier Campus",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "vnt-17",
+      "company": "Vantage Data Centers",
+      "name": "Vantage WA2 Quincy",
+      "stateCode": "WA",
+      "status": "construction"
+    },
+    {
+      "id": "sw-4-a",
+      "company": "Switch",
+      "name": "Switch LAS VEGAS 11",
+      "stateCode": "NV",
+      "status": "construction"
+    },
+    {
+      "id": "sw-7",
+      "company": "Switch",
+      "name": "Switch CITADEL 3",
+      "stateCode": "NV",
+      "status": "construction"
+    },
+    {
+      "id": "sw-11",
+      "company": "Switch",
+      "name": "Switch KEEP 2",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "edgc-17",
+      "company": "EdgeConneX",
+      "name": "EdgeConneX Reno Hyperscale",
+      "stateCode": "NV",
+      "status": "construction"
+    },
+    {
+      "id": "ntt-5",
+      "company": "NTT",
+      "name": "NTT Hillsboro HIL3",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "ntt-8",
+      "company": "NTT",
+      "name": "NTT Phoenix PHX3",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "ntt-14",
+      "company": "NTT",
+      "name": "NTT Dallas DFW2",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "sby-4",
+      "company": "Sabey",
+      "name": "Sabey Quincy SDC4",
+      "stateCode": "WA",
+      "status": "construction"
+    },
+    {
+      "id": "cmp-2-a",
+      "company": "Compass Datacenters",
+      "name": "Compass Goodyear AZ 2",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "cmp-5-a",
+      "company": "Compass Datacenters",
+      "name": "Compass Red Oak TX 3",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "cmp-8",
+      "company": "Compass Datacenters",
+      "name": "Compass Loudoun Campus",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "prm-4",
+      "company": "Prime Data Centers",
+      "name": "Prime Sterling VA1",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "prm-5",
+      "company": "Prime Data Centers",
+      "name": "Prime Reno Campus",
+      "stateCode": "NV",
+      "status": "construction"
+    },
+    {
+      "id": "prm-6",
+      "company": "Prime Data Centers",
+      "name": "Prime Yacolt Campus",
+      "stateCode": "WA",
+      "status": "construction"
+    },
+    {
+      "id": "trct-2",
+      "company": "Tract",
+      "name": "Tract Storey County NV",
+      "stateCode": "NV",
+      "status": "planned"
+    },
+    {
+      "id": "trct-3",
+      "company": "Tract",
+      "name": "Tract Buckeye AZ",
+      "stateCode": "AZ",
+      "status": "planned"
+    },
+    {
+      "id": "trct-4",
+      "company": "Tract",
+      "name": "Tract Reno NV2",
+      "stateCode": "NV",
+      "status": "planned"
+    },
+    {
+      "id": "crs-1",
+      "company": "Crusoe Energy",
+      "name": "Crusoe Abilene Stargate",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "crs-2",
+      "company": "Crusoe Energy",
+      "name": "Crusoe Abilene Stargate Phase 2",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "lnc-2",
+      "company": "Lancium",
+      "name": "Lancium Fort Stockton",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "chq-3",
+      "company": "CloudHQ",
+      "name": "CloudHQ ABS3 Ashburn",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "chq-4",
+      "company": "CloudHQ",
+      "name": "CloudHQ MAN1 Manassas",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "chq-5",
+      "company": "CloudHQ",
+      "name": "CloudHQ Phoenix Campus",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "yndr-1",
+      "company": "Yondr",
+      "name": "Yondr Northlake Campus",
+      "stateCode": "IL",
+      "status": "construction"
+    },
+    {
+      "id": "yndr-2",
+      "company": "Yondr",
+      "name": "Yondr Phoenix Campus",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "aws2-6",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services AWS Loudoun Campus 4",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "aws2-9",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services AWS Hilliard Campus 2",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "aws2-10",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services AWS Pennsylvania Salem",
+      "stateCode": "PA",
+      "status": "construction"
+    },
+    {
+      "id": "aws2-11",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services AWS Indiana New Carlisle",
+      "stateCode": "IN",
+      "status": "construction"
+    },
+    {
+      "id": "ms2-5",
+      "company": "Microsoft",
+      "name": "Microsoft West Des Moines",
+      "stateCode": "IA",
+      "status": "construction"
+    },
+    {
+      "id": "ms2-7",
+      "company": "Microsoft",
+      "name": "Microsoft El Mirage",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "ms2-13",
+      "company": "Microsoft",
+      "name": "Microsoft Cheyenne 2",
+      "stateCode": "WY",
+      "status": "construction"
+    },
+    {
+      "id": "ggl2-7",
+      "company": "Google",
+      "name": "Google Lancaster County",
+      "stateCode": "PA",
+      "status": "construction"
+    },
+    {
+      "id": "meta2-7",
+      "company": "Meta",
+      "name": "Meta Temple TX",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "meta2-8",
+      "company": "Meta",
+      "name": "Meta Kuna ID",
+      "stateCode": "ID",
+      "status": "construction"
+    },
+    {
+      "id": "meta2-9",
+      "company": "Meta",
+      "name": "Meta Cheyenne WY",
+      "stateCode": "WY",
+      "status": "construction"
+    },
+    {
+      "id": "meta2-10",
+      "company": "Meta",
+      "name": "Meta Richland Parish LA",
+      "stateCode": "LA",
+      "status": "construction"
+    },
+    {
+      "id": "cw2-5",
+      "company": "CoreWeave",
+      "name": "CoreWeave Phoenix",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "cw2-6",
+      "company": "CoreWeave",
+      "name": "CoreWeave Houston",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "cw2-7",
+      "company": "CoreWeave",
+      "name": "CoreWeave Lancaster PA",
+      "stateCode": "PA",
+      "status": "construction"
+    },
+    {
+      "id": "cw2-8",
+      "company": "CoreWeave",
+      "name": "CoreWeave Denton TX",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "xai2-2",
+      "company": "xAI",
+      "name": "xAI Colossus 2 Memphis",
+      "stateCode": "TN",
+      "status": "construction"
+    },
+    {
+      "id": "nov-2",
+      "company": "Novva Data Centers",
+      "name": "Novva Colorado Springs",
+      "stateCode": "CO",
+      "status": "construction"
+    },
+    {
+      "id": "nov-3",
+      "company": "Novva Data Centers",
+      "name": "Novva Tahoe Reno",
+      "stateCode": "NV",
+      "status": "construction"
+    },
+    {
+      "id": "edc-1",
+      "company": "EdgeCore Digital Infrastructure",
+      "name": "EdgeCore Mesa Campus",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "edc-2",
+      "company": "EdgeCore Digital Infrastructure",
+      "name": "EdgeCore Ashburn Maries Road",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "edc-3",
+      "company": "EdgeCore Digital Infrastructure",
+      "name": "EdgeCore Ashburn Moran Road",
+      "stateCode": "VA",
+      "status": "planned"
+    },
+    {
+      "id": "edc-4",
+      "company": "EdgeCore Digital Infrastructure",
+      "name": "EdgeCore Louisa County Campus",
+      "stateCode": "VA",
+      "status": "planned"
+    },
+    {
+      "id": "sky-4",
+      "company": "Skybox Datacenters",
+      "name": "Skybox Austin",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "sky-5",
+      "company": "Skybox Datacenters",
+      "name": "Skybox Dallas",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "csq-25",
+      "company": "Centersquare",
+      "name": "Centersquare Dulles Expansion",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "onk-2",
+      "company": "OneNeck IT Solutions",
+      "name": "OneNeck Parker",
+      "stateCode": "CO",
+      "status": "construction"
+    },
+    {
+      "id": "dcb-con",
+      "company": "DC BLOX",
+      "name": "DC BLOX Conyers Campus",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-bc00493e-fceb-40a9-b4d1-ce92c834a87e",
+      "company": "Google",
+      "name": "Google Iowa (Scraped)",
+      "stateCode": "IA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-1224bce4-afae-419a-96f4-c299f367712e",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Washington (Scraped)",
+      "stateCode": "WA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-8d0aa8bf-cd21-4cbe-82e5-65607165fdf4",
+      "company": "Google",
+      "name": "Google Idaho (Scraped)",
+      "stateCode": "ID",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-ef81dfcb-5128-40bd-adc8-fdbe21d74bd3",
+      "company": "Switch",
+      "name": "Switch Arizona (Scraped)",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-7fb9d3da-c808-4661-91a0-425034553f96",
+      "company": "Google",
+      "name": "Google Oregon (Scraped)",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-558a0148-f673-4069-8e19-802484c14d18",
+      "company": "Apple",
+      "name": "Apple Arizona (Scraped)",
+      "stateCode": "AZ",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-b0fb0122-ec4c-4c3f-ac5e-4916e6a1b4cc",
+      "company": "Microsoft",
+      "name": "Microsoft Michigan (Scraped)",
+      "stateCode": "MI",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-79bcf99a-8d02-4b15-af60-e6fc582df5c7",
+      "company": "Microsoft",
+      "name": "Microsoft Tennessee (Scraped)",
+      "stateCode": "TN",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-17ab1f74-aa01-4d44-a66d-a03ae0ec6dcf",
+      "company": "Crusoe",
+      "name": "Crusoe New York (Scraped)",
+      "stateCode": "NY",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-f9601c6b-6d24-4531-9bd6-29d71ac8db7f",
+      "company": "CyrusOne",
+      "name": "CyrusOne Texas (Scraped)",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-e36842f7-a9c4-4f42-ac6d-05a709005636",
+      "company": "Vantage",
+      "name": "Vantage Virginia (Scraped)",
+      "stateCode": "VA",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-0d1c1d38-4b56-424f-b200-49e61929bb69",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Idaho (Scraped)",
+      "stateCode": "ID",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-ddf317c2-e061-4ee6-b96a-bc5891c07230",
+      "company": "Microsoft",
+      "name": "Microsoft Wisconsin (Scraped)",
+      "stateCode": "WI",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-66b38504-e8fa-41f0-9002-0cf947cac431",
+      "company": "Vantage",
+      "name": "Vantage Alabama (Scraped)",
+      "stateCode": "AL",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-0879dcfa-8db9-4757-993c-38ec3b7d21a6",
+      "company": "Stream",
+      "name": "Stream California (Scraped)",
+      "stateCode": "CA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-6171a91d-4c0c-4b62-9d02-bfc84b9ea22d",
+      "company": "Compass",
+      "name": "Compass Arizona (Scraped)",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-00068687-a1a6-4e1e-93b8-83819d24d64a",
+      "company": "Stack Infrastructure",
+      "name": "Stack Infrastructure Colorado (Scraped)",
+      "stateCode": "CO",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-8c7dbf36-f7d8-434b-89b2-72580cdb728e",
+      "company": "CoreWeave",
+      "name": "CoreWeave Idaho (Scraped)",
+      "stateCode": "ID",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-43c66d83-4f79-4e12-a1b9-b5cff0f759cf",
+      "company": "Vantage",
+      "name": "Vantage Washington (Scraped)",
+      "stateCode": "WA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-a6845500-730e-413d-ad1f-360f6b86a25a",
+      "company": "Tract",
+      "name": "Tract Georgia (Scraped)",
+      "stateCode": "GA",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-2dfeb5c1-6629-4101-b469-fe015cde0f78",
+      "company": "Oracle",
+      "name": "Oracle Texas (Scraped)",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-d25d05cb-eb9c-4422-b663-f748a11f5002",
+      "company": "Vantage",
+      "name": "Vantage Arizona (Scraped)",
+      "stateCode": "AZ",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-411943f3-73b3-445e-8739-f8e7d8cf6f54",
+      "company": "Oracle",
+      "name": "Oracle Illinois (Scraped)",
+      "stateCode": "IL",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-1864df9c-d33f-44da-8925-caf3136c35db",
+      "company": "Google",
+      "name": "Google Nebraska (Scraped)",
+      "stateCode": "NE",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-f8b45884-3c87-4244-bd2e-57ddedae3c2c",
+      "company": "Google",
+      "name": "Google North Dakota (Scraped)",
+      "stateCode": "ND",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-c5023481-d91e-4249-8209-7cc665226db4",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Michigan (Scraped)",
+      "stateCode": "MI",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-97d77669-fea0-42d5-8700-3a532d626c31",
+      "company": "Google",
+      "name": "Google Kansas (Scraped)",
+      "stateCode": "KS",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-16ba4006-01f0-43f2-bda6-a3ea8ea37337",
+      "company": "Google",
+      "name": "Google Virginia (Scraped)",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-bc5bc39a-f303-4444-b9dd-ba31d522c1fd",
+      "company": "Google",
+      "name": "Google Kentucky (Scraped)",
+      "stateCode": "KY",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-b6b1e06e-162e-45c6-94bd-5b64c706ab4f",
+      "company": "Google",
+      "name": "Google South Carolina (Scraped)",
+      "stateCode": "SC",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-883021e7-7226-4c6b-8654-0750b286dee7",
+      "company": "Google",
+      "name": "Google Oklahoma (Scraped)",
+      "stateCode": "OK",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-f0d5c5cd-876f-4f07-b3d2-fe8793c1bfe6",
+      "company": "Microsoft",
+      "name": "Microsoft Montana (Scraped)",
+      "stateCode": "MT",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-6c932c65-634a-44e1-9505-64220d777878",
+      "company": "Google",
+      "name": "Google New York (Scraped)",
+      "stateCode": "NY",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-af95fd52-af61-4014-85e0-13b83960a6e7",
+      "company": "Microsoft",
+      "name": "Microsoft Alaska (Scraped)",
+      "stateCode": "AK",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-dbc43b0c-690e-46be-98e5-dd01778bb383",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Nevada (Scraped)",
+      "stateCode": "NV",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-5981d765-53e5-44fb-8182-9231bdd1c4f3",
+      "company": "Microsoft",
+      "name": "Microsoft Iowa (Scraped)",
+      "stateCode": "IA",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-5a4e4909-1062-4401-9b05-a2b26ed4017f",
+      "company": "Meta",
+      "name": "Meta Indiana (Scraped)",
+      "stateCode": "IN",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-ecb1efd2-e432-4c5b-a35c-79133e6f4703",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Delaware (Scraped)",
+      "stateCode": "DE",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-fd292da2-706f-41af-a981-6d09af3ebf26",
+      "company": "Meta",
+      "name": "Meta Wisconsin (Scraped)",
+      "stateCode": "WI",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-33ecc4b3-62e2-4e31-9ec1-bee75ec0942d",
+      "company": "Microsoft",
+      "name": "Microsoft Maine (Scraped)",
+      "stateCode": "ME",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-a4545dd3-fa88-4838-bd3e-667b1db65300",
+      "company": "Meta",
+      "name": "Meta Idaho (Scraped)",
+      "stateCode": "ID",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-6ca70b94-7358-4843-a8d3-02a4a95982bc",
+      "company": "Meta",
+      "name": "Meta Connecticut (Scraped)",
+      "stateCode": "CT",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-904ee0be-0e06-4eec-8216-e1d8e5e86cfb",
+      "company": "Microsoft",
+      "name": "Microsoft Colorado (Scraped)",
+      "stateCode": "CO",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-fa4fd923-d86f-4d6a-aed7-78ffeea94ee2",
+      "company": "Microsoft",
+      "name": "Microsoft Oklahoma (Scraped)",
+      "stateCode": "OK",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-bbd1069e-0d18-4e3b-9dfd-8bb52dad0950",
+      "company": "Microsoft",
+      "name": "Microsoft Ohio (Scraped)",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-f1114f4c-b0b8-4942-8f5e-123ea34dc255",
+      "company": "Tract",
+      "name": "Tract Virginia (Scraped)",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-ec161ae4-9815-48b5-9b63-b46b15c7d7d9",
+      "company": "Microsoft",
+      "name": "Microsoft Virginia (Scraped)",
+      "stateCode": "VA",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-bd6095ea-ee6f-45ac-963b-0716347346d7",
+      "company": "Google",
+      "name": "Google New Jersey (Scraped)",
+      "stateCode": "NJ",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-88da7e4b-d122-4e64-af24-713120675801",
+      "company": "Meta",
+      "name": "Meta Wyoming (Scraped)",
+      "stateCode": "WY",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-42a6ad12-6750-4aca-8ffe-34cc1a7d6ab8",
+      "company": "Meta",
+      "name": "Meta South Carolina (Scraped)",
+      "stateCode": "SC",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-f9090eee-851f-48fb-8c24-6ce7a9c0a149",
+      "company": "Meta",
+      "name": "Meta Vermont (Scraped)",
+      "stateCode": "VT",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-182934e6-b856-4f85-8111-d2652c984d15",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Iowa (Scraped)",
+      "stateCode": "IA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-2d421136-965a-454b-956c-65bcec50e8e8",
+      "company": "Microsoft",
+      "name": "Microsoft Texas (Scraped)",
+      "stateCode": "TX",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-149b540d-6933-4973-a26a-ca9828c25ff2",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Oregon (Scraped)",
+      "stateCode": "OR",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-09fbe218-95f7-47fc-8b4b-37184672ce9e",
+      "company": "Meta",
+      "name": "Meta Colorado (Scraped)",
+      "stateCode": "CO",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-ca3857fe-ef95-4c9e-9b06-80c144038a0b",
+      "company": "Meta",
+      "name": "Meta Alabama (Scraped)",
+      "stateCode": "AL",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-6d16810d-afa4-4b40-8f13-f42d9e6db39c",
+      "company": "Meta",
+      "name": "Meta New Mexico (Scraped)",
+      "stateCode": "NM",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-cb816777-b76b-4c47-afc0-61f98741ae1a",
+      "company": "Meta",
+      "name": "Meta Alaska (Scraped)",
+      "stateCode": "AK",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-3b8dd3a3-e186-42d4-b512-d8e4e9df5d8d",
+      "company": "Microsoft",
+      "name": "Microsoft California (Scraped)",
+      "stateCode": "CA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-8678f19a-7a28-4f3c-b6fb-00f17113d7c9",
+      "company": "Microsoft",
+      "name": "Microsoft Alabama (Scraped)",
+      "stateCode": "AL",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-46a67e74-5834-40bf-876e-53155ddbc589",
+      "company": "Meta",
+      "name": "Meta Illinois (Scraped)",
+      "stateCode": "IL",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-94950be0-ecd3-444b-9f73-79ec778449e4",
+      "company": "Google",
+      "name": "Google Minnesota (Scraped)",
+      "stateCode": "MN",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-1dfeaef1-b4c3-42eb-9bc2-2844a8ba7630",
+      "company": "Meta",
+      "name": "Meta Arizona (Scraped)",
+      "stateCode": "AZ",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-e9a91a91-fbe9-46c4-b6ce-168841515f51",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Hawaii (Scraped)",
+      "stateCode": "HI",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-63baf6a2-c92d-46c1-8324-f326b2845d80",
+      "company": "Meta",
+      "name": "Meta Oklahoma (Scraped)",
+      "stateCode": "OK",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-022cc737-e01a-4dad-9e7f-752afd942ced",
+      "company": "Google",
+      "name": "Google Michigan (Scraped)",
+      "stateCode": "MI",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-218b071e-d222-4c49-a3da-5aacd3587ec7",
+      "company": "Meta",
+      "name": "Meta Massachusetts (Scraped)",
+      "stateCode": "MA",
+      "status": "planned"
+    },
+    {
+      "id": "scraped-810b1d97-2b37-4a19-a5f0-50a112ad7658",
+      "company": "Google",
+      "name": "Google Florida (Scraped)",
+      "stateCode": "FL",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-045aa988-bdf0-4959-b057-34026dac8aba",
+      "company": "Meta",
+      "name": "Meta Missouri (Scraped)",
+      "stateCode": "MO",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-0f5978a8-cf7d-4dd2-8c4b-dde3f1feb316",
+      "company": "Google",
+      "name": "Google Ohio (Scraped)",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-25fc6ac4-7ee8-43dd-b73e-f7e6702ceb0b",
+      "company": "Google",
+      "name": "Google Alabama (Scraped)",
+      "stateCode": "AL",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-e1ab0c9f-5516-486d-a809-4b3c6933b047",
+      "company": "Google",
+      "name": "Google Louisiana (Scraped)",
+      "stateCode": "LA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-4dd6e8bc-660c-42da-8a1c-53cbaaeca76b",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Mississippi (Scraped)",
+      "stateCode": "MS",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-c342c805-0e62-4e4e-9b13-0760ae919076",
+      "company": "Google",
+      "name": "Google Georgia (Scraped)",
+      "stateCode": "GA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-b10d3116-180a-41ef-ad64-746b30c42e63",
+      "company": "Meta",
+      "name": "Meta Louisiana (Scraped)",
+      "stateCode": "LA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-dd6c2d26-1323-48d2-8da7-dae07c277663",
+      "company": "Microsoft",
+      "name": "Microsoft Mississippi (Scraped)",
+      "stateCode": "MS",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-6168267e-dc7a-4a34-93ba-ba92052720bd",
+      "company": "Meta",
+      "name": "Meta Virginia (Scraped)",
+      "stateCode": "VA",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-1ef8e931-d6ec-4efa-854b-7e21e5650b39",
+      "company": "Meta",
+      "name": "Meta Texas (Scraped)",
+      "stateCode": "TX",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-a9285b57-5552-47ed-b69d-29597dc5c45d",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Ohio (Scraped)",
+      "stateCode": "OH",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-1a48312c-101a-4a71-ad01-a4a2a73ad4e3",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services Alabama (Scraped)",
+      "stateCode": "AL",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-aa10b3d3-1539-4d99-8463-1a35452f2fc8",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services New York (Scraped)",
+      "stateCode": "NY",
+      "status": "construction"
+    },
+    {
+      "id": "scraped-88740856-d288-4715-aa40-3681adb2d8f0",
+      "company": "Amazon Web Services",
+      "name": "Amazon Web Services California (Scraped)",
+      "stateCode": "CA",
+      "status": "construction"
+    }
+  ]
+}

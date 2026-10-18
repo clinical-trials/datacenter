@@ -1,13 +1,13 @@
 'use strict';
 const fs=require('node:fs/promises'),path=require('node:path'),{createHash}=require('node:crypto');
-const {staticRecords,facilityImports,bundledSupplement,aggregate,recordCheck}=require('./model.cjs');
+const {staticRecords,facilityImports,bundledSupplement,aggregate,projectCatalog,recordCheck}=require('./model.cjs');
 const ROOT=path.resolve(__dirname,'../..'),ORIGIN='https://usdatamap.com';
 async function get(url,headers={}){
  const response=await fetch(url,{headers,signal:AbortSignal.timeout(25000),redirect:'error'});
  if(!response.ok)throw Error('Source response '+response.status);
  const text=await response.text();if(text.length>5000000)throw Error('Source exceeds expected size');return text;
 }
-async function collect(){
+async function collect(includeProjects=false){
  const html=await get(ORIGIN+'/');
  const script=html.match(/<script[^>]+src="(\/assets\/index-[A-Za-z0-9_-]+\.js)"/);
  if(!script)throw Error('Source entrypoint changed');
@@ -31,13 +31,15 @@ async function collect(){
  const bundled=aggregate(base,bundledSupplement(code));
  if(!advertised||Number(advertised[1].replaceAll(',',''))!==bundled.total)throw Error('Bundled directory does not reconcile with the published static total');
  const observed_at=new Date().toISOString();
- return {date:observed_at.slice(0,10),observed_at,...counts,source:'USDataMap directory',source_url:ORIGIN+'/',series:'usdatamap-directory-v1',geography:'United States and Washington, D.C.; Puerto Rico coverage not established',counting_unit:'Directory records; facilities and campuses may be mixed',verification:'Directory-reported; not independently verified',source_bundle_sha256:createHash('sha256').update(code).digest('hex'),source_static_total:bundled.total,notes:'Aggregated from the source’s base directory and current approved public records, deduplicated by ID or normalized company + state + name. The bundled layers must reconcile with the static page total before current records are accepted; the live total can differ from cached page metadata. Existing is mapped to reported operating. No facility-level dataset is redistributed. Additions and reclassifications are not proof of new construction or openings. Missing state categories are unavailable, not a verified zero.'};
+ const snapshot={date:observed_at.slice(0,10),observed_at,...counts,source:'USDataMap directory',source_url:ORIGIN+'/',series:'usdatamap-directory-v1',geography:'United States and Washington, D.C.; Puerto Rico coverage not established',counting_unit:'Directory records; facilities and campuses may be mixed',verification:'Directory-reported; not independently verified',source_bundle_sha256:createHash('sha256').update(code).digest('hex'),source_static_total:bundled.total,notes:'Aggregated from the source’s base directory and current approved public records, deduplicated by ID or normalized company + state + name. The bundled layers must reconcile with the static page total before current records are accepted; the live total can differ from cached page metadata. Existing is mapped to reported operating. A companion project picker lists minimal names, operators, states and reported phases for planned and construction records. Additions and reclassifications are not proof of new construction or openings. Missing state categories are unavailable, not a verified zero.'};
+ return includeProjects?{snapshot,catalog:projectCatalog(base,payload.items,observed_at)}:snapshot;
 }
 async function main(){
  const file=path.join(ROOT,'site/data-center-counts.json'),previous=JSON.parse(await fs.readFile(file,'utf8'));
- let snapshot,error;try{snapshot=await collect();}catch(e){error=e;console.error('Count update failed:',e.message);}
+ let snapshot,catalog,error;try{({snapshot,catalog}=await collect(true));}catch(e){error=e;console.error('Count update failed:',e.message);}
  const result=recordCheck(previous,snapshot,new Date().toISOString(),error),body=JSON.stringify(result,null,2)+'\n';
  for(const target of ['site/data-center-counts.json','web/public/data-center-counts.json'])await fs.writeFile(path.join(ROOT,target),body);
+ if(catalog)for(const target of ['site/data-center-projects.json','web/public/data-center-projects.json'])await fs.writeFile(path.join(ROOT,target),JSON.stringify(catalog,null,2)+'\n');
  if(error)process.exitCode=1;else console.log(JSON.stringify({observed_at:snapshot.observed_at,operating:snapshot.operating,under_construction:snapshot.under_construction,planned:snapshot.planned,total:snapshot.total}));
 }
 if(require.main===module)main().catch(()=>{console.error('Could not store the count observation');process.exitCode=1;});

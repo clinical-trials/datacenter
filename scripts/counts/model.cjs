@@ -40,19 +40,29 @@ function staticRecords(code,external=new Map()){
  if(!candidates.length)throw Error('Directory literal format changed');
  return candidates[0];
 }
-function aggregate(base,added){
+function directoryRecords(base,added){
  if(!Array.isArray(base)||!Array.isArray(added)||!base.length||!added.length)throw Error('Both directory layers must load');
  const rows=[...base,...added.map(r=>({id:'scraped-'+r.id,company:r.company,name:r.name,stateCode:r.state_code,status:r.status}))];
- const ids=new Set(),names=new Set(),result={operating:0,under_construction:0,planned:0,total:0,operating_by_state:{},construction_by_state:{},planned_by_state:{}};
+ const ids=new Set(),names=new Set(),result=[];
  for(const row of rows){
   if(!['id','company','name','stateCode','status'].every(k=>typeof row[k]==='string'&&row[k].trim()))throw Error('Incomplete directory record');
   if(!Object.hasOwn(PHASES,row.status)||!STATES.includes(row.stateCode))throw Error('Unknown phase or geography; review source');
   const key=[row.company,row.stateCode,row.name].map(x=>x.trim().toLowerCase()).join('::');
   if(ids.has(row.id)||names.has(key))continue;ids.add(row.id);names.add(key);
-  const phase=PHASES[row.status],byState=phase==='under_construction'?'construction_by_state':phase+'_by_state';
-  result[phase]++;result.total++;result[byState][row.stateCode]=(result[byState][row.stateCode]||0)+1;
+  result.push(row);
  }
  return result;
+}
+function aggregate(base,added){
+ const result={operating:0,under_construction:0,planned:0,total:0,operating_by_state:{},construction_by_state:{},planned_by_state:{}};
+ for(const row of directoryRecords(base,added)){
+  const phase=PHASES[row.status],byState=phase==='under_construction'?'construction_by_state':phase+'_by_state';
+  result[phase]++;result.total++;result[byState][row.stateCode]=(result[byState][row.stateCode]||0)+1;
+ }return result;
+}
+function projectCatalog(base,added,observed_at){
+ const records=directoryRecords(base,added).filter(r=>r.status!=='existing');
+ return {schema_version:1,observed_at,source:'USDataMap directory',source_url:'https://usdatamap.com/',verification:'Directory-reported; not independently verified',counts:{construction:records.filter(r=>r.status==='construction').length,planned:records.filter(r=>r.status==='planned').length},records};
 }
 function recordCheck(previous,snapshot,checkedAt,error){
  const result={...previous,schema_version:2,update_policy:'Daily automated source checks; page checks the published feed every five minutes.'};
@@ -69,4 +79,4 @@ function bundledSupplement(code){
   try{const rows=d.init.elements.map(item=>{if(item.type!=='ObjectExpression')throw Error();const row={};for(const key of ['id','company','name','state_code','status']){const p=item.properties.find(p=>p.type==='Property'&&!p.computed&&(p.key.name||p.key.value)===key);if(p?.value.type!=='Literal'||typeof p.value.value!=='string')throw Error();row[key]=p.value.value;}return row;});candidates.push(rows);}catch{}
  }candidates.sort((a,b)=>b.length-a.length);if(!candidates.length)throw Error('Bundled supplement format changed');return candidates[0];
 }
-module.exports={staticRecords,facilityImports,bundledSupplement,aggregate,recordCheck};
+module.exports={staticRecords,facilityImports,bundledSupplement,aggregate,projectCatalog,recordCheck};

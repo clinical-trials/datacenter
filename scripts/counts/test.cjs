@@ -34,3 +34,11 @@ test('client uses the newest observation and refuses inconsistent or future coun
  assert.equal(Feed.valid({...current,observed_at:'2099-01-01'}),false);
  assert.equal(Feed.merge([current],[{...current}]).length,1);
 });
+test('project roster shares count deduplication and never calls planned projects construction',()=>{
+ const {projectCatalog}=require('./model.cjs');
+ const base=[record,{id:'build',company:'B',name:'Build',stateCode:'IN',status:'construction'}];
+ const added=[{id:'dup',company:'b',name:'Build',state_code:'IN',status:'construction'},{id:'plan',company:'C',name:'Future',state_code:'NM',status:'planned'}];
+ const c=projectCatalog(base,added,'2026-10-18T00:00:00Z'),counts=aggregate(base,added);
+ assert.equal(c.records.length,2);assert.equal(c.counts.construction,counts.under_construction);assert.equal(c.counts.planned,counts.planned);
+ assert.equal(c.records.find(r=>r.name==='Future').status,'planned');assert.equal(c.records.some(r=>r.status==='existing'),false);
+});

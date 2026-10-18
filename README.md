@@ -139,7 +139,7 @@ Check routing invariants with `node --test scripts/test-community-tours.cjs scri
 
 The three headline counts now read a shared, dated JSON feed on the repository's public `main` branch. The public GitHub Pages dashboard and the hosted dashboard check it every five minutes while visible, on return to the tab, and when a visitor selects **Check latest counts**. They retain a validated local/cache observation during connection failures and show the observation date, failed checks, and data older than 48 hours. State selection survives a refresh; unavailable state counts remain unknown. Changes are compared only within the same defined source series, never against the original user-reported baseline.
 
-`.github/workflows/update-counts.yml` collects daily at 14:23 UTC, and supports manual runs. It also runs when its collector changes. `scripts/counts/collect.cjs` reads USDataMap's publicly served directory layers, aggregates phases and state counts using the directory's ID/name deduplication, and saves only aggregate observations. Downloaded JavaScript is parsed as data, never evaluated. The embedded layers must reconcile with the source's static total; the current public layer can be newer than that cached total. Unknown statuses, missing layers, schema failures, and unavailable requests retain the last successful observation and publish a failed-check status. No facility-level directory is redistributed. The older Sites cloud task remains paused; these counts do not depend on it or the private `/api/counts` route.
+`.github/workflows/update-counts.yml` collects daily at 14:23 UTC, and supports manual runs. It also runs when its collector changes. `scripts/counts/collect.cjs` reads USDataMap's publicly served directory layers, aggregates phases and state counts using the directory's ID/name deduplication, and saves aggregate observations plus a minimal named roster of construction and planned projects. Downloaded JavaScript is parsed as data, never evaluated. The embedded layers must reconcile with the source's static total; the current public layer can be newer than that cached total. Unknown statuses, missing layers, schema failures, and unavailable requests retain the last successful observation and publish a failed-check status. The companion roster contains names, operators, state codes and directory-reported phases; it does not copy directory descriptions or imply verified permitting status. The older Sites cloud task remains paused; these counts do not depend on it or the private `/api/counts` route.
 
 The browser reads the raw public feed directly because GitHub-token commits do not trigger another Pages build. Thus routine data updates do not require deploying the application. GitHub schedules can be delayed or disabled by platform policy; visible timestamps remain the authority on freshness. Run `npm ci --prefix scripts/counts`, `npm test --prefix scripts/counts`, and `npm run update --prefix scripts/counts` to validate and collect manually. Source: [USDataMap](https://usdatamap.com/); directory records are not a verified national census, physical opening count, or environmental-impact measure.
 
@@ -213,3 +213,21 @@ requirements. DOE storage guidance and an explicitly labeled Google
 operator report support the explanation. The Act wizard includes a proposed
 policy request for tested storage and workload-flexibility plans; it does not
 assert an existing legal mandate or universal curtailment percentage.
+
+Act project picker (18 October 2026): the Which project selector loads
+`data-center-projects.json`, built from the same validated and deduplicated
+records as the headline counts. Its dated snapshot contains 239 reported
+construction and 82 reported planned records, across 45 states. State, phase
+and name/operator filters preserve the current selection. Choosing a record
+fills its name and state into the generic letter flow; recipients and docket
+numbers are cleared and must be verified. Only the separately selected
+Jasper guide inserts the reviewed Indiana facts. Edited letters are retained
+until the user explicitly replaces them. Refreshes never overwrite form text.
+
+The collector and daily workflow now write both count and project feeds.
+The picker checks the public main-branch project feed every five minutes
+while visible and on request, retaining its packaged snapshot if unavailable.
+These workflow changes are on v2-10.18.2026; scheduled roster publication
+requires integration into main. No merge to main is performed automatically.
+Tests: `node --test scripts/counts/test.cjs scripts/test-citizen-projects.cjs
+scripts/test-citizen.cjs scripts/test-citizen-dom.cjs`.

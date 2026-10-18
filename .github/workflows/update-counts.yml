@@ -32,7 +32,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add site/data-center-counts.json web/public/data-center-counts.json
+          git add site/data-center-counts.json web/public/data-center-counts.json site/data-center-projects.json web/public/data-center-projects.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update dated data center count observation'
             git push origin HEAD:main
