@@ -240,3 +240,17 @@ with selectable-text fallback when clipboard permission is unavailable. The
 6 PM CST / 7 PM EST time and local-number URL are from the November 10 IDEM
 hearing notice (including its PDF link annotation). No test phone call was
 placed. These event-specific details are hidden for other project selections.
+
+General hearing-access cards: every event marked `isHearing` in
+`site/public-events.js` uses a common participation template. A verified
+`access` record holds the complete international phone number, conference ID
+(or explicitly confirmed no-ID requirement), source URL, verification date,
+local-number and online links, and speaking instructions. Event dates carry
+an IANA time zone and an offset-bearing start time. Organizer contact numbers
+are not promoted to dial-in numbers. Missing phone access and missing IDs
+remain labeled unverified; past events display archived numbers without call
+buttons. The Jasper notice is one populated example, not a universal number.
+
+Validate with `node --test scripts/test-hearing-access.cjs`. These checks
+cover another hearing, missing access, unsafe telephone values, archived
+events, and separation of organizer contacts from conference access.
