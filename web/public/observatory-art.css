@@ -241,6 +241,13 @@ main>section :where(label,.field) { min-width:0; }
 main>section summary { align-content:center; line-height:1.5; }
 textarea:focus-visible { outline:2px solid var(--art-blue); outline-offset:4px; }
 .justice-questions article,.justice-next,.ces-guide { background:transparent; border:1px solid var(--art-line); border-radius:var(--art-radius); box-shadow:none; }
+.justice-next h2 { background:transparent; border:0; border-radius:0; padding:0; }
+.justice-next h2::after { display:none; }
+.justice-questions article>span,.climate-chain b { background:transparent; border:0; border-radius:0; padding:0; transform:none; font-weight:500; }
+.climate-chain li:nth-child(even) b { transform:none; }
+.justice-dot { outline:0; }
+.balance-guide { background:transparent; border:1px solid var(--art-line); border-radius:var(--art-radius); }
+.health-cost-grid .cost-symbol { border-width:1px; }
 .ces-guide blockquote { background:var(--art-sky); border-left-width:2px; }
 .periodic-board { border-width:1px; box-shadow:none; }
 .community-timeline { border-top:1px solid var(--art-line); }
@@ -334,6 +341,9 @@ textarea:focus-visible { outline:2px solid var(--art-blue); outline-offset:4px; 
   .citizen-controls .btn { flex:none; }
 }
 @media(min-width:1200px) { .mor-filters { grid-template-columns:1fr 1fr 1.2fr auto; } }
+@media(min-width:801px) {
+  .rail { position:sticky; top:0; align-self:start; min-height:0; max-height:100dvh; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; }
+}
 @media(max-width:800px) {
   .pagehead { gap:1rem; }
   .reading-context { margin-bottom:1.25rem; }
