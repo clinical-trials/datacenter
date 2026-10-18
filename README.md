@@ -231,3 +231,12 @@ These workflow changes are on v2-10.18.2026; scheduled roster publication
 requires integration into main. No merge to main is performed automatically.
 Tests: `node --test scripts/counts/test.cjs scripts/test-citizen-projects.cjs
 scripts/test-citizen.cjs scripts/test-citizen-dom.cjs`.
+
+Hearing phone access (18 October 2026): the Jasper Act guide displays the full
++1 (317) 552-1674 dial-in number separately from conference ID 141 723 194#.
+Tap-to-call opens only the base telephone number; callers enter the ID at the
+prompt. Copy controls provide the ID or full date/time/source instructions,
+with selectable-text fallback when clipboard permission is unavailable. The
+6 PM CST / 7 PM EST time and local-number URL are from the November 10 IDEM
+hearing notice (including its PDF link annotation). No test phone call was
+placed. These event-specific details are hidden for other project selections.

@@ -75,3 +75,19 @@ test('spoken point selection rejects a fourth point and does not replace edited 
  assert.match(get('citizen-speech').value,/100 hours/);assert.doesNotMatch(get('citizen-speech').value,/Particles & filter performance/);
  d.window.close();
 });
+test('Jasper hearing presents a full phone number, separate conference ID and copyable instructions',async()=>{
+ const {d,get,click,change}=setup();
+ assert.equal(get('citizen-hearing-call').getAttribute('href'),'tel:+13175521674');
+ assert.equal(get('citizen-hearing-call').textContent,'+1 (317) 552-1674');
+ assert.equal(get('citizen-hearing-conference').textContent,'141 723 194#');
+ assert.match(get('citizen-hearing-local').href,/dialin\.teams\.microsoft\.com/);
+ let copied='';d.window.navigator.clipboard={writeText:async text=>{copied=text;}};
+ click('#citizen-copy-conference');await Promise.resolve();assert.equal(copied,'141723194#');
+ click('#citizen-copy-hearing');await new Promise(resolve=>setTimeout(resolve,0));
+ assert.match(copied,/\+1 317-552-1674/);assert.match(copied,/141723194#/);assert.match(copied,/6:00 PM Central Standard Time/);assert.match(copied,/7:00 PM Eastern Standard Time/);
+ assert.doesNotMatch(copied,/1674\.\./);
+ d.window.navigator.clipboard={writeText:async()=>{throw Error('Clipboard blocked');}};click('#citizen-copy-hearing');await new Promise(resolve=>setTimeout(resolve,0));
+ assert.equal(get('citizen-phone-copy-fallback').hidden,false);assert.match(get('citizen-phone-copy-fallback').value,/141723194#/);
+ change('citizen-scope','other');assert.equal(get('citizen-jasper').hidden,true);
+ d.window.close();
+});
