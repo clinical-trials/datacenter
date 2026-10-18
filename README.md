@@ -152,7 +152,7 @@ Equal-weight yes/no explanations separate land-use authorization, prohibition, r
 The maintained source file is `site/ballot-measures.json`, mirrored into both application editions. Updating a record requires checking current official language and status, retaining source publication dates, and linking an outcome source before adding a result. There is no automatic ballot/results feed. Validate with `node --test scripts/test-ballot-measures.cjs` and `python3 scripts/validate.py`.
 
 Public-comment guide (18 October 2026): `#citizen` now offers a four-step,
-mobile-friendly builder with 15 concern choices and separate letters for air
+mobile-friendly builder with 16 concern choices and separate letters for air
 permitting, local planning, county fiscal questions, community health, utility
 cases and legislators. It supports existing-records requests and a generic
 other-community template. Personal text remains in tab memory; download,
@@ -203,3 +203,13 @@ per-office spoken drafts and clearing. Research checkboxes reset when switching
 projects. All replacement decisions use on-page controls instead of native
 confirmation dialogs. Browser access to the local preview is blocked by the
 browser URL policy; published-page checks are recorded separately.
+
+Solar clarification (18 October 2026): the Cleaner power view compares a
+12-hour supply gap at 100 MW and 50 MW of total facility demand (1,200 and
+600 MWh delivered, respectively). It distinguishes storage energy from
+discharge power, includes cooling in the load boundary, and identifies
+losses, reserves, recharge and multi-day reliability as additional design
+requirements. DOE storage guidance and an explicitly labeled Google
+operator report support the explanation. The Act wizard includes a proposed
+policy request for tested storage and workload-flexibility plans; it does not
+assert an existing legal mandate or universal curtailment percentage.
