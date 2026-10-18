@@ -1,34 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 370" fill="none">
   <defs>
-    <filter id="soft" x="-40%" y="-100%" width="180%" height="300%"><feGaussianBlur stdDeviation="6"/></filter>
-    <pattern id="print" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".65" fill="#34372e"/></pattern>
+    <pattern id="nm-shadow-dots" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#f7f5ef"/><circle cx="3" cy="3" r="1.85" fill="#191b18"/></pattern>
+    <g id="nm-gpu-shape" transform="translate(42 173) rotate(-12)">
+      <path d="M4 0h99l8 8v34H70v5H24v-5H0V4Z"/>
+      <path d="M-5-4v50M-5 5H0M-5 36H0" fill="none"/>
+    </g>
+    <path id="nm-water-shape" d="M209 227c-3 22-32 39-25 57 5 13 24 17 37 7 18-14 3-41-12-64Z"/>
+    <g id="nm-solar-shape" transform="matrix(1 -.3 .55 1 290 216)"><path d="M4 0h85q5 0 5 5v40q0 5-5 5H5q-5 0-5-5V5q0-5 4-5Z"/></g>
+    <ellipse id="nm-sun-shape" cx="426" cy="146" rx="42" ry="23" transform="rotate(-12 426 146)"/>
+    <path id="nm-power-shape" d="m400 277-24 22 20-3-8 20 34-30-21 4Z"/>
+    <g id="nm-chip-shape" transform="translate(455 293) rotate(18)">
+      <path d="M-13-13h26v26h-26Z"/>
+      <path d="M-8-18v5M0-18v5M8-18v5M-8 13v5M0 13v5M8 13v5M-18-8h5M-18 0h5M-18 8h5M13-8h5M13 0h5M13 8h5" fill="none"/>
+    </g>
   </defs>
-  <!-- Original sculptural study: GPU board, chip, water, solar and sun. Decorative, not measurements. -->
-  <g fill="#3b3b32" opacity=".09" filter="url(#soft)">
-    <ellipse cx="110" cy="328" rx="73" ry="9"/><ellipse cx="329" cy="335" rx="90" ry="10"/>
+  <!-- Offset print shadows reuse the exact silhouettes, including chip pins and GPU bracket. -->
+  <g class="object-shadows" transform="translate(22 20)" fill="url(#nm-shadow-dots)" stroke="#191b18" stroke-width="2.8" stroke-linejoin="round">
+    <use href="#nm-gpu-shape"/><use href="#nm-water-shape"/><use href="#nm-solar-shape"/><use href="#nm-sun-shape"/><use href="#nm-power-shape"/><use href="#nm-chip-shape"/>
   </g>
   <g stroke="#282b25" stroke-width="1.3" stroke-linecap="round">
     <path d="M270 0v58M79 99l359-68M95 96v66M426 34v92M270 64v85M188 170l171-43M209 165v62M344 132v68M426 165v76M389 252l77-19M400 249v35M455 237v39"/>
     <circle cx="270" cy="63" r="4.5" fill="#f7f5ef"/>
   </g>
+  <use href="#nm-gpu-shape" fill="#bc3828" stroke="#191b18" stroke-width="1.6"/>
   <g transform="translate(42 173) rotate(-12)">
-    <path d="M4 0h99l8 8v34H70v5H24v-5H0V4Z" fill="#bc3828"/>
-    <path d="M-5-4v50M-5 5H0M-5 36H0" stroke="#282b25" stroke-width="1.4"/>
-    <path d="M37 8h29v26H37Z" stroke="#f7f5ef" stroke-opacity=".7" stroke-width="1.1"/>
-    <path d="M44 14h15v14H44Z" fill="#f7f5ef" fill-opacity=".8"/>
-    <path d="M11 10h17v8h9m-26 14h12v-7h14m29-8h16V9h15M66 27h28v7M28 42v5m6-5v5m6-5v5m6-5v5m6-5v5m6-5v5m6-5v5" stroke="#f7f5ef" stroke-opacity=".65" stroke-width="1.1"/>
+    <path d="M37 8h29v26H37Z" stroke="#f7f5ef" stroke-opacity=".8" stroke-width="1.1"/>
+    <path d="M44 14h15v14H44Z" fill="#f7f5ef"/>
+    <path d="M11 10h17v8h9m-26 14h12v-7h14m29-8h16V9h15M66 27h28v7M28 42v5m6-5v5m6-5v5m6-5v5m6-5v5m6-5v5m6-5v5" stroke="#f7f5ef" stroke-opacity=".8" stroke-width="1.1"/>
   </g>
-  <path d="M209 227c-3 22-32 39-25 57 5 13 24 17 37 7 18-14 3-41-12-64Z" fill="#272b26"/>
-  <g transform="matrix(1 -.3 .55 1 290 216)">
-    <path d="M4 0h85q5 0 5 5v40q0 5-5 5H5q-5 0-5-5V5q0-5 4-5Z" fill="#244b8c"/>
-    <path d="M23 6v38M47 6v38M71 6v38M7 17h80M7 33h80" stroke="#f7f5ef" stroke-opacity=".53" stroke-width="1"/>
-  </g>
-  <ellipse cx="426" cy="146" rx="42" ry="23" transform="rotate(-12 426 146)" fill="#d8b73f"/>
-  <path d="m400 277-24 22 20-3-8 20 34-30-21 4Z" fill="#bc3828"/>
-  <g transform="translate(455 293) rotate(18)">
-    <path d="M-13-13h26v26h-26Z" fill="#272b26"/>
-    <path d="M-6-6H6V6H-6Z" stroke="#f7f5ef" stroke-opacity=".7" stroke-width="1"/>
-    <path d="M-8-18v5M0-18v5M8-18v5M-8 13v5M0 13v5M8 13v5M-18-8h5M-18 0h5M-18 8h5M13-8h5M13 0h5M13 8h5" stroke="#272b26" stroke-width="1.5"/>
-  </g>
-  <path d="M318 262c21-8 62-3 94 11-21 17-69 14-94-11Z" fill="url(#print)" opacity=".2"/>
+  <use href="#nm-water-shape" fill="#272b26" stroke="#191b18" stroke-width="1.6"/>
+  <use href="#nm-solar-shape" fill="#244b8c" stroke="#191b18" stroke-width="1.6"/>
+  <path transform="matrix(1 -.3 .55 1 290 216)" d="M23 6v38M47 6v38M71 6v38M7 17h80M7 33h80" stroke="#f7f5ef" stroke-opacity=".7" stroke-width="1"/>
+  <use href="#nm-sun-shape" fill="#d8b73f" stroke="#191b18" stroke-width="1.6"/>
+  <use href="#nm-power-shape" fill="#bc3828" stroke="#191b18" stroke-width="1.6"/>
+  <use href="#nm-chip-shape" fill="#272b26" stroke="#191b18" stroke-width="1.6"/>
+  <path transform="translate(455 293) rotate(18)" d="M-6-6H6V6H-6Z" stroke="#f7f5ef" stroke-opacity=".8" stroke-width="1"/>
 </svg>
