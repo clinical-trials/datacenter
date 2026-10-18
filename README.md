@@ -150,3 +150,37 @@ The `#vote` destination under Act combines a dated Ballotpedia national snapshot
 Equal-weight yes/no explanations separate land-use authorization, prohibition, rezoning and future voter approval. Official documents are linked on each card. Past-election outcomes retain their source status, including the distinction between an election-night report and a certified canvass. Dates classify records automatically but do not infer results or registration deadlines. Official election-office and Vote.gov links provide local sample ballots and participation rules; no address or voting-choice collection is added. Ballot research remains separate from the scholarly review corpus.
 
 The maintained source file is `site/ballot-measures.json`, mirrored into both application editions. Updating a record requires checking current official language and status, retaining source publication dates, and linking an outcome source before adding a result. There is no automatic ballot/results feed. Validate with `node --test scripts/test-ballot-measures.cjs` and `python3 scripts/validate.py`.
+
+Public-comment guide (18 October 2026): `#citizen` now offers a four-step,
+mobile-friendly builder with 13 concern choices and separate letters for air
+permitting, local planning, county fiscal questions, community health, utility
+cases and legislators. It supports existing-records requests and a generic
+other-community template. Personal text remains in tab memory; download,
+copy and print are user-controlled, and the tool never submits comments.
+
+The supplied `Complete-Package-T073-50413-00077_v27.pdf` (87 pages) informed the
+question design; it is not redistributed. Project-specific statements link to
+the IDEM draft rather than treating the supplied review as an agency finding.
+Testing rotates to previously untested engines; unlimited genuine emergency
+hours do not erase the draft's separate annual NOx/VOC/CO caps. Screening
+plumes and reported contract totals are not inserted as established facts.
+
+Participation checked against IDEM's original notice, extension and hearing
+notice on 18 October 2026: written comments end 16 November 2026 (no closing
+clock time stated); virtual hearing 10 November at 6 PM Central. Hearing chat
+is not a comment channel. These dates also update the public-events list and
+Jasper case JSON. They are dated checks, not a live regulatory feed.
+
+Verification: `node --test scripts/test-citizen.cjs` checks routing, separation
+of generic templates from Indiana evidence, date boundaries, records-request
+scope and literal preservation of user text. `python3 scripts/validate.py`
+checks the existing evidence corpus. Other jurisdictions require residents to
+verify their own notice and recipient; no nationwide legal coverage is implied.
+
+To run the DOM interaction checks, install the temporary test dependency with
+`npm install --prefix work/citizen-test --no-package-lock --no-audit --no-fund jsdom`,
+then run `node --test scripts/test-citizen-dom.cjs`. These check per-letter edits,
+explicit regeneration, records mode, recipient entry, literal text handling and
+clearing. The browser review confirmed the first mobile flow and 320/390-pixel
+widths; a stalled native dialog limited final browser interaction checks. The
+final safeguard uses on-page buttons and passes the DOM tests.

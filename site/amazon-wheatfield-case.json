@@ -7,8 +7,8 @@
   "sha256": "4d45fe6c331fc54dc5892824cab47e872324de51ab96516a89157b020bec892d",
   "applicationReceived": "2026-05-20",
   "publicNoticeBegins": "2026-09-24",
-  "listedCommentEnd": "2026-10-24",
-  "deadlineCaveat": "Saturday; notice provides next-business-day rule when IDEM offices are closed. Confirm with IDEM.",
+  "listedCommentEnd": "2026-11-16",
+  "deadlineCaveat": "Extended by official IDEM notice to Monday November 16, 2026. No closing clock time stated; check current notices before submitting.",
   "issuedDate": null,
   "epaSubmissionDate": null,
   "criticalGenerators": 384,
@@ -25,5 +25,9 @@
     "Draft A.2\u2013A.3, pp. 5\u20136 of 42",
     "Technical support document, application receipt",
     "TSD Appendix A, p. 1 of 8"
-  ]
+  ],
+  "participationChecked": "2026-10-18",
+  "extensionNotice": "https://www.in.gov/idem/files/notice_20261116_air_50413phextension-CM.pdf",
+  "hearingNotice": "https://www.in.gov/idem/files/notice_20261116_air_50413ph-cm.pdf",
+  "hearingStart": "2026-11-10T18:00:00-06:00"
 }
