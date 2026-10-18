@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 116" role="img" aria-labelledby="title desc">
+  <title id="title">Footprint — six toes, one planet</title>
+  <desc id="desc">An inky, almost-human footprint with six separate toes. The smallest, extra toe is red.</desc>
+  <g fill="#25231f">
+    <path d="M24 37C36 31 52 35 62 43C74 53 71 64 64 78C60 86 62 92 58 100C54 108 42 110 34 104C27 99 27 89 31 80C37 67 27 62 20 55C12 47 15 40 24 37Z"/>
+    <ellipse cx="18" cy="18" rx="10" ry="13" transform="rotate(-18 18 18)"/>
+    <ellipse cx="40" cy="12" rx="7" ry="10" transform="rotate(-5 40 12)"/>
+    <ellipse cx="57" cy="17" rx="6" ry="8" transform="rotate(14 57 17)"/>
+    <ellipse cx="70" cy="28" rx="5.5" ry="7" transform="rotate(28 70 28)"/>
+    <ellipse cx="77" cy="42" rx="4.5" ry="6" transform="rotate(38 77 42)"/>
+  </g>
+  <ellipse cx="79" cy="57" rx="4.2" ry="5.5" transform="rotate(48 79 57)" fill="#c53c30"/>
+</svg>

@@ -1,0 +1,9 @@
+/* One small anomaly in an otherwise familiar footprint. */
+.top .brand{display:grid;grid-template-columns:auto auto;column-gap:.65rem;align-items:center;min-height:48px}
+.top .brand::before{content:none;display:none}
+.top .brand .footprint-mark{display:block;grid-column:1;grid-row:1 / span 2;width:42px;height:56px;object-fit:contain}
+.top .brand .brand-wordmark{grid-column:2;grid-row:1;align-self:end;font:inherit;line-height:1.15}
+.top .brand .brand-subtitle{grid-column:2;grid-row:2;align-self:start;margin:0;font-size:12px;line-height:1.5;letter-spacing:0}
+body[data-view=nearby] .top .brand .brand-wordmark{grid-row:1 / span 2;align-self:center}
+.top .brand:focus-visible{outline:3px solid #244eae;outline-offset:5px;border-radius:8px}
+@media(max-width:699px){.top .brand{column-gap:.45rem}.top .brand .footprint-mark{width:34px;height:46px}.top .brand .brand-subtitle{font-size:10px}}
