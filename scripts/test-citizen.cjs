@@ -31,3 +31,21 @@ test('drafts preserve personal words literally and cannot invent support',()=>{
  assert.equal(m.build({scope:'jasper',topicIds:['unknown']}).length,0);
  assert.equal(m.build({scope:'jasper',topicIds:['noise','noise']}).length,1);
 });
+test('oral outline uses at most three chosen concerns for one office and keeps the chosen position',()=>{
+ const o={scope:'jasper',topicIds:['particles','startup','testing','emergency','noise'],position:'conditions'};
+ const s=m.testimony(o,'air',['emergency','particles','noise','testing','startup']);
+ assert.deepEqual(s.topicIds,['emergency','particles','testing']);
+ assert.match(s.text,/support approval only/);
+ assert.match(s.text,/100 hours/);assert.match(s.text,/50 hours/);
+ assert.doesNotMatch(s.text,/sound study|warm-up time|three-minute limit|192 years/);
+ assert.ok(s.sources.some(x=>x.page===56));
+ assert.equal(m.testimony({...o,kind:'records'},'air'),null);
+ assert.equal(m.testimony(o,'air',[]),null);
+});
+test('oral templates for another community never assert Jasper facts or a scheduled hearing',()=>{
+ const s=m.testimony({scope:'other',project:'Example project',place:'New Mexico',topicIds:['baseline','startup'],position:'questions'},'air');
+ assert.match(s.text,/Example project/);assert.match(s.text,/answers before deciding/);
+ assert.doesNotMatch(s.text,/384|572|50413|November|Jasper|Phillip/);assert.deepEqual(s.sources,[]);
+ assert.equal(m.speechStats('  One two\nthree  ').words,3);
+ assert.equal(m.speechStats(Array(390).fill('word').join(' ')).seconds,180);
+});

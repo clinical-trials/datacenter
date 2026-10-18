@@ -152,18 +152,35 @@ Equal-weight yes/no explanations separate land-use authorization, prohibition, r
 The maintained source file is `site/ballot-measures.json`, mirrored into both application editions. Updating a record requires checking current official language and status, retaining source publication dates, and linking an outcome source before adding a result. There is no automatic ballot/results feed. Validate with `node --test scripts/test-ballot-measures.cjs` and `python3 scripts/validate.py`.
 
 Public-comment guide (18 October 2026): `#citizen` now offers a four-step,
-mobile-friendly builder with 13 concern choices and separate letters for air
+mobile-friendly builder with 15 concern choices and separate letters for air
 permitting, local planning, county fiscal questions, community health, utility
 cases and legislators. It supports existing-records requests and a generic
 other-community template. Personal text remains in tab memory; download,
 copy and print are user-controlled, and the tool never submits comments.
 
-The supplied `Complete-Package-T073-50413-00077_v27.pdf` (87 pages) informed the
-question design; it is not redistributed. Project-specific statements link to
+The supplied `Complete-Package-T073-50413-00077_v27.pdf` (87 pages) and the
+11-page `Policy-Kit-with-Resident-Guide_v1.pdf` informed the question design;
+they are not redistributed. The latter combines the seven-page prototype
+and four-page resident guide. Project-specific statements link to
 the IDEM draft rather than treating the supplied review as an agency finding.
 Testing rotates to previously untested engines; unlimited genuine emergency
 hours do not erase the draft's separate annual NOx/VOC/CO caps. Screening
 plumes and reported contract totals are not inserted as established facts.
+The prototype's scoring totals are not used as validated health or compliance
+scores. The federal maintenance/readiness provision allows 100 hours/year,
+subject to specified exceptions; the allowed 50 non-emergency hours are
+included, not additional. The draft conditions are distinct from proposed
+safeguards, actual operating measurements and evidence still to be found.
+
+The Act wizard includes a seven-document research checklist, evidence labels,
+questions about test scheduling and open operating logs, and a follow-up
+guide for the final response and decision. A separate spoken-comment builder
+uses up to three selected concerns for the current office, preserving the
+resident's chosen position. It includes editable text, word count, an estimated
+duration at 130 words/minute, copy/download/print and explicit replacement of
+existing drafts. Three minutes is only a practice target; the verified Jasper
+notice does not establish a per-speaker limit. Records requests have no oral
+testimony option. Letter edits are not automatically summarized into speech.
 
 Participation checked against IDEM's original notice, extension and hearing
 notice on 18 October 2026: written comments end 16 November 2026 (no closing
@@ -173,14 +190,16 @@ Jasper case JSON. They are dated checks, not a live regulatory feed.
 
 Verification: `node --test scripts/test-citizen.cjs` checks routing, separation
 of generic templates from Indiana evidence, date boundaries, records-request
-scope and literal preservation of user text. `python3 scripts/validate.py`
+scope, oral outline routing, timing estimates and literal preservation of user
+text. `python3 scripts/validate.py`
 checks the existing evidence corpus. Other jurisdictions require residents to
 verify their own notice and recipient; no nationwide legal coverage is implied.
 
 To run the DOM interaction checks, install the temporary test dependency with
 `npm install --prefix work/citizen-test --no-package-lock --no-audit --no-fund jsdom`,
 then run `node --test scripts/test-citizen-dom.cjs`. These check per-letter edits,
-explicit regeneration, records mode, recipient entry, literal text handling and
-clearing. The browser review confirmed the first mobile flow and 320/390-pixel
-widths; a stalled native dialog limited final browser interaction checks. The
-final safeguard uses on-page buttons and passes the DOM tests.
+explicit regeneration, records mode, recipient entry, literal text handling,
+per-office spoken drafts and clearing. Research checkboxes reset when switching
+projects. All replacement decisions use on-page controls instead of native
+confirmation dialogs. Browser access to the local preview is blocked by the
+browser URL policy; published-page checks are recorded separately.
