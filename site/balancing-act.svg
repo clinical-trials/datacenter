@@ -1,11 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" fill="none">
-  <!-- Original suspended forms. No shape encodes a quantity. -->
+  <!-- Original suspended server, solar and sun forms. No shape encodes a quantity. -->
   <g stroke="#282b25" stroke-width="1.25" stroke-linecap="round">
-    <path d="M184 3v49M41 77l272-49M67 73v64M280 34v107M184 56v44M129 114l103-27M150 109v50"/>
+    <path d="M184 3v49M41 77l272-49M67 73v53M280 34v109M184 56v44M129 114l103-27M150 109v50"/>
     <circle cx="184" cy="55" r="4" fill="#f7f5ef"/>
   </g>
-  <path d="M21 148c19-27 60-37 85-21 17 11 4 28-21 34-28 7-51 4-64-13Z" fill="#bc3828"/>
-  <path d="M243 154c19-21 51-25 70-7 14 14 18 36 7 44-20 14-58-9-77-37Z" fill="#244b8c"/>
+  <path d="m39 132 49-13q7-2 7 6l-2 43q0 7-7 6l-48-7q-6-1-5-7l2-22q0-4 4-6Z" fill="#bc3828"/>
+  <path d="m46 141 34-6m-35 18 34-4m-35 16 34-1" stroke="#f7f5ef" stroke-opacity=".65" stroke-width="1.25" stroke-linecap="round"/>
+  <g transform="matrix(1 -.28 .5 1 238 155)">
+    <path d="M4 0h69q4 0 4 4v35q0 4-4 4H4q-4 0-4-4V4q0-4 4-4Z" fill="#244b8c"/>
+    <path d="M19 5v33M38 5v33M57 5v33M6 14h65M6 29h65" stroke="#f7f5ef" stroke-opacity=".53" stroke-width=".85"/>
+  </g>
   <ellipse cx="150" cy="173" rx="31" ry="17" transform="rotate(-16 150 173)" fill="#d8b73f"/>
   <ellipse cx="198" cy="217" rx="118" ry="3" fill="#292b25" opacity=".06"/>
 </svg>

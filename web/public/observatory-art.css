@@ -215,7 +215,7 @@ body[data-view=citizen] main>.phone-fold,body[data-view=citizen] main>.phone-sec
   .pagehead:not(.ledger-art-head):not(:has(.balance-aside)) { display:grid; grid-template-columns:minmax(0,1fr) 10rem; gap:.5rem 1.5rem; }
   .pagehead:not(.ledger-art-head):not(:has(.balance-aside))>div:first-child { grid-column:1; grid-row:1 / 3; }
   .pagehead:not(.ledger-art-head):not(:has(.balance-aside))>.btn { grid-column:2; grid-row:2; }
-  .pagehead:not(.ledger-art-head):not(:has(.balance-aside))::after { display:block; width:8rem; height:7rem; background:url('balancing-act.svg?v=refined-20261018') center/contain no-repeat; grid-column:2; grid-row:1; align-self:center; justify-self:center; }
+  .pagehead:not(.ledger-art-head):not(:has(.balance-aside))::after { display:block; width:8rem; height:7rem; background:url('balancing-act.svg?v=sculptural-nouns-20261018') center/contain no-repeat; grid-column:2; grid-row:1; align-self:center; justify-self:center; }
 }
 @media(min-width:1050px) {
   .pagehead:not(.ledger-art-head):not(:has(.balance-aside))::after { width:10rem; height:8rem; }
