@@ -15,12 +15,12 @@
  async function load(){
   page.innerHTML='<h1>Moratoria &amp; local response</h1><p role="status">Loading the jurisdiction records…</p>';
   try{
-   const response=await fetch('moratoria.json?v=20261018c');if(!response.ok)throw Error('fetch');
+   const response=await fetch('moratoria.json?v=nationwide-20261018');if(!response.ok)throw Error('fetch');
    const data=await response.json();if(!M||!M.valid(data))throw Error('data');
    const states=[...new Set(data.records.map(r=>r.state))].sort((a,b)=>stateNames[a].localeCompare(stateNames[b]));
    const count=key=>data.records.filter(r=>r.status===key).length;
-   page.innerHTML=`<header class="mor-hero"><div><p class="eyebrow">Act / Moratoria &amp; local response</p><h1>A pause.<br><em>A public decision.</em></h1></div><figure><img src="balancing-act.svg?v=compute-art-20261018" alt="" width="360" height="230"><figcaption>power / place / public voice</figcaption></figure><p class="mor-intro">Where communities are putting data center plans on hold—and what happens next.</p><button type="button" class="btn mor-find-button" data-section="mor-find">Find my state ↓</button></header>
-    <div class="mor-caption"><strong>${data.records.length} jurisdiction records · ${states.length} states represented</strong><span>Evidence snapshot · ${date(data.asOf)}</span></div>
+   page.innerHTML=`<header class="mor-hero"><div><p class="eyebrow">Act / Moratoria &amp; local response</p><h1>Local pauses.<br><em>Across the country.</em></h1></div><figure><img src="balancing-act.svg?v=compute-art-20261018" alt="" width="360" height="230"><figcaption>power / place / public voice</figcaption></figure><p class="mor-intro">Explore local pauses across the country. Find the jurisdiction, then check the scope and the public record.</p><button type="button" class="btn mor-find-button" data-section="mor-national-find">Find my state ↓</button></header>
+    <div class="mn-switch" role="group" aria-label="Choose record collection"><button type="button" id="mor-national-button" aria-pressed="true" aria-controls="mor-national">Nationwide directory</button><button type="button" id="mor-reviewed-button" aria-pressed="false" aria-controls="mor-reviewed">Reviewed cases</button></div><div id="mor-national"></div><div id="mor-reviewed" hidden><div class="mor-caption"><strong>${data.records.length} jurisdiction records · ${states.length} states represented</strong><span>Evidence snapshot · ${date(data.asOf)}</span></div>
     <div class="mor-status-chart" aria-label="Status of the included records at the snapshot date">${Object.entries(M.labels).filter(([key])=>key!=='recheck').map(([key,label])=>`<button type="button" class="mor-stat mor-${key}" data-mor-status="${key}" aria-label="Filter ${label.toLowerCase()}: ${count(key)} records"><strong>${count(key)}</strong><span>${label}</span><i aria-hidden="true" style="--share:${count(key)/data.records.length*100}%"></i></button>`).join('')}</div>
     <p class="mor-note">Counts describe this selected collection, not U.S. totals. A county rule may exclude its cities. A pause usually affects specified approvals, not existing operations.</p>
     <div id="mor-freshness" class="mor-caution" hidden></div>
@@ -30,7 +30,26 @@
      <p id="mor-result-count" class="mor-result-count" role="status" aria-live="polite"></p><div id="mor-results"></div>
     </section>
     <section class="mor-learning" aria-labelledby="mor-use-title"><div class="mor-section-head"><h2 id="mor-use-title">Make the pause count.</h2><span>02 / Questions for the next decision</span></div><p>A suggested public-interest checklist for the review period:</p><div class="mor-questions"><div><span>01</span><h3>Establish the baseline</h3><p>Ask for air, noise, water and utility-cost data before construction, with a public monitoring plan.</p></div><div><span>02</span><h3>Write measurable conditions</h3><p>Ask which limits, reporting duties and remedies would be enforceable, and by which agency.</p></div><div><span>03</span><h3>Follow the costs</h3><p>Ask who funds grid upgrades, water infrastructure and oversight, and who carries the risk if a project closes.</p></div></div><div class="mor-actions"><button type="button" data-view="citizen" class="btn">Build a public comment →</button><button type="button" data-view="community" class="btn">Plan a community baseline →</button><button type="button" data-view="vote" class="btn">Explore ballot measures →</button></div></section>
-    <details class="mor-method"><summary>Coverage, status definitions &amp; download</summary><p>${escape(data.coverage)} The collection prioritizes official ordinances, legislative records, government notices and minutes checked on ${date(data.asOf)}. It is maintained as a dated research supplement, not a live legal-status feed. The review PDF retains its own cutoff.</p><dl><dt>Adopted pause</dt><dd>An official record establishes adoption of a temporary restriction; the scope and any known end condition are shown.</dd><dt>Prohibition</dt><dd>A prohibition in an adopted ordinance, distinct from a time-limited moratorium.</dd><dt>Proposed action</dt><dd>A draft or scheduled decision; no adoption is inferred.</dd><dt>Community response</dt><dd>Documented testimony, organizing or a petition. This record does not establish enactment.</dd><dt>Not in force</dt><dd>The cited measure was vetoed or set aside; read the case-specific explanation.</dd><dt>Needs a new check</dt><dd>A stated or calculated term, scheduled decision, or 45-day review interval has passed. The last documented status remains in the record. Calculated dates are review reminders, not definitive legal deadlines.</dd></dl><p>Official text controls. New amendments, litigation, exemptions or state preemption may change the result. An absence here is a research gap.</p><a href="moratoria.json" download>Download the sourced jurisdiction register (JSON)</a></details>`;
+    <details class="mor-method"><summary>Coverage, status definitions &amp; download</summary><p>${escape(data.coverage)} The collection prioritizes official ordinances, legislative records, government notices and minutes checked on ${date(data.asOf)}. It is maintained as a dated research supplement, not a live legal-status feed. The review PDF retains its own cutoff.</p><dl><dt>Adopted pause</dt><dd>An official record establishes adoption of a temporary restriction; the scope and any known end condition are shown.</dd><dt>Prohibition</dt><dd>A prohibition in an adopted ordinance, distinct from a time-limited moratorium.</dd><dt>Proposed action</dt><dd>A draft or scheduled decision; no adoption is inferred.</dd><dt>Community response</dt><dd>Documented testimony, organizing or a petition. This record does not establish enactment.</dd><dt>Not in force</dt><dd>The cited measure was vetoed or set aside; read the case-specific explanation.</dd><dt>Needs a new check</dt><dd>A stated or calculated term, scheduled decision, or 45-day review interval has passed. The last documented status remains in the record. Calculated dates are review reminders, not definitive legal deadlines.</dd></dl><p>Official text controls. New amendments, litigation, exemptions or state preemption may change the result. An absence here is a research gap.</p><a href="moratoria.json" download>Download the sourced jurisdiction register (JSON)</a></details></div>`;
+   let nationalLoaded=false;
+   const showCollection=kind=>{
+    const national=kind==='national';
+    page.querySelector('#mor-national').hidden=!national;page.querySelector('#mor-reviewed').hidden=national;
+    page.querySelector('#mor-national-button').setAttribute('aria-pressed',String(national));
+    page.querySelector('#mor-reviewed-button').setAttribute('aria-pressed',String(!national));
+    page.querySelector('.mor-find-button').dataset.section=national?'mor-national-find':'mor-find';
+    if(national)loadNational();
+   };
+   const loadNational=()=>{
+    if(nationalLoaded)return;nationalLoaded=true;
+    window.mountNationalMoratoria(page.querySelector('#mor-national'),{stateNames,reviewed:data.records,onReviewed:id=>{
+     const record=data.records.find(r=>r.id===id);if(!record)return;
+     page.querySelector('#mor-state').value=record.state;page.querySelector('#mor-status').value='all';page.querySelector('#mor-search').value=record.jurisdiction;
+     showCollection('reviewed');render();page.querySelector('#mor-find').scrollIntoView({behavior:'instant',block:'start'});
+    }});
+   };
+   page.querySelector('#mor-national-button').onclick=()=>showCollection('national');
+   page.querySelector('#mor-reviewed-button').onclick=()=>showCollection('reviewed');
    function render(){
     const now=M.today(),state=page.querySelector('#mor-state').value,kind=page.querySelector('#mor-status').value,search=page.querySelector('#mor-search').value;
     const rows=M.filter(data.records,{state,status:kind,search},now).sort((a,b)=>a.state.localeCompare(b.state)||a.jurisdiction.localeCompare(b.jurisdiction));
@@ -49,8 +68,8 @@
     if(state){page.querySelector('#mor-state').value=state.dataset.morState;render();}
     if(status){page.querySelector('#mor-status').value=status.dataset.morStatus;render();page.querySelector('#mor-find').scrollIntoView({behavior:'instant',block:'start'});page.querySelector('#mor-status').focus({preventScroll:true});}
    });
-   window.addEventListener('footprint:viewchange',e=>{if(e.detail.name==='moratoria')render();});
-   render();
+   window.addEventListener('footprint:viewchange',e=>{if(e.detail.name==='moratoria'){render();loadNational();}});
+   render();if(document.body.dataset.view==='moratoria')loadNational();
   }catch{
    page.innerHTML='<h1>Moratoria &amp; local response</h1><p role="alert">The jurisdiction register could not load. No status counts are shown.</p><p>Check your city or county’s official ordinance and meeting records, or open our source file.</p><a href="moratoria.json">Open the sourced register</a> <button type="button" class="btn" id="mor-retry">Try again</button>';
    page.querySelector('#mor-retry').onclick=load;

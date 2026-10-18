@@ -28,9 +28,10 @@ test('state, literal search and status intersect; empty states imply missing cov
 const {JSDOM}=require('../work/citizen-test/node_modules/jsdom');
 async function ui(fail=false){
  const dom=new JSDOM('<main><section id="view-indiana"><div class="pagehead"></div></section><aside class="sponsor-space"></aside><footer>Research notes</footer></main>',{runScripts:'outside-only',url:'https://example.test/#moratoria'});
- const w=dom.window;w.DATA={states:[{abbreviation:'US',name:'United States'},{abbreviation:'CA',name:'California'},{abbreviation:'IN',name:'Indiana'},{abbreviation:'MD',name:'Maryland'},{abbreviation:'ME',name:'Maine'},{abbreviation:'FL',name:'Florida'},{abbreviation:'NM',name:'New Mexico'},{abbreviation:'NY',name:'New York'},{abbreviation:'NC',name:'North Carolina'},{abbreviation:'OR',name:'Oregon'},{abbreviation:'VA',name:'Virginia'},{abbreviation:'WA',name:'Washington'},{abbreviation:'WI',name:'Wisconsin'}]};
+ const w=dom.window;w.DATA={states:[{abbreviation:'AZ',name:'Arizona'},{abbreviation:'CO',name:'Colorado'},{abbreviation:'MT',name:'Montana'},{abbreviation:'US',name:'United States'},{abbreviation:'CA',name:'California'},{abbreviation:'IN',name:'Indiana'},{abbreviation:'MD',name:'Maryland'},{abbreviation:'ME',name:'Maine'},{abbreviation:'FL',name:'Florida'},{abbreviation:'NM',name:'New Mexico'},{abbreviation:'NY',name:'New York'},{abbreviation:'NC',name:'North Carolina'},{abbreviation:'OR',name:'Oregon'},{abbreviation:'VA',name:'Virginia'},{abbreviation:'WA',name:'Washington'},{abbreviation:'WI',name:'Wisconsin'}]};
  w.view=name=>{w.document.body.dataset.view=name;};w.HTMLElement.prototype.scrollIntoView=()=>{};
- w.fetch=async()=>({ok:!fail,json:async()=>data});
+ w.fetch=async url=>({ok:!fail,json:async()=>url.startsWith('moratoria-national.json')?JSON.parse(fs.readFileSync('site/moratoria-national.json','utf8')):data});
+ w.eval(fs.readFileSync('site/moratoria-national-model.js','utf8'));w.eval(fs.readFileSync('site/moratoria-national.js','utf8'));
  w.eval(fs.readFileSync('site/moratoria-model.js','utf8'));w.Moratoria.today=()=>data.asOf;
  w.eval(fs.readFileSync('site/moratoria.js','utf8'));await new Promise(r=>setTimeout(r,0));return dom;
 }

@@ -24,7 +24,7 @@
           "locator": "Sections 1 and 6: permit scope, end condition, 50 MW definition and exclusions"
         },
         {
-          "label": "Governor\u2019s announcement",
+          "label": "Governor’s announcement",
           "url": "https://www.governor.ny.gov/news/first-statewide-moratorium-new-hyperscale-data-centers-launched-governor-kathy-hochul",
           "kind": "Official record",
           "locator": "July 14, 2026: anticipated up-to-one-year review"
@@ -77,7 +77,7 @@
       "term": "120 days; city lists November 24, 2026 as the expiration date. An extension is possible.",
       "summary": "Land-use applications pause while the city revises where and how these facilities may develop.",
       "scope": "New or expanded data centers and battery energy storage systems proposed as a primary use; the resolution defines the size and service-capacity thresholds.",
-      "exception": "Applications submitted before the pause may proceed. This differs from Oregon\u2019s separate pause on enterprise-zone tax agreements.",
+      "exception": "Applications submitted before the pause may proceed. This differs from Oregon’s separate pause on enterprise-zone tax agreements.",
       "response": "The city describes weeks of public discussion, followed by research, technical consultation and public input on code amendments.",
       "nextStep": "Check the current Community Development Code amendment schedule and any extension before relying on the November date.",
       "sources": [
@@ -111,7 +111,7 @@
       "scope": "Future data center applications within the city.",
       "exception": "Existing approvals for the AWS facility under construction are unchanged. A pre-application for a second facility is not a formal approval.",
       "response": "The city links the pause to resident concerns and describes expanded notification, applicant meetings and Planning Commission review for projects requiring an EIR.",
-      "nextStep": "Review the council\u2019s extension decision and comment on proposed water, generator-emission, noise and siting standards.",
+      "nextStep": "Review the council’s extension decision and comment on proposed water, generator-emission, noise and siting standards.",
       "sources": [
         {
           "label": "City moratorium Q&A",
@@ -135,9 +135,9 @@
       "term": "Citywide prohibition; the temporary moratorium is part of the earlier history.",
       "summary": "The city moved from a temporary pause to an ordinance prohibiting data centers citywide.",
       "scope": "Citywide zoning prohibition under Ordinance 2278, following the January 21 moratorium and March 4 extension.",
-      "exception": "Accessory server rooms supporting the same site\u2019s primary use are separately defined and excluded from the data-center definition; see Ordinance 2278, section 5.",
+      "exception": "Accessory server rooms supporting the same site’s primary use are separately defined and excluded from the data-center definition; see Ordinance 2278, section 5.",
       "response": "The city publishes resident and applicant correspondence, meeting records, and a withdrawn proposal at 1977 Saturn Street.",
-      "nextStep": "Use the city\u2019s ordinance and public-record archive to examine the decision; check the voting tab for the separate ballot history.",
+      "nextStep": "Use the city’s ordinance and public-record archive to examine the decision; check the voting tab for the separate ballot history.",
       "sources": [
         {
           "label": "City regulations and correspondence archive",
@@ -164,7 +164,7 @@
       "level": "County",
       "status": "not-in-force",
       "actionDate": "2026-08-28",
-      "term": "Court directed the moratorium be set aside, according to the county\u2019s August 28 update.",
+      "term": "Court directed the moratorium be set aside, according to the county’s August 28 update.",
       "summary": "An adopted and extended pause was subsequently set aside by a court.",
       "scope": "The earlier measure paused final county approvals for data centers in unincorporated areas.",
       "exception": "Do not treat the earlier extension as an active restriction. The county update says the supporting findings did not meet all state-law requirements.",
@@ -221,7 +221,7 @@
       "scope": "County site-plan approvals and applications under Ordinance 42-26.",
       "exception": "AWS separately withdrew its Calvert Technology Center application, announced August 4. Withdrawal and a moratorium are distinct events.",
       "response": "The county identifies noise, generators, water demand, heat, stormwater and infrastructure as topics for regulatory review.",
-      "nextStep": "Read Ordinance 42-26 and follow the county\u2019s zoning amendments; ask for enforceable monitoring and infrastructure-cost terms.",
+      "nextStep": "Read Ordinance 42-26 and follow the county’s zoning amendments; ask for enforceable monitoring and infrastructure-cost terms.",
       "sources": [
         {
           "label": "County data center page",
@@ -244,8 +244,8 @@
       "actionDate": "2026-01-13",
       "term": "Up to one year; city targets replacement rules by or before January 24, 2027.",
       "summary": "Zoning approvals pause for new, principal-use data centers larger than 10,000 square feet.",
-      "scope": "Data centers over the floor-area threshold that are a property\u2019s primary use; the city also addresses telecommunications centers.",
-      "exception": "This city action is separate from Dane County\u2019s rule. It does not establish a Wisconsin-wide restriction.",
+      "scope": "Data centers over the floor-area threshold that are a property’s primary use; the city also addresses telecommunications centers.",
+      "exception": "This city action is separate from Dane County’s rule. It does not establish a Wisconsin-wide restriction.",
       "response": "The city is sharing a draft zoning framework through committee discussions and a public information meeting with Q&A.",
       "nextStep": "The city lists an October 27, 2026 public information meeting. Open the official page for registration, time and the latest schedule.",
       "sources": [
@@ -258,7 +258,7 @@
       ],
       "checked": "2026-10-18",
       "endDate": "2027-01-24",
-      "endBasis": "City\u2019s stated outside date; replacement ordinance may end it earlier",
+      "endBasis": "City’s stated outside date; replacement ordinance may end it earlier",
       "nextDate": "2026-10-27"
     },
     {
@@ -268,12 +268,12 @@
       "level": "County",
       "status": "pause",
       "actionDate": "2026-06-04",
-      "term": "18-month pause; verify the resolution\u2019s exact effective and termination dates.",
+      "term": "18-month pause; verify the resolution’s exact effective and termination dates.",
       "summary": "County action targets hyperscale facilities in towns subject to county zoning.",
       "scope": "Applications and zoning permits for facilities with at least 5,000 servers and at least 10,000 square feet.",
       "exception": "Cities, villages and towns with independent zoning are outside the county pause. Fitchburg explicitly says the county moratorium does not apply to it.",
       "response": "An Advisory Committee on Data Centers studies environmental, economic, health and safety implications and recommends policy.",
-      "nextStep": "Confirm which government zones the parcel, then follow that government\u2019s committee and permit records.",
+      "nextStep": "Confirm which government zones the parcel, then follow that government’s committee and permit records.",
       "sources": [
         {
           "label": "County Board adoption",
@@ -330,7 +330,7 @@
       "summary": "An October 20 agenda item would direct staff to draft a moratorium ordinance.",
       "scope": "Proposed large-scale data center development in unincorporated Broward County.",
       "exception": "A motion to draft legislation is not an enacted moratorium. October 20 is after this evidence check.",
-      "response": "Commissioner Fisher\u2019s item opens a policy discussion; the listed motion alone does not establish a public hearing on a completed ordinance.",
+      "response": "Commissioner Fisher’s item opens a policy discussion; the listed motion alone does not establish a public hearing on a completed ordinance.",
       "nextStep": "Check October 20 agenda item 40 (26-1386), then follow any drafted ordinance and later hearing notices.",
       "sources": [
         {
@@ -387,7 +387,7 @@
       "nextStep": "Follow the Citizen Advisory Committee and town meeting records; ask what findings must be complete before approvals resume.",
       "sources": [
         {
-          "label": "Town of Merrillville \u2014 Data Centers",
+          "label": "Town of Merrillville — Data Centers",
           "url": "https://www.merrillville.in.gov/business-building-economic-development/data-centers",
           "kind": "Official record",
           "locator": "Official town page explicitly gives June 1, 2026 through May 31, 2027 and identifies new project approvals as the paused action. It describes the citizen advisory process and topics to study."
@@ -417,7 +417,7 @@
           "label": "Wabash County Ordinance 2026-85-08",
           "url": "https://www.in.gov/counties/wabash/files/ordinances/2026-85-08-Ordinance-Imposing-a-Temporary-Moratorium-on-Data-Centers.pdf",
           "kind": "Official record",
-          "locator": "PDF pp.1\u20132: scope, geographical jurisdiction, adoption and term. Sec.3 conditions town applicability on their adoption; sec.4 ends the pause at zoning amendment or 18 months, whichever earlier."
+          "locator": "PDF pp.1–2: scope, geographical jurisdiction, adoption and term. Sec.3 conditions town applicability on their adoption; sec.4 ends the pause at zoning amendment or 18 months, whichever earlier."
         },
         {
           "label": "Wabash County ordinance register",
@@ -447,7 +447,7 @@
       "nextStep": "Read later council minutes and ordinances to find the disposition; use the Act wizard to frame questions about project protections.",
       "sources": [
         {
-          "label": "Shelbyville Common Council minutes \u2014 March 23, 2026",
+          "label": "Shelbyville Common Council minutes — March 23, 2026",
           "url": "https://www.shelbyville.in.gov/AgendaCenter/ViewFile/Minutes/_03232026-784",
           "kind": "Official record",
           "locator": "Minutes record petition and resident questions, plus council distinction between annexation and project approval."
@@ -474,7 +474,7 @@
       "nextStep": "Check the October 20 resolution and any exceptions or statutory deadlines. No outcome is assumed in this October 18 record.",
       "sources": [
         {
-          "label": "Loudoun County \u2014 Board Approves Process that Could Pause Legislative Data Center & Substation Applications",
+          "label": "Loudoun County — Board Approves Process that Could Pause Legislative Data Center & Substation Applications",
           "url": "https://www.loudoun.gov/m/NewsFlash/home/detail/10874",
           "kind": "Official record",
           "locator": "County release dated Sept 17, updated Sept 24, 2026 explicitly says resolution is to be considered Oct 20 and is conditional on approval. Details proposed scope, one-year limit, continued processing and exceptions."
@@ -501,13 +501,13 @@
       "nextStep": "Follow staff progress reports and draft standards; ask how environmental justice, cumulative effects and monitoring will be evaluated.",
       "sources": [
         {
-          "label": "Santa Fe County \u2014 approves 18-month moratorium",
+          "label": "Santa Fe County — approves 18-month moratorium",
           "url": "https://www.santafecountynm.gov/news/detail/santa-fe-county-approves-18-month-moratorium-on-data-centers",
           "kind": "Official record",
           "locator": "July 2, 2026 county release reports unanimous passage, duration, 1 MW threshold, public-input changes and study topics."
         },
         {
-          "label": "Santa Fe County \u2014 sponsored legislation",
+          "label": "Santa Fe County — sponsored legislation",
           "url": "https://www.santafecountynm.gov/county-commissioners/lisa-cacari-stone/sponsored-legislation",
           "kind": "Official record",
           "locator": "Lists Ordinance 2026-06 as adopted June 30, 2026."
@@ -522,6 +522,122 @@
       "checked": "2026-10-18",
       "endDate": null,
       "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "missoula-mt",
+      "state": "MT",
+      "jurisdiction": "Missoula County",
+      "level": "County",
+      "status": "pause",
+      "actionDate": "2026-07-09",
+      "term": "One year, ending July 8, 2027, unless replaced by zoning regulations; a further year requires a public hearing.",
+      "summary": "The county paused new or expanded data centers while studying their impacts.",
+      "scope": "County territory outside Missoula city limits.",
+      "exception": "This county measure does not cover the City of Missoula. A project withdrawal is a separate action.",
+      "response": "The county describes public engagement and a study of energy, water, air, heat, noise and vibration.",
+      "nextStep": "The county lists an October 27 study presentation and November hearings. Check the project page for agendas and participation details.",
+      "sources": [
+        {
+          "label": "County interim-zoning project and participation page",
+          "url": "https://missoulacountyvoice.com/data-center-interim-zoning",
+          "kind": "Official record",
+          "locator": "Project description, expiration and anticipated timeline"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2027-07-08",
+      "endBasis": "Date stated by county",
+      "nextDate": "2026-10-27"
+    },
+    {
+      "id": "denver-co",
+      "state": "CO",
+      "jurisdiction": "Denver",
+      "level": "City",
+      "status": "pause",
+      "actionDate": "2026-05-18",
+      "term": "Temporary pause under Bill 26-0431. Confirm the operative term and exceptions in its signed ordinance.",
+      "summary": "Council passed a moratorium on specified data-center applications; the mayor signed May 20.",
+      "scope": "Acceptance or processing of certain permit and site-development-plan applications where a data center is the proposed primary use.",
+      "exception": "The legislative summary alone does not establish every exception or a current termination date; consult the attachments and later amendments.",
+      "response": "The legislative record includes written testimony and the public-hearing history.",
+      "nextStep": "Read the signed ordinance and follow Community Planning and Housing agendas for replacement standards.",
+      "sources": [
+        {
+          "label": "Bill 26-0431 adoption history and ordinance attachments",
+          "url": "https://denver.legistar.com/LegislationDetail.aspx?GUID=0A6BACDC-1F9A-474F-863E-C3F51B5C4489&ID=7960021&Options=&Search=",
+          "kind": "Official record",
+          "locator": "Passed May 18; mayor signed May 20, 2026; scope in title"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "pima-az",
+      "state": "AZ",
+      "jurisdiction": "Pima County",
+      "level": "County",
+      "status": "pause",
+      "actionDate": "2026-09-22",
+      "term": "Reported 120-day term; confirm the amended resolution and any later court or board action.",
+      "summary": "Resolution 2026-56 was approved September 22. The August 11 action directed staff to develop a measure; it was not this adoption.",
+      "scope": "New data-center development in unincorporated Pima County. Contemporaneous reporting says the final amendment excludes projects with permits already submitted.",
+      "exception": "The national dataset’s August adoption date and derived December endpoint are not used here. Legal challenges and later amendments require checking.",
+      "response": "County officials invited input on zoning changes; residents addressed the September meeting.",
+      "nextStep": "Check the approved resolution, current code-amendment schedule and any litigation before relying on the restriction.",
+      "sources": [
+        {
+          "label": "Resolution 2026-56 approval record",
+          "url": "https://pima.legistar.com/LegislationDetail.aspx?GUID=633B4F2B-1303-4119-9A5C-44A7BC8A056B&ID=8215310&Options=&Search=",
+          "kind": "Official record",
+          "locator": "Final action September 22, 2026; status Approved"
+        },
+        {
+          "label": "August drafting direction",
+          "url": "https://pima.legistar.com/LegislationDetail.aspx?GUID=2ED83826-7496-4CA5-AB1E-7CA334C3F51F&ID=8165122&Options=&Search=",
+          "kind": "Official record",
+          "locator": "August 11 direction to develop a resolution"
+        },
+        {
+          "label": "Reporting on the adopted amendment",
+          "url": "https://azluminaria.org/2026/09/23/pima-county-supervisors-approve-data-center-moratorium/",
+          "kind": "Local reporting",
+          "locator": "120-day term, 3–2 vote and permit-submission exception"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "worcester-md",
+      "state": "MD",
+      "jurisdiction": "Worcester County",
+      "level": "County",
+      "status": "pause",
+      "actionDate": "2026-07-21",
+      "term": "Twelve months or until rescinded by commissioners.",
+      "summary": "Resolution 26-18 pauses permit submissions and issuance for data centers and cable landing stations.",
+      "scope": "County permits and related Board of Zoning Appeals proceedings; both pending and future applications.",
+      "exception": "The hold covers the county processes described in the resolution; do not assume it covers every municipality’s separate authority.",
+      "response": "The county plans public consideration of new zoning rules after staff review.",
+      "nextStep": "Follow County Commissioner agendas for proposed legislation and ask which applications remain on hold.",
+      "sources": [
+        {
+          "label": "County adoption announcement",
+          "url": "https://worcestermd.gov/news/worcester-county-enacts-moratorium-data-centers-and-cable-landing-stations-while-new",
+          "kind": "Official record",
+          "locator": "July 30 announcement of July 21 action, scope and 12-month term"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2027-07-21",
+      "endBasis": "Calculated review trigger: 12 months from adoption; confirm legal endpoint",
       "nextDate": null
     }
   ]
