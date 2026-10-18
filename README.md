@@ -254,3 +254,9 @@ buttons. The Jasper notice is one populated example, not a universal number.
 Validate with `node --test scripts/test-hearing-access.cjs`. These checks
 cover another hearing, missing access, unsafe telephone values, archived
 events, and separation of organizer contacts from conference access.
+
+## Shared visual language
+
+`site/observatory-art.css` is the final visual-system stylesheet; the former `soft-surfaces.css` is no longer loaded. Keep new views consistent with the original balancing-act identity: warm paper, ink outlines, rounded comic panels, red/yellow/blue suspended shapes, halftone shading, and crisp offset shadows. `site/balancing-act.svg` is original decorative artwork, not a quantitative graphic.
+
+Use dots on illustrations or margins, leaving text and inputs on solid surfaces. Use color sparingly in dense research views. Preserve evidence-status colors and scientific chart scales; decorative shapes must not imply measured severity. Keep touch controls at least 44px, retain visible keyboard focus, honor reduced motion, and check narrow layouts. The six-toed footprint remains the brand and favicon.

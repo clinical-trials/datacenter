@@ -47,7 +47,9 @@
   page.addEventListener('click',event=>{const anchor=event.target.closest('a[href="#vote-find"]');if(anchor){event.preventDefault();page.querySelector('#vote-find')?.scrollIntoView({behavior:'instant',block:'start'});}});
   for(const selector of ['#view-citizen','#view-decide']){
     const target=document.querySelector(selector);if(!target)continue;
-    const entry=document.createElement('div');entry.className='vote-entry';entry.innerHTML='<span>From evidence to civic action</span><button type="button" class="btn" data-view="vote">Vote & ballot measures →</button>';target.prepend(entry);
+    const entry=document.createElement('div');entry.className='vote-entry';entry.innerHTML='<span>From evidence to civic action</span><button type="button" class="btn" data-view="vote">Vote & ballot measures →</button>';
+    // The Act page opens with its task; related voting links follow the wizard.
+    if(target.id==='view-citizen')target.append(entry);else target.prepend(entry);
   }
   window.addEventListener('hashchange',()=>{if(location.hash==='#vote')view('vote');});
   if(location.hash==='#vote')view('vote');load();
