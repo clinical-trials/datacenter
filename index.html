@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Center Footprint Observatory</title>
-  <meta name="description" content="Explore data-center climate, health, water and public costs, with cited research and public-comment tools.">
+  <title>Data Centers Near Me | Footprint</title>
+  <meta name="description" content="Find data centers near your ZIP code, build a neighborhood tour, and explore the research and health dashboard.">
   <script>
     const dashboard = new URL('./site/', window.location.href);
     dashboard.search = window.location.search;
-    dashboard.hash = window.location.hash || '#impact';
+    dashboard.hash = window.location.hash || '#nearby';
     window.location.replace(dashboard.href);
   </script>
-  <noscript><meta http-equiv="refresh" content="0; url=./site/"></noscript>
+  <noscript><meta http-equiv="refresh" content="0; url=./site/#nearby"></noscript>
 </head>
 <body>
-  <h1>Data Center Footprint Observatory</h1>
-  <p><a href="./site/#impact">Open the dashboard</a></p>
+  <h1>Data Centers Near Me</h1>
+  <p><a href="./site/#nearby">Find data centers near me</a> · <a href="./site/#impact">Full research &amp; health dashboard</a></p>
   <p>The public dashboard includes charts, research and public-comment tools. Live collection and saved filing edits require the separately hosted application.</p>
 </body>
 </html>

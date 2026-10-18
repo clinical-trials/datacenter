@@ -15,7 +15,7 @@
   search.before(launcher);
   const directories=search.querySelector('.nearby-directory-links'),form=document.getElementById('zip-form'),result=document.getElementById('zip-result');
   search.replaceChildren();search.className='nm-search';
-  const heading=document.createElement('div');heading.className='nm-search-heading';heading.innerHTML='<p class="eyebrow">Five digits. Start exploring.</p><h2>What’s in your neighborhood?</h2>';
+  const heading=document.createElement('div');heading.className='nm-search-heading';heading.innerHTML='<p class="eyebrow">Five digits. Start exploring.</p><h2>Start with your ZIP.</h2>';
   search.append(heading,form);page.querySelector('#nm-search-slot').append(search);page.querySelector('#nm-result-slot').append(result);
   main.insertBefore(page,main.querySelector(':scope>section'));
   document.getElementById('zip-code').placeholder='Your ZIP';document.getElementById('zip-submit').textContent='Find nearby ↗';
@@ -23,6 +23,10 @@
   example.onclick=()=>{const input=document.getElementById('zip-code');input.value='87102';input.dispatchEvent(new Event('input'));form.requestSubmit();};form.append(example);
   if(directories){const more=document.createElement('details');more.className='nm-directories';const summary=document.createElement('summary');summary.textContent='Other public-address directories';more.append(summary,directories);page.append(more);}
   function openTour(){const zip=document.getElementById('zip-code').value;view('tours');if(/^\d{5}$/.test(zip))window.dispatchEvent(new CustomEvent('footprint:tourzip',{detail:{zip}}));document.getElementById('ct-auto-zip')?.focus({preventScroll:true});}
+  const quickTour=document.createElement('button');quickTour.type='button';quickTour.className='btn nm-zip-tour';quickTour.textContent='Build my neighborhood tour →';
+  quickTour.onclick=()=>{const input=document.getElementById('zip-code');if(!/^\d{5}$/.test(input.value)){document.getElementById('zip-status').textContent='Enter all five ZIP digits to find a tour.';input.setAttribute('aria-invalid','true');input.focus();return;}openTour();};
+  const tourHint=document.createElement('p');tourHint.className='nm-tour-hint';tourHint.textContent='5 or 10 min walk · 20 min drive · time to look included';
+  form.querySelector('.zip-entry').after(quickTour,tourHint);
   page.querySelector('#nm-tour-start').onclick=openTour;window.addEventListener('footprint:neighborhoodtour',openTour);
   const prompts={look:{title:'What shares the block?',text:'Look for homes, schools, shops and green space. Notice the neighborhood around the building—not just the building itself.',view:'community',link:'Turn an observation into a question →'},listen:{title:'What can you hear?',text:'From a permitted public place, notice traffic, fans and other sounds. Write down the time and what you hear. A listening stop is an observation, not a noise measurement.',view:'health',link:'Learn about sound & air evidence →'},ask:{title:'What would you ask the operator?',text:'How much electricity and water does this site use? Where are its permits? Pick one question, then look for a public record that could answer it.',view:'ledger',link:'Look inside the public records →'}};
   function showPrompt(key){const p=prompts[key],box=page.querySelector('#nm-prompt');box.replaceChildren();const title=document.createElement('h3'),text=document.createElement('p'),link=document.createElement('a');title.textContent=p.title;text.textContent=p.text;link.textContent=p.link;link.href='#'+p.view;link.dataset.view=p.view;box.append(title,text,link);page.querySelectorAll('[data-lens]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lens===key)));box.dataset.lens=key;}

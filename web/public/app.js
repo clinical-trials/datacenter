@@ -7,8 +7,9 @@ const ref=(...ids)=>ids.map(id=>src[id]?`<a class="ref" href="${esc(src[id].url)
 const names=Object.fromEntries(DATA.states.map(s=>[s.abbreviation,s.name]));
 let selected='IN';
 function view(name){
+ if(!['nearby','cleaner-power','tours','virginia','new-mexico','health','ai-footprint','citizen','community','solutions','periodic','impact','ledger','decide','learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='nearby';
  document.body.dataset.view=name;
- if(!['nearby','cleaner-power','tours','virginia','new-mexico','health','ai-footprint','citizen','community','solutions','periodic','impact','ledger','decide','learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='learn';
+ document.title=name==='nearby'?'Data Centers Near Me | Footprint':'Footprint | Research & Health Dashboard';
  document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!=='view-'+name);
  document.querySelectorAll('.nav button').forEach(b=>b.dataset.view===(['virginia','new-mexico'].includes(name)?'states':name)?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
  if(document.getElementById('mobile-view'))document.getElementById('mobile-view').value=name;history.replaceState(null,'','#'+name);window.scrollTo({top:0,behavior:'instant'});
@@ -87,7 +88,7 @@ function renderSources(){const q=$('source-search').value.toLowerCase().trim(),t
  $('source-list').innerHTML=matches.length?matches.map(s=>`<article class="source-item" id="source-${esc(s.id)}"><div class="pillrow"><span class="badge">${esc(s.type)}</span><span class="badge">${s.year}</span>${s.theme?`<span class="small">${esc(s.theme)}</span>`:''}</div><h3><a href="${esc(s.url)}" target="_blank" rel="noopener">[${s.number}] ${esc(s.title)}</a></h3><div class="source-meta">${esc(s.authors)}${s.venue?' · '+esc(s.venue):''}</div>${s.methods?`<p><b>Method:</b> ${esc(s.methods)}</p>`:''}<p>${esc(s.finding)}</p>${s.limitations?`<p class="small"><b>Limitations:</b> ${esc(s.limitations)}</p>`:''}${s.access?`<p class="small"><b>Access:</b> ${esc(s.access)}</p>`:''}<p class="source-meta">${s.doi?'DOI: '+esc(s.doi)+' · ':''}${s.geography?esc(s.geography)+' · ':''}Accessed 1 October 2026</p></article>`).join(''):'<div class="empty">No matching records. Try a broader term or select all evidence categories.</div>';
 }
 $('source-search').oninput=renderSources;$('source-type').onchange=renderSources;
-renderStates();renderWater();renderScenario();renderSources();view(location.hash.slice(1)||'impact');
+renderStates();renderWater();renderScenario();renderSources();view(location.hash.slice(1)||'nearby');
 if(document.modelContext?.registerTool){
  const lifecycle=new AbortController();
  const properties=Object.fromEntries(specs.map(([id,label,value,minimum,maximum])=>[id,{type:'number',description:label,minimum,maximum}]));
