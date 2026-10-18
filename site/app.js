@@ -7,7 +7,7 @@ const ref=(...ids)=>ids.map(id=>src[id]?`<a class="ref" href="${esc(src[id].url)
 const names=Object.fromEntries(DATA.states.map(s=>[s.abbreviation,s.name]));
 let selected='IN';
 function view(name){
- if(!['nearby','cleaner-power','tours','virginia','new-mexico','health','ai-footprint','citizen','community','solutions','periodic','impact','ledger','decide','learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='nearby';
+ if(!['nearby','vote','cleaner-power','tours','virginia','new-mexico','health','ai-footprint','citizen','community','solutions','periodic','impact','ledger','decide','learn','research','assessment','california','states','water','indiana','review','scenario','sources'].includes(name))name='nearby';
  document.body.dataset.view=name;
  document.title=name==='nearby'?'Data Centers Near Me | Footprint':'Footprint | Research & Health Dashboard';
  document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!=='view-'+name);

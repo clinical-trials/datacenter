@@ -1,0 +1,73 @@
+{
+  "checked": "2026-10-18",
+  "scope": "Dated national discovery snapshot and four selected local measures checked against official records. Not an exhaustive ballot database or a personalized sample ballot. No automatic election-results feed is connected.",
+  "trackerUrl": "https://ballotpedia.org/Data_center-related_ballot_measures,_2026",
+  "snapshot": {
+    "asOf": "2026-09-21",
+    "source": "Ballotpedia News",
+    "url": "https://news.ballotpedia.org/2026/09/21/ohio-leads-states-in-number-of-local-ballot-measures-on-data-centers-for-2026/",
+    "total": 38,
+    "jurisdictions": 35,
+    "november": 34,
+    "electionDate": "2026-11-03",
+    "advisory": 9,
+    "other": 29,
+    "byState": {"OH":20,"IL":7,"WI":3,"KS":3,"CA":2,"MI":1,"NV":1,"FL":1},
+    "limit": "Source publication date, not a live count. Local measures do not apply to every voter in the listed state. An unlisted state is not a verified zero. The national totals are separate from the four detailed examples."
+  },
+  "measures": [
+    {
+      "id":"nv-boulder-city-2026-q1", "state":"NV", "jurisdiction":"Boulder City", "title":"Question 1 · A new land use", "electionDate":"2026-11-03", "type":"Land-use authorization", "effect":"Changes which uses voters authorize in this area", "checked":"2026-10-18",
+      "summary":"Decide whether data centers may be an authorized use in the Eldorado Valley Transfer Area, outside its habitat-conservation easement.",
+      "yes":"Allow data centers as a permitted use in the specified area. The council could consider future leases.",
+      "no":"Keep data centers outside the authorized uses in that area.",
+      "limit":"Approval would not require the council to approve a facility. This question does not govern land elsewhere in Boulder City. Campaign arguments in the official booklet are advocacy, not verified environmental measurements.",
+      "question":"What would each future lease require for water, electricity, noise, emissions and public infrastructure costs?",
+      "sources":[
+        {"kind":"official","label":"City election page · date and question","url":"https://www.bcnv.org/193/Current-Ballot-Questions"},
+        {"kind":"official","label":"Official explanation, fiscal note & both sides’ arguments (PDF)","url":"https://www.bcnv.org/DocumentCenter/View/17253/Ballot-Question-1-Explanation-Digest-and-Arguments"}
+      ]
+    },
+    {
+      "id":"mi-augusta-2026-rezoning", "state":"MI", "jurisdiction":"Augusta Township", "title":"Ordinance 2025-02 · A rezoning vote", "electionDate":"2026-08-04", "type":"Zoning referendum", "effect":"Determines whether the rezoning takes effect", "checked":"2026-10-18",
+      "summary":"A referendum on changing specified land from agricultural-residential to general-industrial zoning for a proposed data-center development.",
+      "yes":"Uphold the rezoning ordinance.",
+      "no":"Reject the rezoning ordinance.",
+      "outcome":"Township record: the ordinance will not take effect following the August 4 election.",
+      "limit":"This concerns the specified rezoning, not a statewide prohibition. The dashboard does not report a certified vote tally.",
+      "question":"What zoning and permit decisions still apply to the site after this result?",
+      "sources":[
+        {"kind":"official","label":"Township ordinance register · recorded outcome","role":"outcome","url":"https://augustatownship.org/ordinances/"},
+        {"kind":"official","label":"Signed resolution placing the ordinance on the ballot (PDF)","url":"https://augustatownship.org/wp-content/uploads/2026/03/26-04-Resolution-to-put-Ordinance-2025-02-on-Ballot-FINAL-Signed.pdf"},
+        {"kind":"secondary","label":"Ballotpedia · referendum explanation","url":"https://news.ballotpedia.org/2026/03/19/voters-in-at-least-five-jurisdictions-will-decide-ballot-measures-related-to-data-centers-in-2026/"}
+      ]
+    },
+    {
+      "id":"ca-monterey-park-2026-ndc", "state":"CA", "jurisdiction":"Monterey Park", "title":"Measure NDC · A citywide prohibition", "electionDate":"2026-06-02", "type":"General Plan amendment", "effect":"Adds a citywide land-use prohibition", "checked":"2026-10-18",
+      "summary":"A General Plan amendment to prohibit data centers throughout Monterey Park, with the prohibition continuing until voters end it.",
+      "yes":"Adopt the proposed citywide prohibition through the General Plan amendment.",
+      "no":"Do not adopt this proposed General Plan amendment.",
+      "outcome":"City update identifies Measure NDC as adopted. No certified vote tally is reproduced here.",
+      "limit":"A no vote would not itself approve a project or remove other applicable restrictions. The ballot’s stated health and utility-rate purposes are not measured health outcomes.",
+      "question":"How is the city implementing the prohibition, and how does it define the facilities covered?",
+      "sources":[
+        {"kind":"official","label":"City election page · measure and analysis","url":"https://montereypark.ca.gov/1720/2026-Special-Election-Information"},
+        {"kind":"official","label":"City update · adopted Measure NDC","role":"outcome","url":"https://www.montereypark.ca.gov/m/newsflash/home/detail/1387"}
+      ]
+    },
+    {
+      "id":"wi-port-washington-2026-tid", "state":"WI", "jurisdiction":"Port Washington", "title":"Tax-increment districts · Who gets the next vote?", "electionDate":"2026-04-07", "type":"Future voter-approval requirement", "effect":"Adds a referendum requirement for qualifying districts", "checked":"2026-10-18",
+      "summary":"An ordinance requiring voter approval before the city creates or approves specified tax-increment districts involving large capital expenditures or the stated $10 million thresholds.",
+      "yes":"Require a referendum before approving a district covered by the ordinance.",
+      "no":"Do not add this referendum requirement through the proposed ordinance.",
+      "outcome":"Election-night county report: 2,710 yes and 1,371 no. This is the April 7 report, not a certified canvass verified by this dashboard.",
+      "limit":"This is a financing and approval-process measure, not a general data-center ban. Consult the full text for the distinct base-value and project-cost thresholds; it does not establish a campus’s tax payment.",
+      "question":"Which future financing districts are covered, and who bears repayment and infrastructure risks?",
+      "sources":[
+        {"kind":"official","label":"Official referendum notice (PDF)","url":"https://www.portwashingtonwi.gov/home/showpublisheddocument/6912/639080603000370000"},
+        {"kind":"official","label":"Full ordinance and referendum notice (PDF)","url":"https://www.portwashingtonwi.gov/home/showpublisheddocument/7058/639104550605406904"},
+        {"kind":"official","label":"County election-night report · page 19 (PDF)","role":"outcome","url":"https://www.ozaukeecounty.gov/DocumentCenter/View/27126/April-7-2026---Summary"}
+      ]
+    }
+  ]
+}
