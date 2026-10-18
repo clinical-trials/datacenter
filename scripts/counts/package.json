@@ -1,0 +1,1 @@
+{"name":"footprint-count-updater","private":true,"version":"1.0.0","dependencies":{"acorn":"8.16.0"},"scripts":{"test":"node --test test.cjs","update":"node collect.cjs"}}

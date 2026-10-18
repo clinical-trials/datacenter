@@ -1,0 +1,42 @@
+name: Refresh data center counts
+on:
+  schedule:
+    - cron: '23 14 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/counts/**', 'site/count-feed-model.js', '.github/workflows/update-counts.yml']
+permissions:
+  contents: write
+concurrency:
+  group: data-center-counts
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --prefix scripts/counts --ignore-scripts
+      - run: npm test --prefix scripts/counts
+      - name: Observe source
+        id: collect
+        continue-on-error: true
+        run: npm run update --prefix scripts/counts
+      - name: Publish observation or failure status
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data-center-counts.json web/public/data-center-counts.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update dated data center count observation'
+            git push origin HEAD:main
+          fi
+      - name: Report failed collection
+        if: steps.collect.outcome == 'failure'
+        run: exit 1
