@@ -1,0 +1,85 @@
+/* Restrained exhibition typography; color distinguishes actions, never health severity. */
+.mor-page { --mor-rule:#cfcec5; --mor-ink:#282b25; --mor-blue:#244b8c; --mor-red:#a42e21; color:var(--mor-ink); }
+.mor-page *, .mor-page *::before, .mor-page *::after { box-sizing:border-box; }
+.mor-page h1 { font-size:clamp(2.8rem,6vw,5rem); font-weight:400; line-height:1.03; letter-spacing:-.045em; margin:.7rem 0 1.4rem; }
+.mor-page h1 em { font-family:Baskerville,Georgia,serif; font-weight:400; color:var(--mor-blue); }
+.mor-hero { display:grid; grid-template-columns:minmax(0,1fr); align-items:center; padding:.8rem 0 2rem; }
+.mor-intro { font-size:1.08rem; max-width:38rem; line-height:1.55; }
+.mor-hero figure { display:none; margin:0; }
+.mor-hero img { width:100%; height:auto; }
+.mor-hero figcaption { font:italic .82rem Baskerville,Georgia,serif; text-align:center; color:#63665e; margin-top:.6rem; }
+.mor-caption { display:flex; flex-wrap:wrap; gap:.5rem 2rem; justify-content:space-between; border-top:1px solid var(--mor-rule); padding:1rem 0; font-size:.84rem; }
+.mor-caption strong { font-weight:500; }
+.mor-caption>span,.mor-note,.mor-checked,.mor-result-count { color:#5b6056; font-size:.82rem; line-height:1.5; }
+.mor-status-chart { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem 1.3rem; padding-bottom:.5rem; }
+.mor-stat { --tone:var(--mor-blue); display:flex; flex-direction:column; align-items:flex-start; gap:.25rem; position:relative; padding:.5rem 0 .9rem; border:0; border-radius:0; background:transparent; color:var(--mor-ink); text-align:left; min-height:5.5rem; cursor:pointer; }
+.mor-stat strong { font:400 2.7rem/1 Baskerville,Georgia,serif; }
+.mor-stat span { font-size:.8rem; }
+.mor-stat i { display:block; height:3px; background:var(--tone); width:var(--share); max-width:100%; margin-top:.5rem; }
+.mor-ban { --tone:var(--mor-red); }.mor-proposed { --tone:#9a7917; }.mor-response { --tone:#282b25; }.mor-not-in-force { --tone:#797e74; }
+.mor-stat[aria-pressed=true] span { text-decoration:underline; text-underline-offset:.3rem; }
+.mor-page button:focus-visible,.mor-page summary:focus-visible,.mor-page a:focus-visible { outline:2px solid var(--mor-blue); outline-offset:4px; }
+.mor-section-head { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:.6rem; padding:1.4rem 0; }
+.mor-section-head h2 { margin:0; font-size:1.65rem; font-weight:400; }
+.mor-section-head>span { font-size:.7rem; text-transform:uppercase; letter-spacing:.07em; color:#5b6056; }
+.mor-explore { margin-top:2rem; border-top:1px solid var(--mor-rule); }
+.mor-filters { display:grid; grid-template-columns:minmax(0,1fr); gap:1rem; align-items:end; }
+.mor-filters label { display:flex; flex-direction:column; gap:.45rem; font-size:.8rem; font-weight:500; min-width:0; }
+.mor-filters input,.mor-filters select { width:100%; max-width:100%; min-width:0; min-height:46px; background:#fffefa; border:1px solid #969c91; border-radius:.35rem; padding:.65rem; font-size:1rem; font-family:inherit; color:var(--mor-ink); }
+.mor-filters button { min-height:46px; border:0; border-bottom:1px solid var(--mor-rule); background:transparent; font:inherit; font-size:.85rem; padding:.5rem; color:var(--mor-blue); cursor:pointer; }
+.mor-state-index { display:flex; flex-wrap:wrap; gap:.5rem; padding:1.1rem 0 .3rem; }
+.mor-state-index button { display:flex; align-items:baseline; gap:.5rem; justify-content:center; min-width:54px; min-height:44px; padding:.65rem; border:1px solid var(--mor-rule); border-radius:.3rem; background:transparent; color:var(--mor-ink); cursor:pointer; }
+.mor-state-index span { font-size:.85rem; }.mor-state-index small { color:#64675f; font-size:.68rem; }
+.mor-state-index button[aria-pressed=true] { border-color:var(--mor-blue); background:#edf0f4; color:var(--mor-blue); }
+.mor-result-count { padding:.5rem 0; }
+.mor-record { display:grid; grid-template-columns:minmax(0,1fr); gap:1rem; padding:1.6rem 0; border-top:1px solid var(--mor-rule); }
+.mor-region { text-transform:uppercase; letter-spacing:.06em; font-size:.7rem; color:#5b6056; }
+.mor-place h3 { font:400 1.8rem/1.15 Baskerville,Georgia,serif; margin:.5rem 0 .7rem; }
+.mor-status { font-size:.76rem; font-weight:500; color:var(--mor-blue); display:inline-flex; align-items:center; gap:.5rem; }
+.mor-status::before { content:''; width:7px; height:7px; background:currentColor; border-radius:50%; }
+.mor-record[data-status=ban] .mor-status { color:var(--mor-red); }
+.mor-record[data-status=proposed] .mor-status { color:#775c0c; }
+.mor-record[data-status=response] .mor-status { color:var(--mor-ink); }
+.mor-record[data-status=not-in-force] .mor-status { color:#656b60; }
+.mor-record[data-status=recheck] .mor-status { color:#885723; }
+.mor-checked { font-size:.72rem; margin:.45rem 0 0; }
+.mor-summary { font-size:1.12rem; line-height:1.45; margin:0 0 1.1rem; }
+.mor-key { margin:0; display:grid; gap:.9rem; }
+.mor-key dt { text-transform:uppercase; font-size:.65rem; letter-spacing:.075em; color:#5b6056; margin-bottom:.3rem; }
+.mor-key dd { margin:0; font-size:.88rem; line-height:1.55; }
+.mor-key dd>span { display:block; font-size:.78rem; color:#5b6056; margin-bottom:.3rem; }
+.mor-record details { margin-top:.9rem; border:0; border-top:1px solid #deded6; background:transparent; border-radius:0; padding:0; }
+.mor-record summary,.mor-method summary { cursor:pointer; min-height:44px; padding:.9rem 0; color:var(--mor-blue); font-size:.86rem; }
+.mor-detail h4 { font-size:.78rem; margin:1rem 0 .4rem; text-transform:uppercase; letter-spacing:.04em; font-weight:500; }
+.mor-detail p { font-size:.88rem; line-height:1.55; margin:0 0 .8rem; }
+.mor-sources { padding-left:1.1rem; font-size:.85rem; }
+.mor-sources li { margin:.9rem 0; }
+.mor-sources small { display:block; color:#5b6056; font-size:.73rem; margin-top:.3rem; line-height:1.4; }
+.mor-page a { overflow-wrap:anywhere; color:var(--mor-blue); }
+.mor-caution { border-left:2px solid #9a7917; padding:.7rem 1rem; background:#f5f0df; font-size:.82rem; line-height:1.5; margin:.7rem 0; }
+.mor-caution[hidden] { display:none; }
+.mor-empty { padding:1.5rem 0 2rem; max-width:40rem; }
+.mor-empty h3 { font-weight:400; }
+.mor-learning { border-top:1px solid var(--mor-rule); margin-top:2rem; padding-bottom:2rem; }
+.mor-questions { display:grid; grid-template-columns:minmax(0,1fr); gap:1.5rem; margin:1.8rem 0; }
+.mor-questions>div { border-top:1px solid var(--mor-rule); padding-top:.8rem; }
+.mor-questions>div>span { font:italic 1.6rem Baskerville,Georgia,serif; color:var(--mor-blue); }
+.mor-questions h3 { font-weight:500; font-size:1rem; margin:.8rem 0; }
+.mor-questions p { font-size:.87rem; line-height:1.55; }
+.mor-actions { display:flex; flex-wrap:wrap; gap:.6rem; }
+.mor-actions .btn { white-space:normal; }
+.mor-method { border-top:1px solid var(--mor-rule); padding-top:.5rem; font-size:.86rem; line-height:1.6; }
+.mor-method dt { font-weight:600; margin-top:.8rem; }.mor-method dd { margin-left:0; }
+.mor-entry { font-size:.82rem; border-bottom:1px solid #cfcec5; padding:0 0 1rem; display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; }
+.mor-entry button { background:transparent; border:0; color:#244b8c; padding:.5rem 0; min-height:44px; font:inherit; cursor:pointer; text-decoration:underline; text-underline-offset:.3rem; }
+body[data-view=moratoria] .center-counts,body[data-view=moratoria] main>.phone-fold,body[data-view=moratoria] .phone-section-jump { display:none; }
+@media(min-width:600px) {
+ .mor-status-chart { grid-template-columns:repeat(5,minmax(0,1fr)); }
+ .mor-hero { grid-template-columns:minmax(0,1fr) 25%; gap:2rem; }
+ .mor-hero figure { display:block; }
+ .mor-filters { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .mor-record { grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr); gap:2rem; }
+ .mor-questions { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media(min-width:1200px) { .mor-filters { grid-template-columns:1fr 1fr 1.2fr auto; }.mor-key { grid-template-columns:1fr 1fr; gap:1.4rem; } }
+@media print { .mor-filters,.mor-state-index,.mor-actions,.mor-hero figure { display:none; }.mor-record { break-inside:avoid; }.mor-page details::details-content { content-visibility:visible; } }

@@ -260,3 +260,10 @@ events, and separation of organizer contacts from conference access.
 `site/observatory-art.css` is the final visual-system stylesheet; the former `soft-surfaces.css` is no longer loaded. Keep new views consistent with the refined balancing-act identity: warm paper, fine suspension lines, asymmetrical organic forms, restrained red/yellow/blue accents, and generous open space. Use light typography and quiet rules around evidence and forms. Avoid repeating bright filled cards, heavy outlines, speech bubbles, or hard offset shadows. `site/balancing-act.svg` and `site/calder-neighborhood.svg` are original decorative sculpture studies, not quantitative graphics.
 
 Use dots on illustrations or margins, leaving text and inputs on solid surfaces. Use color sparingly in dense research views. Preserve evidence-status colors and scientific chart scales; decorative shapes must not imply measured severity. Keep touch controls at least 44px, retain visible keyboard focus, honor reduced motion, and check narrow layouts. The six-toed footprint remains the brand and favicon.
+
+
+## Moratoria & local response
+
+The `#moratoria` tab contains a dated, selected register of 18 jurisdictions in 12 states, checked October 18, 2026. State/territory, action-type and text filters distinguish adopted pauses, prohibitions, proposals, community petitions, and measures not in force. Each record retains its jurisdiction, legal scope, term, exceptions, local response and official sources. It is not a nationwide census or a live legal-status service; missing entries are coverage gaps.
+
+`site/moratoria.json` is the source of truth for this supplement. Update the individual `checked` dates only after checking the official records. `moratoria-model.js` marks elapsed terms, past proposed-decision dates and active records older than 45 days for a new check; it never assumes extension, repeal or passage. Derived dates are explicitly labeled review triggers. Tests: `node --test scripts/test-moratoria.cjs`.

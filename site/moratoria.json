@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-18",
+  "coverage": "Selected U.S. jurisdictions with traceable official records. This is not a nationwide census. Missing entries do not mean no local action exists.",
+  "records": [
+    {
+      "id": "ny-state",
+      "state": "NY",
+      "jurisdiction": "New York State",
+      "level": "State",
+      "status": "pause",
+      "actionDate": "2026-07-14",
+      "term": "Until the final environmental-impact report and findings; announcement anticipates up to one year.",
+      "summary": "Executive Order 62 pauses certain DEC approvals while the state studies large data centers.",
+      "scope": "Covered facilities can consume at least 50 MW; applies to DEC discretionary approvals for construction or expansion whose applications were not complete before July 14.",
+      "exception": "Local-government permits are not covered by this provision. Manufacturing, specified research, education and medical-care facilities are excluded.",
+      "response": "The order directs public comment and a hearing on energy, water, air, noise and disproportionate impacts on disadvantaged communities.",
+      "nextStep": "Follow DPS Case 26-E-0045 and the environmental-review process; ask who funds grid upgrades and how cumulative impacts will be assessed.",
+      "sources": [
+        {
+          "label": "Executive Order 62",
+          "url": "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops",
+          "kind": "Official record",
+          "locator": "Sections 1 and 6: permit scope, end condition, 50 MW definition and exclusions"
+        },
+        {
+          "label": "Governor\u2019s announcement",
+          "url": "https://www.governor.ny.gov/news/first-statewide-moratorium-new-hyperscale-data-centers-launched-governor-kathy-hochul",
+          "kind": "Official record",
+          "locator": "July 14, 2026: anticipated up-to-one-year review"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "seattle-wa",
+      "state": "WA",
+      "jurisdiction": "Seattle",
+      "level": "City",
+      "status": "pause",
+      "actionDate": "2026-06-09",
+      "term": "Temporary; exact termination provision not extracted. Check the signed ordinance.",
+      "summary": "Council adopted a freeze on establishing or expanding covered data centers; the mayor signed June 11.",
+      "scope": "Ordinance 127447 covers applications for establishment, expansion or conversion to the defined data-center use. The council describes a power-capacity threshold above 20 MVA.",
+      "exception": "MVA is apparent-power capacity, not the same unit as MW. Do not apply this threshold to every server room or assume a statewide ban.",
+      "response": "Council reports substantial public concern about infrastructure, utility affordability and environmental effects; its accompanying framework orders impact studies.",
+      "nextStep": "Review the signed ordinance and the work plan; follow Land Use and Sustainability Committee agendas for implementing rules.",
+      "sources": [
+        {
+          "label": "Council adoption and public response",
+          "url": "https://council.seattle.gov/2026/06/09/city-council-passes-emergency-data-center-moratorium-and-policy-framework/",
+          "kind": "Official record",
+          "locator": "June 9, 2026: adoption, threshold and policy framework"
+        },
+        {
+          "label": "Ordinance 127447 legislative record",
+          "url": "https://seattle.legistar.com/LegislationDetail.aspx?GUID=86F14A6D-9247-4BB5-839E-0A26937BFD3C&ID=8032163&Options=&Search=",
+          "kind": "Official record",
+          "locator": "CB 121214; passed June 9; signed June 11; signed ordinance attachment"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "hillsboro-or",
+      "state": "OR",
+      "jurisdiction": "Hillsboro",
+      "level": "City",
+      "status": "pause",
+      "actionDate": "2026-07-27",
+      "term": "120 days; city lists November 24, 2026 as the expiration date. An extension is possible.",
+      "summary": "Land-use applications pause while the city revises where and how these facilities may develop.",
+      "scope": "New or expanded data centers and battery energy storage systems proposed as a primary use; the resolution defines the size and service-capacity thresholds.",
+      "exception": "Applications submitted before the pause may proceed. This differs from Oregon\u2019s separate pause on enterprise-zone tax agreements.",
+      "response": "The city describes weeks of public discussion, followed by research, technical consultation and public input on code amendments.",
+      "nextStep": "Check the current Community Development Code amendment schedule and any extension before relying on the November date.",
+      "sources": [
+        {
+          "label": "Adoption and exceptions",
+          "url": "https://www.hillsboro-oregon.gov/Home/Components/News/News/17551/",
+          "kind": "Official record",
+          "locator": "July 27, 2026: 120-day land-use pause and prior-application exception"
+        },
+        {
+          "label": "Next steps and expiration",
+          "url": "https://www.hillsboro-oregon.gov/Home/Components/News/News/17569/4300",
+          "kind": "Official record",
+          "locator": "August 3, 2026: November 24 expiry and public-input plan"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2026-11-24",
+      "endBasis": "Date stated by city",
+      "nextDate": null
+    },
+    {
+      "id": "gilroy-ca",
+      "state": "CA",
+      "jurisdiction": "Gilroy",
+      "level": "City",
+      "status": "pause",
+      "actionDate": "2026-09-14",
+      "term": "Initial 45-day term from September 14; extension requires another council action.",
+      "summary": "New applications pause while the city develops data-center-specific standards.",
+      "scope": "Future data center applications within the city.",
+      "exception": "Existing approvals for the AWS facility under construction are unchanged. A pre-application for a second facility is not a formal approval.",
+      "response": "The city links the pause to resident concerns and describes expanded notification, applicant meetings and Planning Commission review for projects requiring an EIR.",
+      "nextStep": "Review the council\u2019s extension decision and comment on proposed water, generator-emission, noise and siting standards.",
+      "sources": [
+        {
+          "label": "City moratorium Q&A",
+          "url": "https://cityofgilroy.org/1202/Data-Center-Moratorium-QA",
+          "kind": "Official record",
+          "locator": "September 14 action; 45-day term; existing AWS approval; public participation"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2026-10-29",
+      "endBasis": "Calculated review trigger: September 14 + 45 days; confirm the legal cutoff",
+      "nextDate": null
+    },
+    {
+      "id": "monterey-park-ca",
+      "state": "CA",
+      "jurisdiction": "Monterey Park",
+      "level": "City",
+      "status": "ban",
+      "actionDate": "2026-05-06",
+      "term": "Citywide prohibition; the temporary moratorium is part of the earlier history.",
+      "summary": "The city moved from a temporary pause to an ordinance prohibiting data centers citywide.",
+      "scope": "Citywide zoning prohibition under Ordinance 2278, following the January 21 moratorium and March 4 extension.",
+      "exception": "Accessory server rooms supporting the same site\u2019s primary use are separately defined and excluded from the data-center definition; see Ordinance 2278, section 5.",
+      "response": "The city publishes resident and applicant correspondence, meeting records, and a withdrawn proposal at 1977 Saturn Street.",
+      "nextStep": "Use the city\u2019s ordinance and public-record archive to examine the decision; check the voting tab for the separate ballot history.",
+      "sources": [
+        {
+          "label": "City regulations and correspondence archive",
+          "url": "https://www.montereypark.ca.gov/1710/Data-Center-Information",
+          "kind": "Official record",
+          "locator": "Chronology: Ordinances 2272, 2274, 2276, 2278; withdrawn project"
+        },
+        {
+          "label": "Ordinance 2278",
+          "url": "https://www.montereypark.ca.gov/DocumentCenter/View/19133/Ord-2278-Data-Center-Prohibition---Regular",
+          "kind": "Official record",
+          "locator": "May 6, 2026 citywide prohibition; definitions and exclusions"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "imperial-ca",
+      "state": "CA",
+      "jurisdiction": "Imperial County",
+      "level": "County",
+      "status": "not-in-force",
+      "actionDate": "2026-08-28",
+      "term": "Court directed the moratorium be set aside, according to the county\u2019s August 28 update.",
+      "summary": "An adopted and extended pause was subsequently set aside by a court.",
+      "scope": "The earlier measure paused final county approvals for data centers in unincorporated areas.",
+      "exception": "Do not treat the earlier extension as an active restriction. The county update says the supporting findings did not meet all state-law requirements.",
+      "response": "The Data Center Advisory Committee continues to provide a forum for community input and policy recommendations.",
+      "nextStep": "Check later court and county actions, and follow advisory-committee materials for the next policy proposal.",
+      "sources": [
+        {
+          "label": "County update on court ruling",
+          "url": "https://imperialcounty.org/2026/08/icdcmoratorium2026/",
+          "kind": "Official record",
+          "locator": "August 28, 2026: June adoption, July extension, court ruling, continuing committee"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "raleigh-nc",
+      "state": "NC",
+      "jurisdiction": "Raleigh",
+      "level": "City",
+      "status": "pause",
+      "actionDate": "2026-10-06",
+      "term": "Six months; city schedule ends April 6, 2027.",
+      "summary": "New development-approval applications pause during a city review of major data center impacts.",
+      "scope": "Acceptance and review of data center development approvals, including the Special Use Permit for major facilities.",
+      "exception": "The city says its current legal framework allows regulation rather than an outright ban. A zoning-code hearing and a project-specific evidentiary hearing have different procedures.",
+      "response": "Draft rules will go through the text-amendment process, with public comment and Planning Commission and council review.",
+      "nextStep": "The city lists November 16 for draft text on its comment portal and March 2, 2027 for the council public hearing; confirm agendas before participating.",
+      "sources": [
+        {
+          "label": "City FAQ and participation schedule",
+          "url": "https://raleighnc.gov/services/unified-development-ordinance-udo/data-centers-faq",
+          "kind": "Official record",
+          "locator": "Updated October 7, 2026: six-month pause, process, November 16 and April 6 dates"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2027-04-06",
+      "endBasis": "Date stated by city",
+      "nextDate": "2026-11-16"
+    },
+    {
+      "id": "calvert-md",
+      "state": "MD",
+      "jurisdiction": "Calvert County",
+      "level": "County",
+      "status": "pause",
+      "actionDate": "2026-08-18",
+      "term": "Six months, effective August 28, 2026.",
+      "summary": "The county stops accepting data center site plans and approving pending or new ones during its review.",
+      "scope": "County site-plan approvals and applications under Ordinance 42-26.",
+      "exception": "AWS separately withdrew its Calvert Technology Center application, announced August 4. Withdrawal and a moratorium are distinct events.",
+      "response": "The county identifies noise, generators, water demand, heat, stormwater and infrastructure as topics for regulatory review.",
+      "nextStep": "Read Ordinance 42-26 and follow the county\u2019s zoning amendments; ask for enforceable monitoring and infrastructure-cost terms.",
+      "sources": [
+        {
+          "label": "County data center page",
+          "url": "https://www.calvertcountymd.gov/3880/Data-Centers",
+          "kind": "Official record",
+          "locator": "Adoption August 18; effective August 28; six-month term; withdrawal and review scope"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2027-02-28",
+      "endBasis": "Calculated review trigger: six months from effective date; confirm ordinance cutoff",
+      "nextDate": null
+    },
+    {
+      "id": "madison-wi",
+      "state": "WI",
+      "jurisdiction": "Madison",
+      "level": "City",
+      "status": "pause",
+      "actionDate": "2026-01-13",
+      "term": "Up to one year; city targets replacement rules by or before January 24, 2027.",
+      "summary": "Zoning approvals pause for new, principal-use data centers larger than 10,000 square feet.",
+      "scope": "Data centers over the floor-area threshold that are a property\u2019s primary use; the city also addresses telecommunications centers.",
+      "exception": "This city action is separate from Dane County\u2019s rule. It does not establish a Wisconsin-wide restriction.",
+      "response": "The city is sharing a draft zoning framework through committee discussions and a public information meeting with Q&A.",
+      "nextStep": "The city lists an October 27, 2026 public information meeting. Open the official page for registration, time and the latest schedule.",
+      "sources": [
+        {
+          "label": "City moratorium and public meetings",
+          "url": "https://www.cityofmadison.com/dpced/about/temporary-data-center-moratorium",
+          "kind": "Official record",
+          "locator": "January 13 adoption; 10,000-square-foot scope; October 27 meeting; January 24 endpoint"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2027-01-24",
+      "endBasis": "City\u2019s stated outside date; replacement ordinance may end it earlier",
+      "nextDate": "2026-10-27"
+    },
+    {
+      "id": "dane-wi",
+      "state": "WI",
+      "jurisdiction": "Dane County",
+      "level": "County",
+      "status": "pause",
+      "actionDate": "2026-06-04",
+      "term": "18-month pause; verify the resolution\u2019s exact effective and termination dates.",
+      "summary": "County action targets hyperscale facilities in towns subject to county zoning.",
+      "scope": "Applications and zoning permits for facilities with at least 5,000 servers and at least 10,000 square feet.",
+      "exception": "Cities, villages and towns with independent zoning are outside the county pause. Fitchburg explicitly says the county moratorium does not apply to it.",
+      "response": "An Advisory Committee on Data Centers studies environmental, economic, health and safety implications and recommends policy.",
+      "nextStep": "Confirm which government zones the parcel, then follow that government\u2019s committee and permit records.",
+      "sources": [
+        {
+          "label": "County Board adoption",
+          "url": "https://www.danecounty.gov/PressDetail/11898",
+          "kind": "Official record",
+          "locator": "June 4, 2026: amended scope and 18-month action; release precedes executive consideration"
+        },
+        {
+          "label": "Fitchburg explains jurisdiction boundary",
+          "url": "https://fitchburgwi.gov/3058/Data-Center-Resources",
+          "kind": "Official record",
+          "locator": "Current FAQ confirms county moratorium and that it does not cover Fitchburg"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "manatee-fl",
+      "state": "FL",
+      "jurisdiction": "Manatee County",
+      "level": "County",
+      "status": "pause",
+      "actionDate": "2026-10-08",
+      "term": "12-month pause under Ordinance 26-42.",
+      "summary": "The county pauses new data center and large-load development applications.",
+      "scope": "Unincorporated county areas; building permits, site plans, development orders and agreements, special uses, rezonings and plan amendments.",
+      "exception": "A temporary pause is not a permanent prohibition. Incorporated municipalities have their own jurisdiction.",
+      "response": "After two public hearings, the county is studying electricity, water, noise, buffering and compatibility with neighboring properties.",
+      "nextStep": "Follow proposed Comprehensive Plan and Land Development Code changes; request the studies used to justify siting standards.",
+      "sources": [
+        {
+          "label": "County adoption announcement",
+          "url": "https://www.mymanatee.org/connect/news-and-information/news-and-information/article-detail/board-of-county-commissioners/2026/10/09/manatee-county-commissioners-approve-12-month-data-center-moratorium",
+          "kind": "Official record",
+          "locator": "October 8, 2026 action: Ordinance 26-42 and application scope"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2027-10-08",
+      "endBasis": "Calculated review trigger: 12 months after adoption; confirm ordinance effective date",
+      "nextDate": null
+    },
+    {
+      "id": "broward-fl",
+      "state": "FL",
+      "jurisdiction": "Broward County",
+      "level": "County",
+      "status": "proposed",
+      "actionDate": null,
+      "term": "Proposed one-year term; no adoption established in this record.",
+      "summary": "An October 20 agenda item would direct staff to draft a moratorium ordinance.",
+      "scope": "Proposed large-scale data center development in unincorporated Broward County.",
+      "exception": "A motion to draft legislation is not an enacted moratorium. October 20 is after this evidence check.",
+      "response": "Commissioner Fisher\u2019s item opens a policy discussion; the listed motion alone does not establish a public hearing on a completed ordinance.",
+      "nextStep": "Check October 20 agenda item 40 (26-1386), then follow any drafted ordinance and later hearing notices.",
+      "sources": [
+        {
+          "label": "County Commission agenda",
+          "url": "https://broward.legistar.com/MeetingDetail.aspx?GUID=AEF9C41C-6BD7-4BFD-B73A-400D12678A31&ID=1417428&Options=info%7C&Search=",
+          "kind": "Official record",
+          "locator": "October 20, 2026 agenda, item 40 / 26-1386: motion to direct drafting"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": "2026-10-20"
+    },
+    {
+      "id": "maine-state",
+      "state": "ME",
+      "jurisdiction": "Maine",
+      "level": "State",
+      "status": "not-in-force",
+      "actionDate": "2026-04-29",
+      "term": "LD 307 did not become law: veto sustained April 29, 2026.",
+      "summary": "The legislature passed a proposed pause, but the governor vetoed it and the veto was sustained.",
+      "scope": "LD 307 proposed a state coordination council and a temporary limitation on certain data centers.",
+      "exception": "Legislative passage alone does not establish an active law. This outcome says nothing about separate municipal restrictions.",
+      "response": "Public officials debated a statewide pause and the effects on a proposed redevelopment project in Jay; the final record preserves both the bill text and amendments.",
+      "nextStep": "Use the final bill disposition when discussing statewide law, and separately check municipal ordinances.",
+      "sources": [
+        {
+          "label": "Legislature: final disposition",
+          "url": "https://legislature.maine.gov/bills/display_ps.asp?PID=0&paper=HP0207&snum=132",
+          "kind": "Official record",
+          "locator": "LD 307: veto April 24; veto sustained April 29, 2026"
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "merrillville-in",
+      "state": "IN",
+      "jurisdiction": "Merrillville",
+      "level": "Town",
+      "status": "pause",
+      "actionDate": "2026-06-01",
+      "actionLabel": "effective date; adoption date not stated on town page",
+      "term": "One year: June 1, 2026 through May 31, 2027.",
+      "summary": "New project approvals pause while the town studies neighborhood and infrastructure effects.",
+      "scope": "New data-center project approvals within the municipality.",
+      "exception": "This municipal action does not stop a campus in neighboring Hobart or establish a statewide ban.",
+      "response": "Town is using a one-year pause to study infrastructure, utilities, traffic, noise, tax revenue and neighborhood compatibility, informed by a campus under construction in neighboring Hobart. Citizen Advisory Committee meetings and public education were part of the response.",
+      "nextStep": "Follow the Citizen Advisory Committee and town meeting records; ask what findings must be complete before approvals resume.",
+      "sources": [
+        {
+          "label": "Town of Merrillville \u2014 Data Centers",
+          "url": "https://www.merrillville.in.gov/business-building-economic-development/data-centers",
+          "kind": "Official record",
+          "locator": "Official town page explicitly gives June 1, 2026 through May 31, 2027 and identifies new project approvals as the paused action. It describes the citizen advisory process and topics to study."
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": "2027-05-31",
+      "endBasis": "Date stated by town",
+      "nextDate": null
+    },
+    {
+      "id": "wabash-in",
+      "state": "IN",
+      "jurisdiction": "Wabash County",
+      "level": "County",
+      "status": "pause",
+      "actionDate": "2026-08-31",
+      "actionLabel": "adopted and effective in unincorporated county",
+      "term": "18 months from adoption, or earlier enactment of data center zoning rules.",
+      "summary": "A zoning gap prompted a pause on new applications and permits in unincorporated Wabash County.",
+      "scope": "Acceptance, processing and approval of applications and permits, including improvement-location permits, for data-center structures and appurtenant facilities in all zoning districts of unincorporated Wabash County. Application in LaFontaine, Lagro and Roann requires each town's legislative adoption; do not shade those towns automatically.",
+      "exception": "LaFontaine, Lagro and Roann require their own adoption; the county action does not automatically cover them.",
+      "response": "Plan Commission held a noticed public hearing and recommended a pause because existing zoning did not regulate data-center projects. The pause allows the county to develop those regulations.",
+      "nextStep": "Read Ordinance 2026-85-08 and check for replacement zoning amendments before treating the pause as current.",
+      "sources": [
+        {
+          "label": "Wabash County Ordinance 2026-85-08",
+          "url": "https://www.in.gov/counties/wabash/files/ordinances/2026-85-08-Ordinance-Imposing-a-Temporary-Moratorium-on-Data-Centers.pdf",
+          "kind": "Official record",
+          "locator": "PDF pp.1\u20132: scope, geographical jurisdiction, adoption and term. Sec.3 conditions town applicability on their adoption; sec.4 ends the pause at zoning amendment or 18 months, whichever earlier."
+        },
+        {
+          "label": "Wabash County ordinance register",
+          "url": "https://www.in.gov/counties/wabash/ordinances/",
+          "kind": "Official record",
+          "locator": "Lists ordinance 2026-85-08 as adopted August 31, 2026."
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "shelbyville-in",
+      "state": "IN",
+      "jurisdiction": "Shelbyville",
+      "level": "City",
+      "status": "response",
+      "actionDate": "2026-03-23",
+      "actionLabel": "public comment recorded in council minutes",
+      "term": "Historical public comment on March 23, 2026; no restriction established by these minutes.",
+      "summary": "Council minutes record a resident petition requesting a data center moratorium.",
+      "scope": "Residents requested a data-center moratorium in response to proposed Prologis development. This is the city of Shelbyville, distinct from Shelby County's separate actions.",
+      "exception": "A request is not enactment. The council distinguished an annexation decision from approval of the proposed data center.",
+      "response": "Council minutes record questions about whether community protections would precede annexation and a resident petition asking for a moratorium. Officials explained the next annexation vote was not itself approval of the data center.",
+      "nextStep": "Read later council minutes and ordinances to find the disposition; use the Act wizard to frame questions about project protections.",
+      "sources": [
+        {
+          "label": "Shelbyville Common Council minutes \u2014 March 23, 2026",
+          "url": "https://www.shelbyville.in.gov/AgendaCenter/ViewFile/Minutes/_03232026-784",
+          "kind": "Official record",
+          "locator": "Minutes record petition and resident questions, plus council distinction between annexation and project approval."
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    },
+    {
+      "id": "loudoun-va",
+      "state": "VA",
+      "jurisdiction": "Loudoun County",
+      "level": "County",
+      "status": "proposed",
+      "actionDate": "2026-09-15",
+      "actionLabel": "board initiated consideration of proposed pause",
+      "term": "Proposed pause of up to one year; resolution scheduled October 20, 2026.",
+      "summary": "The board is considering delaying final legislative votes during its standards review.",
+      "scope": "Proposed deferral of final board votes on data-center and electrical-substation applications requiring legislative approval. Applications may still be submitted and progress through Planning Commission. Administrative applications are outside scope; exceptions contemplated for grid reliability/statutory deadlines.",
+      "exception": "Applications could still be submitted and reviewed; administrative applications are outside the proposal. The county describes this as narrower than an approval moratorium.",
+      "response": "County is reviewing data-center standards and siting. Its attorney advised that a data-center approval moratorium is not legal; the board is considering a narrower pause in final legislative decisions during that review.",
+      "nextStep": "Check the October 20 resolution and any exceptions or statutory deadlines. No outcome is assumed in this October 18 record.",
+      "sources": [
+        {
+          "label": "Loudoun County \u2014 Board Approves Process that Could Pause Legislative Data Center & Substation Applications",
+          "url": "https://www.loudoun.gov/m/NewsFlash/home/detail/10874",
+          "kind": "Official record",
+          "locator": "County release dated Sept 17, updated Sept 24, 2026 explicitly says resolution is to be considered Oct 20 and is conditional on approval. Details proposed scope, one-year limit, continued processing and exceptions."
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": "2026-10-20"
+    },
+    {
+      "id": "santa-fe-nm",
+      "state": "NM",
+      "jurisdiction": "Santa Fe County",
+      "level": "County",
+      "status": "pause",
+      "actionDate": "2026-06-30",
+      "actionLabel": "adopted",
+      "term": "18 months; exact effective and expiration dates not extracted from the scanned ordinance.",
+      "summary": "County commissioners adopted a pause with a 1 MW threshold after public testimony.",
+      "scope": "County development approvals and development permits for covered data centers. County release reports a 1 MW threshold. This is a county action, not a statewide New Mexico ban.",
+      "exception": "This covers county development approvals, not all New Mexico or the separate City of Santa Fe. Confirm boundaries and exemptions in Ordinance 2026-06.",
+      "response": "Public testimony led the county to extend the proposed pause from 12 to 18 months and reduce the threshold from 100 MW to 1 MW. The adopted approach includes environmental-justice and cumulative-impact protections, monitoring and staff progress reports while standards are developed.",
+      "nextStep": "Follow staff progress reports and draft standards; ask how environmental justice, cumulative effects and monitoring will be evaluated.",
+      "sources": [
+        {
+          "label": "Santa Fe County \u2014 approves 18-month moratorium",
+          "url": "https://www.santafecountynm.gov/news/detail/santa-fe-county-approves-18-month-moratorium-on-data-centers",
+          "kind": "Official record",
+          "locator": "July 2, 2026 county release reports unanimous passage, duration, 1 MW threshold, public-input changes and study topics."
+        },
+        {
+          "label": "Santa Fe County \u2014 sponsored legislation",
+          "url": "https://www.santafecountynm.gov/county-commissioners/lisa-cacari-stone/sponsored-legislation",
+          "kind": "Official record",
+          "locator": "Lists Ordinance 2026-06 as adopted June 30, 2026."
+        },
+        {
+          "label": "Santa Fe County Ordinance 2026-06",
+          "url": "https://www.santafecountynm.gov/documents/ordinances/Ordinance_2026-06.pdf",
+          "kind": "Official record",
+          "locator": "Official seven-page ordinance. Exact effective and expiration dates have not been verified for this summary."
+        }
+      ],
+      "checked": "2026-10-18",
+      "endDate": null,
+      "endBasis": null,
+      "nextDate": null
+    }
+  ]
+}
