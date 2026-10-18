@@ -38,11 +38,12 @@
       <form id="ct-auto-form"><div class="ct-auto-inputs"><label>ZIP code<input id="ct-auto-zip" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" placeholder="87102" required aria-describedby="ct-auto-start"></label><label>Minutes to look at each stop<input id="ct-auto-dwell" type="number" inputmode="decimal" min="0.5" max="15" step="0.5" value="2" required></label></div>
       <div class="ct-auto-options"><label>Search within<select id="ct-auto-radius"><option value="2">2 miles of ZIP</option><option value="5">5 miles of ZIP</option><option value="10" selected>10 miles of ZIP</option><option value="25">25 miles of ZIP</option></select></label><label class="ct-round-trip"><input id="ct-auto-return" type="checkbox"> Return to the first stop</label></div>
       <p id="ct-auto-start" class="ct-auto-start"><b>Start at the first listed stop.</b> The ZIP finds your area—not your front door. Getting to the start is extra.</p><button class="btn ct-primary" id="ct-auto-submit" type="submit">Suggest nearby tours ↗</button><p class="cp-small">Search shares the ZIP with Zippopotam.us and public stop coordinates with FOSSGIS for route estimates. No device location is requested.</p></form>
-      <p id="ct-auto-status" role="status">We’ll compare a 5-minute walk, 10-minute walk and 20-minute drive, including time at every stop.</p><div id="ct-auto-results" class="ct-auto-results"></div>
+      <p id="ct-auto-status" role="status">We’ll compare a 5-minute walk, 10-minute walk and 20-minute drive, including time at every stop.</p><h3 id="ct-auto-result-heading" class="ct-auto-result-heading" tabindex="-1" aria-live="polite" hidden></h3><div id="ct-auto-results" class="ct-auto-results"></div><details id="ct-auto-unavailable" class="ct-auto-other" hidden><summary></summary><div id="ct-auto-other-results" class="ct-auto-results"></div></details>
       <details class="ct-auto-method"><summary>Which stops are considered?</summary><p>We check up to eight of the nearest address-listed stops within your selected radius, combining co-located records. Each suggestion has two to six stops. The search favors more stops within budget, then a start nearer the ZIP reference point, then less travel. The full route is checked again before a suggestion is offered.</p><p>This is an incomplete public-address catalog, not a live list of all data centers or a guarantee of public access. Office/contact-only records are excluded when identified. Mapped points may not mark entrances. Phases and address sources travel with each selected stop. Road conditions, crossings and parking may add time.</p><p>Sources: <a href="https://api.zippopotam.us/" target="_blank" rel="noopener noreferrer">ZIP lookup</a> · <a href="https://doi.org/10.57931/3017294" target="_blank" rel="noopener noreferrer">PNNL / IM3 locations</a> · <a href="nearby-addresses.json">Address supplement</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> · <a href="https://routing.openstreetmap.de/about.html" target="_blank" rel="noopener noreferrer">FOSSGIS routing</a> · <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener noreferrer">Fix the map</a>.</p></details>`;
     const $=id=>mount.querySelector('#'+id);let generation=0,controller;
     const status=message=>$('ct-auto-status').textContent=message;
-    function invalidate(){generation++;controller?.abort();$('ct-auto-submit').disabled=false;$('ct-auto-results').replaceChildren();status('Choose your settings, then suggest nearby tours.');}
+    function busy(value){$('ct-auto-submit').disabled=value;$('ct-auto-submit').textContent=value?'Finding tours…':'Suggest nearby tours ↗';}
+    function invalidate(){generation++;controller?.abort();busy(false);$('ct-auto-results').replaceChildren();$('ct-auto-other-results').replaceChildren();$('ct-auto-unavailable').hidden=true;$('ct-auto-unavailable').open=false;$('ct-auto-result-heading').hidden=true;status('Choose your settings, then suggest nearby tours.');}
     $('ct-auto-zip').oninput=()=>{const original=$('ct-auto-zip').value;$('ct-auto-zip').value=original.replace(/\D/g,'').slice(0,5);invalidate();if(original!==$('ct-auto-zip').value)status('Only numbers are kept. Enter all five ZIP digits.');};
     for(const id of ['ct-auto-dwell','ct-auto-radius','ct-auto-return'])$(id).addEventListener(id==='ct-auto-dwell'?'input':'change',invalidate);
     function emptyCard(preset,text,help='Try less time at stops, a wider search area or a custom route.'){const card=el('article',undefined,'ct-auto-card ct-auto-unavailable');card.append(el('p',preset.budget+' min '+preset.label,'cp-tag'),el('h3',text),el('p',help));return card;}
@@ -54,27 +55,42 @@
       const list=el('ol');for(const s of stops){const item=el('li');item.append(el('b',s.name));list.append(item);}card.append(list);
       const start=el('p',undefined,'ct-auto-origin');start.append(el('b','Start: '+stops[0].address),el('span','≈ '+stops[0].distance.toFixed(1)+' mi from ZIP reference · getting here is extra'));
       card.append(start,el('p',roundTrip?'Returns to the first stop.':'One-way · ends at the last stop.','cp-small'));
-      const use=el('button','Use '+budget+' min '+preset.label+' →','btn ct-primary');use.type='button';use.onclick=async()=>{use.disabled=true;try{await onUse(suggestion);}finally{use.disabled=false;}};
+      const use=el('button','Show '+budget+' min '+preset.label+' on map →','btn ct-primary');use.type='button';use.onclick=async()=>{use.disabled=true;try{await onUse(suggestion);}finally{use.disabled=false;}};
       card.append(use,el('p','Loads these stops into your tour below. Times are estimates, without live traffic.','cp-small'));return card;
     }
     window.addEventListener('footprint:tourzip',event=>{const zip=String(event.detail?.zip||'');if(!/^\d{5}$/.test(zip))return;$('ct-auto-zip').value=zip;$('ct-auto-zip').dispatchEvent(new Event('input'));$('ct-auto-form').requestSubmit();});
     $('ct-auto-form').onsubmit=async event=>{
       event.preventDefault();const zip=$('ct-auto-zip').value;if(!/^\d{5}$/.test(zip)){status('Enter a five-digit ZIP code.');return;}
       if(!$('ct-auto-dwell').validity.valid)return;
-      invalidate();const job=generation,options={dwell:Number($('ct-auto-dwell').value),roundTrip:$('ct-auto-return').checked},radius=Number($('ct-auto-radius').value);controller=new AbortController();const signal=controller.signal;$('ct-auto-submit').disabled=true;status('Finding public addresses near '+zip+'…');
+      invalidate();const job=generation,options={dwell:Number($('ct-auto-dwell').value),roundTrip:$('ct-auto-return').checked},radius=Number($('ct-auto-radius').value);controller=new AbortController();const signal=controller.signal;busy(true);status('Finding public addresses near '+zip+'…');
       const presets=[{budget:5,mode:'walking',label:'walk'},{budget:10,mode:'walking',label:'walk'},{budget:20,mode:'driving',label:'drive'}];
+      let available=0,unavailable=0;
+      function showResult(card){
+        signal.throwIfAborted();if(job!==generation)return;
+        const heading=$('ct-auto-result-heading');heading.hidden=false;
+        if(card.classList.contains('ct-auto-unavailable')){
+          unavailable++;$('ct-auto-unavailable').hidden=false;$('ct-auto-other-results').append(card);
+          $('ct-auto-unavailable').querySelector('summary').textContent=unavailable+' other time option'+(unavailable===1?'':'s')+' · why unavailable';
+        }else{
+          available++;$('ct-auto-results').append(card);
+          if(available===1&&document.activeElement===$('ct-auto-submit')){heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});}
+        }
+        heading.textContent=available?available+' tour'+(available===1?'':'s')+' ready near '+zip:'Checking tour options near '+zip+'…';
+      }
       try{
         const [place,data]=await Promise.all([lookupZip(zip,signal),catalog()]);signal.throwIfAborted();
         const candidates=model.nearbyCandidates(data.stops,place.coordinates,radius,8);
         if(candidates.length<2){status(zip+' · '+place.name+': '+candidates.length+' eligible stop'+(candidates.length===1?'':'s')+' found within '+radius+' miles. At least two are needed for a multi-stop tour. Try a wider radius or add your own addresses; this catalog is incomplete.');return;}
-        status('Checking walking paths and driving routes for '+candidates.length+' nearby stops…');
         const points=candidates.map(s=>({...s.location,matchedAddress:s.address})),matrices={},errors={};
-        for(const mode of ['walking','driving']){try{matrices[mode]=await routing.matrix(points,mode,signal);}catch(error){if(signal.aborted)throw error;errors[mode]=error.message;}}
         for(const preset of presets){
+          if(!matrices[preset.mode]&&!errors[preset.mode]){
+            status('Checking '+preset.label+' routes for '+candidates.length+' nearby stops…'+(available?' '+available+' tour already ready below.':''));
+            try{matrices[preset.mode]=await routing.matrix(points,preset.mode,signal);}catch(error){if(signal.aborted)throw error;errors[preset.mode]=error.message||'Route timing unavailable.';}
+          }
           signal.throwIfAborted();status('Checking the '+preset.budget+'-minute '+preset.label+', including '+options.dwell+' minutes at each stop…');
-          if(!matrices[preset.mode]){$('ct-auto-results').append(emptyCard(preset,'Route timing unavailable. Please retry.','Travel time is unknown. Retry when the routing service is available, or build a custom route.'));continue;}
+          if(!matrices[preset.mode]){showResult(emptyCard(preset,'Route timing unavailable. Please retry.','Travel time is unknown. Retry when the routing service is available, or build a custom route.'));continue;}
           const plan=model.findTour(candidates,matrices[preset.mode],{...options,budget:preset.budget});
-          if(!plan){const incomplete=matrices[preset.mode].some((row,i)=>row.some((value,j)=>i!==j&&value===null));$('ct-auto-results').append(emptyCard(preset,'No '+(incomplete?'verified ':'')+'two-stop '+preset.label+' fits this budget in the checked set.',incomplete?'Some stops or paths could not be routed. Try a wider radius or add your own addresses.':undefined));continue;}
+          if(!plan){const incomplete=matrices[preset.mode].some((row,i)=>row.some((value,j)=>i!==j&&value===null));showResult(emptyCard(preset,'No '+(incomplete?'verified ':'')+'two-stop '+preset.label+' fits this budget in the checked set.',incomplete?'Some stops or paths could not be routed. Try a wider radius or add your own addresses.':undefined));continue;}
           let indices=[...plan.indices],route,chosen,chosenPoints;
           try{
             while(indices.length>=2){
@@ -84,12 +100,14 @@
               indices.pop();route=null;
             }
             if(job!==generation)return;
-            $('ct-auto-results').append(route?resultCard(preset,{stops:chosen,points:chosenPoints,route,...options,budget:preset.budget,mode:preset.mode}):emptyCard(preset,'The full route exceeds this budget.'));
-          }catch(error){if(signal.aborted)throw error;errors[preset.mode]=error.message;$('ct-auto-results').append(emptyCard(preset,'Route could not be verified. Please retry.','Travel time is unknown. Retry when the routing service is available, or build a custom route.'));}
+            showResult(route?resultCard(preset,{stops:chosen,points:chosenPoints,route,...options,budget:preset.budget,mode:preset.mode}):emptyCard(preset,'The full route exceeds this budget.'));
+          }catch(error){if(signal.aborted)throw error;errors[preset.mode]=error.message;showResult(emptyCard(preset,'Route could not be verified. Please retry.','Travel time is unknown. Retry when the routing service is available, or build a custom route.'));}
         }
+        $('ct-auto-result-heading').textContent=available?available+' tour'+(available===1?'':'s')+' found near '+zip:(Object.keys(errors).length?'No verified tour available yet':'No tour fits these settings')+' · '+zip;
+        $('ct-auto-unavailable').open=available===0;
         status(zip+' · '+place.name+' · '+candidates.length+' nearest eligible stops checked within '+radius+' miles. Includes '+options.dwell+' min looking at every stop. Address supplement: '+data.updated+'.'+(Object.keys(errors).length?' Some route estimates are unavailable.':''));
       }catch(error){if(job===generation&&!signal.aborted)status(error.message||'Suggestions are unavailable. Please retry.');}
-      finally{if(job===generation)$('ct-auto-submit').disabled=false;}
+      finally{if(job===generation)busy(false);}
     };
   }
   window.TourSuggestions={create};
