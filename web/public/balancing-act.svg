@@ -1,18 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" fill="none">
-  <defs>
-    <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#20221e"/></pattern>
-  </defs>
-  <!-- Original suspended shapes. Decorative: neither areas nor balance encode data. -->
-  <g fill="url(#dots)">
-    <ellipse cx="91" cy="173" rx="54" ry="24" transform="rotate(-18 91 173)"/>
-    <path d="M251 159h75v54h-75z"/>
-    <path d="m167 133 41 69h-83z"/>
+  <!-- Original suspended forms. No shape encodes a quantity. -->
+  <g stroke="#282b25" stroke-width="1.25" stroke-linecap="round">
+    <path d="M184 3v49M41 77l272-49M67 73v64M280 34v107M184 56v44M129 114l103-27M150 109v50"/>
+    <circle cx="184" cy="55" r="4" fill="#f7f5ef"/>
   </g>
-  <g stroke="#20221e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M185 4v39M43 78l269-50M67 74v65M279 35v107M185 51v35M130 100l103-27M152 95v42"/>
-    <circle cx="185" cy="51" r="7" fill="#fffaf0"/>
-    <ellipse cx="67" cy="147" rx="53" ry="24" transform="rotate(-18 67 147)" fill="#cf382b"/>
-    <path d="M241 144h75v54h-75z" fill="#224fb5"/>
-    <path d="m152 126 41 68h-83z" fill="#f1ce39"/>
-  </g>
+  <path d="M21 148c19-27 60-37 85-21 17 11 4 28-21 34-28 7-51 4-64-13Z" fill="#bc3828"/>
+  <path d="M243 154c19-21 51-25 70-7 14 14 18 36 7 44-20 14-58-9-77-37Z" fill="#244b8c"/>
+  <ellipse cx="150" cy="173" rx="31" ry="17" transform="rotate(-16 150 173)" fill="#d8b73f"/>
+  <ellipse cx="198" cy="217" rx="118" ry="3" fill="#292b25" opacity=".06"/>
 </svg>

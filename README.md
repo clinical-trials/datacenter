@@ -257,6 +257,6 @@ events, and separation of organizer contacts from conference access.
 
 ## Shared visual language
 
-`site/observatory-art.css` is the final visual-system stylesheet; the former `soft-surfaces.css` is no longer loaded. Keep new views consistent with the original balancing-act identity: warm paper, ink outlines, rounded comic panels, red/yellow/blue suspended shapes, halftone shading, and crisp offset shadows. `site/balancing-act.svg` is original decorative artwork, not a quantitative graphic.
+`site/observatory-art.css` is the final visual-system stylesheet; the former `soft-surfaces.css` is no longer loaded. Keep new views consistent with the refined balancing-act identity: warm paper, fine suspension lines, asymmetrical organic forms, restrained red/yellow/blue accents, and generous open space. Use light typography and quiet rules around evidence and forms. Avoid repeating bright filled cards, heavy outlines, speech bubbles, or hard offset shadows. `site/balancing-act.svg` and `site/calder-neighborhood.svg` are original decorative sculpture studies, not quantitative graphics.
 
 Use dots on illustrations or margins, leaving text and inputs on solid surfaces. Use color sparingly in dense research views. Preserve evidence-status colors and scientific chart scales; decorative shapes must not imply measured severity. Keep touch controls at least 44px, retain visible keyboard focus, honor reduced motion, and check narrow layouts. The six-toed footprint remains the brand and favicon.
