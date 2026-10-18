@@ -9,7 +9,7 @@ const stops=[
 ];
 const tick=()=>new Promise(resolve=>setImmediate(resolve));
 async function flush(){for(let i=0;i<8;i++)await tick();}
-function setup({drivingWait,walkingError=false}={}){
+function setup({drivingWait,walkingWait,walkingError=false}={}){
   const dom=new JSDOM('<div id="finder"></div>',{url:'https://example.test/#tours',runScripts:'outside-only'}),w=dom.window,d=w.document;
   w.HTMLElement.prototype.scrollIntoView=function(){};
   w.AbortController=AbortController;
@@ -26,7 +26,7 @@ function setup({drivingWait,walkingError=false}={}){
   };
   for(const file of ['tour-routing-model.js','tour-suggestion-model.js','facility-addresses.js'])w.eval(fs.readFileSync('site/'+file,'utf8'));
   w.TourRoutingService={
-    matrix:async(_points,mode)=>{if(mode==='walking'&&walkingError)throw Error('Walking service unavailable');if(mode==='driving'&&drivingWait)await drivingWait;return [[0,mode==='walking'?219:91],[mode==='walking'?219:91,0]];},
+    matrix:async(_points,mode)=>{if(mode==='walking'&&walkingError)throw Error('Walking service unavailable');if(mode==='walking'&&walkingWait)await walkingWait;if(mode==='driving'&&drivingWait)await drivingWait;return [[0,mode==='walking'?219:91],[mode==='walking'?219:91,0]];},
     route:async(points,mode)=>({duration:mode==='walking'?219:91,distance:350,legs:[{duration:mode==='walking'?219:91,distance:350}],geometry:{type:'LineString',coordinates:points.map(p=>p.coordinates)}})
   };
   w.eval(fs.readFileSync('site/tour-suggestions.js','utf8'));
@@ -99,4 +99,13 @@ test('when every budget is too short, the reasons are visible without inventing 
     assert.match(x.d.querySelector('#ct-auto-result-heading').textContent,/No tour fits/);
     assert.equal(x.d.querySelector('#ct-auto-submit').disabled,false);
   }finally{x.dom.window.close();}
+});
+
+test('the first usable result receives focus even when disabling the search button blurs it',async()=>{
+  let finishWalking;const wait=new Promise(resolve=>{finishWalking=resolve;});
+  const x=setup({walkingWait:wait});x.d.querySelector('#ct-auto-submit').focus();const job=x.submit();
+  try{
+    x.d.body.tabIndex=-1;x.d.body.focus();assert.equal(x.d.activeElement,x.d.body);await flush();finishWalking();await job;
+    assert.equal(x.d.activeElement,x.d.querySelector('#ct-auto-result-heading'));
+  }finally{finishWalking();await job;x.dom.window.close();}
 });

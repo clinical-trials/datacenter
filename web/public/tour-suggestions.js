@@ -62,6 +62,7 @@
     $('ct-auto-form').onsubmit=async event=>{
       event.preventDefault();const zip=$('ct-auto-zip').value;if(!/^\d{5}$/.test(zip)){status('Enter a five-digit ZIP code.');return;}
       if(!$('ct-auto-dwell').validity.valid)return;
+      const revealResults=$('ct-auto-form').contains(document.activeElement)||event.submitter===$('ct-auto-submit');
       invalidate();const job=generation,options={dwell:Number($('ct-auto-dwell').value),roundTrip:$('ct-auto-return').checked},radius=Number($('ct-auto-radius').value);controller=new AbortController();const signal=controller.signal;busy(true);status('Finding public addresses near '+zip+'…');
       const presets=[{budget:5,mode:'walking',label:'walk'},{budget:10,mode:'walking',label:'walk'},{budget:20,mode:'driving',label:'drive'}];
       let available=0,unavailable=0;
@@ -73,7 +74,7 @@
           $('ct-auto-unavailable').querySelector('summary').textContent=unavailable+' other time option'+(unavailable===1?'':'s')+' · why unavailable';
         }else{
           available++;$('ct-auto-results').append(card);
-          if(available===1&&document.activeElement===$('ct-auto-submit')){heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});}
+          if(available===1&&revealResults&&!mount.closest('[hidden]')&&(document.activeElement===document.body||$('ct-auto-form').contains(document.activeElement))){heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});}
         }
         heading.textContent=available?available+' tour'+(available===1?'':'s')+' ready near '+zip:'Checking tour options near '+zip+'…';
       }
