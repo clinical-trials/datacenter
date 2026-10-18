@@ -26,12 +26,14 @@ test('four-step flow separates letters and preserves edits through route changes
 });
 test('other-community records flow keeps local recipients, omits Indiana claims and treats input literally',()=>{
  const {d,doc,get,click,input,change}=setup();
+ const decorativeImages=doc.querySelectorAll('img').length;
  change('citizen-scope','other');input('citizen-project-name','Example NM project');input('citizen-place','New Mexico');change('citizen-kind','records');
  click('[data-step="1"]');click('[value="baseline"]');click('[data-step="2"]');
  assert.equal(get('citizen-position-wrap').hidden,true);
  input('citizen-recipient-air','Example agency');input('citizen-note','<img src=x onerror=alert(1)>');click('[data-step="3"]');
  const text=get('citizen-draft').value;assert.match(text,/Example agency/);assert.match(text,/existing records/);assert.doesNotMatch(text,/50413|384|Jasper|PJackso/);
- assert.ok(text.includes('<img src=x onerror=alert(1)>'));assert.equal(doc.querySelectorAll('img').length,0);
+ assert.ok(text.includes('<img src=x onerror=alert(1)>'));assert.equal(doc.querySelectorAll('img').length,decorativeImages);
+ assert.equal(doc.querySelectorAll('img[src="x"],[onerror]').length,0);
  click('#citizen-clear');assert.ok(get('citizen-draft').value);click('#citizen-clear');assert.equal(get('citizen-draft').value,'');assert.equal(get('citizen-note').value,'');
  d.window.close();
 });

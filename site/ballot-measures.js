@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const main=document.querySelector('main');if(!main)return;
-  const page=document.createElement('section');page.id='view-vote';page.className='vote-page';page.hidden=true;main.append(page);
+  const page=document.createElement('section');page.id='view-vote';page.className='vote-page';page.hidden=true;main.insertBefore(page,main.querySelector(':scope > section'));
   const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const link=(url,label)=>`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(label)} ↗</a>`;
   const date=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});

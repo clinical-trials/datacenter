@@ -33,3 +33,14 @@ test('the national snapshot reconciles and every example links to official evide
    if(m.outcome)assert.ok(m.sources.some(s=>s.role==='outcome'));
  }
 });
+
+test('the voting tab opens before sponsorship and footer content',()=>{
+ const {JSDOM}=require('../work/citizen-test/node_modules/jsdom');
+ const dom=new JSDOM('<main><section id="view-impact"></section><aside class="sponsor-space"></aside><footer>Research notes</footer></main>',{runScripts:'outside-only',url:'https://example.test/'});
+ const w=dom.window;w.DATA={states:[]};w.fetch=()=>new Promise(()=>{});
+ w.eval(fs.readFileSync('site/ballot-measures.js','utf8'));
+ for(const selector of ['.sponsor-space','footer']){
+  assert.ok(w.document.querySelector('#view-vote').compareDocumentPosition(w.document.querySelector(selector)) & w.Node.DOCUMENT_POSITION_FOLLOWING);
+ }
+ dom.window.close();
+});
