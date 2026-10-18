@@ -19,8 +19,6 @@
   search.append(heading,form);page.querySelector('#nm-search-slot').append(search);page.querySelector('#nm-result-slot').append(result);
   main.insertBefore(page,main.querySelector(':scope>section'));
   document.getElementById('zip-code').placeholder='Your ZIP';document.getElementById('zip-submit').textContent='Find nearby ↗';
-  const example=document.createElement('button');example.type='button';example.className='nm-example';example.textContent='Just browsing? Try Albuquerque · 87102';
-  example.onclick=()=>{const input=document.getElementById('zip-code');input.value='87102';input.dispatchEvent(new Event('input'));form.requestSubmit();};form.append(example);
   if(directories){const more=document.createElement('details');more.className='nm-directories';const summary=document.createElement('summary');summary.textContent='Other public-address directories';more.append(summary,directories);page.append(more);}
   function openTour(){const zip=document.getElementById('zip-code').value;view('tours');if(/^\d{5}$/.test(zip))window.dispatchEvent(new CustomEvent('footprint:tourzip',{detail:{zip}}));document.getElementById('ct-auto-zip')?.focus({preventScroll:true});}
   const quickTour=document.createElement('button');quickTour.type='button';quickTour.className='btn nm-zip-tour';quickTour.textContent='Build my neighborhood tour →';
