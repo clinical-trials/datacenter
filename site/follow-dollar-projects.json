@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "reviewed": "2026-10-19",
+  "reviewScope": "A bounded review of named county financial reports, budget documents, official meeting minutes, a county FAQ and an attributed operator statement. This is not a fiscal audit, exhaustive records search, or project health-impact assessment.",
+  "sources": {
+    "va-budget": {
+      "title": "Louisa County FY2027 adopted budget",
+      "publisher": "Louisa County, Virginia",
+      "date": "2026-05",
+      "url": "https://www.louisacounty.gov/DocumentCenter/View/12544/FY27-Louisa-County-Adopted-Budget-Book-Draft?bidId=",
+      "locator": "PDF pp. 88 and 93; construction status and full-buildout revenue forecast",
+      "kind": "Government budget projection",
+      "sha256": "939fab2a086f323adbb1e0ecab0a486efc54cca9f73c8dac6ed636e26f2b0b34"
+    },
+    "va-2024": {
+      "title": "Louisa County FY2024 financial report",
+      "publisher": "Louisa County, Virginia",
+      "date": "2024-11-20",
+      "url": "https://www.louisacounty.gov/Archive.aspx?ADID=100",
+      "locator": "PDF p. 10, AWS Water/Sewer Infrastructure; management transmittal letter",
+      "kind": "County management estimate within annual financial report",
+      "sha256": "423705bd0952a644f2073f29b895b55e6271f32a5c96fe23fc7478a23b91d5a8"
+    },
+    "va-2025": {
+      "title": "Louisa County FY2025 financial report",
+      "publisher": "Louisa County, Virginia",
+      "date": "2025-12-12",
+      "url": "https://www.louisacounty.gov/ArchiveCenter/ViewFile/Item/101",
+      "locator": "PDF p. 23, capital grants and contributions; p. 26, permit fees; p. 10, campus development",
+      "kind": "Government financial report; project receipts not separately quantified in cited passages",
+      "sha256": "04d59314df8b29107569f185be54037cd40ced0794b7179016fe39f0fbb0e0a8"
+    },
+    "va-rebate": {
+      "title": "Data Centers in Louisa County — by-right project FAQs",
+      "publisher": "Louisa County, Virginia",
+      "date": "Undated; accessed 2026-10-19",
+      "url": "https://www.louisacounty.gov/DocumentCenter/View/11955/Data-Centers-in-Louisa-County",
+      "locator": "PDF p. 26, Taxes and Annual Infrastructure Grants schedule",
+      "kind": "County explanation of rebate terms; executed agreement not reviewed",
+      "sha256": "17e51bbeaa7b22324c10d879579914c751c04b4f32651dde929a7056fe068e5b"
+    },
+    "in-minutes": {
+      "title": "St. Joseph County Redevelopment Commission minutes — December 9, 2025",
+      "publisher": "St. Joseph County, Indiana",
+      "date": "2025-12-09",
+      "url": "https://stjoepros.org/AgendaCenter/ViewFile/ArchivedMinutes/_12092025-4224",
+      "locator": "PDF pp. 8–9; Resolution 2025-18; audio 00:20:18–00:24:02",
+      "kind": "Official minutes recording a county staff statement and funding approval",
+      "excerpt": "We already have in our possession the $7 million from AWS.",
+      "sha256": "94769cf98099fd65e21b75c28d48396a2c677f96bb0ca7f3a470785a8939ff58"
+    },
+    "in-operator": {
+      "title": "Amazon’s Investment Is Building Lasting Opportunity for St. Joseph County",
+      "publisher": "South Bend Regional Chamber of Commerce; opinion by Sam Markman, AWS economic development manager",
+      "date": "2026-07-09",
+      "url": "https://www.sbrchamber.com/news/2026/07/09/default/amazon-s-investment-is-building-lasting-opportunity-for-st.-joseph-county/",
+      "locator": "Paragraphs on campus progress, 35-year property taxes, and $114M water/sewer investment",
+      "kind": "Attributed operator statement; not independent verification of receipts"
+    },
+    "health-method": {
+      "title": "Han et al. — Health-Informed Computing: Estimating and Addressing the Public Health Impact of Data Centers",
+      "publisher": "arXiv v4; record reports acceptance by Communications of the ACM",
+      "date": "2026-06-08",
+      "url": "https://arxiv.org/abs/2412.06288v4",
+      "locator": "Methods and scope; not a campus-specific estimate for either comparison case",
+      "kind": "Research methodology; modeled impacts"
+    }
+  },
+  "projects": [
+    {
+      "id": "aws-louisa",
+      "state": "VA",
+      "name": "AWS · Louisa County",
+      "sites": "Lake Anna + North Creek technology campuses",
+      "phase": "Construction reported",
+      "phaseAsOf": "May 2026 county budget; present operating status not independently verified",
+      "phaseSources": [
+        "va-budget"
+      ],
+      "boundary": "Two campuses share the reviewed financial account. Figures cannot be allocated to an individual building from these records.",
+      "taxReceived": null,
+      "healthCost": null,
+      "taxGap": "Campus-specific tax collections and rebates actually paid are not isolated in the reviewed records. Unknown is not $0.",
+      "records": [
+        {
+          "id": "va-tax-forecast",
+          "category": "tax",
+          "title": "Future county revenue",
+          "value": 25000000,
+          "display": "> $25M / year",
+          "status": "government_projection",
+          "statusLabel": "County projection",
+          "period": "Annual at $11B full buildout; FY2027 budget forecast",
+          "payer": "AWS",
+          "recipient": "Louisa County",
+          "scope": "The county anticipates new annual revenue at full buildout.",
+          "limit": "Not collected tax. The passage does not resolve gross versus net of rebates; do not subtract a rebate percentage from this figure.",
+          "sources": [
+            "va-budget"
+          ]
+        },
+        {
+          "id": "va-infra-estimate",
+          "category": "infrastructure",
+          "title": "Water & sewer infrastructure",
+          "value": 100000000,
+          "display": "≈ $100M",
+          "status": "estimate",
+          "statusLabel": "Historical county estimate",
+          "period": "One-time infrastructure estimate in FY2024 report, issued November 20, 2024",
+          "payer": "AWS, per county report",
+          "recipient": "Infrastructure serving both campuses; Louisa County Water Authority to own and maintain it",
+          "scope": "Offsite water and sewer works, not all electricity-grid costs.",
+          "limit": "Estimated project cost, not a receipt or final construction bill. Later reimbursements are acknowledged separately; the two records must not be added.",
+          "sources": [
+            "va-2024"
+          ]
+        },
+        {
+          "id": "va-infra-received",
+          "category": "infrastructure",
+          "title": "Infrastructure reimbursements",
+          "value": null,
+          "display": "Amount not isolated",
+          "status": "reported_received",
+          "statusLabel": "County reports receipt",
+          "period": "Fiscal year ended June 30, 2025",
+          "payer": "AWS",
+          "recipient": "Louisa County",
+          "scope": "The FY2025 report identifies AWS infrastructure reimbursements.",
+          "limit": "The cited capital-contribution increase also includes land-sale contributions. It cannot all be assigned to AWS. A project receipt ledger is needed for the exact amount.",
+          "sources": [
+            "va-2025"
+          ]
+        },
+        {
+          "id": "va-rebate",
+          "category": "incentive",
+          "title": "Revenue returned to AWS",
+          "value": 15,
+          "upperValue": 30,
+          "display": "15–30%",
+          "status": "conditional_terms",
+          "statusLabel": "County-described rebate terms",
+          "period": "FAQ labels a 20-year term and displays 2026–2046",
+          "payer": "Louisa County",
+          "recipient": "AWS",
+          "scope": "Share of incremental tax revenue, tiered by certified capital investment. This is a rebate payment mechanism, not the fictional game’s assumed tax reduction.",
+          "limit": "No rebate disbursement verified. The stated term and displayed endpoints need reconciliation against the executed agreement; no total rebate dollars calculated.",
+          "sources": [
+            "va-rebate"
+          ]
+        }
+      ],
+      "ask": "Please provide annual AWS tax collections by tax type and fund, rebate payments, the executed performance agreement and amendments, and the campus-specific infrastructure reimbursement ledger. Identify ongoing water-system maintenance obligations and the studies estimating health impacts."
+    },
+    {
+      "id": "aws-new-carlisle",
+      "state": "IN",
+      "name": "AWS · New Carlisle",
+      "sites": "St. Joseph County data-center campus",
+      "phase": "Operating + continuing buildout reported",
+      "phaseAsOf": "July 9, 2026 operator statement; not a building-by-building occupancy audit",
+      "phaseSources": [
+        "in-operator"
+      ],
+      "boundary": "Campus-wide tax and water statements; the road record concerns a shared regional interchange, not infrastructure exclusively for AWS.",
+      "taxReceived": null,
+      "healthCost": null,
+      "taxGap": "An annual campus tax-receipt ledger and distribution among local public bodies were not verified. The operator’s 35-year projection is not cash received.",
+      "records": [
+        {
+          "id": "in-tax-forecast",
+          "category": "tax",
+          "title": "Future property taxes",
+          "value": 1000000000,
+          "display": "> $1B / 35 years",
+          "status": "operator_projection",
+          "statusLabel": "Operator projection",
+          "period": "35-year horizon stated July 9, 2026; annual schedule not supplied",
+          "payer": "AWS",
+          "recipient": "Local public bodies; fund-by-fund distribution not verified",
+          "scope": "AWS projects property-tax revenue over 35 years.",
+          "limit": "Not independently verified collections. Do not annualize it or compare it directly with Louisa’s full-buildout annual forecast.",
+          "sources": [
+            "in-operator"
+          ]
+        },
+        {
+          "id": "in-road-received",
+          "category": "infrastructure",
+          "title": "Road contribution received",
+          "value": 7000000,
+          "display": "$7M",
+          "status": "reported_received",
+          "statusLabel": "County reports receipt",
+          "period": "By December 9, 2025; one-time contribution",
+          "payer": "AWS",
+          "recipient": "St. Joseph County, for the State Road 2 / Larrison Boulevard interchange",
+          "scope": "County staff said the money was in the county’s possession, awaiting transfer to the state after signed documents.",
+          "limit": "Verified against official minutes, not a bank reconciliation. Receipt by the county does not establish final expenditure by INDOT or the entire project cost.",
+          "sources": [
+            "in-minutes"
+          ]
+        },
+        {
+          "id": "in-road-county",
+          "category": "infrastructure",
+          "title": "County’s part of the road package",
+          "value": 12000000,
+          "display": "$12M",
+          "status": "commitment",
+          "statusLabel": "County commitment · partly in-kind",
+          "period": "Funding package approved December 9, 2025",
+          "payer": "St. Joseph County funding and in-kind contributions",
+          "recipient": "Shared State Road 2 / Larrison Boulevard interchange",
+          "scope": "Includes prior expenses, donated right-of-way and acquisitions. Together with AWS’s $7M, this describes a $19M local package.",
+          "limit": "Not a $12M new household-tax bill, not all cash, and not the interchange’s total cost. The road serves multiple users; do not assign the county share entirely to AWS.",
+          "sources": [
+            "in-minutes"
+          ]
+        },
+        {
+          "id": "in-water-commitment",
+          "category": "infrastructure",
+          "title": "Water & sewer investment",
+          "value": 114000000,
+          "display": "$114M",
+          "status": "operator_commitment",
+          "statusLabel": "Operator-reported investment",
+          "period": "July 9, 2026 statement; payment schedule not supplied",
+          "payer": "AWS",
+          "recipient": "Water and sewer infrastructure serving the development area",
+          "scope": "AWS describes its infrastructure investment.",
+          "limit": "The paid-to-date amount and allocation by recipient were not independently verified. Do not label it a received payment or add it to public tax revenue.",
+          "sources": [
+            "in-operator"
+          ]
+        }
+      ],
+      "ask": "Please provide annual campus property-tax receipts and their distribution, the $7M road-contribution receipt and subsequent transfers, the cash/in-kind breakdown of the county’s $12M obligation, and paid invoices for the stated $114M water/sewer investment. Provide enforceable utility cost-allocation terms and project-specific health-impact studies."
+    }
+  ],
+  "healthGaps": [
+    "Attributable illness and mortality, including asthma-related outcomes",
+    "Medical spending, lost work/school time and economic valuation of health risks",
+    "Where exposed people live, including communities near supplying power plants",
+    "Compensation paid to affected people and who bears remaining costs"
+  ],
+  "comparisonRules": [
+    "Receipt, commitment, estimate and projection are different evidence states. Verification of a statement is not verification of payment.",
+    "A county financial report is useful evidence, but not every management estimate in it is an audited transaction.",
+    "Do not subtract taxes from health damages or produce a net-benefit ranking. Population, geography, timing and valuation differ.",
+    "Health-cost estimates for these campuses were not identified in this bounded review. This does not establish that no study exists or that no harm occurs.",
+    "No common ten-year horizon, per-household bill or annualized total is invented. Investment is not tax revenue, and assessed property value is not tax collected.",
+    "The original simulator remains fictional and cannot alter these sourced records."
+  ]
+}
