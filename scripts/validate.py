@@ -66,7 +66,7 @@ for name in ('index.html', 'review.html', 'consumer-guide.html'):
         assert json.loads(''.join(page.embedded)) == data
 
 assert len(re.findall(r'^@', (SITE / 'bibliography.bib').read_text(), re.M)) == len(sources)
-assert (SITE / 'bibliography.ris').read_text().count('ER  - ') == len(sources)
+assert len(re.findall(r'^ER  -[ \t]*$', (SITE / 'bibliography.ris').read_text(), re.M)) == len(sources)
 metric_ids = {m['id'] for m in data['environmentalMetrics']}
 for case in data['metricApplication']['cases']:
     assert case['missingData']
