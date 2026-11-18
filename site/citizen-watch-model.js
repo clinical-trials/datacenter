@@ -66,6 +66,9 @@
    const agreement=group==='agreement',title=text(s.title)||text(s.place),published=date(s.date);
    const body=[title,s.finding,s.limit,s.status].map(text).join(' ');
    const record={id:'supplement:'+group+':'+(text(s.id)||hash(url+'|'+title)),title,kind:agreement?'filing':'source',topics:agreement?[...new Set(['community',...topicTags(body)])]:topicTags(body),states:own(supplementPlaces,s.id)?[...supplementPlaces[s.id]]:[],companies:own(supplementCompanies,s.id)?[...supplementCompanies[s.id]]:companyTags([title,s.authors].map(text).join(' ')),date:published,dateLabel:published?(agreement?'Announcement dated ':'Published ')+published:'Publication date not stated',checked:date(supplement.reviewed),summary:[s.display,s.finding,s.recipient?'Recipient: '+text(s.recipient):''].map(text).filter(Boolean).join(' · '),limit:text(s.limit)||text(s.limitations),url,phase:agreement?(text(s.phase)||'Not established in this record'):'Not applicable · '+(group==='equipment'?'equipment reference':'publication'),evidenceStatus:text(s.status)||'Government guidance'};
+   // The guidance register embeds an access date in its status text. Keep the
+   // review date in checked, so a re-check alone is not a substantive change.
+   record.evidenceStatus=record.evidenceStatus.replace(/;\s*accessed\s+\d{4}-\d{2}-\d{2}\s*$/i,'');
    add(record);sourceUrls.add(url);
   }
   for(const s of Array.isArray(supplement.publications)?supplement.publications:[])addSupplement(s,'publication');

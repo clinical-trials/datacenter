@@ -34,3 +34,8 @@ test('equipment orders remain general and are not converted into operating-site 
  assert.deepEqual(order.states,[]);assert.match(order.evidenceStatus,/contract/);assert.match(order.limit,/not electricity generated/);
  assert.match(order.phase,/Not applicable/);
 });
+test('a guidance access-date refresh alone does not imply changed substantive evidence',()=>{
+ const before=model.buildFeed({supplement}).find(x=>x.id.startsWith('supplement:guidance:'));
+ const after=model.buildFeed({supplement:{...supplement,reviewed:'2026-11-18',negotiationSource:{...supplement.negotiationSource,status:supplement.negotiationSource.status.replace('2026-11-17','2026-11-18')}}}).find(x=>x.id===before.id);
+ assert.equal(model.fingerprint(before),model.fingerprint(after));
+});
