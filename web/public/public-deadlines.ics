@@ -1,0 +1,252 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Data Center Research Observatory//Public Participation Calendar//
+ EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Data-center public participation
+BEGIN:VEVENT
+UID:dc-920c7e200a3100ea@clinical-trials.github.io
+SEQUENCE:0
+DTSTAMP:20261119T002919Z
+LAST-MODIFIED:20261119T002919Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+SUMMARY:Loudon County — data-center moratorium hearing
+DESCRIPTION:The Commission will hear a resolution extending the temporary m
+ oratorium on data centers/facilities and consider it for a vote in the Com
+ mission meeting that follows. Check the agenda\, speaking rules and any ch
+ anges before travel.\nProceeding: loudon-2026-moratorium-extension\nAgency
+ : Loudon County Commission\nProject phase: Policy hearing on a proposed mo
+ ratorium extension\; not an individual facility permit\nRecord status: act
+ ive\nOfficial source: https://loudoncounty-tn.gov/public-hearing-12-7-26/\
+ nSource checked: 2026-11-18\nAll-day calendar marker for the listed date\,
+  not a verified closing clock time. Confirm the clock time\, time zone\, e
+ xtensions and submission rules with the agency.\nThe county announcement s
+ tates 6 p.m.\; its calendar lists 6–8 p.m. Neither explicitly names a ti
+ me zone. The export is date-only: confirm the local start time\, venue and
+  speaking procedure before attending. No phone access or speaker-registrat
+ ion deadline is verified here.\nOfficial participation instructions: https
+ ://loudoncounty-tn.gov/public-hearing-12-7-26/\nFind and review the record
+ s: https://clinical-trials.github.io/datacenter/site/?proceeding=tn-loudon
+ -moratorium-hearing&prepare=records#citizen\nPrepare a public comment: htt
+ ps://clinical-trials.github.io/datacenter/site/?proceeding=tn-loudon-morat
+ orium-hearing&prepare=comment#citizen\nCalendar reminders are personal pre
+ paration prompts\, not legal filing deadlines. All-day reminder timing fol
+ lows the recipient calendar time zone\; confirm settings after adding. Rec
+ heck the official notice before acting.
+URL:https://loudoncounty-tn.gov/public-hearing-12-7-26/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Loudon County Courthouse Annex\, 101 Mulberry Street\, Suite 200\,
+  Loudon\, Tennessee
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Find the official records and begin a comment.\nLoudon County 
+ — data-center moratorium hearing\nOfficial source: https://loudoncounty-
+ tn.gov/public-hearing-12-7-26/\nPublic-comment guide: https://clinical-tri
+ als.github.io/datacenter/site/?proceeding=tn-loudon-moratorium-hearing&pre
+ pare=comment#citizen\nRecords toolkit: https://clinical-trials.github.io/d
+ atacenter/site/?proceeding=tn-loudon-moratorium-hearing&prepare=records#ci
+ tizen\nCalendar-day reminder\; no exact closing time has been established.
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Check for an extension\, confirm instructions and finish your c
+ omment.\nLoudon County — data-center moratorium hearing\nOfficial source
+ : https://loudoncounty-tn.gov/public-hearing-12-7-26/\nPublic-comment guid
+ e: https://clinical-trials.github.io/datacenter/site/?proceeding=tn-loudon
+ -moratorium-hearing&prepare=comment#citizen\nRecords toolkit: https://clin
+ ical-trials.github.io/datacenter/site/?proceeding=tn-loudon-moratorium-hea
+ ring&prepare=records#citizen\nCalendar-day reminder\; no exact closing tim
+ e has been established.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:dc-dbe6f33cab33a606@clinical-trials.github.io
+SEQUENCE:0
+DTSTAMP:20261119T002919Z
+LAST-MODIFIED:20261119T002919Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Amazon Hobart — check listed comment date
+DESCRIPTION:Review the draft permit and provide written comments or request
+  a hearing using the official notice. Reference F089-50590-00739 and provi
+ de the U.S. mailing address required by the notice. Confirm the current de
+ adline and method before submitting. A hearing has not been scheduled in t
+ his notice.\nProceeding: idem-f089-50590-00739\nAgency: Indiana Department
+  of Environmental Management\, Office of Air Quality\nProject phase: Draft
+  new-source construction and FESOP air permit\; final issuance not establi
+ shed here\nRecord status: active\nOfficial source: https://www.in.gov/idem
+ /files/notice_20261213_air_50590pn-cm.pdf\nSource checked: 2026-11-18\nAll
+ -day calendar marker for the listed date\, not a verified closing clock ti
+ me. Confirm the clock time\, time zone\, extensions and submission rules w
+ ith the agency.\nThe official index lists December 13\, a Sunday. The noti
+ ce allows the next business day IDEM is open when day 30 falls on a closed
+  day\; that may mean December 14. Confirm with IDEM. This calendar uses th
+ e earlier listed date as a conservative planning marker. No closing clock 
+ time is stated.\nOfficial participation instructions: https://www.in.gov/i
+ dem/files/notice_20261213_air_50590pn-cm.pdf\nFind and review the records:
+  https://clinical-trials.github.io/datacenter/site/?proceeding=in-amazon-h
+ obart-comments&prepare=records#citizen\nPrepare a public comment: https://
+ clinical-trials.github.io/datacenter/site/?proceeding=in-amazon-hobart-com
+ ments&prepare=comment#citizen\nCalendar reminders are personal preparation
+  prompts\, not legal filing deadlines. All-day reminder timing follows the
+  recipient calendar time zone\; confirm settings after adding. Recheck the
+  official notice before acting.
+URL:https://www.in.gov/idem/files/notice_20261213_air_50590pn-cm.pdf
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:4751 East 61st Avenue\, Hobart\, Indiana
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Find the official records and begin a comment.\nAmazon Hobart 
+ — check listed comment date\nOfficial source: https://www.in.gov/idem/fi
+ les/notice_20261213_air_50590pn-cm.pdf\nPublic-comment guide: https://clin
+ ical-trials.github.io/datacenter/site/?proceeding=in-amazon-hobart-comment
+ s&prepare=comment#citizen\nRecords toolkit: https://clinical-trials.github
+ .io/datacenter/site/?proceeding=in-amazon-hobart-comments&prepare=records#
+ citizen\nCalendar-day reminder\; no exact closing time has been establishe
+ d.
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Check for an extension\, confirm instructions and finish your c
+ omment.\nAmazon Hobart — check listed comment date\nOfficial source: htt
+ ps://www.in.gov/idem/files/notice_20261213_air_50590pn-cm.pdf\nPublic-comm
+ ent guide: https://clinical-trials.github.io/datacenter/site/?proceeding=i
+ n-amazon-hobart-comments&prepare=comment#citizen\nRecords toolkit: https:/
+ /clinical-trials.github.io/datacenter/site/?proceeding=in-amazon-hobart-co
+ mments&prepare=records#citizen\nCalendar-day reminder\; no exact closing t
+ ime has been established.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:dc-e7c3ea0640fd73f6@clinical-trials.github.io
+SEQUENCE:1
+DTSTAMP:20261119T002919Z
+LAST-MODIFIED:20261119T002919Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+SUMMARY:New Jersey — extended Data Center Fair Share Act responses
+DESCRIPTION:Respond to the request for information on implementation of the
+  Data Center Fair Share Act\, including electric-distribution-company tari
+ ff requirements for large data centers. Use the docket's Post Comments pro
+ cess or the alternative channel specified by the notice\; reference EO2608
+ 0463. Verify the current instructions before submitting.\nProceeding: njbp
+ u-eo26080463\nAgency: New Jersey Board of Public Utilities\nProject phase:
+  Policy consultation on large-data-center utility service and tariffs\; no
+ t a facility permit or final tariff\nRecord status: active\nOfficial sourc
+ e: https://nj.gov/bpu/pdf/publicnotice/Notice%20to%20Extend%20Comment%20Pe
+ riod.pdf\nSource checked: 2026-11-18\nAll-day calendar marker for the list
+ ed date\, not a verified closing clock time. Confirm the clock time\, time
+  zone\, extensions and submission rules with the agency.\nThe extension st
+ ates 5 p.m. on December 14\, replacing November 13 at 5 p.m. Neither notic
+ e explicitly names the time zone. The calendar export is date-only. Confir
+ m the time zone with BPU and submit before the stated closing time\; an al
+ l-day calendar marker is not permission to submit until midnight.\nOfficia
+ l participation instructions: https://www.nj.gov/bpu/pdf/publicnotice/Webp
+ osting-Notice-EO26080463-%20Data%20Center%20Fair%20Share%20Act%20RFI.pdf\n
+ Find and review the records: https://clinical-trials.github.io/datacenter/
+ site/?proceeding=nj-fair-share-comments&prepare=records#citizen\nPrepare a
+  public comment: https://clinical-trials.github.io/datacenter/site/?procee
+ ding=nj-fair-share-comments&prepare=comment#citizen\nCalendar reminders ar
+ e personal preparation prompts\, not legal filing deadlines. All-day remin
+ der timing follows the recipient calendar time zone\; confirm settings aft
+ er adding. Recheck the official notice before acting.
+URL:https://nj.gov/bpu/pdf/publicnotice/Notice%20to%20Extend%20Comment%20Pe
+ riod.pdf
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Written responses to New Jersey BPU docket EO26080463
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Find the official records and begin a comment.\nNew Jersey — 
+ extended Data Center Fair Share Act responses\nOfficial source: https://nj
+ .gov/bpu/pdf/publicnotice/Notice%20to%20Extend%20Comment%20Period.pdf\nPub
+ lic-comment guide: https://clinical-trials.github.io/datacenter/site/?proc
+ eeding=nj-fair-share-comments&prepare=comment#citizen\nRecords toolkit: ht
+ tps://clinical-trials.github.io/datacenter/site/?proceeding=nj-fair-share-
+ comments&prepare=records#citizen\nCalendar-day reminder\; no exact closing
+  time has been established.
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Check for an extension\, confirm instructions and finish your c
+ omment.\nNew Jersey — extended Data Center Fair Share Act responses\nOff
+ icial source: https://nj.gov/bpu/pdf/publicnotice/Notice%20to%20Extend%20C
+ omment%20Period.pdf\nPublic-comment guide: https://clinical-trials.github.
+ io/datacenter/site/?proceeding=nj-fair-share-comments&prepare=comment#citi
+ zen\nRecords toolkit: https://clinical-trials.github.io/datacenter/site/?p
+ roceeding=nj-fair-share-comments&prepare=records#citizen\nCalendar-day rem
+ inder\; no exact closing time has been established.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:dc-fecb357756fa2a5f@clinical-trials.github.io
+SEQUENCE:0
+DTSTAMP:20261119T002919Z
+LAST-MODIFIED:20261119T002919Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Microsoft LPO — check listed comment date
+DESCRIPTION:Review the draft permit and provide written comments or request
+  a hearing using the official notice. Reference F091-50526-00197 and provi
+ de the U.S. mailing address required by the notice. Confirm the current de
+ adline and method before submitting. A hearing has not been scheduled in t
+ his notice.\nProceeding: idem-f091-50526-00197\nAgency: Indiana Department
+  of Environmental Management\, Office of Air Quality\nProject phase: Draft
+  new-source construction and FESOP air permit\; final issuance not establi
+ shed here\nRecord status: active\nOfficial source: https://www.in.gov/idem
+ /files/notice_20261128_air_50526pn-cm.pdf\nSource checked: 2026-11-18\nAll
+ -day calendar marker for the listed date\, not a verified closing clock ti
+ me. Confirm the clock time\, time zone\, extensions and submission rules w
+ ith the agency.\nThe official index lists November 28\, a Saturday. The no
+ tice allows the next business day IDEM is open when day 30 falls on a clos
+ ed day\; that may mean November 30. Confirm with IDEM. This calendar uses 
+ the earlier listed date as a conservative planning marker. No closing cloc
+ k time is stated.\nOfficial participation instructions: https://www.in.gov
+ /idem/files/notice_20261128_air_50526pn-cm.pdf\nFind and review the record
+ s: https://clinical-trials.github.io/datacenter/site/?proceeding=in-micros
+ oft-lpo-comments&prepare=records#citizen\nPrepare a public comment: https:
+ //clinical-trials.github.io/datacenter/site/?proceeding=in-microsoft-lpo-c
+ omments&prepare=comment#citizen\nCalendar reminders are personal preparati
+ on prompts\, not legal filing deadlines. All-day reminder timing follows t
+ he recipient calendar time zone\; confirm settings after adding. Recheck t
+ he official notice before acting.
+URL:https://www.in.gov/idem/files/notice_20261128_air_50526pn-cm.pdf
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:360 E. Boyd Boulevard\, La Porte\, Indiana
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Find the official records and begin a comment.\nMicrosoft LPO 
+ — check listed comment date\nOfficial source: https://www.in.gov/idem/fi
+ les/notice_20261128_air_50526pn-cm.pdf\nPublic-comment guide: https://clin
+ ical-trials.github.io/datacenter/site/?proceeding=in-microsoft-lpo-comment
+ s&prepare=comment#citizen\nRecords toolkit: https://clinical-trials.github
+ .io/datacenter/site/?proceeding=in-microsoft-lpo-comments&prepare=records#
+ citizen\nCalendar-day reminder\; no exact closing time has been establishe
+ d.
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Check for an extension\, confirm instructions and finish your c
+ omment.\nMicrosoft LPO — check listed comment date\nOfficial source: htt
+ ps://www.in.gov/idem/files/notice_20261128_air_50526pn-cm.pdf\nPublic-comm
+ ent guide: https://clinical-trials.github.io/datacenter/site/?proceeding=i
+ n-microsoft-lpo-comments&prepare=comment#citizen\nRecords toolkit: https:/
+ /clinical-trials.github.io/datacenter/site/?proceeding=in-microsoft-lpo-co
+ mments&prepare=records#citizen\nCalendar-day reminder\; no exact closing t
+ ime has been established.
+END:VALARM
+END:VEVENT
+END:VCALENDAR
