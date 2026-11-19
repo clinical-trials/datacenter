@@ -11,7 +11,7 @@
         const point=geocodes.locations.find(p=>p.address===s.address);return point?[{...s,priority:0,location:{coordinates:point.coordinates,source:point.source,label:'US Census address-range match'}}]:[];
       });
       const mapped=layer.features.filter(f=>f.properties.address&&f.properties.address.verification!=='operator-contact').map(f=>{
-        const a=f.properties.address;return {name:window.FacilityAddresses.name(f),address:[a.street,a.city,[a.state,a.postcode].filter(Boolean).join(' ')].filter(Boolean).join(', '),source:a.source_url,checked:a.checked_on,verification:a.verification==='operator-facility'?'Operator facility listing':'Community-mapped address · confirm before travel',phase:'Existing in mapped source; current operation not independently verified',location:{coordinates:f.geometry.coordinates,source:'https://doi.org/10.57931/3017294',label:'IM3 / OpenStreetMap representative point'}};
+        const a=f.properties.address;return {name:window.FacilityAddresses.name(f),address:[a.street,a.city,[a.state,a.postcode].filter(Boolean).join(' ')].filter(Boolean).join(', '),city:a.city,state:a.state,source:a.source_url,checked:a.checked_on,verification:a.verification==='operator-facility'?'Operator facility listing':'Community-mapped address · confirm before travel',phase:'Existing in mapped source; current operation not independently verified',location:{coordinates:f.geometry.coordinates,source:'https://doi.org/10.57931/3017294',label:'IM3 / OpenStreetMap representative point'}};
       });
       return {stops:[...primary,...mapped],updated:layer.retrieved};
     }).catch(error=>{catalogPromise=null;throw error;});

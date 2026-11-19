@@ -1,6 +1,6 @@
 {
-  "checked": "2026-10-18",
-  "scope": "Dated national discovery snapshot and four selected local measures checked against official records. Not an exhaustive ballot database or a personalized sample ballot. No automatic election-results feed is connected.",
+  "checked": "2026-11-18",
+  "scope": "Post-election guide with a dated national discovery summary and selected local cases. The September 21 snapshot is retained as history. Selected November results are paired with official ballot, legal-effect or results records and explicitly labeled where certification has not been verified. Not an exhaustive ballot database, a national opinion poll or a personalized sample ballot. No automatic election-results feed is connected.",
   "trackerUrl": "https://ballotpedia.org/Data_center-related_ballot_measures,_2026",
   "snapshot": {
     "asOf": "2026-09-21",
@@ -12,62 +12,388 @@
     "electionDate": "2026-11-03",
     "advisory": 9,
     "other": 29,
-    "byState": {"OH":20,"IL":7,"WI":3,"KS":3,"CA":2,"MI":1,"NV":1,"FL":1},
+    "byState": {
+      "OH": 20,
+      "IL": 7,
+      "WI": 3,
+      "KS": 3,
+      "CA": 2,
+      "MI": 1,
+      "NV": 1,
+      "FL": 1
+    },
     "limit": "Source publication date, not a live count. Local measures do not apply to every voter in the listed state. An unlisted state is not a verified zero. The national totals are separate from the four detailed examples."
   },
   "measures": [
     {
-      "id":"nv-boulder-city-2026-q1", "state":"NV", "jurisdiction":"Boulder City", "title":"Question 1 · A new land use", "electionDate":"2026-11-03", "type":"Land-use authorization", "effect":"Changes which uses voters authorize in this area", "checked":"2026-10-18",
-      "summary":"Decide whether data centers may be an authorized use in the Eldorado Valley Transfer Area, outside its habitat-conservation easement.",
-      "yes":"Allow data centers as a permitted use in the specified area. The council could consider future leases.",
-      "no":"Keep data centers outside the authorized uses in that area.",
-      "limit":"Approval would not require the council to approve a facility. This question does not govern land elsewhere in Boulder City. Campaign arguments in the official booklet are advocacy, not verified environmental measurements.",
-      "question":"What would each future lease require for water, electricity, noise, emissions and public infrastructure costs?",
-      "sources":[
-        {"kind":"official","label":"City election page · date and question","url":"https://www.bcnv.org/193/Current-Ballot-Questions"},
-        {"kind":"official","label":"Official explanation, fiscal note & both sides’ arguments (PDF)","url":"https://www.bcnv.org/DocumentCenter/View/17253/Ballot-Question-1-Explanation-Digest-and-Arguments"}
+      "id": "nv-boulder-city-2026-q1",
+      "state": "NV",
+      "jurisdiction": "Boulder City",
+      "title": "Question 1 · A new land use",
+      "electionDate": "2026-11-03",
+      "type": "Land-use authorization",
+      "effect": "Changes which uses voters authorize in this area",
+      "checked": "2026-11-18",
+      "summary": "Voters rejected adding data centers to the authorized uses in the Eldorado Valley Transfer Area outside its habitat-conservation easement.",
+      "yes": "Allow data centers as a permitted use in the specified area. The council could consider future leases.",
+      "no": "Keep data centers outside the authorized uses in that area.",
+      "limit": "This question covers the specified Eldorado Valley Transfer Area outside the conservation easement, not all land in Boulder City or nearby federal land. A YES result would only have authorized a use, not approved a facility or required a lease. Campaign arguments are advocacy, not environmental measurements.",
+      "question": "What would each future lease require for water, electricity, noise, emissions and public infrastructure costs?",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "City election page · date and question",
+          "url": "https://www.bcnv.org/193/Current-Ballot-Questions"
+        },
+        {
+          "kind": "official",
+          "label": "Official explanation, fiscal note & both sides’ arguments (PDF)",
+          "url": "https://www.bcnv.org/DocumentCenter/View/17253/Ballot-Question-1-Explanation-Digest-and-Arguments"
+        },
+        {
+          "kind": "official",
+          "label": "County canvass packet · official final tally on PDF page 2",
+          "role": "outcome",
+          "url": "https://bcnv.primegov.com/api/compilemeetingattachmenthistory/historyattachment/?historyId=3697514a-e5cc-4fc3-89c1-b907dedc132f"
+        }
+      ],
+      "outcome": "Question 1 was rejected. The county official final results in the November 13 canvass packet record 2,165 YES and 5,227 NO votes.",
+      "resultStatus": "Official final tally in county canvass packet; City Council certification action not independently verified here.",
+      "legalEffect": "The proposed land-use authorization did not pass. This is not a citywide or statewide data-center ban.",
+      "nextStep": "Check which uses remain authorized on this city-owned land and which separate land, lease or permit decisions remain open to public participation."
+    },
+    {
+      "id": "mi-augusta-2026-rezoning",
+      "state": "MI",
+      "jurisdiction": "Augusta Township",
+      "title": "Ordinance 2025-02 · A rezoning vote",
+      "electionDate": "2026-08-04",
+      "type": "Zoning referendum",
+      "effect": "Determines whether the rezoning takes effect",
+      "checked": "2026-10-18",
+      "summary": "A referendum on changing specified land from agricultural-residential to general-industrial zoning for a proposed data-center development.",
+      "yes": "Uphold the rezoning ordinance.",
+      "no": "Reject the rezoning ordinance.",
+      "outcome": "Township record: the ordinance will not take effect following the August 4 election.",
+      "limit": "This concerns the specified rezoning, not a statewide prohibition. The dashboard does not report a certified vote tally.",
+      "question": "What zoning and permit decisions still apply to the site after this result?",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Township ordinance register · recorded outcome",
+          "role": "outcome",
+          "url": "https://augustatownship.org/ordinances/"
+        },
+        {
+          "kind": "official",
+          "label": "Signed resolution placing the ordinance on the ballot (PDF)",
+          "url": "https://augustatownship.org/wp-content/uploads/2026/03/26-04-Resolution-to-put-Ordinance-2025-02-on-Ballot-FINAL-Signed.pdf"
+        },
+        {
+          "kind": "secondary",
+          "label": "Ballotpedia · referendum explanation",
+          "url": "https://news.ballotpedia.org/2026/03/19/voters-in-at-least-five-jurisdictions-will-decide-ballot-measures-related-to-data-centers-in-2026/"
+        }
       ]
     },
     {
-      "id":"mi-augusta-2026-rezoning", "state":"MI", "jurisdiction":"Augusta Township", "title":"Ordinance 2025-02 · A rezoning vote", "electionDate":"2026-08-04", "type":"Zoning referendum", "effect":"Determines whether the rezoning takes effect", "checked":"2026-10-18",
-      "summary":"A referendum on changing specified land from agricultural-residential to general-industrial zoning for a proposed data-center development.",
-      "yes":"Uphold the rezoning ordinance.",
-      "no":"Reject the rezoning ordinance.",
-      "outcome":"Township record: the ordinance will not take effect following the August 4 election.",
-      "limit":"This concerns the specified rezoning, not a statewide prohibition. The dashboard does not report a certified vote tally.",
-      "question":"What zoning and permit decisions still apply to the site after this result?",
-      "sources":[
-        {"kind":"official","label":"Township ordinance register · recorded outcome","role":"outcome","url":"https://augustatownship.org/ordinances/"},
-        {"kind":"official","label":"Signed resolution placing the ordinance on the ballot (PDF)","url":"https://augustatownship.org/wp-content/uploads/2026/03/26-04-Resolution-to-put-Ordinance-2025-02-on-Ballot-FINAL-Signed.pdf"},
-        {"kind":"secondary","label":"Ballotpedia · referendum explanation","url":"https://news.ballotpedia.org/2026/03/19/voters-in-at-least-five-jurisdictions-will-decide-ballot-measures-related-to-data-centers-in-2026/"}
+      "id": "ca-monterey-park-2026-ndc",
+      "state": "CA",
+      "jurisdiction": "Monterey Park",
+      "title": "Measure NDC · A citywide prohibition",
+      "electionDate": "2026-06-02",
+      "type": "General Plan amendment",
+      "effect": "Adds a citywide land-use prohibition",
+      "checked": "2026-10-18",
+      "summary": "A General Plan amendment to prohibit data centers throughout Monterey Park, with the prohibition continuing until voters end it.",
+      "yes": "Adopt the proposed citywide prohibition through the General Plan amendment.",
+      "no": "Do not adopt this proposed General Plan amendment.",
+      "outcome": "City update identifies Measure NDC as adopted. No certified vote tally is reproduced here.",
+      "limit": "A no vote would not itself approve a project or remove other applicable restrictions. The ballot’s stated health and utility-rate purposes are not measured health outcomes.",
+      "question": "How is the city implementing the prohibition, and how does it define the facilities covered?",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "City election page · measure and analysis",
+          "url": "https://montereypark.ca.gov/1720/2026-Special-Election-Information"
+        },
+        {
+          "kind": "official",
+          "label": "City update · adopted Measure NDC",
+          "role": "outcome",
+          "url": "https://www.montereypark.ca.gov/m/newsflash/home/detail/1387"
+        }
       ]
     },
     {
-      "id":"ca-monterey-park-2026-ndc", "state":"CA", "jurisdiction":"Monterey Park", "title":"Measure NDC · A citywide prohibition", "electionDate":"2026-06-02", "type":"General Plan amendment", "effect":"Adds a citywide land-use prohibition", "checked":"2026-10-18",
-      "summary":"A General Plan amendment to prohibit data centers throughout Monterey Park, with the prohibition continuing until voters end it.",
-      "yes":"Adopt the proposed citywide prohibition through the General Plan amendment.",
-      "no":"Do not adopt this proposed General Plan amendment.",
-      "outcome":"City update identifies Measure NDC as adopted. No certified vote tally is reproduced here.",
-      "limit":"A no vote would not itself approve a project or remove other applicable restrictions. The ballot’s stated health and utility-rate purposes are not measured health outcomes.",
-      "question":"How is the city implementing the prohibition, and how does it define the facilities covered?",
-      "sources":[
-        {"kind":"official","label":"City election page · measure and analysis","url":"https://montereypark.ca.gov/1720/2026-Special-Election-Information"},
-        {"kind":"official","label":"City update · adopted Measure NDC","role":"outcome","url":"https://www.montereypark.ca.gov/m/newsflash/home/detail/1387"}
+      "id": "wi-port-washington-2026-tid",
+      "state": "WI",
+      "jurisdiction": "Port Washington",
+      "title": "Tax-increment districts · Who gets the next vote?",
+      "electionDate": "2026-04-07",
+      "type": "Future voter-approval requirement",
+      "effect": "Adds a referendum requirement for qualifying districts",
+      "checked": "2026-10-18",
+      "summary": "An ordinance requiring voter approval before the city creates or approves specified tax-increment districts involving large capital expenditures or the stated $10 million thresholds.",
+      "yes": "Require a referendum before approving a district covered by the ordinance.",
+      "no": "Do not add this referendum requirement through the proposed ordinance.",
+      "outcome": "Election-night county report: 2,710 yes and 1,371 no. This is the April 7 report, not a certified canvass verified by this dashboard.",
+      "limit": "This is a financing and approval-process measure, not a general data-center ban. Consult the full text for the distinct base-value and project-cost thresholds; it does not establish a campus’s tax payment.",
+      "question": "Which future financing districts are covered, and who bears repayment and infrastructure risks?",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Official referendum notice (PDF)",
+          "url": "https://www.portwashingtonwi.gov/home/showpublisheddocument/6912/639080603000370000"
+        },
+        {
+          "kind": "official",
+          "label": "Full ordinance and referendum notice (PDF)",
+          "url": "https://www.portwashingtonwi.gov/home/showpublisheddocument/7058/639104550605406904"
+        },
+        {
+          "kind": "official",
+          "label": "County election-night report · page 19 (PDF)",
+          "role": "outcome",
+          "url": "https://www.ozaukeecounty.gov/DocumentCenter/View/27126/April-7-2026---Summary"
+        }
       ]
     },
     {
-      "id":"wi-port-washington-2026-tid", "state":"WI", "jurisdiction":"Port Washington", "title":"Tax-increment districts · Who gets the next vote?", "electionDate":"2026-04-07", "type":"Future voter-approval requirement", "effect":"Adds a referendum requirement for qualifying districts", "checked":"2026-10-18",
-      "summary":"An ordinance requiring voter approval before the city creates or approves specified tax-increment districts involving large capital expenditures or the stated $10 million thresholds.",
-      "yes":"Require a referendum before approving a district covered by the ordinance.",
-      "no":"Do not add this referendum requirement through the proposed ordinance.",
-      "outcome":"Election-night county report: 2,710 yes and 1,371 no. This is the April 7 report, not a certified canvass verified by this dashboard.",
-      "limit":"This is a financing and approval-process measure, not a general data-center ban. Consult the full text for the distinct base-value and project-cost thresholds; it does not establish a campus’s tax payment.",
-      "question":"Which future financing districts are covered, and who bears repayment and infrastructure risks?",
-      "sources":[
-        {"kind":"official","label":"Official referendum notice (PDF)","url":"https://www.portwashingtonwi.gov/home/showpublisheddocument/6912/639080603000370000"},
-        {"kind":"official","label":"Full ordinance and referendum notice (PDF)","url":"https://www.portwashingtonwi.gov/home/showpublisheddocument/7058/639104550605406904"},
-        {"kind":"official","label":"County election-night report · page 19 (PDF)","role":"outcome","url":"https://www.ozaukeecounty.gov/DocumentCenter/View/27126/April-7-2026---Summary"}
+      "id": "ks-el-dorado-2026-high-impact",
+      "state": "KS",
+      "jurisdiction": "El Dorado",
+      "title": "High-impact facilities · A ten-year prohibition",
+      "electionDate": "2026-11-03",
+      "type": "Citizen-initiated ordinance",
+      "effect": "Prohibits covered facilities within the city for ten years, subject to voter amendment or repeal.",
+      "checked": "2026-11-18",
+      "summary": "A voter-approved prohibition on high-impact data centers and specified battery energy storage systems.",
+      "yes": "Adopt the ten-year prohibition on covered data centers and battery storage systems.",
+      "no": "Do not adopt this proposed prohibition through the ballot question.",
+      "outcome": "The City reported approval on November 4, with approximately 70% support. No exact certified tally is reproduced here.",
+      "resultStatus": "Approval and implementation reported by the City; certified vote tally not independently verified.",
+      "legalEffect": "Binding city prohibition. The City states it takes effect immediately and lasts ten years unless voters amend or repeal it.",
+      "nextStep": "Ask the City how the definitions and enforcement apply to a particular proposal, including storage projects; monitor implementation rather than treating the previous temporary moratorium as the only protection.",
+      "limit": "City scope, not all of Butler County or Kansas. High-impact data centers exceed 10 MW peak electrical load OR 100,000 gallons daily water draw. The measure also prohibits Tier 2 and Tier 3 battery storage, described by the City as aggregate capacity greater than 80 kWh. These thresholds define covered facilities; they are not measurements of an actual project's use or health effects.",
+      "question": "Which proposals meet the exact definitions, and how will the City document compliance and enforcement?",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "City November 4 statement · approval, thresholds, duration and immediate effect",
+          "role": "outcome",
+          "url": "https://www.eldoks.gov/DocumentCenter/View/17177/Voters-Approve-Ballot-Question"
+        },
+        {
+          "kind": "official",
+          "label": "City official statements · initiative and implementation record",
+          "url": "https://www.eldoks.gov/638/Official-Statements"
+        }
+      ]
+    },
+    {
+      "id": "ca-alhambra-2026-db",
+      "state": "CA",
+      "jurisdiction": "Alhambra",
+      "title": "Measure DB · Who can change the ban?",
+      "electionDate": "2026-11-03",
+      "type": "Voter-approved ordinance proposal",
+      "effect": "Affirms an existing citywide ban as a voter-approved ordinance.",
+      "checked": "2026-11-18",
+      "summary": "The measure would affirm the Council's existing data-center prohibition in every city zone and reserve amendment or repeal to voters.",
+      "yes": "Adopt the voter-approved ordinance affirming the citywide data-center prohibition.",
+      "no": "Do not adopt this voter-approved ordinance; the Council-adopted ban would remain unless the Council later changed it.",
+      "outcome": "The official county count as of November 17 at 15:58:36 reports 19,157 YES (83.92%) and 3,671 NO (16.08%). Certification was not verified here.",
+      "resultStatus": "Official county count; certification and final municipal attestation not independently verified.",
+      "legalEffect": "Binding ordinance if adopted and certified; the City Attorney says future amendment or repeal would require voters. The Council's existing prohibition already applies.",
+      "nextStep": "Check the certified result and municipal attestation, then confirm how the City applies the data-center definition and its incidental-use exception.",
+      "limit": "Alhambra city limits only. The definition excludes data facilities incidental to another primary use and strictly supporting its on-site operations. The official city analysis explains that a NO vote would not remove the existing Council-adopted ban. A vote tally does not measure emissions avoided.",
+      "question": "Has the result been certified and attested, and how is the incidental-use exception interpreted?",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "County November 17 result · City of Alhambra Measure DB",
+          "role": "outcome",
+          "url": "https://results.lavote.gov/text-results/4348"
+        },
+        {
+          "kind": "official",
+          "label": "City ballot-measures page · official documents",
+          "url": "https://www.alhambraca.gov/175/Ballot-Measures"
+        },
+        {
+          "kind": "official",
+          "label": "City Attorney analysis · existing ban, voter control and exception",
+          "url": "https://www.alhambraca.gov/DocumentCenter/View/8177/Impartial-Analysis-of-Data-Center-Ban---Ballot-Measure"
+        },
+        {
+          "kind": "official",
+          "label": "Ordinance O2M26-4868 · election and proposed measure text",
+          "url": "https://www.alhambraca.gov/DocumentCenter/View/8180/O2M26-4868-Ordinance-Calling-Data-Ban-Ballot-Measure-Election"
+        }
+      ]
+    },
+    {
+      "id": "fl-edgewater-2026-amendment4",
+      "state": "FL",
+      "jurisdiction": "Edgewater",
+      "title": "Amendment 4 · A charter-level prohibition",
+      "electionDate": "2026-11-03",
+      "type": "City charter amendment",
+      "effect": "Prohibits new data centers within the city and requires voters to amend or repeal the charter prohibition.",
+      "checked": "2026-11-18",
+      "summary": "A city charter amendment concerning approval, construction, expansion and operation of new data centers.",
+      "yes": "Adopt the charter prohibition and require voter approval to amend or repeal it.",
+      "no": "Do not add this charter prohibition through Amendment 4.",
+      "outcome": "The county results portal records 7,884 YES (77.20%) and 2,328 NO (22.80%) for Amendment 4. The county election office labels its linked November 3 results official.",
+      "resultStatus": "Official county results; exact certification date not recorded here.",
+      "legalEffect": "Binding charter restriction. Ordinance 2026-O-18 makes approved amendments effective upon certification; the exact certification date was not verified here.",
+      "nextStep": "Ask the City Clerk for the certified result and updated charter, and how the new charter restriction operates alongside the separately adopted data-center moratorium.",
+      "limit": "Corporate limits of Edgewater, Florida only. The ballot ordinance defines covered facilities and makes the prohibition self-executing; it is not a Florida-wide ban. Ordinance adoption placing a question on the ballot is distinct from voter approval and certification. The separate September 14 moratorium should not be mistaken for this charter amendment.",
+      "question": "Where is the certified charter update, and which facilities and applications fall within its definition?",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "County election office · identifies linked November 3 results as official",
+          "url": "https://www.volusiaelections.gov/"
+        },
+        {
+          "kind": "official",
+          "label": "County official results portal · Amendment 4 tally",
+          "role": "outcome",
+          "url": "https://app.enhancedvoting.com/results/public/volusia-county-fl/elections/2026GeneralElection"
+        },
+        {
+          "kind": "official",
+          "label": "Ordinance 2026-O-18 · charter text, approval and certification provisions",
+          "url": "https://cityofedgewater.legistar.com/View.ashx?G=36EA95D4-A9C2-4769-9490-1B1315FCF6BE&GUID=33A43B8B-C294-4350-A52D-726D1AA9753F&ID=15707704&M=F"
+        },
+        {
+          "kind": "official",
+          "label": "City legislative record · separately adopted September 14 moratorium",
+          "url": "https://cityofedgewater.legistar.com/LegislationDetail.aspx?GUID=FFC15764-C1E1-415E-BB8D-8DFF46C1EF8D&ID=8191772&Options=&Search="
+        }
+      ]
+    },
+    {
+      "id": "il-bloomington-2026-advisory",
+      "state": "IL",
+      "jurisdiction": "Bloomington",
+      "title": "Moratorium question · Advice requires a next step",
+      "electionDate": "2026-11-03",
+      "type": "Nonbinding advisory referendum",
+      "effect": "Asks whether the City should implement a moratorium; does not itself enact one.",
+      "checked": "2026-11-18",
+      "summary": "An advisory question on whether Bloomington should pause creation of large-scale data centers.",
+      "yes": "Advise the City to implement a moratorium on creation of large-scale data centers.",
+      "no": "Oppose that advisory recommendation.",
+      "outcome": "Ballotpedia reports approval. The official ballot confirms advisory wording; the official canvass was not independently verified here.",
+      "resultStatus": "Reported result; certification not verified.",
+      "legalEffect": "Nonbinding advisory vote; separate municipal action is required to establish a moratorium. Illinois Election Code 5/28-6(c) gives these advisory questions no legal effect.",
+      "nextStep": "Look for a separate City Council proposal, public hearing or adopted ordinance, and ask how officials plan to respond to the advisory result.",
+      "limit": "The question concerns the City of Bloomington, Illinois. It expresses an opinion on a large-scale-data-center moratorium; it sets no duration or detailed standards and does not prove that a moratorium is currently in force. The Illinois advisory rule should not be generalized to binding measures in other states.",
+      "question": "What separate City action, if any, has implemented the recommendation?",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "City election commissioners specimen ballot · advisory referenda, PDF page 3",
+          "url": "https://bloomingtonelectionsil.gov/wp-content/uploads/2026/09/26GILBLO_SAMPLE_3.pdf"
+        },
+        {
+          "kind": "official",
+          "label": "Illinois Election Code 5/28-6(c) · advisory questions have no legal effect",
+          "url": "https://witnessslips.ilga.gov/legislation/ilcs/fulltext?DocName=001000050K28-6"
+        },
+        {
+          "kind": "secondary",
+          "label": "Ballotpedia · reported approval, unofficial until certified",
+          "role": "outcome",
+          "url": "https://ballotpedia.org/Bloomington,_Illinois,_Large-Scale_Data_Center_Moratorium_Advisory_Measure_(November_2026)"
+        }
       ]
     }
-  ]
+  ],
+  "postElection": {
+    "asOf": "2026-11-14",
+    "checked": "2026-11-18",
+    "electionDate": "2026-11-03",
+    "total": 47,
+    "favoringLimits": 46,
+    "approvedLimiting": 33,
+    "rejectedSupportive": 13,
+    "rejectedReview": 1,
+    "totalYear": 57,
+    "decidedYear": 53,
+    "favoringLimitsYear": 52,
+    "pendingYear": 4,
+    "advisory": 10,
+    "advisoryScope": "November 3 measures only: three approved opposition questions and seven rejected support questions.",
+    "byState": {
+      "OH": 21,
+      "ME": 9,
+      "IL": 7,
+      "KS": 4,
+      "WI": 3,
+      "AR": 2,
+      "CA": 2,
+      "NH": 2,
+      "NJ": 2,
+      "ND": 2,
+      "FL": 1,
+      "MI": 1,
+      "NV": 1
+    },
+    "byStateScope": "All 57 measures tracked for 2026, including earlier elections and four pending measures; not the 47 November 3 measures alone.",
+    "source": "Ballotpedia",
+    "url": "https://ballotpedia.org/Data_center-related_ballot_measures,_2026",
+    "limit": "Secondary-source discovery aggregate, not an independent canvass of all results. The 47 November 3 measures include 10 nonbinding advisory questions. Favoring limits describes the direction of a local outcome, not a count of binding bans or a national opinion poll. Different questions have different legal effects; certification and implementation must be checked locally. State totals cover the full 2026 tracker. An unlisted state is not a verified zero.",
+    "categories": [
+      {
+        "label": "Full bans",
+        "count": 5
+      },
+      {
+        "label": "Partial bans",
+        "count": 13
+      },
+      {
+        "label": "Six-month moratoria",
+        "count": 7
+      },
+      {
+        "label": "Zoning requirements",
+        "count": 2
+      },
+      {
+        "label": "Advisory opposition",
+        "count": 3
+      },
+      {
+        "label": "Voter-approval requirements",
+        "count": 2
+      },
+      {
+        "label": "Financial guarantees",
+        "count": 1
+      }
+    ],
+    "rejectedCategories": [
+      {
+        "label": "Advisory support",
+        "count": 7
+      },
+      {
+        "label": "Site rezoning",
+        "count": 4
+      },
+      {
+        "label": "Land-use authorization",
+        "count": 1
+      },
+      {
+        "label": "Development term summary",
+        "count": 1
+      }
+    ]
+  }
 }

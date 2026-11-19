@@ -9,7 +9,8 @@
     let source='';try{const u=new URL(raw.source);if(['http:','https:'].includes(u.protocol))source=u.href;}catch{}
     let location;const c=raw.location?.coordinates;
     if(Array.isArray(c)&&c.length===2&&c.every(Number.isFinite)&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90){try{const u=new URL(raw.location.source);if(['http:','https:'].includes(u.protocol))location={coordinates:[...c],source:u.href,label:clean(raw.location.label,160)||'Mapped representative point'};}catch{}}
-    return {name,address,source,location,verification:clean(raw.verification,130)||'User-added · address not verified',phase:clean(raw.phase,160)||'Phase not verified',checked:clean(raw.checked,10),prompt:clean(raw.prompt,300),note:clean(raw.note,1500),visited:raw.visited===true,included:raw.included!==false};
+    const city=clean(raw.city,100),state=typeof raw.state==='string'&&/^[A-Za-z]{2}$/.test(raw.state)?raw.state.toUpperCase():'';
+    return {name,address,source,location,city,state,verification:clean(raw.verification,130)||'User-added · address not verified',phase:clean(raw.phase,160)||'Phase not verified',checked:clean(raw.checked,10),prompt:clean(raw.prompt,300),note:clean(raw.note,1500),visited:raw.visited===true,included:raw.included!==false};
   }
   function routeSegments(stops,mode='driving'){
     const travelmode=['driving','walking','bicycling'].includes(mode)?mode:'driving';
